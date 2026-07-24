@@ -1,4 +1,4 @@
-"""Score slopbench runner outputs: recall, flags/1k, ToA violations, variance.
+"""Score RegisterBench runner outputs: recall, flags/1k, ToA violations, variance.
 
 Inputs: every results/raw_*.json runner output (normalized schema produced by
 runners/). A run whose file names match seeded draft ids is treated as a
@@ -242,9 +242,9 @@ def main():
 
     # markdown table
     lines = [
-        f"# slopbench results: {REGISTER} ({stamp})",
+        f"# RegisterBench results: {REGISTER} ({stamp})",
         "",
-        "slopbench measures rules, not writers. It never claims or implies AI",
+        "RegisterBench measures rules, not writers. It never claims or implies AI",
         "authorship of any text. A flag on human text is not automatically wrong",
         "as style advice; the claim under test is that these rules remove AI",
         "tells, and rule fire density on verifiably pre-ChatGPT text is evidence",

@@ -10,7 +10,7 @@ unslop reports rule/before/after with no character offsets, so index is null;
 score.py matches its findings by text containment.
 
 Usage: py run_unslop.py <out.json> <file-or-dir> [...]
-Env:   SLOPBENCH_TOOLS_DIR overrides the default ../../../tools location.
+Env:   REGISTERBENCH_TOOLS_DIR overrides the default ../../../tools location.
 """
 
 import json
@@ -21,7 +21,7 @@ from datetime import date
 from pathlib import Path
 
 TOOLS_DIR = Path(os.environ.get(
-    "SLOPBENCH_TOOLS_DIR",
+    "REGISTERBENCH_TOOLS_DIR",
     Path(__file__).resolve().parent.parent.parent.parent / "tools"))
 TOOL_DIR = TOOLS_DIR / "unslop"
 sys.path.insert(0, str(TOOL_DIR / "unslop"))

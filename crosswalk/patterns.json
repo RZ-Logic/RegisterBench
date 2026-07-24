@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "created": "2026-07-24",
-  "notes": "Canonical slopbench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact strings the tool emits (code track) or the exact pattern headings in its skill files (prompt track). An empty list means the tool does not claim the pattern; recall tables report those cells as unclaimed rather than missed. 'partial' lists rules that cover only a subset of the canonical pattern.",
+  "notes": "Canonical RegisterBench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact strings the tool emits (code track) or the exact pattern headings in its skill files (prompt track). An empty list means the tool does not claim the pattern; recall tables report those cells as unclaimed rather than missed. 'partial' lists rules that cover only a subset of the canonical pattern.",
   "tools": {
     "stop-slop": {
       "track": "prompt",

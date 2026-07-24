@@ -21,7 +21,7 @@ OUT_DIR = Path(__file__).resolve().parent.parent / "corpora" / "finance-audit" /
 PROVENANCE = OUT_DIR.parent / "PROVENANCE.md"
 
 # SEC fair-access policy requires a descriptive User-Agent with contact info.
-UA = "slopbench benchmark research (rizwan.ahmed109@gmail.com)"
+UA = "RegisterBench benchmark research (rizwan.ahmed109@gmail.com)"
 
 # CIK, ticker, company. One 10-K each, latest filed on or before CUTOFF.
 COMPANIES = [

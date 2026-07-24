@@ -1,12 +1,12 @@
-# slopbench
+# RegisterBench
 
 The first independent, cross-tool, register-split benchmark of anti-AI-slop rulesets. Working name; final name pending.
 
-Every published number in this niche is self-graded: each tool's own rules run on each tool's own fixtures. slopbench publishes what no tool has: (a) cross-tool comparison under one protocol, (b) flag behavior on verifiably human pre-ChatGPT text, and (c) register-level splits.
+Every published number in this niche is self-graded: each tool's own rules run on each tool's own fixtures. RegisterBench publishes what no tool has: (a) cross-tool comparison under one protocol, (b) flag behavior on verifiably human pre-ChatGPT text, and (c) register-level splits.
 
-## What slopbench does not do
+## What RegisterBench does not do
 
-slopbench measures rules, not writers. It never claims or implies AI authorship of any text, anywhere. The human corpora predate November 2022, so no flag on them can be an AI catch. A flag on human text is not automatically wrong as style advice either. The claim these tools make is removing AI tells. A rule that fires densely on a 2001 email or a 2019 10-K encodes a style preference, not an AI signal. We report both metrics and let readers judge.
+RegisterBench measures rules, not writers. It never claims or implies AI authorship of any text, anywhere. The human corpora predate November 2022, so no flag on them can be an AI catch. A flag on human text is not automatically wrong as style advice either. The claim these tools make is removing AI tells. A rule that fires densely on a 2001 email or a 2019 10-K encodes a style preference, not an AI signal. We report both metrics and let readers judge.
 
 ## Tools under test
 
@@ -40,7 +40,7 @@ The human corpus is 111k words of pre-November-2022 SEC filing prose (10-K MD&A 
 
 **Code track (deterministic).** avoid-ai-writing's `analyzeText` API and unslop's `humanize_deterministic_with_report` (intensity full, structural and soul passes off, which makes runs voice-neutral by construction). Commit SHAs pinned in every result file.
 
-**Prompt track (stochastic).** Each tool's skill files verbatim as system prompt, one uniform detect-only instruction appended, fixed model `claude-sonnet-4-6`, N=3 runs per draft, mean/min/max reported. Model string and date recorded in every result file.
+**Prompt track (stochastic).** Each tool's skill files verbatim as system prompt, one uniform detect-only instruction appended, fixed model `claude-sonnet-5`, N=3 runs per draft, mean/min/max reported. Model string and date recorded in every result file.
 
 **Flag matching.** `crosswalk/patterns.json` maps each tool's rule names to canonical pattern IDs and records which patterns each tool claims at all, so recall tables can distinguish "missed" from "out of scope". Flags match planted spans by character overlap (threshold 0.5) or quoted-text containment. Unmatched flags are logged and feed the false-positive analysis.
 
@@ -64,4 +64,4 @@ finance-audit (this release), casual-email, social, technical-docs (planned). Fi
 
 ## License
 
-MIT (pending final confirmation).
+MIT. See `LICENSE`.

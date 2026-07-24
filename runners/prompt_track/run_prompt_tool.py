@@ -25,12 +25,12 @@ import urllib.request
 from datetime import date
 from pathlib import Path
 
-MODEL = "claude-sonnet-4-6"   # pinned by the methodology spec; do not float
+MODEL = "claude-sonnet-5"   # pinned per Rizwan 2026-07-24 (supersedes the brief's 4-6); do not float
 N_RUNS = 3
 MAX_TOKENS = 4000
 
 ROOT = Path(__file__).resolve().parent.parent.parent
-TOOLS_DIR = Path(os.environ.get("SLOPBENCH_TOOLS_DIR", ROOT.parent / "tools"))
+TOOLS_DIR = Path(os.environ.get("REGISTERBENCH_TOOLS_DIR", ROOT.parent / "tools"))
 
 RULESET_FILES = {
     "stop-slop": ["SKILL.md", "references/phrases.md",

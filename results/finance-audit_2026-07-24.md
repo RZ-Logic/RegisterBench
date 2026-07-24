@@ -1,6 +1,6 @@
-# slopbench results: finance-audit (2026-07-24)
+# RegisterBench results: finance-audit (2026-07-24)
 
-slopbench measures rules, not writers. It never claims or implies AI
+RegisterBench measures rules, not writers. It never claims or implies AI
 authorship of any text. A flag on human text is not automatically wrong
 as style advice; the claim under test is that these rules remove AI
 tells, and rule fire density on verifiably pre-ChatGPT text is evidence

@@ -3,14 +3,14 @@
 // normalized findings JSON. Zero dependencies, Node >= 18.
 //
 // Usage: node run_avoid_ai_writing.js <out.json> <file-or-dir> [...]
-// Env:   SLOPBENCH_TOOLS_DIR overrides the default ../../../tools location.
-//        SLOPBENCH_CONTEXT_MODE sets analyzeText contextMode (default general).
+// Env:   REGISTERBENCH_TOOLS_DIR overrides the default ../../../tools location.
+//        REGISTERBENCH_CONTEXT_MODE sets analyzeText contextMode (default general).
 
 const fs = require('fs');
 const path = require('path');
 const { execSync } = require('child_process');
 
-const TOOLS_DIR = process.env.SLOPBENCH_TOOLS_DIR ||
+const TOOLS_DIR = process.env.REGISTERBENCH_TOOLS_DIR ||
   path.resolve(__dirname, '..', '..', '..', 'tools');
 const TOOL_DIR = path.join(TOOLS_DIR, 'avoid-ai-writing');
 const AIDetector = require(path.join(TOOL_DIR, 'detector', 'patterns.js'));
@@ -31,7 +31,7 @@ function collect(p) {
   return [p];
 }
 
-const contextMode = process.env.SLOPBENCH_CONTEXT_MODE || 'general';
+const contextMode = process.env.REGISTERBENCH_CONTEXT_MODE || 'general';
 const sha = execSync('git rev-parse HEAD', { cwd: TOOL_DIR }).toString().trim();
 
 const result = {

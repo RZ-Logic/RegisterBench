@@ -38,14 +38,14 @@
     {
       "term": "pervasive",
       "variants": ["pervasiveness"],
-      "citation": "PCAOB AS 3105 (basis for adverse vs qualified opinion)",
-      "note": "Term of art distinguishing adverse from qualified opinions. Reads as intensifier slop out of context."
+      "citation": "PCAOB AS 3105 (pervasiveness threshold)",
+      "note": "Term of art. Pervasiveness is the threshold separating a qualified opinion from an adverse opinion (for misstatements) and from a disclaimer (for scope limitations). Reads as intensifier slop out of context."
     },
     {
       "term": "qualified opinion",
       "variants": ["qualified opinions"],
       "citation": "PCAOB AS 3105",
-      "note": "Opinion type. 'Qualified' here means restricted, near-opposite of its everyday sense."
+      "note": "Opinion type. Issued when a matter is material but not pervasive, arising from either a GAAP departure (material misstatement) or a scope limitation (inability to obtain sufficient appropriate evidence). 'Qualified' here means 'with reservations / except for', near-opposite of the everyday sense of competent or eligible."
     },
     {
       "term": "adverse opinion",
