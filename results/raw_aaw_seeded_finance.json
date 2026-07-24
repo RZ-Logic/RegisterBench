@@ -1,0 +1,488 @@
+{
+  "tool": "avoid-ai-writing-detector",
+  "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+  "run_date": "2026-07-24",
+  "options": {
+    "contextMode": "general"
+  },
+  "files": {
+    "fin-01.md": {
+      "words": 371,
+      "score": 19,
+      "label": "Some AI patterns",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "pivotal",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "seamless",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "leverages",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "marking a pivotal moment",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "Only time will tell",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "in order to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Moreover",
+          "index": 1223,
+          "severity": "medium"
+        },
+        {
+          "rule": "generic-conclusion",
+          "text": "Only time will tell",
+          "index": 2402,
+          "severity": "medium"
+        },
+        {
+          "rule": "significance-inflation",
+          "text": "marking a pivotal moment",
+          "index": 1164,
+          "severity": "high"
+        },
+        {
+          "rule": "significance-inflation",
+          "text": "a pivotal moment in",
+          "index": 1172,
+          "severity": "high"
+        },
+        {
+          "rule": "hollow-intensifier",
+          "text": "genuinely",
+          "index": 496,
+          "severity": "medium"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "could potentially",
+          "index": 920,
+          "severity": "high"
+        },
+        {
+          "rule": "em-dash",
+          "text": "2 em dashes in 371 words",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    },
+    "fin-02.md": {
+      "words": 379,
+      "score": 10,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "ever-evolving",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "robust",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "serves as",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier2",
+          "text": "empower",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "tier2",
+          "text": "foster",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "tier2",
+          "text": "ecosystem",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "punct-distribution",
+          "text": "Punctuation density uniform across paragraphs (CV=0.17)",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    },
+    "fin-03.md": {
+      "words": 397,
+      "score": 16,
+      "label": "Some AI patterns",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "meticulous",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "holistic",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "interplay",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "due to the fact that",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "boasts",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "underscoring",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Furthermore",
+          "index": 1242,
+          "severity": "medium"
+        },
+        {
+          "rule": "vague-attribution",
+          "text": "experts believe",
+          "index": 758,
+          "severity": "critical"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "may eventually",
+          "index": 1435,
+          "severity": "high"
+        }
+      ]
+    },
+    "fin-04.md": {
+      "words": 356,
+      "score": 12,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "daunting",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "watershed moment",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "The future looks bright",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 1028,
+          "severity": "medium"
+        },
+        {
+          "rule": "generic-conclusion",
+          "text": "The future looks bright",
+          "index": 2379,
+          "severity": "medium"
+        },
+        {
+          "rule": "significance-inflation",
+          "text": "a watershed moment for",
+          "index": 696,
+          "severity": "high"
+        },
+        {
+          "rule": "hollow-intensifier",
+          "text": "truly",
+          "index": 1899,
+          "severity": "medium"
+        },
+        {
+          "rule": "novelty-inflation",
+          "text": "What nobody tells you",
+          "index": 1693,
+          "severity": "medium"
+        },
+        {
+          "rule": "em-dash",
+          "text": "2 em dashes in 356 words",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    },
+    "fin-05.md": {
+      "words": 349,
+      "score": 9,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "landscape",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "testament to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "filler",
+          "text": "It is important to note that",
+          "index": 647,
+          "severity": "medium"
+        },
+        {
+          "rule": "vague-attribution",
+          "text": "Studies show",
+          "index": 1019,
+          "severity": "critical"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "could potentially",
+          "index": 1752,
+          "severity": "high"
+        },
+        {
+          "rule": "formatting",
+          "text": "4 bold phrases",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    },
+    "fin-06.md": {
+      "words": 342,
+      "score": 9,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "In conclusion",
+          "index": 2098,
+          "severity": "medium"
+        },
+        {
+          "rule": "sycophantic",
+          "text": "That's a great question",
+          "index": 1564,
+          "severity": "critical"
+        },
+        {
+          "rule": "cutoff-disclaimer",
+          "text": "As of my last update",
+          "index": 1906,
+          "severity": "critical"
+        }
+      ]
+    },
+    "fin-07.md": {
+      "words": 355,
+      "score": 10,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "Only time will tell",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "To summarize",
+          "index": 2026,
+          "severity": "medium"
+        },
+        {
+          "rule": "transition",
+          "text": "At the end of the day",
+          "index": 1549,
+          "severity": "medium"
+        },
+        {
+          "rule": "generic-conclusion",
+          "text": "Only time will tell",
+          "index": 2361,
+          "severity": "medium"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "might possibly",
+          "index": 1341,
+          "severity": "high"
+        },
+        {
+          "rule": "em-dash",
+          "text": "2 em dashes in 355 words",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    },
+    "fin-08.md": {
+      "words": 361,
+      "score": 7,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "intricacies",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "underscores",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "punct-distribution",
+          "text": "Punctuation density uniform across paragraphs (CV=0.19)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "uniformity",
+          "text": "All paragraphs are ~3 sentences",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "fin-09.md": {
+      "words": 354,
+      "score": 5,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "ever-evolving",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "enduring",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "Leveraging",
+          "index": null,
+          "severity": "high"
+        }
+      ]
+    },
+    "fin-10.md": {
+      "words": 330,
+      "score": 7,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "game-changer",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "cutting-edge",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "In conclusion",
+          "index": 1917,
+          "severity": "medium"
+        },
+        {
+          "rule": "novelty-inflation",
+          "text": "the insight everyone's missing",
+          "index": 885,
+          "severity": "medium"
+        },
+        {
+          "rule": "em-dash",
+          "text": "2 em dashes in 330 words",
+          "index": null,
+          "severity": "medium"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,474 @@
+{
+  "tool": "avoid-ai-writing-detector",
+  "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+  "run_date": "2026-07-24",
+  "options": {
+    "contextMode": "general"
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "score": 5,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizing",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "commenced",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.82 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 21.8% (947 unique / 4346 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "score": 2,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 25.4% (355 unique / 1400 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "score": 0,
+      "label": "Text too long",
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "score": 2,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "em-dash",
+          "text": "36 em dashes in 1857 words",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 30.4% (580 unique / 1910 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "score": 0,
+      "label": "Text too long",
+      "findings": []
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "score": 2,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 6262,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 25.1% (480 unique / 1909 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 7820,
+          "severity": "medium"
+        },
+        {
+          "rule": "em-dash",
+          "text": "4 em dashes in 2072 words",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 23.3% (482 unique / 2068 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "score": 0,
+      "label": "Text too long",
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 12127,
+          "severity": "medium"
+        },
+        {
+          "rule": "title-case-header",
+          "text": "To the Board of Directors and Stockholders of Ford Motor Company\n",
+          "index": 0,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 21.5% (467 unique / 2173 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "score": 1,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 21.2% (1039 unique / 4899 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 5361,
+          "severity": "medium"
+        },
+        {
+          "rule": "title-case-header",
+          "text": "To the Stockholders and Board of Directors\n",
+          "index": 0,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 29.2% (392 unique / 1344 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "score": 6,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "enduring",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "robust",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "Leveraging",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "commenced",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 12665,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.80 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 17.5% (1678 unique / 9610 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizing",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "commenced",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Moreover",
+          "index": 18485,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 20.5% (611 unique / 2986 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "could ultimately",
+          "index": 4201,
+          "severity": "high"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 24.3% (466 unique / 1917 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "score": 0,
+      "label": "Text too long",
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "score": 2,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 27.6% (343 unique / 1241 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "score": 2,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "commenced",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 42303,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.80 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 4582,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 15.5% (1380 unique / 8903 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "score": 3,
+      "label": "Minimal AI signals",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "title-case-header",
+          "text": "To the Stockholders and the Board of Directors of Microsoft Corporation\n",
+          "index": 0,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 30.0% (369 unique / 1229 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
+    }
+  }
+}

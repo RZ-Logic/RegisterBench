@@ -1,0 +1,151 @@
+Report of Independent Registered Public Accounting Firm
+
+37
+
+Consolidated Balance Sheets
+
+39
+
+Consolidated Statements of Earnings
+
+40
+
+Consolidated Statements of Comprehensive Income
+
+41
+
+Consolidated Statements of Stockholders' Equity
+
+42
+
+Consolidated Statements of Cash Flows
+
+43
+
+Notes to Consolidated Financial Statements
+
+44
+
+Note 1. Summary of Significant Accounting Policies
+
+44
+
+Note 2. Net Sales and Segment Reporting
+
+51
+
+Note 3. Property and Leases
+
+53
+
+Note 4. Debt and Derivative Instruments
+
+55
+
+Note 5. Income Taxes
+
+60
+
+Note 6. Stockholders' Equity
+
+63
+
+Note 7. Fair Value Measurements
+
+63
+
+Note 8. Stock-Based Compensation
+
+64
+
+Note 9. Employee Benefit Plans
+
+67
+
+Note 10. Weighted Average Common Shares
+
+67
+
+Note 11. Commitments and Contingencies
+
+67
+
+Note 12. HD Supply Acquisition
+
+67
+
+36
+
+Table of Contents
+
+Report of Independent Registered Public Accounting Firm
+
+To the Stockholders and Board of Directors
+
+The Home Depot, Inc.:
+
+Opinion on the Consolidated Financial Statements
+
+We have audited the accompanying consolidated balance sheets of The Home Depot, Inc. and subsidiaries (the Company) as of January 31, 2021 and February 2, 2020, the related consolidated statements of earnings, comprehensive income, stockholders' equity, and cash flows for each of the fiscal years in the three-year period ended January 31, 2021, and the related notes (collectively, the consolidated financial statements). In our opinion, the consolidated financial statements present fairly, in all material respects, the financial position of the Company as of January 31, 2021 and February 2, 2020, and the results of its operations and its cash flows for each of the fiscal years in the three-year period ended January 31, 2021, in conformity with U.S. generally accepted accounting principles.
+
+We also have audited, in accordance with the standards of the Public Company Accounting Oversight Board (United States) (PCAOB), the Company's internal control over financial reporting as of January 31, 2021, based on criteria established in Internal Control – Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission, and our report dated March 24, 2021 expressed an unqualified opinion on the effectiveness of the Company's internal control over financial reporting.
+
+Change in Accounting Principle
+
+As discussed in Note 1 to the consolidated financial statements, the Company elected to change its method of accounting for Leases as of February 4, 2019 due to the adoption of Accounting Standards Update No. 2016-02, Leases (Topic 842), and related amendments.
+
+Basis for Opinion
+
+These consolidated financial statements are the responsibility of the Company's management. Our responsibility is to express an opinion on these consolidated financial statements based on our audits. We are a public accounting firm registered with the PCAOB and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud. Our audits included performing procedures to assess the risks of material misstatement of the consolidated financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the consolidated financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the consolidated financial statements. We believe that our audits provide a reasonable basis for our opinion.
+
+Critical Audit Matters
+
+The critical audit matters communicated below are matters arising from the current period audit of the consolidated financial statements that were communicated or required to be communicated to the audit committee and that: (1) relate to accounts or disclosures that are material to the consolidated financial statements and (2) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the consolidated financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate.
+
+Estimation of store shrink using a sampling approach
+
+As discussed in Note 1 to the consolidated financial statements, the majority of the Company's U.S. merchandise inventory balances are stated at lower of cost (first-in, first out) or market as determined by the retail inventory method. The retail inventory method is based on a number of factors such as markups, markdowns, and inventory losses (or shrink). Shrink is the difference between the recorded amount of inventory and the physical inventory counted. The Company calculates shrink based on actual inventory losses identified as a result of physical inventory counts during each fiscal period and estimated inventory losses occurring between physical
+
+37
+
+Table of Contents
+
+inventory counts. The estimate for shrink occurring in the interim period between physical inventory counts is calculated on a store-specific basis and is primarily based on recent shrink results. Due to changes in operating conditions during fiscal 2020 as a result of the COVID-19 pandemic, the Company used the results from a sample of stores that were able to conduct physical inventory counts as a basis for estimating shrink for those stores at which physical inventory counts were temporarily suspended during the year.
+
+We identified the evaluation of the estimation of store shrink using a sampling approach as a critical audit matter. Evaluating the Company's use of sampling and its reliability to produce results substantially the same as those which would be obtained by a count of all U.S. retail stores involved a high degree of auditor judgment. Additionally, professionals with specialized skills and knowledge assisted the engagement team.
+
+The following are the primary procedures we performed to address this critical audit matter. We evaluated the design and tested the operating effectiveness of certain internal controls related to the process of developing and selecting the sampling model to estimate store shrink. We evaluated the appropriateness of the Company using sampling by comparing shrink results and store characteristics across the population to assess the sample's reliability to produce results substantially the same as those which would be obtained by a count of all U.S. retail stores. We involved sampling professionals with specialized skills and knowledge who assisted in:
+
+•Evaluating the Company's design of a sampling method and key parameters used; and
+
+•Testing the Company's application of a sampling model by evaluating formulas and calculations.
+
+Fair value of customer relationships intangible asset
+
+As discussed in Note 12 to the consolidated financial statements, on December 24, 2020, the Company acquired HD Supply Holdings, Inc. (HDS) in a business combination. As a result of the transaction, the Company acquired a customer relationships intangible asset associated with the generation of future income from existing customers. The preliminary, estimated acquisition-date fair value for the customer relationships intangible asset was approximately $2.6 billion. The Company used an income approach to determine the estimated fair value of the customer relationships intangible asset.
+
+We identified the evaluation of the fair value of the customer relationships intangible asset acquired in the HDS business combination as a critical audit matter. There was a high degree of subjective auditor judgment related to certain assumptions used in the valuation model. Significant assumptions included the amount and timing of future cash flows, growth rates, customer attrition rate, and the discount rate applied. Changes in these assumptions could have a significant impact on the fair value of the customer relationships intangible asset. Professionals with specialized skill and knowledge were also required to assess significant assumptions and evaluate evidence obtained.
+
+The following are the primary procedures we performed to address this critical audit matter. We evaluated the design and tested the operating effectiveness of certain internal controls over the Company's acquisition-date valuation process, including controls related to the development of the above assumptions. We evaluated the amount and timing of future cash flows and growth rates used by the Company by comparing projected cash flows to certain publicly available information for comparable companies, industry reports, and historical revenues achieved. We performed sensitivity analyses over the Company's assumptions used to determine the preliminary, estimated fair value of the customer relationships intangible asset to assess the impact changes in those assumptions would have on the Company's determination of fair value. We involved valuation professionals with specialized skills and knowledge, who assisted in evaluating:
+
+•Long term growth rates used to project future cash flows by comparing to certain nationwide economic trend data such as GDP, inflation, and relevant industry data;
+
+•Expected customer attrition rate applied by developing an independent attrition rate using historical sales data; and
+
+•Discount rate applied by developing an independent discount rate and comparing inputs to certain publicly available market data for comparable entities.
+
+/s/ KPMG LLP
+
+We have served as the Company's auditor since 1979.
+
+Atlanta, Georgia
+
+March 24, 2021
+
+38
+
+Table of Contents
+
+THE HOME DEPOT, INC.

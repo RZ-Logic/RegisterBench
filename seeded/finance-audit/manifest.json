@@ -1,0 +1,221 @@
+{
+  "register": "finance-audit",
+  "created": "2026-07-24",
+  "schema": {
+    "plants": "Ground-truth pattern instances. span is an exact substring of the draft; occurrence disambiguates repeated substrings (1-based). origin 'inserted' means added during adaptation, 'retained' means present in the real base filing text and deliberately kept. Recall is computed over plants only.",
+    "distractors": "Terms of art retained from base text. Never counted in recall. Tool flags overlapping a distractor feed the false-positive analysis.",
+    "base_file": "Corpus file the draft was adapted from; full filing provenance is in corpora/finance-audit/PROVENANCE.md."
+  },
+  "drafts": [
+    {
+      "draft_id": "fin-01",
+      "base_file": "AAPL_2020_mdna.txt",
+      "plants": [
+        {"pattern_id": "str-negative-parallelism", "tier": "structural", "span": "This was not a temporary disruption. It was a structural shift.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-em-dash", "tier": "structural", "span": "— and, by extension, channel partners —", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-filler-wordy", "tier": "phrasal", "span": "in order to", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-hollow-intensifier", "tier": "lex-1", "span": "genuinely", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-hedge-stack", "tier": "phrasal", "span": "could potentially", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-significance-inflation", "tier": "phrasal", "span": "marking a pivotal moment in the Company's product history", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "Moreover,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "leverages", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rule-of-three", "tier": "structural", "span": "across products, services, and experiences", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "seamless", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-generic-conclusion", "tier": "phrasal", "span": "Only time will tell how durable these gains prove.", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "significant", "span": "significant volatility", "note": "ordinary filing usage retained from base; below any density gate"}
+      ]
+    },
+    {
+      "draft_id": "fin-02",
+      "base_file": "MSFT_2020_mdna.txt",
+      "plants": [
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "empower", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "phr-false-range", "tier": "phrasal", "span": "from startups to superpowers", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "foster", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-signposting-meta", "tier": "phrasal", "span": "Let's take a closer look at the drivers behind these results.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-copula-avoidance", "tier": "structural", "span": "serves as", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "cornerstone", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-vague-attribution", "tier": "phrasal", "span": "widely regarded as", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "dynamic and highly competitive", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "ever-evolving", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "cloud-based services are dynamic", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "this dynamic environment", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "robust", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rhetorical-setup", "tier": "structural", "span": "What does this mean for the year ahead?", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-throat-clearing", "tier": "phrasal", "span": "Make no mistake:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-colon-reveal", "tier": "structural", "span": "The result: a durable franchise.", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "significant", "span": "significant portion", "note": "ordinary filing usage retained from base"}
+      ]
+    },
+    {
+      "draft_id": "fin-03",
+      "base_file": "KO_2021_opinion.txt",
+      "plants": [
+        {"pattern_id": "phr-vague-attribution", "tier": "phrasal", "span": "experts believe", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-superficial-ing", "tier": "phrasal", "span": ", underscoring the importance of rigorous transfer-pricing documentation", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "Furthermore,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-filler-wordy", "tier": "phrasal", "span": "due to the fact that", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-hedge-stack", "tier": "phrasal", "span": "may eventually", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "meticulous", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-negative-listing", "tier": "structural", "span": "not a formality. Not a checkbox. A judgment.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "holistic", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "interplay", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-copula-avoidance", "tier": "structural", "span": "boasts", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "nuanced", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "present fairly", "span": "present fairly, in all material respects", "note": "mandatory opinion wording, PCAOB AS 3101.08"},
+        {"term": "reasonable assurance", "span": "reasonable assurance", "note": "defined confidence standard"},
+        {"term": "comprehensive basis of accounting", "span": "comprehensive income", "note": "GAAP statement name; collides with Tier 1 'comprehensive'"}
+      ]
+    },
+    {
+      "draft_id": "fin-04",
+      "base_file": "DAL_2021_mdna.txt",
+      "plants": [
+        {"pattern_id": "phr-throat-clearing", "tier": "phrasal", "span": "Here's the thing:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-staccato-fragments", "tier": "structural", "span": "Demand collapsed. Fleets parked. Cash burned.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-significance-inflation", "tier": "phrasal", "span": "a watershed moment for the industry", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-false-agency", "tier": "structural", "span": "The market decided for us.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-em-dash", "tier": "structural", "span": "— slowly, unevenly —", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "Additionally,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rule-of-three", "tier": "structural", "span": "safety, liquidity, and recovery", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-novelty-inflation", "tier": "phrasal", "span": "What nobody tells you about airline recoveries is", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "navigating", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "daunting", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-hollow-intensifier", "tier": "lex-1", "span": "truly", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-generic-conclusion", "tier": "phrasal", "span": "The future looks bright for carriers that adapt.", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "unprecedented", "span": "The unprecedented, widespread and persistent impact", "note": "retained from real DAL 10-K opening sentence; Tier 3 word in ordinary use"}
+      ]
+    },
+    {
+      "draft_id": "fin-05",
+      "base_file": "JNJ_2021_mdna.txt",
+      "plants": [
+        {"pattern_id": "str-formatting-slop", "tier": "structural", "span": "**Consumer Health**, **Pharmaceutical**, and **Medical Devices**", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-filler-wordy", "tier": "phrasal", "span": "It is important to note that", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "competitive landscape", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-formatting-slop", "tier": "structural", "span": "**particularly significant**", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-vague-attribution", "tier": "phrasal", "span": "Studies show", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-negative-parallelism", "tier": "structural", "span": "not just a product portfolio but a platform", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-synonym-cycling", "tier": "structural", "span": "the enterprise treats its breadth as not just a product portfolio but a platform. The organization invests accordingly, and the healthcare giant's scale", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "innovative products", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "life-enhancing innovations", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "innovation pipeline", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "testament to", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-superficial-ing", "tier": "phrasal", "span": ", reflecting management's commitment to create life-enhancing innovations", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "transformative", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-hedge-stack", "tier": "phrasal", "span": "could potentially", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": []
+    },
+    {
+      "draft_id": "fin-06",
+      "base_file": "DE_2020_opinion.txt",
+      "plants": [
+        {"pattern_id": "phr-signposting-meta", "tier": "phrasal", "span": "In this memorandum, we'll walk through", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rhetorical-setup", "tier": "structural", "span": "So what changed this year? Quite a bit.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-staccato-fragments", "tier": "structural", "span": "Tested. Documented. Certified.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "a comprehensive framework of compensating controls", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "con-sycophancy", "tier": "conversational", "span": "That's a great question from the committee", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "streamlined", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-hollow-intensifier", "tier": "lex-1", "span": "Honestly,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "con-cutoff-disclaimer", "tier": "conversational", "span": "As of my last update,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "In conclusion,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "con-chatbot-artifact", "tier": "conversational", "span": "I hope this summary helps clarify our approach.", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "reasonable assurance", "span": "reasonable assurance", "note": "ICFR definition wording"},
+        {"term": "material weakness", "span": "material weakness", "note": "defined term, AS 2201"},
+        {"term": "significant deficiency", "span": "significant deficiency", "note": "defined term, AS 2201; collides with Tier 3 'significant'"},
+        {"term": "comprehensive basis of accounting", "span": "comprehensive income", "note": "GAAP statement name; collides with Tier 1 'comprehensive'"}
+      ]
+    },
+    {
+      "draft_id": "fin-07",
+      "base_file": "AAPL_2020_mdna.txt",
+      "plants": [
+        {"pattern_id": "phr-throat-clearing", "tier": "phrasal", "span": "Let me be clear:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-em-dash", "tier": "structural", "span": "— $72.5 billion of it —", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "utilizes", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "bolster", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-negative-parallelism", "tier": "structural", "span": "The question isn't whether to return capital. It's how fast.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "effectively manages", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "effective at reasonable cost", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "effective duration", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-hedge-stack", "tier": "phrasal", "span": "might possibly", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-filler-wordy", "tier": "phrasal", "span": "At the end of the day", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-false-agency", "tier": "structural", "span": "The balance sheet tells us a story of discipline.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "To summarize,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-generic-conclusion", "tier": "phrasal", "span": "Only time will tell.", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": []
+    },
+    {
+      "draft_id": "fin-08",
+      "base_file": "DE_2020_opinion.txt",
+      "plants": [
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "intricacies", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-copula-avoidance", "tier": "structural", "span": "stands as", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-significance-inflation", "tier": "phrasal", "span": "underscores its importance", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-vague-attribution", "tier": "phrasal", "span": "Observers note", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "multifaceted", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-false-range", "tier": "phrasal", "span": "from the shop floor to the boardroom", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-superficial-ing", "tier": "phrasal", "span": ", highlighting the significance of dealer-level data", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rule-of-three", "tier": "structural", "span": "historical data, announced programs, and forecasted volumes", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-novelty-inflation", "tier": "phrasal", "span": "Here is the part most reviewers skip:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-hollow-intensifier", "tier": "lex-1", "span": "fundamentally", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": [
+        {"term": "critical audit matter", "span": "critical audit matter", "note": "defined term, AS 3101"},
+        {"term": "significant", "span": "significant judgment", "note": "ordinary audit usage retained from base"}
+      ]
+    },
+    {
+      "draft_id": "fin-09",
+      "base_file": "JNJ_2021_mdna.txt",
+      "plants": [
+        {"pattern_id": "phr-significance-inflation", "tier": "phrasal", "span": "profoundly change the trajectory of health for humanity", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "str-staccato-fragments", "tier": "structural", "span": "Heart. Science. Ingenuity.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-negative-listing", "tier": "structural", "span": "not a slogan. Not a poster. An operating system.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "con-chatbot-artifact", "tier": "conversational", "span": "Certainly,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "poised", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "ever-evolving", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "empowered", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "Firstly,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-transition", "tier": "phrasal", "span": "Secondly,", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "Leveraging", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "enduring", "occurrence": 1, "origin": "retained"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "significant investment in talent development", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "significant investment in research", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t3-density", "tier": "lex-3", "span": "significantly higher", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": []
+    },
+    {
+      "draft_id": "fin-10",
+      "base_file": "MSFT_2020_mdna.txt",
+      "plants": [
+        {"pattern_id": "phr-signposting-meta", "tier": "phrasal", "span": "Without further ado, the highlights:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-staccato-fragments", "tier": "structural", "span": "Azure grew 56%. Office held. Gaming climbed.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-colon-reveal", "tier": "structural", "span": "The takeaway: cloud is the business.", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "game-changer", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-novelty-inflation", "tier": "phrasal", "span": "the insight everyone's missing", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-throat-clearing", "tier": "phrasal", "span": "Here's the thing about scale:", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t2-cluster", "tier": "lex-2", "span": "harnessing", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-hollow-intensifier", "tier": "lex-1", "span": "literally", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "lex-t1-vocab", "tier": "lex-1", "span": "cutting-edge", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-em-dash", "tier": "structural", "span": "— real, durable growth —", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "str-rule-of-three", "tier": "structural", "span": "products, platforms, and partnerships", "occurrence": 1, "origin": "inserted"},
+        {"pattern_id": "phr-generic-conclusion", "tier": "phrasal", "span": "In conclusion, the momentum speaks for itself", "occurrence": 1, "origin": "inserted"}
+      ],
+      "distractors": []
+    }
+  ]
+}

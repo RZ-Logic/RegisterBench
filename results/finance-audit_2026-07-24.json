@@ -1,0 +1,583 @@
+{
+  "register": "finance-audit",
+  "date": "2026-07-24",
+  "crosswalk_version": "0.1.0",
+  "tools": {
+    "avoid-ai-writing-detector": {
+      "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.4672131147540984,
+            "matched": 57,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 0,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 2,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 18,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 5,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 2,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 0,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 2,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 20,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 25,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 8,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 12,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "tier1",
+                "text": "marking a pivotal moment"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "generic-conclusion",
+                "text": "Only time will tell"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "significance-inflation",
+                "text": "marking a pivotal moment"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "significance-inflation",
+                "text": "a pivotal moment in"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "tier2",
+                "text": "ecosystem"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "punct-distribution",
+                "text": "Punctuation density uniform across paragraphs (CV=0.17)"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "generic-conclusion",
+                "text": "The future looks bright"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "significance-inflation",
+                "text": "a watershed moment for"
+              },
+              {
+                "draft": "fin-07",
+                "rule": "generic-conclusion",
+                "text": "Only time will tell"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "punct-distribution",
+                "text": "Punctuation density uniform across paragraphs (CV=0.19)"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "uniformity",
+                "text": "All paragraphs are ~3 sentences"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 57,
+            "flags_per_1k": 0.51,
+            "toa_violations": 9,
+            "toa_per_1k": 0.081,
+            "toa_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "HD_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MSFT_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.4672,
+      "recall_min": 0.4672,
+      "recall_max": 0.4672
+    },
+    "unslop-deterministic": {
+      "sha": "5af59d9fcdbd0df7b1a0762be958f78c7805fc09",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.28688524590163933,
+            "matched": 35,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 0,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 0,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 12,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 1,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 7,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 2,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 0,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 2,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 12,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 17,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 2,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 4,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "filler_phrase",
+                "text": "a wide range of"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "filler_phrase",
+                "text": "prior to"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 229,
+            "flags_per_1k": 2.06,
+            "toa_violations": 21,
+            "toa_per_1k": 0.189,
+            "toa_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "Comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "HD_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MSFT_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.2869,
+      "recall_min": 0.2869,
+      "recall_max": 0.2869
+    }
+  }
+}

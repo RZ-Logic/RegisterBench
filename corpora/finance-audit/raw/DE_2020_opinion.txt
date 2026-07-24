@@ -1,0 +1,155 @@
+REPORT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM
+
+To the stockholders and the Board of Directors of Deere & Company:
+
+Opinion on the Financial Statements
+
+We have audited the accompanying consolidated balance sheets of Deere & Company and subsidiaries (the "Company") as of November 1, 2020 and November 3, 2019, the related statements of consolidated income, consolidated comprehensive income, changes in consolidated stockholders' equity, and consolidated cash flows for each of the three years in the period ended November 1, 2020, and the related notes (collectively referred to as the "financial statements"). In our opinion, the financial statements present fairly, in all material respects, the financial position of the Company as of November 1, 2020, and November 3, 2019, and the results of its operations and its cash flows for each of the three years in the period ended November 1, 2020, in conformity with accounting principles generally accepted in the United States of America.
+
+We have also audited, in accordance with the standards of the Public Company Accounting Oversight Board (United States) (PCAOB), the Company's internal control over financial reporting as of November 1, 2020, based on criteria established in Internal Control — Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission and our report dated December 17, 2020, expressed an unqualified opinion on the Company's internal control over financial reporting.
+
+Basis for Opinion
+
+These financial statements are the responsibility of the Company's management. Our responsibility is to express an opinion on the Company's financial statements based on our audits. We are a public accounting firm registered with the PCAOB and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud. Our audits included performing procedures to assess the risks of material misstatement of the financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements. We believe that our audits provide a reasonable basis for our opinion.
+
+Critical Audit Matters
+
+The critical audit matters communicated below are matters arising from the current-period audit of the financial statements that were communicated or required to be communicated to the audit committee and that (1) relate to accounts or disclosures that are material to the financial statements and (2) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate.
+
+Sales Incentives — Refer to Note 2 to the financial statements
+
+Critical Audit Matter Description
+
+The sales incentive accrual at November 1, 2020 was $1,718 million, of which $1,109 million is recorded within trade accounts and notes receivable – net and $609 million is recorded within accounts payable and accrued expenses. At the time a sale to a dealer is recognized, the Company records an estimate of the future sales incentive costs as a reduction to the sales price. These incentives may be based on a dealer's purchase volume, or on retail sales incentive programs for allowances and financing programs that will be due when the dealer sells the equipment to a retail customer. The estimated cost of these programs is based on historical data, announced and expected incentive programs, field inventory levels and forecasted sales volumes. The final cost of these programs is determined at the end of the measurement period for volume-based incentives or when the dealer sells the equipment to the retail customer. This is due to numerous programs available at any particular time and new programs that may be announced after the Company records the equipment sale. Changes in the mix and types of programs affect these estimates, which are reviewed quarterly. The estimation of the sales incentive accrual is impacted by many assumptions. One of the key assumptions is the predictive value of the historical percentage of sales incentive costs to retail sales from dealers.
+
+We identified the sales incentive accrual as a critical audit matter because estimating sales incentive costs requires significant judgment by management and changes in historical percentage of sales incentive costs to retails sales from dealers could have a material impact on the sales incentive accrual. Auditing management's assumptions about the predictive nature of historical sales incentive costs involves a high degree of auditor judgment and an increased extent of effort to evaluate the reasonableness of management's estimates.
+
+​
+
+​
+
+82
+
+Table of Contents
+
+​
+
+How the Critical Audit Matter Was Addressed in the Audit
+
+Our audit procedures related to testing management's assumption that historical sales incentive costs are predictive of future incentive costs included the following, among others:
+
+●We tested the effectiveness of management's controls over the assumptions used to estimate the sales incentive accrual.
+
+●We evaluated management's ability to accurately forecast future incentive costs performing a retrospective review that involved comparing actual incentive costs to management's historical forecasts.
+
+●We evaluated the reasonableness of management's assumption that historical sales incentive costs are predictive of future incentive costs by:
+
+●Considering the impact of changes in the current economic conditions and competitive environment.
+
+●Testing the completeness of the population used in the calculation by inspecting a sample of incentive program communications to dealers to ensure all sales incentive programs offered were included in the calculation and by confirming sales incentive payments with a sample of dealers.
+
+●Comparing historical and current sales incentive costs in the following manner:
+
+●Type and number of programs
+
+●Geography
+
+●Program size and duration
+
+●Eligible products
+
+Allowance for Credit Losses – Refer to Notes 2 and 13 to the financial statements
+
+Critical Audit Matter Description
+
+The allowance for credit losses as of November 1, 2020 was $223 million. The allowance for credit losses represents an estimate of the losses inherent in the Company's receivable portfolio. The level of the allowance is based on many quantitative and qualitative factors, including historical net loss experience by product category, portfolio duration, delinquency trends, economic conditions in the Company's major markets and geographies, commodity price trends, and credit risk quality. The Company has an established process to calculate a range of possible outcomes and determine the adequacy of the allowance. Historical receivable write-offs and recoveries are considered as part of the loss experience by product category. The adequacy of the allowance is assessed quarterly.
+
+The allowance for credit losses specific to the revolving charge accounts portfolio of $3,902 million as of November 1, 2020 was $43 million. The assumptions used in evaluating the Company's exposure to revolving credit losses involve estimates and require significant judgments, as no single statistic, measurement or assumption determines the adequacy of the allowance for credit losses for the revolving charge accounts portfolio. Additionally, the revolving charge accounts portfolio is more susceptible to losses as the loans within this portfolio are unsecured. Losses in this portfolio are expected to follow poor economic conditions prior to losses in the other portfolios. Losses in the revolving charge accounts portfolio could grow to material levels before the full extent of losses is observable in the historical loss data. Therefore, historical loss experience is not the sole predicting factor of anticipated losses. Consequently, qualitative factors (which consider overall economic conditions, the agricultural market, commodity price trends, and delinquency trends) are considered when adjusting historical loss experience for the purpose of determining the level of the allowance for credit losses for the revolving charge accounts portfolio.
+
+We identified the allowance for credit losses specific to the revolving charge accounts portfolio as a critical audit matter because of the significant judgment required by management in determining these qualitative adjustments. Given the subjective nature and judgment applied by management to determine the allowance for credit losses related to the revolving charge accounts portfolio, auditing the allowance for credit losses required a high degree of auditor judgment and an increased extent of effort.
+
+How the Critical Audit Matter Was Addressed in the Audit
+
+Our audit procedures related to testing the allowance for credit losses for the revolving charge accounts portfolio included the following:
+
+●We tested the effectiveness of controls over the determination of the allowance for credit losses for the revolving charge accounts portfolio, including the qualitative factors considered.
+
+●We evaluated the accuracy and relevance of the underlying historical data used in the Company's model which included:
+
+●Historical write-off experience
+
+●Other historical loss metrics
+
+●Portfolio duration
+
+●Delinquency trends
+
+●Trends in non-performing loans
+
+●Trends in portfolio quality
+
+​
+
+83
+
+Table of Contents
+
+​
+
+●We tested the computational accuracy of the Company's model.
+
+●We evaluated the various qualitative adjustment factors considered in the Company's determination of the allowance for credit losses. Our evaluation included:
+
+●Comparison of the qualitative factors used by the Company to source data provided by the Company and/or to externally
+
+available data
+
+●Consideration and evaluation of contradictory evidence
+
+●Consideration of specific revolving charge accounts portfolio delinquency trends within particular geographic locations
+
+●We evaluated management's ability to accurately estimate the losses inherent in the revolving charge accounts portfolio by comparing management's historical estimates to actual losses incurred.
+
+​
+
+/s/ DELOITTE & TOUCHE LLP
+
+Chicago, Illinois
+
+December 17, 2020
+
+We have served as the Company's auditor since 1910.
+
+​
+
+84
+
+Table of Contents
+
+​
+
+​
+
+REPORT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM
+
+To the stockholders and the Board of Directors of Deere & Company:
+
+Opinion on Internal Control over Financial Reporting
+
+We have audited the internal control over financial reporting of Deere & Company and subsidiaries (the "Company") as of November 1, 2020, based on criteria established in Internal Control — Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (COSO). In our opinion, the Company maintained, in all material respects, effective internal control over financial reporting as of November 1, 2020, based on criteria established in Internal Control — Integrated Framework (2013) issued by COSO.
+
+We have also audited, in accordance with the standards of the Public Company Accounting Oversight Board (United States) (PCAOB), the consolidated financial statements as of and for the year ended November 1, 2020, of the Company and our report dated December 17, 2020, expressed an unqualified opinion on those financial statements.
+
+Basis for Opinion
+
+The Company's management is responsible for maintaining effective internal control over financial reporting and for its assessment of the effectiveness of internal control over financial reporting, included in the accompanying Management's Report on Internal Control over Financial Reporting. Our responsibility is to express an opinion on the Company's internal control over financial reporting based on our audit. We are a public accounting firm registered with the PCAOB and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audit in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether effective internal control over financial reporting was maintained in all material respects. Our audit included obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, testing and evaluating the design and operating effectiveness of internal control based on the assessed risk, and performing such other procedures as we considered necessary in the circumstances. We believe that our audit provides a reasonable basis for our opinion.
+
+Definition and Limitations of Internal Control over Financial Reporting
+
+A company's internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes in accordance with generally accepted accounting principles. A company's internal control over financial reporting includes those policies and procedures that (1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.
+
+Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadeq

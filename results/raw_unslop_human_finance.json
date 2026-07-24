@@ -1,0 +1,1476 @@
+{
+  "tool": "unslop-deterministic",
+  "sha": "5af59d9fcdbd0df7b1a0762be958f78c7805fc09",
+  "run_date": "2026-07-24",
+  "options": {
+    "intensity": "full",
+    "structural": false,
+    "soul": false
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "align with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a wide variety of",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "authority_trope",
+          "text": "In reality, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "state-of-the-art",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "align with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "In order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a wide range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with regard to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Finally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "seamless",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "state-of-the-art",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "align with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "align with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "unprecedented",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "Prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "Prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "Prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Moreover, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Moreover, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Moreover, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Pivotal",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "aligned with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "aligned with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "In order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in the event that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "With respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "the fact that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "the fact that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": ", however, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": ", however, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "em_dash_cap",
+          "text": "\u2014",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a significant amount of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": ", however, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leveraging",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leveraging",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leveraging",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "Prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "subsequent to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": ", however, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "performative",
+          "text": "However, ",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Moreover, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Furthermore, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Finally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "aligns with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in order to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a wide variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "subsequent to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "align with",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a wide range of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a variety of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a range of",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "with respect to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "subsequent to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    }
+  }
+}

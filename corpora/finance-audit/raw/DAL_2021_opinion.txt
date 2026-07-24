@@ -1,0 +1,176 @@
+Report of Independent Registered Public Accounting Firm
+
+58
+
+Consolidated Balance Sheets - December 31, 2020 and 2019
+
+62
+
+Consolidated Statements of Operations for the years ended December 31, 2020, 2019 and 2018
+
+63
+
+Consolidated Statements of Comprehensive (Loss)/Income for the years ended December 31, 2020, 2019 and 2018
+
+64
+
+Consolidated Statements of Cash Flows for the years ended December 31, 2020, 2019 and 2018
+
+65
+
+Consolidated Statements of Stockholders' Equity for the years ended December 31, 2020, 2019 and 2018
+
+66
+
+Notes to the Consolidated Financial Statements
+
+67
+
+Note 1 - Summary of Significant Accounting Policies
+
+67
+
+Note 2 - Impact of the COVID-19 Pandemic
+
+71
+
+Note 3 - Revenue Recognition
+
+76
+
+Note 4 - Fair Value Measurements
+
+80
+
+Note 5 - Investments
+
+81
+
+Note 6 - Derivatives and Risk Management
+
+85
+
+Note 7 - Goodwill and Intangible Assets
+
+88
+
+Note 8 - Debt
+
+90
+
+Note 9 - Leases
+
+93
+
+Note 10 - Airport Redevelopment
+
+96
+
+Note 11 - Employee Benefit Plans
+
+98
+
+Note 12 - Commitments and Contingencies
+
+104
+
+Note 13 - Income Taxes
+
+107
+
+Note 14 - Equity and Equity Compensation
+
+109
+
+Note 15 - Accumulated Other Comprehensive Loss
+
+110
+
+Note 16 - Segments
+
+111
+
+Note 17 - (Loss)/Earnings Per Share
+
+113
+
+Delta Air Lines, Inc. 2020 Form 10-K 57
+
+REPORT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM
+
+To the Board of Directors and Stockholders of
+
+Delta Air Lines, Inc.
+
+Opinion on the Financial Statements
+
+We have audited the accompanying consolidated balance sheets of Delta Air Lines, Inc. (the Company) as of December 31, 2020 and 2019, and the related consolidated statements of operations, comprehensive (loss)/income, cash flows, and stockholders' equity for each of the three years in the period ended December 31, 2020, and the related notes (collectively referred to as the "consolidated financial statements"). In our opinion, the consolidated financial statements present fairly, in all material respects, the financial position of the Company at December 31, 2020 and 2019, and the results of its operations and its cash flows for each of the three years in the period ended December 31, 2020, in conformity with U.S. generally accepted accounting principles.
+
+We also have audited, in accordance with the standards of the Public Company Accounting Oversight Board (United States) (PCAOB), the Company's internal control over financial reporting as of December 31, 2020, based on criteria established in Internal Control-Integrated Framework issued by the Committee of Sponsoring Organizations of the Treadway Commission (2013 framework), and our report dated February 12, 2021 expressed an unqualified opinion thereon.
+
+Basis for Opinion
+
+These financial statements are the responsibility of the Company's management. Our responsibility is to express an opinion on the Company's financial statements based on our audits. We are a public accounting firm registered with the PCAOB and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud. Our audits included performing procedures to assess the risks of material misstatements of the financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements. We believe that our audits provide a reasonable basis for our opinion.
+
+Critical Audit Matters
+
+The critical audit matters communicated below are matters arising from the current period audit of the financial statements that were communicated or required to be communicated to the audit committee and that (1) relate to accounts or disclosures that are material to the financial statements and (2) involved especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the consolidated financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate.
+
+Delta Air Lines, Inc. 2020 Form 10-K 58
+
+Employee Benefit Plans
+
+Description of the Matter
+At December 31, 2020, the fair value of the Company's benefit plan assets measured at fair value on a recurring basis totaled $16.6 billion, of which $10.4 billion do not have a readily determinable fair value and are measured at net asset value per share ("NAV assets") as a practical expedient. Management determines the fair value of NAV assets by applying the methodologies described in Note 11 to the consolidated financial statements. The Company's expected long-term rate of return on assets for net periodic benefit for the year ended December 31, 2020 was 8.97%. The expected return on plan assets provided net periodic benefit of $1.4 billion for the year ended December 31, 2020. As disclosed in Note 11 to the consolidated financial statements, the expected long-term rate of return on plan assets is reviewed annually and is based primarily on plan-specific investment studies using historical market return and volatility data.
+
+Auditing the fair value of the Company's NAV assets required significant judgment in estimating the fair value of the NAV assets, primarily resulting from the lag in the availability of data provided by the investment fund managers and the use of corroborating data from public markets to estimate fair value. Auditing the expected long-term rate of return on plan assets required significant judgment due to the subjective nature of certain assumptions. In particular, the Company incorporated excess return expectations compared to historical market return and volatility data based on the Company's investment strategy. Net periodic benefit is sensitive to the expected long-term rate of return on plan assets, which is affected by expectations about future market and economic conditions.
+
+How We Addressed the Matter in Our AuditWe obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's accounting for its employee benefit plans, including controls over management's assessment of the significant inputs and estimates included in the fair value measurements of NAV assets and management's review of the significant assumptions and the inputs used in estimating the expected long-term rate of return on plan assets.
+
+To test the fair value of plan assets measured at NAV, our audit procedures included, among others, evaluating the valuation methodologies used by the Company and comparing significant inputs and underlying data used in the Company's valuations to information available from third-party sources and market data. Additionally, we performed sensitivity analyses to evaluate the changes to the Company's net periodic benefit that would result from changes in the fair value measurement, and compared the Company's asset performance results to applicable third-party benchmarks and assessed management's historical accuracy of estimating fair value by performing retrospective review procedures comparing the Company's estimates of fair value as of the prior year to the final fair value NAV in the investment's audited financial statements made available during the current year.
+
+To test the expected long-term rate of return on plan assets, our audit procedures included, among others, evaluating the methodology used, testing the significant assumptions used in the determination of the expected return and testing the underlying data used by the Company. We involved an actuarial specialist to assist in evaluating the appropriateness of the Company's estimate, including independently calculating a range of expected long-term rates of return based on the Company's current investment portfolio and strategy, and assessed whether management's assumption was consistent with a range of returns for a portfolio of comparative investments. Additionally, we tested the completeness and accuracy of the data used by management and performed sensitivity analyses to evaluate the changes to the Company's net periodic benefit that would result from changes in the expected long-term rate of return on plan assets.
+
+Delta Air Lines, Inc. 2020 Form 10-K 59
+
+Fair Value of Fleet Assets
+
+Description of the Matter
+For the year ended December 31, 2020, the Company recognized $4.4 billion of impairment-related charges for certain owned and leased fleet assets. These impairment-related charges are classified within restructuring charges in the Company's consolidated statement of operations. As discussed in Note 2 to the consolidated financial statements, the Company retired or plans to early retire certain owned and leased fleet types from active service as part of capacity reductions in response to the negative effect on the Company's business from the global COVID-19 pandemic. To assess assets for impairment, the Company groups assets at the fleet type level or at the contract level for aircraft operated by third-party regional carriers. The Company concluded that the management-initiated permanent retirements or planned early retirements of aircraft were impairment indicators which required the Company to test the recoverability of the related asset groups. The Company concluded the book value of these asset groups were not recoverable due to changes to the estimated future cash flows based primarily on the significant reductions to the remaining operating lives. As a result, the Company recognized $4.4 billion in impairment-related charges for the amount by which book value of each asset group exceeded its related fair value. The impairment-related charges were estimated using fair value inputs based primarily upon recent market transactions and third-party bids and corroborated by published pricing guides and the Company's assessment of existing market conditions based on industry knowledge.
+
+Auditing the Company's impairment analysis was highly subjective due to the significant estimation required in determining the fair value of the Company's aircraft. As a result of the COVID-19 pandemic, there is currently a very limited market for aircraft and limited data on how the COVID-19 pandemic has affected the fair value of aircraft.
+
+How We Addressed the Matter in Our Audit
+We obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's accounting for long-lived asset impairments. For example, we tested controls over management's review over determining the relevant measures of fair value of fleet assets.
+
+To test the Company's estimate of the fair value of the aircraft, our audit procedures included, among others, obtaining an understanding of market conditions through inquiries of the Company's fleet management and comparing the aircraft fair value to recent market transactions, bids from third parties and published pricing guides. We also performed procedures to independently identify contrary or confirmatory evidence of the fair values used in the Company's analysis through review of other third-party sources of information.
+
+Realizability of Deferred Tax Assets
+
+Description of the Matter
+At December 31, 2020, the Company had gross deferred tax assets of $9.5 billion and a related valuation allowance of $460 million. As discussed in Notes 1 and 13 to the consolidated financial statements, the Company records a valuation allowance based on the assessment of the realizability of the Company's deferred tax assets. Deferred tax assets are reduced by a valuation allowance if, based on the weight of available evidence, in management's judgment it is more likely than not that some portion, or all, of the deferred tax assets will not be realized.
+
+Auditing management's assessment of recoverability of deferred tax assets involved subjective estimation and complex auditor judgment in weighing the positive and negative evidence to determine whether a valuation allowance for deferred tax assets is needed including the Company's estimate of future taxable income that may be affected by market and economic conditions.
+
+Delta Air Lines, Inc. 2020 Form 10-K 60
+
+How We Addressed the Matter in Our Audit
+We obtained an understanding, evaluated the design, and tested the operating effectiveness of controls that address the risks of material misstatement relating to the realizability of deferred tax assets. This included controls over management's scheduling of the future reversal of existing taxable temporary differences, identification and use of available tax planning strategies and estimate of future taxable income.
+
+To test the realizability of the Company's deferred tax assets, our audit procedures included, among others, evaluating the assumptions to develop the scheduling of the future reversal of existing taxable temporary differences, evaluating tax planning strategies and evaluating the assumptions used by the Company to develop projections of future taxable income. We compared the projections of future taxable income with the actual results of prior periods, as well as management's consideration of current industry and economic trends. We also compared the projections of future taxable income with other forecasted financial information prepared by the Company. In addition, we involved our tax specialists to evaluate the application of tax law in the performance of these procedures.
+
+/s/ Ernst & Young LLP
+
+We have served as the Company's auditor since 2006.
+
+Atlanta, Georgia
+
+February 12, 2021
+
+Delta Air Lines, Inc. 2020 Form 10-K 61
+
+Financial Statements
+
+DELTA AIR LINES, INC.

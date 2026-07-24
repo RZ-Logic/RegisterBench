@@ -1,0 +1,121 @@
+Report of Independent Registered Public Accounting Firm
+
+To the Board of Directors and Shareholders of Johnson & Johnson
+
+Opinions on the Financial Statements and Internal Control over Financial Reporting
+
+We have audited the accompanying consolidated balance sheets of Johnson & Johnson and its subsidiaries (the "Company") as of January 3, 2021 and December 29, 2019, and the related consolidated statements of earnings, of comprehensive income, of equity and of cash flows for each of the three fiscal years in the period ended January 3, 2021, including the related notes (collectively referred to as the "consolidated financial statements"). We also have audited the Company's internal control over financial reporting as of January 3, 2021, based on criteria established in Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (COSO).
+
+In our opinion, the consolidated financial statements referred to above present fairly, in all material respects, the financial position of the Company as of January 3, 2021 and December 29, 2019, and the results of its operations and its cash flows for each of the three fiscal years in the period ended January 3, 2021 in conformity with accounting principles generally accepted in the United States of America. Also in our opinion, the Company maintained, in all material respects, effective internal control over financial reporting as of January 3, 2021, based on criteria established in Internal Control - Integrated Framework (2013) issued by the COSO.
+
+Basis for Opinions
+
+The Company's management is responsible for these consolidated financial statements, for maintaining effective internal control over financial reporting, and for its assessment of the effectiveness of internal control over financial reporting, included in the accompanying Management's Report on Internal Control Over Financial Reporting. Our responsibility is to express opinions on the Company's consolidated financial statements and on the Company's internal control over financial reporting based on our audits. We are a public accounting firm registered with the Public Company Accounting Oversight Board (United States) (PCAOB) and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audits to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud, and whether effective internal control over financial reporting was maintained in all material respects.
+
+Our audits of the consolidated financial statements included performing procedures to assess the risks of material misstatement of the consolidated financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the consolidated financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the consolidated financial statements. Our audit of internal control over financial reporting included obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk. Our audits also included performing such other procedures as we considered necessary in the circumstances. We believe that our audits provide a reasonable basis for our opinions.
+
+Definition and Limitations of Internal Control over Financial Reporting
+
+A company's internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes in accordance with generally accepted accounting principles. A company's internal control over financial reporting includes those policies and procedures that (i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.
+
+Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.
+
+101
+
+Critical Audit Matters
+
+The critical audit matters communicated below are matters arising from the current period audit of the consolidated financial statements that were communicated or required to be communicated to the audit committee and that (i) relate to accounts or disclosures that are material to the consolidated financial statements and (ii) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the consolidated financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate.
+
+U.S. Pharmaceutical Rebate Reserves – Managed Care, Medicare and Medicaid
+
+As described in Note 1 to the consolidated financial statements, the Company recognizes revenue from product sales when obligations under the terms of a contract with the customer are satisfied. Rebates and discounts provided to customers are accounted for as variable consideration and recorded as a reduction in sales. The liability for such rebates and discounts is recognized within Accrued Rebates, Returns, and Promotions on the consolidated balance sheet. A significant portion of the liability related to rebates is from the sale of pharmaceutical goods within the U.S., primarily the Managed Care, Medicare and Medicaid programs, which amounted to $7.2 billion as of January 3, 2021. For significant rebate programs, which include the U.S. Managed Care, Medicare and Medicaid rebate programs, rebates and discounts estimated by management are based on contractual terms, historical experience, patient outcomes, trend analysis, and projected market conditions in the U.S. pharmaceutical market.
+
+The principal considerations for our determination that performing procedures relating to U.S. pharmaceutical rebate reserves - Managed Care, Medicare and Medicaid is a critical audit matter are the significant judgment by management due to the significant measurement uncertainty involved in developing these reserves and the high degree of auditor judgment, subjectivity and audit effort in performing procedures and evaluating the assumptions related to contractual terms, historical experience, patient outcomes, trend analysis, and projected market conditions in the U.S. pharmaceutical market.
+
+Addressing the matter involved performing procedures and evaluating audit evidence in connection with forming our overall opinion on the consolidated financial statements. These procedures included testing the effectiveness of controls relating to U.S. pharmaceutical rebate reserves - Managed Care, Medicare and Medicaid, including controls over the assumptions used to estimate these rebates. These procedures also included, among others, (i) developing an independent estimate of the rebates by utilizing third party information on price and market conditions in the U.S. pharmaceutical market, the terms of the specific rebate programs, and the historical experience and trend analysis of actual rebate claims paid; (ii) testing rebate claims processed by the Company, including evaluating those claims for consistency with the contractual and mandated terms of the Company's rebate arrangements; and (iii) comparing the independent estimates to management's estimates.
+
+Litigation Contingencies – Talc
+
+As described in Notes 1 and 19 to the consolidated financial statements, the Company records accruals for loss contingencies associated with legal matters, including talc, when it is probable that a liability will be incurred and the amount of the loss can be reasonably estimated. To the extent adverse verdicts have been rendered against the Company, management does not record an accrual until a loss is determined to be probable and can be reasonably estimated. For these matters, management is unable to estimate the possible loss or range of loss beyond the amounts already accrued. Amounts accrued for legal contingencies often result from a complex series of judgments about future events and uncertainties that rely heavily on estimates and assumptions including timing of related payments. The ability to make such estimates and judgments can be affected by various factors, including, among other things, whether damages sought in the proceedings are unsubstantiated or indeterminate; scientific and legal discovery has not commenced or is not complete; proceedings are in early stages; matters present legal uncertainties; there are significant facts in dispute; procedural or jurisdictional issues; the uncertainty and unpredictability of the number of potential claims; ability to achieve comprehensive multi-party settlements; complexity of related cross-claims and counterclaims; and/or there are numerous parties involved. There have been verdicts against the Company for this matter, including a verdict in July 2018 of $4.7 billion, which was reversed in part and affirmed in part by the Missouri Court of Appeals in June 2020, reducing the overall award to $2.1 billion and, with additional interest as of January 3, 2021, as the Company pursues further appeal, is currently $2.5 billion. An application for transfer of the case to the Missouri Supreme Court was subsequently denied, and the Company is currently seeking review by the United States Supreme Court. As described by management, the Company continues to believe that it has strong legal grounds for the appeal of this verdict, as well as other verdicts it has appealed. Notwithstanding the Company's confidence in the safety of its talc products, in certain circumstances the Company has and may settle cases. The Company has established an accrual for defense costs and reserves for settlement of certain cases and claims, as well as one case currently on appeal, in connection with product liability litigation associated with body powders containing talc.
+
+The principal considerations for our determination that performing procedures relating to the talc litigation is a critical audit matter are the significant judgment by management when assessing the likelihood of a loss being incurred and when
+
+102
+
+determining whether a reasonable estimate of the loss or range of loss for each claim can be made, which in turn led to a high degree of auditor judgment, subjectivity and effort in performing procedures and evaluating management's assessment of the loss contingencies associated with this litigation.
+
+Addressing the matter involved performing procedures and evaluating audit evidence in connection with forming our overall opinion on the consolidated financial statements. These procedures included testing the effectiveness of controls relating to management's evaluation of the talc litigation, including controls over determining whether a loss is probable and whether the amount of loss can be reasonably estimated, as well as financial statement disclosures. These procedures also included, among others, (i) gaining an understanding of the Company's process around the accounting and reporting for the talc litigation; (ii) discussing the status of significant known actual and potential litigation with the Company's in-house legal counsel, as well as external counsel when deemed necessary; (iii) obtaining and evaluating the letters of audit inquiry with internal and external legal counsel for significant litigation; (iv) evaluating the reasonableness of management's assessment regarding whether an unfavorable outcome is reasonably possible or probable and reasonably estimable; and (v) evaluating the sufficiency of the Company's litigation contingencies disclosures.
+
+Litigation – Opioids
+
+As described in Notes 1 and 19 to the consolidated financial statements, the Company records accruals for loss contingencies associated with legal matters, including opioids, when it is probable that a liability will be incurred and the amount of the loss can be reasonably estimated. To the extent adverse verdicts have been rendered against the Company, management does not record an accrual until a loss is determined to be probable and can be reasonably estimated. For these matters, management is unable to estimate the possible loss or range of loss beyond the amounts already accrued. Amounts accrued for legal contingencies often result from a complex series of judgments about future events and uncertainties that rely heavily on estimates and assumptions including timing of related payments. The ability to make such estimates and judgments can be affected by various factors, including, among other things, whether damages sought in the proceedings are unsubstantiated or indeterminate; matters present legal uncertainties; there are significant facts in dispute; procedural or jurisdictional issues; the uncertainty and unpredictability of the number of potential claims; ability to achieve comprehensive multi-party settlements; complexity of related cross-claims and counterclaims; and/or there are numerous parties involved. The Company has been named in numerous lawsuits brought by certain state and local governments related to opioids matters. The trial in the matter filed by the Oklahoma Attorney General resulted in a judgment against the Company in the amount of $572 million which was subsequently reduced to $465 million. The Company has appealed the judgment and, as described by management, believes that it has strong grounds to overturn this judgment. Separately in October 2019, the Company announced a proposed agreement in principle that would include the Company paying $4 billion as settlement of the lawsuits. In October 2020, the Company agreed to contribute up to an additional $1 billion to an all-in settlement amount that would resolve opioid lawsuits filed and future claims by states, cities, counties and tribal governments, for a total of $5 billion which has been accrued, subject to various conditions and an agreement being finalized. As described by management, this agreement in principle is not an admission of liability or wrong-doing and would resolve opioid lawsuits filed and future claims by states, cities and counties.
+
+The principal considerations for our determination that performing procedures relating to the opioids litigation is a critical audit matter are the significant judgment by management when assessing the likelihood of a loss being incurred for the judgment against the Company in Oklahoma and when determining whether a reasonable estimate of the range of loss for the proposed agreement in principle to settle opioids litigation can be made, which in turn led to a high degree of auditor judgment, subjectivity and effort in performing procedures and evaluating management's assessment of the loss contingencies associated with this litigation.
+
+Addressing the matter involved performing procedures and evaluating audit evidence in connection with forming our overall opinion on the consolidated financial statements. These procedures included testing the effectiveness of controls relating to management's evaluation of the opioid litigation, including controls over determining whether a loss is probable and whether the amount of loss can be reasonably estimated, as well as financial statement disclosures. These procedures also included, among others, (i) gaining an understanding of the Company's process around the accounting and reporting for the opioids litigation; (ii) discussing the status of significant known actual and potential litigation and ongoing settlement negotiations with the Company's in-house legal counsel, as well as external counsel when deemed necessary; (iii) obtaining and evaluating the letters of audit inquiry with internal and external legal counsel for significant litigation; (iv) evaluating the reasonableness of management's assessment regarding whether an unfavorable outcome is reasonably possible or probable and reasonably estimable; and (v) evaluating the sufficiency of the Company's litigation contingencies disclosures.
+
+/s/ PricewaterhouseCoopers LLP
+
+Florham Park, New Jersey
+
+February 22, 2021
+
+We have served as the Company's auditor since at least 1920. We have not been able to determine the specific year we began serving as auditor of the Company.
+
+103
+
+Management's Report on Internal Control Over Financial Reporting
+
+Under Section 404 of the Sarbanes-Oxley Act of 2002, management is required to assess the effectiveness of the Company's internal control over financial reporting as of the end of each fiscal year and report, based on that assessment, whether the Company's internal control over financial reporting is effective.
+
+Management of the Company is responsible for establishing and maintaining adequate internal control over financial reporting. The Company's internal control over financial reporting is designed to provide reasonable assurance as to the reliability of the Company's financial reporting and the preparation of external financial statements in accordance with generally accepted accounting principles.
+
+Internal controls over financial reporting, no matter how well designed, have inherent limitations. Therefore, internal control over financial reporting determined to be effective can provide only reasonable assurance with respect to financial statement preparation and may not prevent or detect all misstatements. Moreover, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.
+
+The Company's management has assessed the effectiveness of the Company's internal control over financial reporting as of January 3, 2021. In making this assessment, the Company used the criteria established by the Committee of Sponsoring Organizations of the Treadway Commission (COSO) in "Internal Control-Integrated Framework (2013)." These criteria are in the areas of control environment, risk assessment, control activities, information and communication, and monitoring. The Company's assessment included extensive documenting, evaluating and testing the design and operating effectiveness of its internal controls over financial reporting.
+
+Based on the Company's processes and assessment, as described above, management has concluded that, as of January 3, 2021, the Company's internal control over financial reporting was effective.
+
+The effectiveness of the Company's internal control over financial reporting as of January 3, 2021 has been audited by PricewaterhouseCoopers LLP, an independent registered public accounting firm, as stated in their report, which appears herein.
+
+/s/ Alex Gorsky/s/ Joseph J. Wolk
+
+Alex Gorsky Joseph J. Wolk
+
+Chairman, Board of Directors Executive Vice President, Chief Financial Officer
+
+Chief Executive Officer
+
+104
+
+Shareholder Return Performance Graphs
+
+Set forth below are line graphs comparing the cumulative total shareholder return on the Company's Common Stock for periods of five years and ten years ending January 3, 2021, against the cumulative total return of the Standard & Poor's 500 Stock Index, the Standard & Poor's Pharmaceutical Index and the Standard & Poor's Health Care Equipment Index. The graphs and tables assume that $100 was invested on December 31, 2015 and December 31, 2010 in each of the Company's Common Stock, the Standard & Poor's 500 Stock Index, the Standard & Poor's Pharmaceutical Index and the Standard & Poor's Health Care Equipment Index and that all dividends were reinvested.
+
+5 Year Shareholder Return Performance J&J vs. Indices
+
+201520162017201820192020
+
+Johnson & Johnson$100.00$115.32$143.47$136.10$158.16$175.32
+
+S&P 500 Index$100.00$111.95$136.38$130.39$171.44$202.96
+
+S&P Pharmaceutical Index$100.00$98.44$110.81$119.78$137.85$148.23
+
+S&P Healthcare Equipment Index$100.00$106.48$139.38$162.02$209.52$246.47
+
+10 Year Shareholder Return Performance J&J vs. Indices
+
+20102011201220132014201520162017201820192020
+
+Johnson & Johnson$100.00$109.89$121.79$163.95$192.37$194.59$224.41$279.18$264.84$307.77$341.17
+
+S&P 500 Index$100.00$102.11$118.44$156.78$178.22$180.67$202.27$246.41$235.59$309.74$366.70
+
+S&P Pharmaceutical Index$100.00$117.76$134.75$182.22$222.70$235.59$231.91$261.06$282.19$324.76$349.21
+
+S&P Healthcare Equipment Index$100.00$99.20$116.33$148.54$187.58$198.78$211.67$277.07$322.07$416.50$489.94
+
+105

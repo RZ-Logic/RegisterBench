@@ -1,0 +1,137 @@
+REPORT OF INDEPENDENT REGISTERED PUBLIC ACCOUNTING FIRM
+
+To the Stockholders and the Board of Directors of Microsoft Corporation
+
+Opinion on the Financial Statements
+
+We have audited the accompanying consolidated balance sheets of Microsoft Corporation and subsidiaries (the "Company") as of June 30, 2020 and 2019, the related consolidated statements of income, comprehensive income, cash flows, and stockholders' equity, for each of the three years in the period ended June 30, 2020, and the related notes (collectively referred to as the "financial statements"). In our opinion, the financial statements present fairly, in all material respects, the financial position of the Company as of June 30, 2020 and 2019, and the results of its operations and its cash flows for each of the three years in the period ended June 30, 2020, in conformity with accounting principles generally accepted in the United States of America.
+
+We have also audited, in accordance with the standards of the Public Company Accounting Oversight Board (United States) (PCAOB), the Company's internal control over financial reporting as of June 30, 2020, based on criteria established in Internal Control — Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission and our report dated July 30, 2020, expressed an unqualified opinion on the Company's internal control over financial reporting.
+
+Basis for Opinion
+
+These financial statements are the responsibility of the Company's management. Our responsibility is to express an opinion on the Company's financial statements based on our audits. We are a public accounting firm registered with the PCAOB and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audit to obtain reasonable assurance about whether the financial statements are free of material misstatement, whether due to error or fraud. Our audits included performing procedures to assess the risks of material misstatement of the financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the financial statements. We believe that our audits provide a reasonable basis for our opinion.
+
+Critical Audit Matters
+
+The critical audit matters communicated below are matters arising from the current-period audit of the financial statements that were communicated or required to be communicated to the audit committee and that (1) relate to accounts or disclosures that are material to the financial statements and (2) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the financial statements, taken as a whole, and we are not, by communicating the critical audit matters below, providing separate opinions on the critical audit matters or on the accounts or disclosures to which they relate.
+
+94
+
+PART II
+
+Item 8
+
+Revenue Recognition – Refer to Note 1 to the financial statements
+
+Critical Audit Matter Description
+
+The Company recognizes revenue upon transfer of control of promised products or services to customers in an amount that reflects the consideration the Company expects to receive in exchange for those products or services. The Company offers customers the ability to acquire multiple licenses of software products and services, including cloud-based services, in its customer agreements through its volume licensing programs.
+
+Significant judgment is exercised by the Company in determining revenue recognition for these customer agreements, and includes the following:
+
+•
+
+Determination of whether products and services are considered distinct performance obligations that should be accounted for separately versus together, such as software licenses and related services that are sold with cloud-based services.
+
+•
+
+The pattern of delivery (i.e., timing of when revenue is recognized) for each distinct performance obligation.
+
+•
+
+Identification and treatment of contract terms that may impact the timing and amount of revenue recognized (e.g., variable consideration, optional purchases, and free services).
+
+•
+
+Determination of stand-alone selling prices for each distinct performance obligation and for products and services that are not sold separately.
+
+Given these factors and due to the volume of transactions, the related audit effort in evaluating management's judgments in determining revenue recognition for these customer agreements was extensive and required a high degree of auditor judgment.
+
+How the Critical Audit Matter Was Addressed in the Audit
+
+Our principal audit procedures related to the Company's revenue recognition for these customer agreements included the following:
+
+•
+
+We tested the effectiveness of controls related to the identification of distinct performance obligations, the determination of the timing of revenue recognition, and the estimation of variable consideration.
+
+•
+
+We evaluated management's significant accounting policies related to these customer agreements for reasonableness.
+
+•
+
+We selected a sample of customer agreements and performed the following procedures:
+
+–
+
+Obtained and read contract source documents for each selection, including master agreements, and other documents that were part of the agreement.
+
+–
+
+Tested management's identification and treatment of contract terms.
+
+–
+
+Assessed the terms in the customer agreement and evaluated the appropriateness of management's application of their accounting policies, along with their use of estimates, in the determination of revenue recognition conclusions.
+
+•
+
+We evaluated the reasonableness of management's estimate of stand-alone selling prices for products and services that are not sold separately.
+
+•
+
+We tested the mathematical accuracy of management's calculations of revenue and the associated timing of revenue recognized in the financial statements.
+
+95
+
+PART II
+
+Item 8
+
+Income Taxes – Uncertain Tax Positions – Refer to Note 12 to the financial statements
+
+Critical Audit Matter Description
+
+The Company's long-term income taxes liability includes uncertain tax positions related to transfer pricing issues that remain unresolved with the Internal Revenue Service ("IRS"). The Company remains under IRS audit, or subject to IRS audit, for tax years subsequent to 2003. While the Company has settled a portion of the IRS audits, resolution of the remaining matters could have a material impact on the Company's financial statements.
+
+Conclusions on recognizing and measuring uncertain tax positions involve significant estimates and management judgment and include complex considerations of the Internal Revenue Code, related regulations, tax case laws, and prior-year audit settlements. Given the complexity and the subjective nature of the transfer pricing issues that remain unresolved with the IRS, evaluating management's estimates relating to their determination of uncertain tax positions required extensive audit effort and a high degree of auditor judgment, including involvement of our tax specialists.
+
+How the Critical Audit Matter Was Addressed in the Audit
+
+Our principal audit procedures to evaluate management's estimates of uncertain tax positions related to unresolved transfer pricing issues included the following:
+
+•
+
+We evaluated the appropriateness and consistency of management's methods and assumptions used in the identification, recognition, measurement, and disclosure of uncertain tax positions, which included testing the effectiveness of the related internal controls.
+
+•
+
+We read and evaluated management's documentation, including relevant accounting policies and information obtained by management from outside tax specialists, that detailed the basis of the uncertain tax positions.
+
+•
+
+We tested the reasonableness of management's judgments regarding the future resolution of the uncertain tax positions, including an evaluation of the technical merits of the uncertain tax positions.
+
+•
+
+For those uncertain tax positions that had not been effectively settled, we evaluated whether management had appropriately considered new information that could significantly change the recognition, measurement or disclosure of the uncertain tax positions.
+
+•
+
+We evaluated the reasonableness of management's estimates by considering how tax law, including statutes, regulations and case law, impacted management's judgments.
+
+/s/ DELOITTE & TOUCHE LLP
+
+Seattle, Washington
+
+July 30, 2020
+
+We have served as the Company's auditor since 1983.
+
+96
+
+PART II

@@ -1,0 +1,296 @@
+{
+  "tool": "unslop-deterministic",
+  "sha": "5af59d9fcdbd0df7b1a0762be958f78c7805fc09",
+  "run_date": "2026-07-24",
+  "options": {
+    "intensity": "full",
+    "structural": false,
+    "soul": false
+  },
+  "files": {
+    "fin-01.md": {
+      "words": 371,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Moreover, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "pivotal",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "seamless",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "leverages",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "in order to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-02.md": {
+      "words": 379,
+      "findings": [
+        {
+          "rule": "stock_vocab",
+          "text": "foster",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "ever-evolving",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "copula_avoidance",
+          "text": "serves as ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "a wide range of",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-03.md": {
+      "words": 397,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Furthermore, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "holistic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "interplay between",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "underscoring ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "meticulous",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "copula_avoidance",
+          "text": "boasts ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "due to the fact that",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-04.md": {
+      "words": 356,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "Additionally, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "filler_phrase",
+          "text": "prior to",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-05.md": {
+      "words": 349,
+      "findings": [
+        {
+          "rule": "hedging_opener",
+          "text": "It is important to note that ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "a testament to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "transformative",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-06.md": {
+      "words": 342,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "In conclusion, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "knowledge_cutoff",
+          "text": "As of my last update, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "comprehensive",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-07.md": {
+      "words": 355,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "To summarize, ",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-08.md": {
+      "words": 361,
+      "findings": [
+        {
+          "rule": "vague_attribution",
+          "text": "Observers note that ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "underscores ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "significance_inflation",
+          "text": ", highlighting the significance",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-09.md": {
+      "words": 354,
+      "findings": [
+        {
+          "rule": "sycophancy",
+          "text": "Certainly, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Firstly, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "transition_tic",
+          "text": "Secondly, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "Leveraging",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "ever-evolving",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-10.md": {
+      "words": 330,
+      "findings": [
+        {
+          "rule": "transition_tic",
+          "text": "In conclusion, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "signposting",
+          "text": "Without further ado, ",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "cutting-edge",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "stock_vocab",
+          "text": "game-changer",
+          "index": null,
+          "severity": null
+        }
+      ]
+    }
+  }
+}

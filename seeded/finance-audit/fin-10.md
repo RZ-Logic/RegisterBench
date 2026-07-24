@@ -1,0 +1,11 @@
+Highlights from fiscal year 2020 compared with fiscal year 2019. Without further ado, the highlights:
+
+Commercial cloud revenue increased 36% to $51.7 billion. Office Commercial products and cloud services revenue increased 12%, driven by Office 365 Commercial growth of 24%. Office Consumer products and cloud services revenue increased 11%, with continued growth in Office 365 Consumer subscribers to 42.7 million. Dynamics products and cloud services revenue increased 14%, driven by Dynamics 365 growth of 42%. Windows original equipment manufacturer licensing revenue increased 9%. Xbox content and services revenue increased 11%.
+
+Azure grew 56%. Office held. Gaming climbed. The takeaway: cloud is the business. The commercial cloud is a game-changer for the revenue mix, shifting an ever larger share of the Company's income toward recurring, subscription-based contracts, and the insight everyone's missing is how much of that shift happened inside existing enterprise agreements rather than through new customer acquisition.
+
+Here's the thing about scale: harnessing a global datacenter footprint lets the Company price capacity in ways regional competitors literally cannot match, and the cutting-edge infrastructure investments of the past five years are now the cost floor beneath every competing bid. Growth — real, durable growth — across products, platforms, and partnerships defined the fiscal year, and the pattern held in every geographic segment the Company reports.
+
+Search advertising revenue, excluding traffic acquisition costs, was relatively unchanged, and remains the one line where fiscal 2020 resembled fiscal 2019. Aggregate demand for software, services, and devices remained correlated to global macroeconomic factors, and the strengthening of the U.S. dollar relative to certain foreign currencies reduced reported revenue and expenses from international operations during the year.
+
+In conclusion, the momentum speaks for itself: commercial cloud annualized revenue exited the fiscal year above its entry run-rate in every segment, operating margins expanded despite the infrastructure build, and the balance of the Company's revenue continues its migration toward subscription economics. Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021.

@@ -1,0 +1,141 @@
+To the Board of Directors and Shareholders of Caterpillar Inc.
+
+Opinions on the Financial Statements and Internal Control over Financial Reporting
+
+We have audited the accompanying consolidated statement of financial position of Caterpillar Inc. and its subsidiaries (the "Company") as of December 31, 2020 and 2019, and the related consolidated statements of results of operations, comprehensive income (loss), changes in shareholders' equity, and cash flow for each of the three years in the period ended December 31, 2020, including the related notes (collectively referred to as the "consolidated financial statements"). We also have audited the Company's internal control over financial reporting as of December 31, 2020, based on criteria established in Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (COSO).
+
+In our opinion, the consolidated financial statements referred to above present fairly, in all material respects, the financial position of the Company as of December 31, 2020 and 2019, and the results of its operations and its cash flows for each of the three years in the period ended December 31, 2020 in conformity with accounting principles generally accepted in the United States of America. Also in our opinion, the Company maintained, in all material respects, effective internal control over financial reporting as of December 31, 2020, based on criteria established in Internal Control - Integrated Framework (2013) issued by the COSO.
+
+The Company's management is responsible for these consolidated financial statements, for maintaining effective internal control over financial reporting, and for its assessment of the effectiveness of internal control over financial reporting, included in the accompanying Management's Report on Internal Control over Financial Reporting. Our responsibility is to express opinions on the Company's consolidated financial statements and on the Company's internal control over financial reporting based on our audits. We are a public accounting firm registered with the Public Company Accounting Oversight Board (United States) (PCAOB) and are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.
+
+We conducted our audits in accordance with the standards of the PCAOB. Those standards require that we plan and perform the audits to obtain reasonable assurance about whether the consolidated financial statements are free of material misstatement, whether due to error or fraud, and whether effective internal control over financial reporting was maintained in all material respects.
+
+Our audits of the consolidated financial statements included performing procedures to assess the risks of material misstatement of the consolidated financial statements, whether due to error or fraud, and performing procedures that respond to those risks. Such procedures included examining, on a test basis, evidence regarding the amounts and disclosures in the consolidated financial statements. Our audits also included evaluating the accounting principles used and significant estimates made by management, as well as evaluating the overall presentation of the consolidated financial statements. Our audit of internal control over financial reporting included obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk. Our audits also included performing such other procedures as we considered necessary in the circumstances. We believe that our audits provide a reasonable basis for our opinions.
+
+Definition and Limitations of Internal Control over Financial Reporting
+
+A company's internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes in accordance with generally accepted accounting principles. A company's internal control over financial reporting includes those policies and procedures that (i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.
+
+Because of its inherent limitations, internal control over financial reporting may not prevent or detect misstatements. Also, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.
+
+The critical audit matter communicated below is a matter arising from the current period audit of the consolidated financial statements that was communicated or required to be communicated to the audit committee and that (i) relates to accounts or disclosures that are material to the consolidated financial statements and (ii) involved our especially challenging, subjective, or complex judgments. The communication of critical audit matters does not alter in any way our opinion on the consolidated financial statements, taken as a whole, and we are not, by communicating the critical audit matter below, providing a separate opinion on the critical audit matter or on the accounts or disclosures to which it relates.
+
+As described in Note 6 to the consolidated financial statements, as a result of the audits of the Company's U.S. 2007 to 2012 income tax returns, including the impact of a loss carryback to 2005, the Internal Revenue Service ("IRS") has proposed to tax in the U.S. profits earned from certain parts transactions by Caterpillar SARL ("CSARL"). This proposal is based on the IRS examination team's application of the "substance-over-form" or "assignment-of-income" judicial doctrines. As described by management, the Company is vigorously contesting the proposed increases to tax and penalties for these years of approximately $2.3 billion, as management believes that the relevant transactions complied with applicable tax laws and did not violate judicial doctrines. As disclosed by management, the purchase of parts by CSARL from unrelated parties and the subsequent sale of those parts to unrelated dealers outside the U.S. have substantial legal, commercial, and economic consequences for the parties involved. Management has concluded that the largest amount of benefit that is more likely than not to be sustained related to this position is the entire benefit. As a result, no amount related to these IRS adjustments is reflected in the Company's unrecognized tax benefits. The Company has filed U.S. income tax returns on this same basis for years after 2012.
+
+The principal considerations for our determination that performing procedures relating to the uncertain tax position arising from the CSARL IRS Examination is a critical audit matter are there was significant judgment by management in evaluating the amount of the benefit that is more likely than not to be sustained related to the position, which in turn led to a high degree of auditor judgment, subjectivity and effort in performing procedures to evaluate whether the position was more likely than not to be sustained. Also, the audit effort involved the use of professionals with specialized skill and knowledge to assist in evaluating the audit evidence obtained from these procedures.
+
+Addressing the matter involved performing procedures and evaluating audit evidence in connection with forming our overall opinion on the consolidated financial statements. These procedures included testing the effectiveness of controls relating to the uncertain tax position arising from the CSARL IRS Examination. These procedures also included, among others, (i) evaluating management's process for determining the reasonableness of the uncertain tax position, including reading certain intercompany and third-party agreements which are relevant to evaluating the legal form and substance of the CSARL transaction flows; (ii) evaluating management's assessment of whether the position was more likely than not to produce a tax benefit and the determination by management of the largest amount of benefit that is more likely than not to be sustained related to this position; and (iii) evaluating the Revenue Agent Reports ("RARs") from the IRS and management's protests of the RARs. Professionals with specialized skill and knowledge were used to assist in evaluating the applicable tax laws and judicial doctrines related to this matter as well as changes in relevant tax regulations, rulings, and case law.
+
+We have served as the Company's auditor since 1925.
+
+(Dollars in millions except per share data)
+
+Total sales and revenues41,748 53,800 54,722
+
+Cost of goods sold29,082 36,630 36,997
+
+Selling, general and administrative expenses4,642 5,162 5,478
+
+Research and development expenses1,415 1,693 1,850
+
+Other operating (income) expenses1,467 1,271 1,382
+
+Consolidated profit before taxes3,995 7,812 7,822
+
+Provision (benefit) for income taxes1,006 1,746 1,698
+
+Profit of consolidated companies2,989 6,066 6,124
+
+Equity in profit (loss) of unconsolidated affiliated companies14 28 24
+
+Profit of consolidated and affiliated companies3,003 6,094 6,148
+
+Less: Profit (loss) attributable to noncontrolling interests5 1 1
+
+Profit per common share$5.51 $10.85 $10.39
+
+Profit per common share — diluted 2
+
+1 Profit attributable to common shareholders.
+
+2 Diluted by assumed exercise of stock-based compensation awards using the treasury stock method.
+
+See accompanying notes to Consolidated Financial Statements.
+
+Profit (loss) of consolidated and affiliated companies$3,003 $6,094 $6,148
+
+Other comprehensive income (loss), net of tax (Note 17):
+
+Total other comprehensive income (loss), net of tax679 9 (481)
+
+Less: comprehensive income attributable to the noncontrolling interests5 1 1
+
+Comprehensive income (loss) attributable to shareholders$3,677 $6,102 $5,666
+
+See accompanying notes to Consolidated Financial Statements.
+
+Receivables – trade and other7,317 8,568
+
+Prepaid expenses and other current assets1,930 1,739
+
+Property, plant and equipment – net12,401 12,904
+
+Long-term receivables – trade and other1,185 1,193
+
+Noncurrent deferred and refundable income taxes1,523 1,411
+
+Accrued wages, salaries and employee benefits1,096 1,629
+
+Long-term debt due within one year:
+
+Long-term debt due after one year:
+
+Commitments and contingencies (Notes 21 and 22)
+
+Common stock of $1.00 par value:
+
+Issued shares: (2020 and 2019 – 814,894,624 shares) at paid-in amount
+
+Profit employed in the business35,167 34,437
+
+Total liabilities and shareholders' equity$78,324 $78,453
+
+See accompanying notes to Consolidated Financial Statements.
+
+Adjustments to adopt new accounting guidance
+
+Tax accounting for intra-entity asset transfers— — (35)— — (35)
+
+Recognition and measurement of financial assets and liabilities— — 11 (11)— —
+
+Pension and other postretirement benefits, net of tax— — — (34)— (34)
+
+Derivative financial instruments, net of tax— — — (39)— (39)
+
+Change in ownership from noncontrolling interests(25)— — — (28)(53)
+
+Common shares issued from treasury stock for stock-based compensation: 5,590,641
+
+Adjustments to adopt new accounting guidance
+
+Reclassification of certain tax effects from accumulated other comprehensive income— — (108)108 — —
+
+Pension and other postretirement benefits, net of tax— — — (34)— (34)
+
+Derivative financial instruments, net of tax— — — (8)— (8)
+
+Common shares issued from treasury stock for stock-based compensation: 5,126,379
+
+Adjustments to adopt new accounting guidance 1
+
+Pension and other postretirement benefits, net of tax— — — (29)— (29)
+
+Common shares issued from treasury stock for stock-based compensation: 5,317,243
+
+1See Note 1J regarding new accounting guidance.
+
+2Dividends per share of common stock of $4.12, $3.95 and $3.36 were declared in the years ended December 31, 2020, 2019 and 2018, respectively.
+
+3See Note 16 regarding shares repurchased.
+
+See accompanying notes to Consolidated Financial Statements.

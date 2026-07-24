@@ -1,0 +1,119 @@
+{
+  "register": "finance-audit",
+  "status": "pending_review",
+  "reviewer": "Rizwan Ahmed",
+  "created": "2026-07-24",
+  "matching": "Case-insensitive whole-phrase match with word boundaries. A tool flag counts as a term-of-art violation when its flagged span overlaps any occurrence of a whitelisted term in the text. Morphological variants listed explicitly in the variants array; no stemming.",
+  "terms": [
+    {
+      "term": "material weakness",
+      "variants": ["material weaknesses"],
+      "citation": "PCAOB AS 2201 Appendix A (.A7); SEC Regulation S-K Item 308",
+      "note": "Defined term. Required wording in adverse ICFR opinions and SOX 404 management reports. No synonym is permissible."
+    },
+    {
+      "term": "significant deficiency",
+      "variants": ["significant deficiencies"],
+      "citation": "PCAOB AS 2201 Appendix A (.A11); AS 1305 (communication to audit committees)",
+      "note": "Defined term with a severity meaning distinct from 'material weakness'. Collides with density rules on 'significant'."
+    },
+    {
+      "term": "in all material respects",
+      "variants": [],
+      "citation": "PCAOB AS 3101.08 (required opinion wording)",
+      "note": "Mandatory phrase in the auditor's opinion sentence. Cannot be rephrased."
+    },
+    {
+      "term": "reasonable assurance",
+      "variants": [],
+      "citation": "PCAOB AS 3101.09; AS 1015.10; Exchange Act Rule 13a-15(f)",
+      "note": "Defined confidence standard. 'Hedging' rules that push toward certainty language invert the regulatory meaning."
+    },
+    {
+      "term": "going concern",
+      "variants": [],
+      "citation": "PCAOB AS 2415; FASB ASC 205-40",
+      "note": "Defined term. Standard explanatory-paragraph wording is 'substantial doubt about the entity's ability to continue as a going concern'."
+    },
+    {
+      "term": "pervasive",
+      "variants": ["pervasiveness"],
+      "citation": "PCAOB AS 3105 (basis for adverse vs qualified opinion)",
+      "note": "Term of art distinguishing adverse from qualified opinions. Reads as intensifier slop out of context."
+    },
+    {
+      "term": "qualified opinion",
+      "variants": ["qualified opinions"],
+      "citation": "PCAOB AS 3105",
+      "note": "Opinion type. 'Qualified' here means restricted, near-opposite of its everyday sense."
+    },
+    {
+      "term": "adverse opinion",
+      "variants": ["adverse opinions"],
+      "citation": "PCAOB AS 3105; AS 2201.90 (ICFR)",
+      "note": "Opinion type."
+    },
+    {
+      "term": "comprehensive basis of accounting",
+      "variants": ["other comprehensive basis of accounting"],
+      "citation": "PCAOB AS 3305 (Special Reports); OCBOA",
+      "note": "Direct collision: 'comprehensive' is a Tier 1 hard-replace word in avoid-ai-writing."
+    },
+    {
+      "term": "comprehensive income",
+      "variants": ["statements of comprehensive income", "other comprehensive income"],
+      "citation": "FASB ASC 220 (Income Statement - Reporting Comprehensive Income)",
+      "note": "Defined GAAP term and required statement name. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; observed firing on real KO and DE audit opinions."
+    },
+    {
+      "term": "critical audit matter",
+      "variants": ["critical audit matters"],
+      "citation": "PCAOB AS 3101.11-.17",
+      "note": "Required auditor communication for large accelerated filers since fiscal years ending on or after 2019-06-30, so it appears throughout the 2019-2021 corpus window."
+    },
+    {
+      "term": "materiality",
+      "variants": [],
+      "citation": "PCAOB AS 2105; SEC Staff Accounting Bulletin No. 99",
+      "note": "Defined concept; 'material'/'materially' as standalone adjectives are deliberately excluded from the starter set pending review because they also occur in ordinary prose."
+    },
+    {
+      "term": "present fairly",
+      "variants": ["presents fairly", "presented fairly", "fairly presents", "fair presentation"],
+      "citation": "PCAOB AS 2815; AS 3101.08 (required opinion wording)",
+      "note": "Mandatory opinion phrase with defined meaning."
+    }
+  ],
+  "proposed_additions": [
+    {
+      "term": "substantial doubt",
+      "variants": [],
+      "citation": "PCAOB AS 2415.02; ASC 205-40-50",
+      "note": "Proposed. Trigger phrase for going-concern disclosure; hedging rules may flag it."
+    },
+    {
+      "term": "internal control over financial reporting",
+      "variants": [],
+      "citation": "Exchange Act Rules 13a-15(f)/15d-15(f); PCAOB AS 2201",
+      "note": "Proposed. Defined term; wordiness rules may target it."
+    },
+    {
+      "term": "forward-looking statements",
+      "variants": ["forward-looking statement"],
+      "citation": "PSLRA of 1995, Securities Act Section 27A / Exchange Act Section 21E",
+      "note": "Proposed. Safe-harbor language is statutorily motivated hedging."
+    },
+    {
+      "term": "safe harbor",
+      "variants": [],
+      "citation": "PSLRA of 1995, Securities Act Section 27A / Exchange Act Section 21E",
+      "note": "Proposed."
+    },
+    {
+      "term": "free of material misstatement",
+      "variants": ["free from material misstatement"],
+      "citation": "PCAOB AS 3101.09 (required basis-for-opinion wording)",
+      "note": "Proposed. Mandatory phrase."
+    }
+  ]
+}
