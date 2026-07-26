@@ -1,0 +1,434 @@
+{
+  "tool": "the-antislop",
+  "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
+  "run_date": "2026-07-24",
+  "run_n": 3,
+  "options": {
+    "model": "claude-sonnet-5",
+    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. One independent pass per draft per run (matches the API harness's per-file call granularity). Supersedes the earlier N=1 preview files, which used coarser per-tool-all-drafts granularity."
+  },
+  "files": {
+    "fin-01.md": {
+      "words": 371,
+      "findings": [
+        {
+          "rule": "Pivotal moment (Tier 1: Almost Always AI)",
+          "text": "marking a pivotal moment in the Company's product history",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation (Content Patterns)",
+          "text": "marking a pivotal moment in the Company's product history",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Moreover/Furthermore (Tier 1: Almost Always AI)",
+          "text": "Moreover, the weakness in foreign currencies had an unfavorable impact on net sales during the year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb) (Tier 1: Almost Always AI)",
+          "text": "the Company leverages its installed base across products, services, and experiences",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms (Language Patterns)",
+          "text": "This was not a temporary disruption. It was a structural shift.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Comparator Sentences (Structural Patterns)",
+          "text": "This was not a temporary disruption. It was a structural shift.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three (Language Patterns)",
+          "text": "products, services, and experiences",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler phrases (Filler and Hedging)",
+          "text": "in order to meet that demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive hedging (Filler and Hedging)",
+          "text": "could potentially affect demand for consumer products into the next fiscal year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions (Filler and Hedging)",
+          "text": "Only time will tell how durable these gains prove.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Promotional language (Content Patterns)",
+          "text": "The seamless integration of hardware and services continued to differentiate the Company's offerings from those of its competitors.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-02.md": {
+      "words": 379,
+      "findings": [
+        {
+          "rule": "Copula avoidance",
+          "text": "Azure serves as a cornerstone of the commercial cloud",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague attributions",
+          "text": "it is widely regarded as the primary engine of the Company's growth",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False ranges",
+          "text": "from startups to superpowers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "The result: a durable franchise.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-03.md": {
+      "words": 397,
+      "findings": [
+        {
+          "rule": "Vague attributions",
+          "text": "experts believe transfer-pricing disputes of this size can take a decade to resolve",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Moreover/Furthermore",
+          "text": "Furthermore,",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler phrases",
+          "text": "due to the fact that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Interplay",
+          "text": "the interplay between jurisdictional tax law and the Company's documented intent",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "boasts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Comparator Sentences",
+          "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-04.md": {
+      "words": 356,
+      "findings": [
+        {
+          "rule": "Staccato Fragment Spam",
+          "text": "Demand collapsed. Fleets parked. Cash burned.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "a watershed moment for the industry",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "safety, liquidity, and recovery",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "The future looks bright for carriers that adapt.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-05.md": {
+      "words": 349,
+      "findings": [
+        {
+          "rule": "Boldface overuse",
+          "text": "**Consumer Health**, **Pharmaceutical**, and **Medical Devices**",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "It's worth noting",
+          "text": "It is important to note that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Boldface overuse",
+          "text": "**particularly significant**",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague attributions",
+          "text": "Studies show that diversified healthcare companies outperform single-segment peers across economic cycles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms",
+          "text": "not just a product portfolio but a platform",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Synonym cycling",
+          "text": "the enterprise treats its breadth as not just a product portfolio but a platform. The organization invests accordingly, and the healthcare giant's scale allows those investments to compound.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "a testament to the research organization",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial -ing analyses",
+          "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive hedging",
+          "text": "could potentially reshape",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-06.md": {
+      "words": 342,
+      "findings": [
+        {
+          "rule": "Tier 2: Suspicious When Repeated \u2014 In this post, we'll cover (template opening)",
+          "text": "In this memorandum, we'll walk through",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (\"implement\")",
+          "text": "implemented",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Structural Patterns (Critical) \u2014 Staccato Fragment Spam",
+          "text": "Key reconciliation, review, and certification controls operated on schedule. Tested. Documented. Certified.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Rule of three",
+          "text": "Key reconciliation, review, and certification controls",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Communication Patterns \u2014 Chatbot artifacts",
+          "text": "I hope this summary helps clarify our approach.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Communication Patterns \u2014 Cutoff disclaimers",
+          "text": "As of my last update",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Communication Patterns \u2014 Sycophantic tone",
+          "text": "That's a great question from the committee",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-07.md": {
+      "words": 355,
+      "findings": [
+        {
+          "rule": "Comparator Sentences",
+          "text": "The question isn't whether to return capital. It's how fast.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "utilizes commercial paper markets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive hedging",
+          "text": "might possibly compress",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "Only time will tell.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-08.md": {
+      "words": 361,
+      "findings": [
+        {
+          "rule": "Intricate/intricacies (Tier 1: Almost Always AI)",
+          "text": "the intricacies of the program mix",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance (Language Patterns)",
+          "text": "stands as the single largest management estimate in the revenue cycle",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague attributions (Content Patterns)",
+          "text": "Observers note that dealer-network incentive structures of this kind are multifaceted in ways that centralized rebate programs are not",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False ranges (Language Patterns)",
+          "text": "programs reach from the shop floor to the boardroom",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial -ing analyses (Content Patterns)",
+          "text": "highlighting the significance of dealer-level data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Manufactured Personality (Advanced Structural Tells)",
+          "text": "Here is the part most reviewers skip:",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-09.md": {
+      "words": 354,
+      "findings": [
+        {
+          "rule": "Leverage (as verb) (Tier 1: Almost Always AI)",
+          "text": "Leveraging the extensive resources across the enterprise",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three (Language Patterns)",
+          "text": "blend heart, science and ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Staccato Fragment Spam (Structural Patterns)",
+          "text": "Heart. Science. Ingenuity. The Credo is not a slogan. Not a poster. An operating system.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Comparator Sentences (Structural Patterns)",
+          "text": "The Credo is not a slogan. Not a poster. An operating system.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation (Content Patterns)",
+          "text": "to profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "fin-10.md": {
+      "words": 330,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Game-changer",
+          "text": "The commercial cloud is a game-changer for the revenue mix",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Cutting-edge",
+          "text": "the cutting-edge infrastructure investments of the past five years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Structural Patterns (Critical) \u2014 Staccato Fragment Spam",
+          "text": "Azure grew 56%. Office held. Gaming climbed.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Advanced Structural Tells \u2014 Manufactured Personality",
+          "text": "Azure grew 56%. Office held. Gaming climbed. The takeaway: cloud is the business.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Rule of three",
+          "text": "products, platforms, and partnerships",
+          "index": null,
+          "severity": null
+        }
+      ]
+    }
+  }
+}

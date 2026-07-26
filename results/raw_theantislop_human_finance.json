@@ -1,0 +1,563 @@
+{
+  "tool": "the-antislop",
+  "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
+  "run_date": "2026-07-24",
+  "options": {
+    "model": "claude-sonnet-5",
+    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. Whole 18-document clean/ corpus, one pass per tool. See NOTES.md."
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": [
+        {
+          "rule": "Align with (Tier 1: Almost Always AI)",
+          "text": "each one is managed separately to better align with the location of the Company's customers and distribution partners and the unique market dynamics of each geographic region",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality (Language Patterns #12)",
+          "text": "The Company will adopt ASU 2016-13 in its first quarter of 2021 utilizing the modified retrospective transition method.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality (Language Patterns #12)",
+          "text": "the Company was authorized to purchase up to $225 billion of the Company's common stock under a share repurchase program, of which $168.6 billion had been utilized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality (Language Patterns #12)",
+          "text": "The Company utilizes several outsourcing partners to manufacture sub-assemblies for the Company's products and to perform final assembly and testing of finished products.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI (Remove Immediately) \u2014 Align with",
+          "text": "which align with our cash deployment actions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "We continue to implement safeguards in our facilities to protect team members",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "other cost-reduction actions implemented in response to lower sales volumes and the benefits of prior restructuring programs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "other cost-reduction actions implemented and benefits from prior restructuring programs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "other cost-reduction actions implemented in response to lower sales volumes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "We intend to utilize our liquidity and debt capacity to fund targeted investments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "We review goodwill for impairment utilizing either a qualitative assessment or a quantitative goodwill impairment test.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "We utilize a mark-to-market approach in recognizing actuarial gains or losses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "we utilize a full yield curve approach in determining a discount rate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "Caterpillar management utilizes this presentation internally to highlight these differences.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging \u2014 Filler phrases (#22)",
+          "text": "In order for our results to be more meaningful to our readers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging \u2014 Filler phrases (#22)",
+          "text": "In order to properly manage sensitivity to changes in interest rates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging \u2014 Filler phrases (#22)",
+          "text": "in order for our results to be meaningful to our readers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Style Patterns \u2014 List addiction (#17)",
+          "text": "\u2022In North America, sales decreased mostly due to lower sales volume driven by lower end-user demand and the impact from changes in dealer inventories. Dealers decreased inventories during 2020, compared with an increase during 2019.\n\n\u2022Sales declined in Latin America primarily due to the impact from changes in dealer inventories and unfavorable currency impacts from a weaker Brazilian real. Dealers decreased inventories during 2020, compared with a slight increase during 2019.\n\n\u2022In EAME, sales decreased mostly due to lower end-user demand and the impact from changes in dealer inventories across most countries in the region. Dealers decreased inventories more in 2020 than in 2019.\n\n\u2022Sales declined in Asia/Pacific primarily due to lower sales volume driven by the impact of changes in dealer inventories, lower end-user demand across most of the region and unfavorable price realization due to competitive market conditions in China.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": [
+        {
+          "rule": "Copula avoidance",
+          "text": "We have served as the Company's auditor since 1925.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Align with",
+          "text": "align with expected demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Align with",
+          "text": "align with demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "The terminal will feature a new, larger Delta Sky Club, wider concourses, more gate seating and 75% more concessions space than the existing terminals.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "we have implemented, and will continue to implement, cost saving initiatives",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "aircraft in our fleet not then being utilized for passenger travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "an entity is required to utilize an \"expected credit loss model\"",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": [
+        {
+          "rule": "Title Case Headings",
+          "text": "Notes to the Consolidated Financial Statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "How We Addressed the Matter in Our Audit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's accounting for its employee benefit plans",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's accounting for long-lived asset impairments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "obtained an understanding, evaluated the design, and tested the operating effectiveness of controls that address the risks of material misstatement relating to the realizability of deferred tax assets",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Tier 1 (Almost Always AI): Moreover/Furthermore",
+          "text": "Moreover, new restrictions could have an adverse effect on production, supply chains, distribution, and demand for vehicles.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 (Almost Always AI): Moreover/Furthermore",
+          "text": "Moreover, our suspension of production earlier this year put pressure on our Automotive liquidity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 (Almost Always AI): Moreover/Furthermore",
+          "text": "Moreover, we do not provide any guarantees in connection with the SCF program.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 (Almost Always AI): Align with",
+          "text": "it allows users to evaluate our operating results aligned with industry reporting.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns: Clinical formality",
+          "text": "for many individuals to substantially restrict daily activities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns: Clinical formality",
+          "text": "The remote work arrangements that we implemented in 2020 remain in place in most locations.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns: Clinical formality",
+          "text": "austerity measures implemented in response to the business environment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns: Clinical formality",
+          "text": "tax planning strategies would be implemented to accelerate taxable amounts to utilize expiring carryforwards",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging: Filler phrases",
+          "text": "in order to evaluate our cost trends absent the impact of varying production and currency exchange levels",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging: Filler phrases",
+          "text": "on a non-recourse basis in order to be paid earlier than our payment terms provide",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging: Excessive hedging",
+          "text": "Ford and other manufacturers could potentially face significant incremental recall costs.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 \"Leverage (as verb)\"",
+          "text": "continuing to leverage our digital platforms for their shopping needs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns #12 \u2014 \"Clinical formality\" (trigger word: \"implement\")",
+          "text": "we implemented a change to store operating hours",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns #12 \u2014 \"Clinical formality\" (trigger word: \"implement\")",
+          "text": "the implementation of a temporary weekly bonus program",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns #12 \u2014 \"Clinical formality\" (trigger word: \"implement\")",
+          "text": "have implemented permanent compensation enhancements for frontline, hourly associates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns #12 \u2014 \"Clinical formality\" (trigger word: \"implement\")",
+          "text": "the enhanced pay and benefits implemented in fiscal 2020",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": [
+        {
+          "rule": "Title Case Headings",
+          "text": "To the Stockholders and Board of Directors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Opinion on the Consolidated Financial Statements",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "the Company utilized three wholesalers distributing products for all three segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "the Company announced plans to implement actions across its global supply chain",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "blend heart, science and ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial -ing analyses",
+          "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships that will profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI (Remove Immediately) \u2014 Moreover/Furthermore",
+          "text": "Moreover, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "utilizing third party information on price and market conditions in the U.S. pharmaceutical market",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Moreover/Furthermore",
+          "text": "Furthermore, COVID-19 has impacted the broader economies of affected countries, including negatively impacting economic growth.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Leverage (as verb)",
+          "text": "businesses share technology and leverage common fundamental strengths and capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Align with",
+          "text": "The change to business segment operating income aligns with the update to how the CODM assesses performance and allocates resources for the Company's business segments.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "3M utilizes a number of tools to hedge currency risk related to earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "the Company also utilizes geographic area data as a secondary performance measure.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "continues to evaluate commercial contracts that may utilize LIBOR as the reference rate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "These instruments are utilized in connection with normal business activities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "The Company does not utilize derivative instruments linked to the Company's stock.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "the Company has not utilized special purpose entities to facilitate off-balance sheet financing arrangements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality (#12)",
+          "text": "implemented plant and/or line shutdowns during 2020 related to certain markets due to weaker customer demand or government mandates.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging \u2014 Filler phrases (#22)",
+          "text": "in order to more closely align its product capability with its sales in major geographic areas",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler and Hedging \u2014 Filler phrases (#22)",
+          "text": "in order to best serve its customers throughout the world with proprietary, automated, efficient, safe and sustainable processes",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": [
+        {
+          "rule": "Tier 1: Almost Always AI \u2014 Align with",
+          "text": "align with our business strategy",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality",
+          "text": "We compete for talented individuals globally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Clinical formality",
+          "text": "governmental, business, and individuals' actions in response to the pandemic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Language Patterns \u2014 Rule of three",
+          "text": "local opportunity, growth, and impact",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

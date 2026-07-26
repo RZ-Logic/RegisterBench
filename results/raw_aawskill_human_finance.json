@@ -1,0 +1,991 @@
+{
+  "tool": "avoid-ai-writing-skill",
+  "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+  "run_date": "2026-07-24",
+  "options": {
+    "model": "claude-sonnet-5",
+    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. Whole 18-document clean/ corpus, one pass per tool. See NOTES.md."
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": [
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees. The bar entitled Other includes consolidating adjustments and Machinery, Energy & Transportation other operating (income) expenses.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees. The bar entitled Other includes consolidating adjustments and Machinery, Energy & Transportation other operating (income) expenses.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "We intend to utilize our liquidity and debt capacity to fund targeted investments that drive long-term profitable growth focused in the areas of expanded offerings and services, including acquisitions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "We review goodwill for impairment utilizing either a qualitative assessment or a quantitative goodwill impairment test.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "We utilize a mark-to-market approach in recognizing actuarial gains or losses immediately through earnings upon the annual remeasurement in the fourth quarter, or on an interim basis as triggering events warrant remeasurement.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "In estimating the service and interest cost components of net periodic benefit cost, we utilize a full yield curve approach in determining a discount rate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"utilize | use\")",
+          "text": "Caterpillar management utilizes this presentation internally to highlight these differences.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word/phrase table: \"in order to | to\")",
+          "text": "In order to properly manage sensitivity to changes in interest rates, Financial Products measures the potential impact of different interest rate assumptions on pre-tax earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, in such event, certain of Cat Financial's other lenders under other loan agreements where similar financial covenants or cross default provisions are applicable, may, at their election, choose to pursue remedies under those loan agreements, including accelerating the repayment of outstanding borrowings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Strong financial position \u2014 Our top priority is to maintain a strong financial position in support of a mid-A rating.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Operational excellence and commitments \u2014 Capital expenditures were $994 million during 2020, compared to $1.07 billion in 2019.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Fund strategic growth initiatives and return capital to shareholders \u2014 We intend to utilize our liquidity and debt capacity to fund targeted investments that drive long-term profitable growth focused in the areas of expanded offerings and services, including acquisitions.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (seamless / seamlessly)",
+          "text": "with the goal of providing customers with a seamless travel experience and industry-leading connectivity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "using aircraft in our fleet not then being utilized for passenger travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "strategic changes to our operations leading to diminished utilization of the intangible assets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "In evaluating the likelihood of utilizing our net deferred income tax assets, the significant factors that we consider include",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "to generate sufficient taxable income to utilize our federal net operating loss carryforwards before any expire",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "an entity is required to utilize an \"expected credit loss model\" on certain financial instruments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (utilize)",
+          "text": "Load Factor - A measure of utilized available seating capacity calculated by dividing RPMs by ASMs for a reporting period.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "The terminal will feature a new, larger Delta Sky Club, wider concourses, more gate seating and 75% more concessions space than the existing terminals.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Free Cash Flow - Represents the cash available for use for debt service or general corporate initiatives.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, some states have instituted travel restrictions, advisories or quarantines for travelers from other states within the U.S.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, we are extending 2020 Medallion Status an additional year, rolling Medallion Qualification Miles into 2021 and extending Delta SkyMiles American Express Card benefits and Delta Sky Club memberships.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, many countries have implemented international testing requirements, which has slowed demand in the short-term but is expected to enhance the long-term recovery of international air travel.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, in the March 2020 quarter, we started codesharing for certain flights operated by LATAM.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, due to the decrease in demand for jet fuel, the refinery has shifted production to produce more non-jet fuel products.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, in 2020, we enhanced the project's scope to include a more customer-friendly design of Terminal 3, a Delta One lounge and expanded Delta Sky Club, and baggage system upgrades designed to increase the terminals' operational efficiency going forward.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (Moreover / Furthermore / Additionally)",
+          "text": "Additionally, participants in the American Express Membership Rewards program may exchange their points for miles under the loyalty program.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive structure (Too many list items: 8+ bullet points in under 200 words)",
+          "text": "\u2022Reducing capacity as described above to align with expected demand, which has resulted in removing from active service approximately 350 aircraft as of December 31, 2020, including certain fleets or aircraft that we have decided to early retire as described below.\n\n\u2022Consolidating our footprint at our airport facilities, including temporarily closing some Delta Sky Clubs.\n\n\u2022Avoiding furloughs for our U.S. employees and reducing employee-related costs, through the following:\n\n\u25e6Voluntary unpaid leaves of 30 days to 12 months offered to most employees. Approximately 50,000 of our employees have taken or have elected to take voluntary leaves at various times during 2020 and, for those taking leaves up to 12 months, continuing through 2021.\n\n\u25e6Offering employees early retirement and voluntary separation programs, with approximately 18,000 employees electing to participate. See Note 11 of the Notes to the Consolidated Financial Statements for additional information.\n\n\u25e6Reaching an agreement with ALPA that protects our pilots from furlough through April 2022.\n\n\u25e6From April 1 through December 31, 2020, salary reductions of 100% for our CEO, 50% for our officers and a 25% reduction in work hours for all other management and most front-line employee work groups.\n\n\u2022Delaying or eliminating nearly all other discretionary spending.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive structure (Too many list items: 8+ bullet points in under 200 words)",
+          "text": "\u2022Raising $9.0 billion through the issuance of notes and entry into a term loan facility, each secured by certain assets related to our SkyMiles program.\n\n\u2022Issuing $3.5 billion of senior secured notes and entering into a $1.5 billion term loan, both of which are secured by certain slots, gates and routes.\n\n\u2022Entering into a $3.0 billion 364-day secured term loan facility with an original maturity in March 2021, which was repaid early and terminated in October 2020.\n\n\u2022Entering into $2.8 billion of sale-leaseback transactions. Approximately $2.3 billion of these transactions were treated as financing activities with the remainder treated as investing activities. See Note 9 of the Notes to the Consolidated Financial Statements for additional information.\n\n\u2022Entering into a promissory note for the $1.6 billion CARES Act payroll support program loan.\n\n\u2022Entering into loan agreements to borrow $1.5 billion from the NYTDC in connection with NYTDC's issuance of Special Facilities Revenue Bonds, Series 2020, to finance, among other things, a portion of the construction costs for the new terminal facilities at LaGuardia Airport.\n\n\u2022Completing $1.7 billion in transactions secured by aircraft, including EETC issuances and aircraft loans.\n\n\u2022Issuing $1.3 billion of unsecured notes.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Restructuring charges. We recognized restructuring charges following strategic business decisions in response to the COVID-19 pandemic.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Government grant recognition. We recognized the full grant proceeds from the CARES Act payroll support program as a contra-expense in 2020.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Pension settlement charges. These charges were recognized in connection with the voluntary programs.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Equity investment MTM adjustments. We previously recorded our proportionate share of losses from our equity investments in Virgin Atlantic, Grupo Aerom\u00e9xico and LATAM in non-operating expense.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022MTM adjustments on investments. Unrealized gains/losses result from our equity investments that are accounted for at fair value in non-operating expense.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Delta Private Jets adjustment. Because we combined Delta Private Jets with Wheels Up in January 2020, we have excluded the impact of Delta Private Jets from 2019 results for comparability.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Third-party refinery sales. We adjust operating expense for refinery sales to third parties to determine operating expense, adjusted because these revenues, and related expenses, are not related to our airline segment.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Strategic investments and related. Cash flows related to our investment in and related transactions with other airlines are included in our GAAP investing activities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "\u2022Profit sharing. We adjust for profit sharing because this adjustment allows investors to better understand and analyze our recurring cost performance and provides a more meaningful comparison of our core operating costs to the airline industry.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": [
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, we performed sensitivity analyses to evaluate the changes to the Company's net periodic benefit that would result from changes in the fair value measurement",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, we tested the completeness and accuracy of the data used by management",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": [
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Internal Control \u2014 Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission and our report dated December 17, 2020, expressed an unqualified opinion on the Company's internal control over financial reporting.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Sales Incentives \u2014 Refer to Note 2 to the financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Internal Control \u2014 Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (COSO).",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes (\u2014 and --)",
+          "text": "Internal Control \u2014 Integrated Framework (2013) issued by COSO.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "The allowance for credit losses represents an estimate of the losses inherent in the Company's receivable portfolio.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, the revolving charge accounts portfolio is more susceptible to losses as the loans within this portfolio are unsecured.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Sales Incentives \u2014 Refer to Note 2 to the financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Allowance for Credit Losses \u2013 Refer to Notes 2 and 13 to the financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Excessive structure",
+          "text": "Our audit procedures related to testing the allowance for credit losses for the revolving charge accounts portfolio included the following:\n\n\u25cfWe tested the effectiveness of controls over the determination of the allowance for credit losses for the revolving charge accounts portfolio, including the qualitative factors considered.\n\n\u25cfWe evaluated the accuracy and relevance of the underlying historical data used in the Company's model which included:\n\n\u25cfWe tested the computational accuracy of the Company's model.\n\n\u25cfWe evaluated the various qualitative adjustment factors considered in the Company's determination of the allowance for credit losses. Our evaluation included:\n\n\u25cfComparison of the qualitative factors used by the Company to source data provided by the Company and/or to externally\n\n\u25cfConsideration and evaluation of contradictory evidence\n\n\u25cfConsideration of specific revolving charge accounts portfolio delinquency trends within particular geographic locations\n\n\u25cfWe evaluated management's ability to accurately estimate the losses inherent in the revolving charge accounts portfolio by comparing management's historical estimates to actual losses incurred.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "robust",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "In order to compensate Ford Credit for the lower interest or lease payments offered to the retail customer",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "in order to evaluate our cost trends absent the impact of varying production and currency exchange levels",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "in order to be paid earlier than our payment terms provide",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "the utilized portion of the corporate credit facility was $27 million, representing amounts utilized for letters of credit, and no portion of the supplemental revolving credit facility was utilized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "while more than 50% of the aggregate amount of commitments under the two facilities is utilized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
+          "text": "tax planning strategies would be implemented to accelerate taxable amounts to utilize expiring carryforwards",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Moreover, new restrictions could have an adverse effect on production, supply chains, distribution, and demand for vehicles.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Moreover, our suspension of production earlier this year put pressure on our Automotive liquidity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Moreover, we do not provide any guarantees in connection with the SCF program.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Hedge-stacked predictions",
+          "text": "Ford and other manufacturers could potentially face significant incremental recall costs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Compulsive rule of three",
+          "text": "Ford Credit's liquidity profile continues to be diverse, robust, and focused on maintaining liquidity levels that meet its business and funding requirements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Compulsive rule of three",
+          "text": "Ford's ability to attract and retain talented, diverse, and highly skilled employees is critical to its success and competitiveness",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Discount rates. Our discount rate assumptions are based primarily on the results of cash flow matching analyses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Salary growth. Our salary growth assumption reflects our actual experience, long-term outlook, and assumed inflation.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Inflation. Our inflation assumption is based on an evaluation of external market indicators, including real gross domestic product growth and central bank inflation targets.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Expected contributions. Our expected amount and timing of contributions are based on an assessment of minimum requirements, cash availability, and other considerations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Retirement rates. Retirement rates are developed to reflect actual and projected plan experience.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Mortality rates. Mortality rates are developed to reflect actual and projected plan experience.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Health care cost trends. Our health care cost trend assumptions are developed based on historical cost data, the near-term outlook, and an assessment of likely long-term trends.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Tax planning strategies. If necessary and available, tax planning strategies would be implemented to accelerate taxable amounts to utilize expiring carryforwards.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Business projections. We make assumptions about the demand for our products in the marketplace.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Long-term growth rate. A growth rate is used to calculate the terminal value of the business",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Discount rate. When measuring possible impairment, future cash flows are discounted at a rate that is consistent with a weighted-average cost of capital",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Economic projections. Assumptions regarding general economic conditions are included in and affect our assumptions regarding industry sales and pricing estimates for our vehicles.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Probability of default. The expected probability of payment and time to default, which include assumptions about macroeconomic factors and recent performance",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Loss given default. The percentage of the expected balance due at default that is not recoverable.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Auction value. Ford Credit's projection of the market value of the vehicles when sold at the end of the lease",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List-label periods",
+          "text": "Return volume. Ford Credit's projection of the number of vehicles that will be returned at lease-end.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": [
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the actuarial model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Opinions on the Financial Statements and Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": [
+        {
+          "rule": "Tier 1 \u2014 Always replace (leverage (verb) \u2192 use)",
+          "text": "customers continuing to leverage our digital platforms for their shopping needs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Results of Operations and Non-GAAP Measures",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Cash and Cash Equivalents at End of Year",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": [
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, professionals with specialized skills and knowledge assisted the engagement team.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "invest for an enduring impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "In 2020, the Company utilized three wholesalers distributing products for all three segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "The robust, active business continuity plans across the Company's network have been instrumental in preparing the Company for events like COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "ability to achieve comprehensive multi-party settlements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace",
+          "text": "scientific and legal discovery has not commenced or is not complete",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "This represents increases of 2.5% in 2020 and 0.5% in 2019.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "This represents a decrease of 1.3% in 2020 and an increase of 0.7% in 2019.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "that represented approximately 16.0%, 12.0% and 12.0% of the total consolidated revenues",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "that represented approximately 15.0%, 12.0% and 11.0% of the total consolidated revenues",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Immunology products sales were $15.1 billion in 2020, representing an increase of 7.9% as compared to the prior year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Infectious disease products sales were $3.6 billion in 2020, representing an increase of 4.7% as compared to the prior year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Neuroscience products sales were $6.5 billion, representing an increase of 3.5% as compared to the prior year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Oncology products achieved sales of $12.4 billion in 2020, representing an increase of 15.7% as compared to the prior year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Pulmonary Hypertension products achieved sales of $3.1 billion, representing an increase of 20.0% as compared to the prior year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Research and development activities represent a significant part of the Company's business.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Total debt represented 35.8% of total capital (shareholders' equity and total debt) in 2020 and 31.8% of total capital in 2019.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "Sales returns allowances represent a reserve for products that may be returned due to expiration, destruction in the field, or in specific areas, product recall.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "the business of the Company's U.K. subsidiaries represented less than 6% of the Company's consolidated assets and less than 3% of the Company's fiscal twelve months revenues",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "the economic conditions continue to present significant challenges",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "matters present legal uncertainties",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Analysis of Sales by Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "In-Process Research and Development (IPR&D):",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Other (Income) Expense, Net:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Interest (Income) Expense:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Medical Devices Segment:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Provision for Taxes on Income:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Revenue Recognition:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Income Taxes:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Legal and Self Insurance Contingencies:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Long-Lived and Intangible Assets:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Employee Benefit Plans:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Stock Based Compensation:",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Tier 1 \u2014 Always replace (word table entry: \"comprehensive | thorough, complete, full\")",
+          "text": "comprehensive income",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word table entry: \"comprehensive | thorough, complete, full\")",
+          "text": "ability to achieve comprehensive multi-party settlements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word table entry: \"comprehensive | thorough, complete, full\")",
+          "text": "ability to achieve comprehensive multi-party settlements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 \u2014 Always replace (word table entry: \"utilize | use\", matched via inflected -ing form per \"Match inflected forms\")",
+          "text": "utilizing third party information",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (\"Moreover\" / \"Furthermore\" / \"Additionally\")",
+          "text": "Moreover, projections of any evaluation of effectiveness to future periods are subject to the risk",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": [
+        {
+          "rule": "Hedge-stacked predictions",
+          "text": "could ultimately be upheld",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "3M utilizes a number of tools to hedge currency risk related to earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "the Company also utilizes geographic area data as a secondary performance measure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "commercial contracts that may utilize LIBOR as the reference rate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "(utilizing the foreign exchange rates applicable at the time of issuance for the euro denominated debt)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "These instruments are utilized in connection with normal business activities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "The Company does not utilize derivative instruments linked to the Company's stock.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"utilize\" \u2192 \"use\")",
+          "text": "the Company has not utilized special purpose entities to facilitate off-balance sheet financing arrangements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"leverage\" (verb) \u2192 \"use\")",
+          "text": "businesses share technology and leverage common fundamental strengths and capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"in order to\" \u2192 \"to\")",
+          "text": "in order to more closely align its product capability with its sales in major geographic areas",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"in order to\" \u2192 \"to\")",
+          "text": "in order to best serve its customers throughout the world",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler phrases (\"In terms of\")",
+          "text": "In terms of SG&A as a percent of sales, partially offsetting these decreases was the overall effect of the COVID-19 pandemic on sales that resulted in higher costs as a percent of sales.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace \u2014 Tier 2 \u2014 Flag when 2+ appear in the same paragraph (\"encompass\" + \"transformation\")",
+          "text": "The Company is investing in an initiative called business transformation, with these investments impacting cost of sales, SG&A, and R&D. Business transformation encompasses the ongoing multi-year phased implementation of an enterprise resource planning (ERP) system on a worldwide basis, as well as changes in processes and internal/external service delivery across 3M.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": [
+        {
+          "rule": "Title case headings",
+          "text": "Opinions on the Financial Statements and Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": [
+        {
+          "rule": "Tier 1 \u2014 Always replace (commence \u2192 start, begin)",
+          "text": "In April 2020, the IRS commenced the audit for tax years 2014 to 2017.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph (empower)",
+          "text": "Microsoft is a technology company whose mission is to empower every person and every organization on the planet to achieve more. We strive to create local opportunity, growth, and impact in every country around the world. Our platforms and tools help drive small business productivity, large business competitiveness, and public-sector efficiency. They also support new startups, improve educational and health outcomes, and empower human ingenuity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite (\"Additionally\")",
+          "text": "Additionally, we have agreed to cover damages resulting from breaches of certain security and privacy commitments in our cloud business.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

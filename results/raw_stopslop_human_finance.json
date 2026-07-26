@@ -1,0 +1,4708 @@
+{
+  "tool": "stop-slop",
+  "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
+  "run_date": "2026-07-24",
+  "options": {
+    "model": "claude-sonnet-5",
+    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. Whole 18-document clean/ corpus, one pass per tool. See NOTES.md."
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "generally discusses 2020 and 2019 items",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "has spread rapidly throughout the world",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "has significantly curtailed global economic activity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "have adversely affected and could in the future",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially adversely impact the Company's business",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "adversely impact the Company's business, results of operations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "aspects of the Company's business were adversely affected by the COVID-19 pandemic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "channel partner points of sale, temporarily closed at various times",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the vast majority of the Company's employees working remotely",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "it continues to work on safely re-opening the remainder",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "operational and financial performance is currently uncertain and will depend",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily driven by higher net sales of Services and Wearables",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "information has been retroactively adjusted to reflect the stock split",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "decreased during 2020 compared to 2019 due primarily to the absence of new iPhone models",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by the introduction of iPhone SE in the third quarter",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of MacBook Pro",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of 10-inch versions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of AirPods",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales from the App Store",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The Company manages its business primarily on a geographic basis",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "each one is managed separately to better align with the location",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of Services and Wearables",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of iPhone",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "decreased during 2020 compared to 2019 due primarily to lower net sales of iPhone",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by higher net sales of Services and iPad",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "were flat during 2020 compared to 2019 due primarily to lower net sales of iPhone",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased during 2020 compared to 2019 due primarily to higher net sales of Wearables",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Products gross margin increased during 2020 compared to 2019 due primarily to higher Products volume",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by the weakness in foreign currencies relative to the U.S. dollar and a different Products mix",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Products gross margin percentage decreased during 2020 compared to 2019 due primarily to the weakness",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by material cost savings and higher leverage",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Services gross margin increased during 2020 compared to 2019 due primarily to higher Services net sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Services gross margin percentage increased during 2020 compared to 2019 due primarily to a different Services mix",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by higher Services costs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was driven primarily by increases in headcount-related expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was driven primarily by increases in headcount-related expenses, higher spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was due primarily to lower interest income and net impairment/gain activity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by lower interest expense",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was 1.85% and 2.19% in 2020 and 2019, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was lower than the statutory federal income tax rate due primarily to the lower tax rate on foreign earnings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was lower compared to 2019 due primarily to a one-time adjustment of U.S. foreign tax credits",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "total marketable securities included $18.6 billion and $18.9 billion, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "investment portfolio is primarily invested in highly rated securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is primarily invested in highly rated securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The Company's investment policy generally requires securities to be investment grade",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Cash used in investing activities of $4.3 billion during 2020 consisted primarily of cash used to acquire property",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by proceeds from maturities and sales of marketable securities, net of purchases",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Cash used in financing activities of $86.8 billion during 2020 consisted primarily of cash used to repurchase common stock",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by net proceeds from the issuance of term debt of $16.1 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by a decrease in the net change in operating assets and liabilities of $3.5 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Cash generated by investing activities of $45.9 billion during 2019 consisted primarily of proceeds from sales and maturities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by cash used to acquire property, plant and equipment of $10.5 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Cash used in financing activities of $91.0 billion during 2019 consisted primarily of cash used to repurchase common stock",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by net proceeds from the issuance of term debt of $7.0 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "maturities generally less than nine months",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "an aggregate principal amount of $106.1 billion (collectively the \"Notes\")",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "shares may be repurchased in privately negotiated and/or open market transactions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "supplier arrangements, which are primarily noncancelable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "leases typically have original terms not exceeding 10 years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "not exceeding 10 years and generally contain multi-year renewal options",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "supplied by the Company, which typically covers periods up to 150 days",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "non-current liabilities primarily consist of items for which",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "unable to make a reasonably reliable estimate of the timing",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in conformity with U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "make judgments and estimates about inherently uncertain matters",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "up to three performance obligations regularly included in arrangements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "and the amount is reasonably estimable, the determination of which",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The outcome of litigation is inherently uncertain",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could be materially adversely affected",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could be materially adversely affected",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "aspects of the Company's business were adversely affected by the COVID-19 pandemic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "information has been retroactively adjusted to reflect the stock split",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which are bundled in the sales price of the respective product",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which are bundled in the sales price of certain products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "each one is managed separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The Company's future gross margins can be impacted by a variety of factors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was driven primarily by increases in headcount-related expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The year-over-year growth in selling, general and administrative expense in 2020 was driven primarily by increases in headcount-related expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "income that may be generated as a result of certain tax planning strategies",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that was restricted from general use",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the adjusted recovery amount of \u20ac12.9 billion plus interest of \u20ac1.2 billion was funded into escrow",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Further information regarding the State Aid Decision can be found in Part II, Item 8 of this Form 10-K",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "investment portfolio is primarily invested in highly rated securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Further information regarding the Company's debt issuances and related hedging activity can be found in Part II, Item 8 of this Form 10-K",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the Company was authorized to purchase up to $225 billion of the Company's common stock under a share repurchase program",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "of which $168.6 billion had been utilized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "shares may be repurchased in privately negotiated and/or open market transactions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were therefore recorded on the Company's Consolidated Balance Sheet",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "leases that had been signed but not yet commenced as of September 26, 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Further information regarding the Company's leases can be found in Part II, Item 8 of this Form 10-K",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "such amounts are not included in the above contractual obligations table",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is deferred and recognized on a straight-line basis over the estimated period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "they are expected to be provided",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "their estimated value and the estimated period they are expected to be provided",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "inventory orders that have been canceled",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "or are expected to be canceled",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the Company may be required to record write-downs or impairments of manufacturing-related assets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "in the period the related revenue is recognized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "revisions to the estimated warranty liabilities would be required",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the tax position will be sustained on examination by the taxing authorities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are measured based on the largest benefit that has a greater-than-50% likelihood",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "it is probable that a loss has been incurred",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "one or more legal matters were resolved against the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the Company's financial condition and operating results for that reporting period could be materially adversely affected",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "the related notes (collectively referred to as the \"financial statements\")",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the financial statements present fairly, in all material respects, the financial position of Apple Inc.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in conformity with U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "our report dated October 29, 2020 expressed an unqualified opinion thereon",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to Apple Inc.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "involved our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is more likely than not to be sustained",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is based on interpretations of tax laws and legal rulings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are more likely than not to be sustained",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are more likely than not to be sustained",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "our report dated October 29, 2020 expressed an unqualified opinion thereon",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to Apple Inc.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "for external purposes in accordance with U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "permit preparation of financial statements in accordance with U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns",
+          "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with U.S. generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": [
+        {
+          "rule": "Adverbs (Specific offenders \u2014 phrases.md)",
+          "text": "we must make judgments about the application of these inherently complex tax laws.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid (structures.md)",
+          "text": "When a triggering event occurs, we perform a test for recoverability by comparing projected undiscounted future cash flows to the carrying value of the equipment on operating leases.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "Strong financial position \u2014 Our top priority is to maintain a strong financial position in support of a mid-A rating.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "Operational excellence and commitments \u2014 Capital expenditures were $994 million during 2020, compared to $1.07 billion in 2019.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "Fund strategic growth initiatives and return capital to shareholders \u2014 We intend to utilize our liquidity and debt capacity to fund targeted investments that drive long-term profitable growth focused in the areas of expanded offerings and services, including acquisitions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "For a discussion of recent accounting pronouncements, see Note 1J \u2014 \"New accounting guidance\" of Part II, Item 8 \"Financial Statements and Supplementary Data.\"",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "Information related to legal proceedings appears in Note 22\u2014Environmental and Legal Matters of Part II, Item 8 \"Financial Statements and Supplementary Data.\"",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Em-dashes (structures.md)",
+          "text": "Capital expenditures\u2014excluding equipment leased to others",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively referred to as the",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "for external purposes in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately and fairly reflect the transactions and dispositions of the assets of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the Company is vigorously contesting the proposed increases to tax and penalties",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "for these years of approximately $2.3 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "were declared in the years ended December 31, 2020, 2019 and 2018, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "whether effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "no amount related to these IRS adjustments is reflected in the Company's unrecognized tax benefits",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the largest amount of benefit that is more likely than not to be sustained related to this position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the amount of the benefit that is more likely than not to be sustained related to the position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "whether the position was more likely than not to be sustained",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the audit evidence obtained from these procedures",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the largest amount of benefit that is more likely than not to be sustained related to this position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Professionals with specialized skill and knowledge were used to assist in evaluating the applicable tax laws and judicial doctrines related to this matter",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were declared in the years ended December 31, 2020, 2019 and 2018, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Three-item lists",
+          "text": "legal, commercial, and economic consequences",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Three-item lists",
+          "text": "auditor judgment, subjectivity and effort",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Three-item lists",
+          "text": "tax regulations, rulings, and case law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Profit per common share \u2014 diluted 2",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Tax accounting for intra-entity asset transfers\u2014 \u2014 (35)\u2014 \u2014 (35)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Recognition and measurement of financial assets and liabilities\u2014 \u2014 11 (11)\u2014 \u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Pension and other postretirement benefits, net of tax\u2014 \u2014 \u2014 (34)\u2014 (34)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Derivative financial instruments, net of tax\u2014 \u2014 \u2014 (39)\u2014 (39)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Change in ownership from noncontrolling interests(25)\u2014 \u2014 \u2014 (28)(53)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Reclassification of certain tax effects from accumulated other comprehensive income\u2014 \u2014 (108)108 \u2014 \u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Pension and other postretirement benefits, net of tax\u2014 \u2014 \u2014 (34)\u2014 (34)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Derivative financial instruments, net of tax\u2014 \u2014 \u2014 (8)\u2014 (8)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Pension and other postretirement benefits, net of tax\u2014 \u2014 \u2014 (29)\u2014 (29)",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Adverbs (phrases.md > Phrases to Remove > Adverbs \u2014 specific offender \"actually\")",
+          "text": "actually",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Binary Contrasts (structures.md \u2014 \"not just X but also Y\" / Additive hedge pattern)",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid (structures.md \u2014 sentence starting with \"When\")",
+          "text": "When we receive a cash payment at the time of sale, we record the cash received on advance sales as deferred revenue in air traffic liability.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid (structures.md \u2014 sentence starting with \"When\")",
+          "text": "When traveling, customers earn miles based on the passenger's loyalty program status and ticket price.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid (structures.md \u2014 sentence starting with \"When\")",
+          "text": "When we evaluate goodwill for impairment using a quantitative approach, we estimate the fair value of the reporting unit by considering both comparable public company multiples (a market approach) and projected discounted future cash flows (an income approach).",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid (structures.md \u2014 sentence starting with \"When\")",
+          "text": "When we perform a quantitative impairment assessment of our indefinite-lived intangible assets, fair value is estimated based on (1) recent market transactions, where available, (2) the royalty method for the Delta tradename (which assumes hypothetical royalties generated from using our tradename) or (3) projected discounted future cash flows (an income approach).",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": [
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "Consolidated Statements of Operations for the years ended December 31, 2020, 2019 and 2018",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "Consolidated Statements of Comprehensive (Loss)/Income for the years ended December 31, 2020, 2019 and 2018",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "Consolidated Statements of Cash Flows for the years ended December 31, 2020, 2019 and 2018",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "Consolidated Statements of Stockholders' Equity for the years ended December 31, 2020, 2019 and 2018",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the related notes (collectively referred to as the \"consolidated financial statements\")",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the consolidated financial statements present fairly, in all material respects, the financial position of the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "the consolidated financial statements present fairly, in all material respects, the financial position of the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in conformity with U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company in accordance with the U.S. federal securities laws",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "our report dated February 12, 2021 expressed an unqualified opinion thereon",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "involved especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$10.4 billion do not have a readily determinable fair value",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "$10.4 billion do not have a readily determinable fair value and are measured at net asset value per share",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the expected long-term rate of return on plan assets is reviewed annually",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is based primarily on plan-specific investment studies using historical market return and volatility data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the expected long-term rate of return on plan assets is reviewed annually and is based primarily on plan-specific investment studies using historical market return and volatility data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily resulting from the lag in the availability of data provided by the investment fund managers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which is affected by expectations about future market and economic conditions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, we performed sensitivity analyses to evaluate the changes to the Company's net periodic benefit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "including independently calculating a range of expected long-term rates of return",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, we tested the completeness and accuracy of the data used by management",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "These impairment-related charges are classified within restructuring charges in the Company's consolidated statement of operations.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "based primarily on the significant reductions to the remaining operating lives",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The impairment-related charges were estimated using fair value inputs based primarily upon recent market transactions and third-party bids",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The impairment-related charges were estimated using fair value inputs based primarily upon recent market transactions and third-party bids and corroborated by published pricing guides",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Auditing the Company's impairment analysis was highly subjective due to the significant estimation required",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "there is currently a very limited market for aircraft",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We also performed procedures to independently identify contrary or confirmatory evidence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Deferred tax assets are reduced by a valuation allowance",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "some portion, or all, of the deferred tax assets will not be realized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "a valuation allowance for deferred tax assets is needed",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "How We Addressed the Matter in Our Audit",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "fairly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "especially",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "quarterly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "quarterly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Consequently",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "externally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "fairly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "only",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "timely",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Internal Control \u2014 Integrated Framework (2013)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Sales Incentives \u2014 Refer to Note 2 to the financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Internal Control \u2014 Integrated Framework (2013)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "our report dated December 17, 2020, expressed an unqualified opinion on the Company's internal control over financial reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "our report dated December 17, 2020, expressed an unqualified opinion on those financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "$1,109 million is recorded within trade accounts and notes receivable \u2013 net",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "$609 million is recorded within accounts payable and accrued expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "a sale to a dealer is recognized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "These incentives may be based on a dealer's purchase volume",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The estimated cost of these programs is based on historical data, announced and expected incentive programs, field inventory levels and forecasted sales volumes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The final cost of these programs is determined at the end of the measurement period for volume-based incentives or when the dealer sells the equipment to the retail customer",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "new programs that may be announced after the Company records the equipment sale",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which are reviewed quarterly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "all sales incentive programs offered were included in the calculation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The level of the allowance is based on many quantitative and qualitative factors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Historical receivable write-offs and recoveries are considered as part of the loss experience by product category",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The adequacy of the allowance is assessed quarterly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Losses in this portfolio are expected to follow poor economic conditions prior to losses in the other portfolios",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "qualitative factors (which consider overall economic conditions, the agricultural market, commodity price trends, and delinquency trends) are considered when adjusting historical loss experience",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Three-item lists",
+          "text": "challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Three-item lists",
+          "text": "unauthorized acquisition, use, or disposition of the company's assets",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "Ford Credit's balance sheet is inherently liquid because of the short-term nature of its finance receivables, investment in operating leases, and cash.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "This process is inherently subjective since it requires our assessment of the probability of future outcomes.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Otherwise, these projections are considered inherently subjective and generally will not be sufficient to overcome negative evidence that includes relevant cumulative losses in recent years, particularly if the projected future taxable income is dependent on an anticipated turnaround to profitability that has not yet been achieved.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We also have varying degrees of discretion when it comes to controlling the different elements within our structural costs.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we returned to work, we established new protocols to help protect the health and safety of our workforce.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When there is a shortage of a key component in our supply chain, and the component cannot be easily sourced from a different supplier, the shortage may disrupt our production.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When global automakers resumed vehicle production in 2020 \u2013 even more quickly than some expected \u2013 semiconductor supplies became further strained.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we provide guidance for adjusted EBIT, we do not provide guidance on a net income basis because the GAAP measure will include potentially significant special items that have not yet occurred and are difficult to predict with reasonable certainty prior to year-end, including pension and OPEB remeasurement gains and losses.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we provide guidance for adjusted earnings/(loss) per share, we do not provide guidance on an earnings/(loss) per share basis because the GAAP measure will include potentially significant special items that have not yet occurred and are difficult to predict with reasonable certainty prior to year-end, including pension and OPEB remeasurement gains and losses.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we provide guidance for adjusted effective tax rate, we do not provide guidance on an effective tax rate basis because the GAAP measure will include potentially significant special items that have not yet occurred and are difficult to predict with reasonable certainty prior to year-end, including pension and OPEB remeasurement gains and losses.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we provide guidance for Company adjusted free cash flow, we do not provide guidance for net cash provided by/(used in) operating activities because the GAAP measure will include items that are difficult to quantify or predict with reasonable certainty, including cash flows related to the Company's exposures to foreign currency exchange rates and certain commodity prices (separate from any related hedges), Ford Credit's operating cash flows, and cash flows related to special items, including separation payments, each of which individually or in the aggregate could have a significant impact to our net cash provided by/(used in) our operating activities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When a triggering event occurs, a test for recoverability is performed, comparing projected undiscounted future cash flows to the carrying value of the asset group.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When an impairment loss is recognized for assets to be held and used, the adjusted carrying amounts of those assets are depreciated over their remaining useful life.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When there is a change to a plan of sale, and the assets are reclassified from held for sale to held and used, the long-lived assets should be reported at the lower of (i) the carrying amount before held for sale designation, adjusted for depreciation that would have been recognized if the assets had not been classified as held for sale or (ii) the fair value at the date the assets no longer satisfy the criteria for classification as held for sale.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When market prices are not available, we generally estimate the fair value of the asset group using the income approach and/or the market approach.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When measuring possible impairment, future cash flows are discounted at a rate that is consistent with a weighted-average cost of capital that we anticipate a potential market participant would use.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively referred to as",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects, the financial position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately and fairly reflect the transactions and dispositions of the assets of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "involved our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Management remeasures defined benefit pension plan obligations at least annually as of December 31",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "for its U.S. plans and non-U.S. plans, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the actuarial model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "a consumer allowance for credit losses of $1,245 million was recorded as of December 31, 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the estimate of the lifetime expected credit losses is based on a collective assessment using measurement models and management judgment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The lifetime expected credit losses for the receivables is determined by applying probability of default and loss given default assumptions to monthly expected exposures",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "an adjustment is made to reflect management judgment regarding qualitative factors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Actuarial gains and losses resulting from plan remeasurement are recognized in net periodic benefit cost in the period of the remeasurement",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the actuarial model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "professionals with specialized skill and knowledge were used to assist in the evaluation of the appropriateness of the model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "management judgment regarding qualitative factors including economic uncertainty, observable changes in portfolio performance, and other relevant factors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "a high degree of auditor judgment, subjectivity and effort in performing procedures and evaluating audit evidence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "management's judgment regarding qualitative factors related to economic uncertainty, observable changes in portfolio performance, and other relevant factors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "a high degree of auditor judgment, subjectivity, and effort in performing procedures to evaluate the significant assumptions",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the related notes (collectively, the consolidated financial statements)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "U.S. generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is primarily based on recent shrink results",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "physical inventory counts were temporarily suspended during the year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "results substantially the same as those which would be obtained by a count of all U.S. retail stores involved a high degree of auditor judgment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, professionals with specialized skills and knowledge assisted the engagement team.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "produce results substantially the same as those which would be obtained by a count of all U.S. retail stores",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was approximately $2.6 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "certain publicly available information for comparable companies",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "certain publicly available market data for comparable entities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "As discussed in Note 1 to the consolidated financial statements, the Company elected to change its method of accounting for Leases",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company in accordance with the U.S. federal securities laws and the applicable rules and regulations of the Securities and Exchange Commission and the PCAOB.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "As discussed in Note 1 to the consolidated financial statements, the majority of the Company's U.S. merchandise inventory balances are stated at lower of cost",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the majority of the Company's U.S. merchandise inventory balances are stated at lower of cost (first-in, first out) or market as determined by the retail inventory method.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The retail inventory method is based on a number of factors such as markups, markdowns, and inventory losses (or shrink).",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is calculated on a store-specific basis and is primarily based on recent shrink results",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "physical inventory counts were temporarily suspended during the year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which would be obtained by a count of all U.S. retail stores involved a high degree of auditor judgment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which would be obtained by a count of all U.S. retail stores.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "As discussed in Note 12 to the consolidated financial statements, on December 24, 2020, the Company acquired HD Supply Holdings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Professionals with specialized skill and knowledge were also required to assess significant assumptions and evaluate evidence obtained.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "text": "markups, markdowns, and inventory losses (or shrink)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "text": "comparable companies, industry reports, and historical revenues achieved",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "text": "\u2022Long term growth rates used to project future cash flows by comparing to certain nationwide economic trend data such as GDP, inflation, and relevant industry data;\n\n\u2022Expected customer attrition rate applied by developing an independent attrition rate using historical sales data; and\n\n\u2022Discount rate applied by developing an independent discount rate and comparing inputs to certain publicly available market data for comparable entities.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "approximately 134,500 employees",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "virtually all countries",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "previously referred to as Consumer",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "distributed directly to retailers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is organized into three business segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are marketed to the general public",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is focused on six therapeutic areas",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are distributed directly to retailers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are distributed to wholesalers, hospitals and retailers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "used principally in the professional fields",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "competes with other companies both locally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "and globally, throughout the world",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is particularly significant",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is committed to bringing its full breadth",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is poised to fulfill its purpose",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "successfully meet the demands",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "rapidly evolving markets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "broadly based in human healthcare",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately 25% of 2020 sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was invested in research and development",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "ultimately delivering value to its patients",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are empowered and inspired to lead",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "This allows every employee to use the Company's reach",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "addressing the unmet needs of society every day",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "5-year compound annual growth rates for worldwide, U.S. and international sales were 3.3%, 3.9% and 2.8%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "3.0%, 3.9% and 2.1%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by a positive currency impact of 0.4%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "enhanced by approximately 1.0%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was enhanced by approximately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "represented approximately 16.0%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "represented approximately 15.0%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been rounded",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "* Previously referred to as Consumer",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "** Previously referred to as Beauty",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Growth was primarily attributable to sales from TYLENOL",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "International sales were negatively impacted by COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The decline was primarily due to negative COVID-19 related impacts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by growth in eCommerce",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily attributable to sales of LISTERINE",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily due to COVID-19 related impacts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by strength in AVEENO",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily driven by COVID-19 impacts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "positively impacted the Pharmaceutical segment operational growth",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately 1.0% in both fiscal years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "(1) Previously included in Other Oncology",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "which was previously disclosed separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was previously disclosed separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by COVID-19 related demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "will likely result in a further reduction",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been introduced in certain markets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was introduced in 2016",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily due to strong sales of SYMTUZA",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by lower sales of PREZISTA",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by migration from RISPERDAL CONSTA",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "market growth globally and maintaining strong share",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, the growth was negatively impacted by declining sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, sales of TRACLEER",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "negatively impacted by generics and migration",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by U.S. share declines",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by higher rebates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "an impact of approximately 0.8%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Growth was negatively impacted by COVID-19 and associated deferral",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been reclassified to conform to current year presentation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "which was previously disclosed separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "(2) Previously referred to as Spine",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The decline in Advanced Surgery was primarily driven by the negative impact of COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The decline in General Surgery was primarily driven by the negative impact of COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by a leadership position in the Anterior approach",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by strength from new products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by the uptake of new products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The Surgical operational decline was primarily driven by the negative impact of COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "3.3%, 3.9% and 2.8%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "2.0%, 21.1%, in 2020 and 2019, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "20.0% and 21.1%, in 2020 and 2019, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are located in the U.S., Belgium, Brazil",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "as a percent to segment sales, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$0.2 billion primarily related to a partial impairment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was based on additional information, including clinical data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "for the fiscal year 2020 was unfavorable by $0.4 billion as compared to the prior year primarily due to the following",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "2020 litigation expense primarily associated with Talc related reserves",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "2019 litigation expense primarily related to the agreement in principle",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "2020 is primarily driven by a contingent consideration reversal",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately $1.1 billion related to the timing",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "This was primarily due to reduced interest income",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by a lower average debt interest rate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "issued approximately $5.0 billion of commercial paper",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately $0.8 billion outstanding at year end",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily driven by the following",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Higher litigation expense of $3.9 billion in 2020 vs. $0.4 billion in 2019 (primarily associated with talc related reserves",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The increase in the income before tax as a percent of sales was primarily driven by the following",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Lower litigation expense of $0.8 billion in 2020 vs. $4.3 billion in 2019 (primarily related to the agreement in principle",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "The decrease in the income before tax as a percent to sales was primarily driven by the following",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "An in-process research and development charge of $0.2 billion in fiscal 2020 primarily related to the Auris Health acquisition",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "A contingent consideration reversal of approximately $1.1 billion in fiscal 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "expects these actions to generate approximately $0.6 to $0.8 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "will be substantially delivered by 2022",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "pre-tax restructuring charges of approximately $1.9 to $2.3 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately 70% of the cumulative pre-tax costs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Total project costs of approximately $1.3 billion have been recorded",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are intended to enable the Company to focus resources",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are finalized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is included on the following lines of the Consolidated Statement of Earnings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been recorded since the restructuring was announced",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was announced",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "has been applied",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "non-cash expenses and other adjustments primarily for depreciation and amortization",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "partially offset by the deferred tax provision",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Investing activities use of $20.8 billion of cash was primarily used for",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily related to the acquisitions of Momenta",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Financing activities use of $6.1 billion of cash was primarily used for",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "issued approximately $5.0 billion of commercial paper, with approximately $0.8 billion outstanding",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were used to fund the Momenta Pharmaceuticals",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, as a result of the Tax Cuts and Jobs Act",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "at a significantly reduced cost",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Accordingly, the Company enters into forward foreign exchange contracts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "transactions primarily related to product costs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are offset by the gains or losses on the underlying transactions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Conversely, a 10% depreciation of the U.S. Dollar",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "by approximately $1,667 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "a policy of only entering into contracts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "may be adversely impacted due to a rise in interest rates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "by approximately $36 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Shareholders' equity per share at the end of 2020 was $24.04 compared to $22.59",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is based on either bids provided by banks",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "35.8% of total capital (shareholders' equity and total debt) in 2020 and 31.8% of total capital",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting principles generally accepted in the U.S.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are based on the Company's consolidated financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been prepared in accordance with accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting matters that generally require consideration of forecasted financial information",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "information reasonably available to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally, this occurs with the transfer of control of the goods",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "global payment terms are typically between 30 to 90 days",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are satisfied; generally, this occurs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are accounted for as variable consideration",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "evaluates market conditions for products or groups of products primarily through the analysis",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "as well as internally generated information",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are based on contractual terms, historical experience",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are estimated based on contractual terms",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are estimated and recorded based on historical sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "specifically investigated and analyzed as part of the accounting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is based on historical return trends by product",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are accounted for in accordance with the U.S. GAAP guidance",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are recorded at full sales value",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "reserve for the total Company has been approximately 1.0% of annual net trade sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are recorded in the same period as related sales",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is based on historical redemption experience",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are based on the estimated sales volumes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are recorded as products are sold",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are evaluated to determine the appropriate amounts",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are included in sales to customers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are included in sales to customers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are recognized as each activity is performed",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is performed or delivered",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are deferred and recognized over the performance period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are recorded based on amounts refundable or payable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are considered to be indefinitely reinvested",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "undistributed earnings subsequent to January 1, 2018 from certain international subsidiaries where the earnings are considered to be indefinitely reinvested",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "total tax effect of this repatriation would be approximately $0.7 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "actuarially determined estimates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "self insurance through a wholly-owned captive insurance company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "claims that exceed the insurance coverage are accrued when losses are probable and amounts can be reasonably estimated",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are based on management's judgment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are accrued when losses are probable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is recorded when a loss is probable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are based on assumptions for the discount rate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "both qualitatively and quantitatively, in economic conditions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is estimated on the date of grant",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is expensed in the financial statements over the service period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was calculated for each of the three component goals",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is calculated for the two component goals",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was estimated on the date of grant using the fair market value",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "was estimated on the date of grant using the Monte Carlo valuation model",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "recently adopted accounting pronouncements and recently issued accounting pronouncements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been established",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "closely monitoring and maintaining critical inventory",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "issued approximately $5.0 billion of commercial paper, with approximately $0.8 billion outstanding at year end, for additional liquidity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, in the fiscal third quarter of 2020, the Company issued senior unsecured notes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were used to fund the Momenta Pharmaceuticals, Inc. acquisition",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Currently, the recent legislative acts put in place are not expected to have a material impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "potentially transferable rights to such production",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "contractually obligated to be paid to these contract manufacturing organizations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "approximately $0.9 billion are reflected in the prepaid expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are reflected in the prepaid expenses and other",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, the Company has entered into certain vaccine development cost sharing arrangements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "a long-standing policy of pricing products responsibly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are used in an environment where",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Inflation rates continue to have an effect on worldwide economies and, consequently, on the way companies operate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "prior three-year cumulative inflation rate surpassed 100%",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the Company strives to maintain its profit margins through cost reduction programs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "commonly referred to as \"Brexit\"",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "officially exited the E.U. on January 31, 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the Company currently does not believe that these and other related effects will have a material impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the Company is exposed to fluctuations in currency exchange rates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the value of the U.S. Dollar as compared to all foreign currencies in which the Company had sales, income or expense in 2020 would have increased or decreased the translation of foreign sales by approximately $384 million and net income by approximately $115 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is enacted",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is enacted",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "an environment increasingly hostile to intellectual property rights",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are involved in various lawsuits and claims",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are unsubstantiated or indeterminate",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "adverse verdicts have been rendered against the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "until a loss is determined to be probable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "discussions with counsel, the ultimate outcome of legal proceedings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "rely heavily on estimates and assumptions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Common Stock is listed on the New York Stock Exchange",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em-dashes",
+          "text": "discounts\u2014 106",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively referred to as the \"consolidated financial statements\"",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects, the financial position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily the Managed Care, Medicare and Medicaid programs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the amount of the loss can be reasonably estimated",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "rely heavily on estimates and assumptions including timing of related payments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "as the Company pursues further appeal, is currently $2.5 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "An application for transfer of the case to the Missouri Supreme Court was subsequently denied",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "the Company is currently seeking review by the United States Supreme Court",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "as well as one case currently on appeal",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "an unfavorable outcome is reasonably possible or probable and reasonably estimable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "which was subsequently reduced to $465 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Separately in October 2019, the Company announced a proposed agreement in principle",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "can provide only reasonable assurance with respect to financial statement preparation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Rebates and discounts provided to customers are accounted for as variable consideration and recorded as a reduction in sales.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The liability for such rebates and discounts is recognized within Accrued Rebates, Returns, and Promotions on the consolidated balance sheet.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "rebates and discounts estimated by management are based on contractual terms, historical experience, patient outcomes, trend analysis, and projected market conditions in the U.S. pharmaceutical market",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "An application for transfer of the case to the Missouri Supreme Court was subsequently denied",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "which was subsequently reduced to $465 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "management is required to assess the effectiveness of the Company's internal control over financial reporting as of the end of each fiscal year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The Company's internal control over financial reporting is designed to provide reasonable assurance as to the reliability of the Company's financial reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "text": "(i) developing an independent estimate of the rebates by utilizing third party information on price and market conditions in the U.S. pharmaceutical market, the terms of the specific rebate programs, and the historical experience and trend analysis of actual rebate claims paid; (ii) testing rebate claims processed by the Company, including evaluating those claims for consistency with the contractual and mandated terms of the Company's rebate arrangements; and (iii) comparing the independent estimates to management's estimates.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "fairly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "especially",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "predominantly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "ultimately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "especially",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "frequently",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Specifically",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "fairly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "generally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "could ultimately be upheld",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "assets might be impaired",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "We obtained an understanding, evaluated the design, and tested the effectiveness of controls over the Company's accounting process for uncertain tax positions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "We obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's annual impairment assessments for trademarks with indefinite lives and reporting units with goodwill.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "including inquiries of tax counsel, inspection of technical memos, and written representations of management",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "the assessment of whether the tax positions are more likely than not to be sustained, the amount of the potential benefits to be realized, and the application of relevant tax law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "comparing significant judgmental inputs to observable third party and industry sources, considering other observable market transactions, and evaluating the reasonableness of management's projected financial information by comparing to third party industry projections, third party economic growth projections, and other internal and external data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "third party industry projections, third party economic growth projections, and other internal and external data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "just over $250 million",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "the preceding Overview\u2014Consideration of COVID-19 section, decreased earnings per diluted share year-on-year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "the preceding Overview\u2014Consideration of COVID-19 section, decreased operating income margins year-on-year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns: Em-dashes",
+          "text": "Change in short-term debt \u2014 net",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "collectively referred to as",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accurately and fairly reflect the transactions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "permit preparation of financial statements in accordance with generally accepted accounting principles",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are being made only in accordance with authorizations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "prevention or timely detection of unauthorized acquisition",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "it can reasonably estimate the amount of the loss",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "management records the most likely estimate of the loss",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "whether the amount of loss can be reasonably estimated",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "an unfavorable outcome is reasonably possible or probable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "probable and reasonably estimable",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "criteria established in Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission (COSO)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "criteria established in Internal Control - Integrated Framework (2013) issued by the COSO",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "We are a public accounting firm registered with the Public Company Accounting Oversight Board (United States) (PCAOB)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent with respect to the Company in accordance with the U.S. federal securities laws",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "whether effective internal control over financial reporting was maintained in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "internal control over financial reporting is a process designed to provide reasonable assurance",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "transactions are recorded as necessary to permit preparation of financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "receipts and expenditures of the company are being made only in accordance with authorizations of management and directors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that was communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "such an estimate cannot be made",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "whether the amount of loss can be reasonably estimated",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "Where the reasonable estimate of the probable loss is a range, management records the most likely estimate of the loss, or the low end of the range if there is no one best estimate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "acquisition, use, or disposition",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "challenging, subjective, or complex",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "judgment, subjectivity, and effort",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "obtaining and evaluating the letters of audit inquiry with internal and external legal counsel, evaluating the reasonableness of management's assessment regarding whether an unfavorable outcome is reasonably possible or probable and reasonably estimable, and evaluating the sufficiency of the Company's disclosures related to legal proceedings",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "internal control over financial reporting may not prevent or detect misstatements",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": [
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "small business productivity, large business competitiveness, and public-sector efficiency",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "support new startups, improve educational and health outcomes, and empower human ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Word Patterns (Lazy extremes)",
+          "text": "empower every person and every organization on the planet",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Word Patterns (Lazy extremes)",
+          "text": "impact in every country around the world",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "ensuring the safety of our employees, striving to protect the health and well-being of the communities in which we operate, and providing technology and resources to our customers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was relatively unchanged",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "highly competitive, with frequent changes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are dynamic and highly competitive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "evolve rapidly, and influence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is highly dependent on our ability",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "individuals globally by offering",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "may significantly affect revenue and expenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "did not significantly impact reported revenue",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "particularly in small and medium businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "LinkedIn was negatively impacted by the weak job market",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Search was negatively impacted by reductions in advertising spend",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "we cannot reliably predict",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "may adversely impact consumer, business, and government spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "revenue fluctuates quarterly and is generally higher",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are fundamentally connected based on how customers use",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "business primarily consists of Server products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "(formerly Office 365 Consumer)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "which primarily addresses demand in the commercial market",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily addresses demand in the consumer market",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily driven by improvement in Azure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "impact of 2% and 4%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$2.4 billion and $0.31, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased slightly, due to gross margin percentage improvement across each of our segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "commercial cloud, primarily from Azure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$2.4 billion and $0.31, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "were negatively impacted by the net charge related to the enactment of the TCJA",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$13.7 billion and $1.75, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Gross margin percentage was relatively unchanged",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "impact of 2%, 2%, and 4%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased slightly, due to gross margin percentage improvement in Azure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "impact of 2%, 2%, and 4%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "declined 31%, primarily due to a decrease in volume",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was relatively unchanged",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "impact of 2% and 3%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased slightly, due to gross margin percentage improvement in LinkedIn and Office 365 Commercial",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased slightly, due to gross margin percentage improvement in Azure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "growth of 19%, primarily due to third-party title strength",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "hardware of 13% primarily due to a decrease in volume of consoles sold",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased slightly, due to sales mix shift to higher gross margin businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are primarily recognized in other income (expense), net",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are primarily recognized in other income (expense), net",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased primarily due to higher yields on fixed-income securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "decreased primarily driven by a decrease in outstanding long-term debt",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "decreased primarily due to lower gains on sales of equity investments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was 17% and 10%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was primarily due to a $2.6 billion net income tax benefit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "statutory rate, primarily due to earnings taxed at lower rates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was 10% and 55%, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "was primarily due to the net charge related to the enactment of the TCJA",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily due to the tax benefit related to intangible property transfers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "TCJA was enacted into law, which significantly changed existing U.S. tax law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the TCJA was enacted into law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "in response to the TCJA and recently issued regulations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Based on the information currently available",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "currently under audit by local tax authorities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "2020 and 2019, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are primarily intended to facilitate liquidity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "consist predominantly of highly liquid investment-grade fixed-income securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "investments are predominantly U.S. dollar-denominated securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are primarily highly liquid investment-grade fixed-income securities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "observable either directly or indirectly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "internally-developed models with unobservable inputs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are generally Level 1 or Level 2 investments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "used mainly when a quoted price is not available",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are generally classified as Level 2 investments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to an increase in cash from customers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to a $3.4 billion cash premium on our debt exchange",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to a $6.4 billion increase in cash from net investment purchases",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to an increase in cash received from customers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to an $8.8 billion increase in common stock repurchases",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "mainly due to a $6.0 billion decrease in cash from net investment purchases",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "comprises mainly unearned revenue related to volume licensing programs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is generally invoiced annually at the beginning of each contract period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "recognized ratably over the coverage period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Unearned revenue is generally invoiced annually at the beginning of each contract period for multi-year agreements and recognized ratably over the coverage period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "$19.7 billion, $16.8 billion, and $8.6 billion, respectively",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Additionally, we have agreed to cover damages",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "are reasonably likely to materially affect liquidity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "not previously subject to U.S. income tax",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounted for separately versus together may require significant judgment",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounted for separately, or not distinct",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Certain cloud services, primarily Office 365, depend on",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is recognized ratably over the period",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Revenue from Office 365 is recognized ratably over the period in which the cloud services are provided",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "items that are not sold separately, including on-premises licenses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "products and services separately and need to determine",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "SSP is not directly observable, such as",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "do not sell the product or service separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We typically have more than one SSP",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "products are generally sold with a right of return",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "review debt investments quarterly for indicators",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "employ a systematic methodology quarterly that considers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "without readily determinable fair values",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "qualitative assessment on a quarterly basis",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "is estimated primarily through the use of a discounted cash flow methodology",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The fair value of each reporting unit is estimated primarily through the use of a discounted cash flow methodology",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could materially affect the determination of fair value",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Costs incurred internally in researching and developing",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Generally, this occurs shortly before the products are released",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "amount of the loss can be reasonably estimated",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could materially impact our consolidated financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "An estimated loss from a loss contingency such as a legal proceeding or claim is accrued by a charge to income if it is probable that an asset has been impaired or a liability has been incurred",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "tax position only if it is more likely than not",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could materially impact our consolidated financial statements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "TCJA significantly changes existing U.S. tax law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We regularly review inventory quantities on hand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "have been prepared in conformity with accounting principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "consisting solely of independent directors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "meets periodically with management, internal auditors",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "present fairly, in all material respects",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "accounting principles generally accepted in the United States of America",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "collectively referred to as",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We have also audited",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Our audits also included",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "our especially challenging, subjective, or complex judgments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "should be accounted for separately versus together",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "products and services that are not sold separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "products and services that are not sold separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "had not been effectively settled",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "management had appropriately considered new information",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "could significantly change the recognition",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "are required to be independent",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that were communicated or required to be communicated to the audit committee",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "products and services are considered distinct performance obligations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "should be accounted for separately versus together",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "that are sold with cloud-based services",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "products and services that are not sold separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "products and services that are not sold separately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "had not been effectively settled",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "challenging, subjective, or complex",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "variable consideration, optional purchases, and free services",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "the identification of distinct performance obligations, the determination of the timing of revenue recognition, and the estimation of variable consideration",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "the recognition, measurement or disclosure of the uncertain tax positions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Three-item lists)",
+          "text": "statutes, regulations and case law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns (Em-dashes)",
+          "text": "Internal Control \u2014 Integrated Framework",
+          "index": null,
+          "severity": null
+        }
+      ]
+    }
+  }
+}

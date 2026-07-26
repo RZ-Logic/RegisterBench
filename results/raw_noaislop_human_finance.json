@@ -1,0 +1,458 @@
+{
+  "tool": "no-ai-slop",
+  "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
+  "run_date": "2026-07-24",
+  "options": {
+    "model": "claude-sonnet-5",
+    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. Whole 18-document clean/ corpus, one pass per tool. See NOTES.md."
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"leverage\")",
+          "text": "partially offset by material cost savings and higher leverage.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"leverage\")",
+          "text": "Services gross margin percentage increased during 2020 compared to 2019 due primarily to a different Services mix and higher leverage, partially offset by higher Services costs.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "The Company will adopt ASU 2016-13 in its first quarter of 2021 utilizing the modified retrospective transition method.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "of which $168.6 billion had been utilized.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "The Company utilizes several outsourcing partners to manufacture sub-assemblies for the Company's products and to perform final assembly and testing of finished products.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Patterns to cut \u2014 Robotic rhythm",
+          "text": "iPhone net sales decreased during 2020 compared to 2019 due primarily to the absence of new iPhone models in the fourth quarter of 2020 and the weakness in foreign currencies relative to the U.S. dollar, partially offset by the introduction of iPhone SE in the third quarter of 2020.\n\nMac net sales increased during 2020 compared to 2019 due primarily to higher net sales of MacBook Pro.\n\niPad net sales increased during 2020 compared to 2019 due primarily to higher net sales of 10-inch versions of iPad, iPad Air and iPad Pro.\n\nWearables, Home and Accessories net sales increased during 2020 compared to 2019 due primarily to higher net sales of AirPods and Apple Watch.\n\nServices net sales increased during 2020 compared to 2019 due primarily to higher net sales from the App Store, advertising and cloud services.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Patterns to cut \u2014 Robotic rhythm",
+          "text": "Americas net sales increased during 2020 compared to 2019 due primarily to higher net sales of Services and Wearables, Home and Accessories. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on Americas net sales during 2020.\n\nEurope net sales increased during 2020 compared to 2019 due primarily to higher net sales of iPhone, Wearables, Home and Accessories and Services. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on Europe net sales during 2020.\n\nGreater China net sales decreased during 2020 compared to 2019 due primarily to lower net sales of iPhone, partially offset by higher net sales of Services and iPad. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on Greater China net sales during 2020.\n\nJapan net sales were flat during 2020 compared to 2019 due primarily to lower net sales of iPhone, offset by higher net sales of Services and Wearables, Home and Accessories. The strength of the Japanese yen relative to the U.S. dollar had a favorable impact on Japan net sales during 2020.\n\nRest of Asia Pacific net sales increased during 2020 compared to 2019 due primarily to higher net sales of Wearables, Home and Accessories, Services and iPhone. The weakness in foreign currencies relative to the U.S. dollar had an unfavorable impact on Rest of Asia Pacific net sales during 2020.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "Caterpillar management utilizes these charts internally to visually communicate with the company's Board of Directors and employees.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "We intend to utilize our liquidity and debt capacity to fund targeted investments that drive long-term profitable growth focused in the areas of expanded offerings and services, including acquisitions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "We review goodwill for impairment utilizing either a qualitative assessment or a quantitative goodwill impairment test.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "We utilize a mark-to-market approach in recognizing actuarial gains or losses immediately through earnings upon the annual remeasurement in the fourth quarter, or on an interim basis as triggering events warrant remeasurement.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "Caterpillar management utilizes this presentation internally to highlight these differences.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "We facilitate voluntary supply chain finance programs (the \"Programs\") through participating financial institutions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases",
+          "text": "In order to properly manage sensitivity to changes in interest rates, Financial Products measures the potential impact of different interest rate assumptions on pre-tax earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases",
+          "text": "The nature of the ME&T and Financial Products businesses is different, especially with regard to the financial position and cash flow items.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "using aircraft in our fleet not then being utilized for passenger travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "strategic changes to our operations leading to diminished utilization of the intangible assets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "In evaluating the likelihood of utilizing our net deferred income tax assets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "to generate sufficient taxable income to utilize our federal net operating loss carryforwards before any expire",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "an entity is required to utilize an \"expected credit loss model\" on certain financial instruments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"utilize\")",
+          "text": "A measure of utilized available seating capacity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"facilitate\")",
+          "text": "receive a Port Authority contribution of $481 million to facilitate construction of the terminal and other supporting infrastructure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"facilitate\")",
+          "text": "To facilitate transactions with participating companies, we sell miles to non-airline businesses, customers and other airlines.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (\"going forward\")",
+          "text": "baggage system upgrades designed to increase the terminals' operational efficiency going forward",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Patterns to cut \u2014 Binary contrasts",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"robust\")",
+          "text": "Ford Credit's liquidity profile continues to be diverse, robust, and focused on maintaining liquidity levels that meet its business and funding requirements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"facilitate\")",
+          "text": "to facilitate adequate supply of these materials and services",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (\"in order to\")",
+          "text": "In order to compensate Ford Credit for the lower interest or lease payments offered to the retail customer, we pay the discounted value of the incentive directly to Ford Credit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (\"going forward\")",
+          "text": "Going forward, we expect to:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (\"when it comes to\")",
+          "text": "We also have varying degrees of discretion when it comes to controlling the different elements within our structural costs.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Patterns to cut \u2014 Importance puffery",
+          "text": "Our global funded plans remain fully funded in aggregate, demonstrating the effectiveness of our de-risking strategy and our commitment to a strong balance sheet.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright (\"leverage\")",
+          "text": "with customers continuing to leverage our digital platforms for their shopping needs",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 banned outright (\"empower\")",
+          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"leverage\")",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"utilize\")",
+          "text": "In 2020, the Company utilized three wholesalers distributing products for all three segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"leverage\")",
+          "text": "\u2022Leveraging in the Pharmaceutical and Consumer Health businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"leverage\")",
+          "text": "\u2022Leveraging in selling, marketing and administrative expense",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"leverage\")",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 banned outright (\"robust\")",
+          "text": "The robust, active business continuity plans across the Company's network have been instrumental",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial analysis",
+          "text": "$7.3 billion spent on acquisitions, reflecting management's commitment to create life-enhancing innovations and to create value through partnerships that will profoundly change the trajectory of health for humanity.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 banned outright: utilize",
+          "text": "utilizing",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright (leverage)",
+          "text": "3M is a highly integrated enterprise, where businesses share technology and leverage common fundamental strengths and capabilities, thus many of 3M's businesses could not easily be sold on a stand-alone basis.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "3M utilizes a number of tools to hedge currency risk related to earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "While 3M manages its businesses globally and believes its business segment results are the most relevant measure of performance, the Company also utilizes geographic area data as a secondary performance measure.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "The Company has reviewed its debt securities, bank facilities, and derivative instruments and continues to evaluate commercial contracts that may utilize LIBOR as the reference rate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "(utilizing the foreign exchange rates applicable at the time of issuance for the euro denominated debt)",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "These instruments are utilized in connection with normal business activities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "The Company does not utilize derivative instruments linked to the Company's stock.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (utilize)",
+          "text": "As of December 31, 2020, the Company has not utilized special purpose entities to facilitate off-balance sheet financing arrangements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright (facilitate)",
+          "text": "As of December 31, 2020, the Company has not utilized special purpose entities to facilitate off-balance sheet financing arrangements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (in terms of)",
+          "text": "In terms of SG&A as a percent of sales, partially offsetting these decreases was the overall effect of the COVID-19 pandemic on sales that resulted in higher costs as a percent of sales.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (in order to)",
+          "text": "3M is increasing its investment in manufacturing and sourcing capability in order to more closely align its product capability with its sales in major geographic areas in order to best serve its customers throughout the world with proprietary, automated, efficient, safe and sustainable processes.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Often-empty phrases (going forward)",
+          "text": "3M's strong balance sheet and liquidity provide the Company with significant flexibility to fund its numerous opportunities going forward.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": [
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "empower every person and every organization on the planet to achieve more",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "empower human ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "facilitate portfolio diversification",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "facilitate liquidity and capital preservation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut \u2014 Banned outright",
+          "text": "facilitate the purchase of components",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

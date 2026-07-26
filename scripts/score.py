@@ -59,6 +59,42 @@ def plant_range(text: str, span: str, occurrence: int):
     return spans[occurrence - 1] if len(spans) >= occurrence else None
 
 
+def boundary_spans(lower: str, term: str):
+    """Whole-phrase occurrences of term, respecting word boundaries.
+
+    Implements the rule whitelist.json documents. Plain substring search would
+    let "qualified opinion" match inside "unqualified opinion", which is the
+    opposite meaning.
+    """
+    pat = r"(?<!\w)" + re.escape(term.lower()) + r"(?!\w)"
+    return [(m.start(), m.end()) for m in re.finditer(pat, lower)]
+
+
+def max_bipartite_matching(edges, n_right):
+    """Kuhn's algorithm. edges[i] = iterable of right-node indices for left i.
+
+    Returns dict left_index -> right_index. Used so each quoted finding is
+    credited to at most one plant, while still giving every tool the best
+    assignment available to it (a greedy scan would instead make recall depend
+    on the order plants happen to appear in the manifest).
+    """
+    match_right = {}
+
+    def try_assign(left, seen):
+        for r in edges[left]:
+            if r in seen:
+                continue
+            seen.add(r)
+            if r not in match_right or try_assign(match_right[r], seen):
+                match_right[r] = left
+                return True
+        return False
+
+    for left in range(len(edges)):
+        try_assign(left, set())
+    return {v: k for k, v in match_right.items()}
+
+
 def load_crosswalk():
     cw = json.loads((ROOT / "crosswalk" / "patterns.json").read_text(encoding="utf-8"))
     rule_to_canon = {}   # tool -> rule string -> set of canonical ids
@@ -120,31 +156,60 @@ def match_seeded(run, manifest, rule_to_canon):
                     occ = [(m2.start(), m2.end()) for m2 in
                            re.finditer(re.escape(ftext), text, re.I)]
                 resolved.append((f, occ))
-        used = [False] * len(resolved)
-        for plant in draft["plants"]:
-            pid = plant["pattern_id"]
-            plants_total += 1
-            per_pattern.setdefault(pid, [0, 0])[1] += 1
+        # Two-stage assignment. Document-level rules describe a whole document
+        # ("you overuse em dashes"), so one such flag legitimately covers every
+        # plant of its canonical pattern and is never consumed. Quoted spans are
+        # located evidence and are consumed once each: without that, a single
+        # paragraph-long quote scores 1.0 against every short plant inside it
+        # (overlap_ratio divides by the smaller span), so a tool that quotes
+        # whole paragraphs would score as if it had located each plant.
+        doc_level = [(k, f) for k, (f, r) in enumerate(resolved) if r is None]
+        span_level = [(k, f, r) for k, (f, r) in enumerate(resolved) if r is not None]
+
+        plants = draft["plants"]
+        for plant in plants:
+            per_pattern.setdefault(plant["pattern_id"], [0, 0])[1] += 1
             per_tier.setdefault(plant["tier"], [0, 0])[1] += 1
-            prange = plant_range(text, plant["span"], plant.get("occurrence", 1))
-            hit = False
-            if prange:
-                for k, (f, ranges) in enumerate(resolved):
-                    if ranges is None:
-                        # doc-level: credit if canonical pattern matches
-                        if pid in canon_ids(tool, f["rule"], rule_to_canon):
-                            hit = True
-                            used[k] = True
-                            break
-                    else:
-                        if any(overlap_ratio(prange, r) >= 0.5 for r in ranges):
-                            hit = True
-                            used[k] = True
-                            break
-            if hit:
+        plants_total += len(plants)
+
+        ranges_by_plant = [
+            plant_range(text, p["span"], p.get("occurrence", 1)) for p in plants
+        ]
+
+        hit = [False] * len(plants)
+        used = [False] * len(resolved)
+
+        # Stage 1: document-level credit, unlimited reuse.
+        for i, plant in enumerate(plants):
+            if ranges_by_plant[i] is None:
+                continue
+            for k, f in doc_level:
+                if plant["pattern_id"] in canon_ids(tool, f["rule"], rule_to_canon):
+                    hit[i] = True
+                    used[k] = True
+                    break
+
+        # Stage 2: quoted spans, one finding to at most one plant. Running this
+        # only on plants stage 1 missed is what keeps the assignment optimal.
+        pending = [i for i in range(len(plants)) if not hit[i] and ranges_by_plant[i]]
+        edges = []
+        for i in pending:
+            prange = ranges_by_plant[i]
+            edges.append([
+                j for j, (_, _, ranges) in enumerate(span_level)
+                if any(overlap_ratio(prange, r) >= 0.5 for r in ranges)
+            ])
+        assignment = max_bipartite_matching(edges, len(span_level))
+        for left, right in assignment.items():
+            hit[pending[left]] = True
+            used[span_level[right][0]] = True
+
+        for i, plant in enumerate(plants):
+            if hit[i]:
                 matched_total += 1
-                per_pattern[pid][0] += 1
+                per_pattern[plant["pattern_id"]][0] += 1
                 per_tier[plant["tier"]][0] += 1
+
         for k, (f, _) in enumerate(resolved):
             if not used[k]:
                 unmatched_flags.append({"draft": did, "rule": f["rule"], "text": f["text"]})
@@ -179,19 +244,40 @@ def score_human(run, whitelist):
         lower = text.lower()
         term_spans = []
         for t in terms:
-            term_spans += find_all(lower, t.lower())
+            term_spans += boundary_spans(lower, t)
+
+        # Flags carrying a character index are tested at that exact position.
+        # Index-less flags (the prompt track emits quotes, not offsets) are
+        # grouped by their text: crediting each one against every occurrence of
+        # that text would count all N flags as violations whenever any single
+        # occurrence happens to sit inside a protected term.
+        indexless = {}
         for f in data["findings"]:
             ftext = f["text"] or ""
-            if f.get("rule") in DOC_LEVEL_RULES:
+            if f.get("rule") in DOC_LEVEL_RULES or not ftext:
                 continue
             if f.get("index") is not None:
-                ranges = [(f["index"], f["index"] + len(ftext))]
+                span = (f["index"], f["index"] + len(ftext))
+                if any(overlap_ratio(span, ts) >= 0.5 for ts in term_spans):
+                    toa_hits += 1
+                    if len(toa_examples) < 25:
+                        toa_examples.append(
+                            {"file": fname, "rule": f["rule"], "text": ftext})
             else:
-                ranges = find_all(lower, ftext.lower())
-            if any(overlap_ratio(r, ts) >= 0.5 for r in ranges for ts in term_spans):
-                toa_hits += 1
+                indexless.setdefault(ftext.lower(), []).append(f)
+
+        for ftext_lower, flags in indexless.items():
+            occurrences = find_all(lower, ftext_lower)
+            colliding = sum(
+                1 for r in occurrences
+                if any(overlap_ratio(r, ts) >= 0.5 for ts in term_spans)
+            )
+            credited = min(len(flags), colliding)
+            toa_hits += credited
+            for f in flags[:credited]:
                 if len(toa_examples) < 25:
-                    toa_examples.append({"file": fname, "rule": f["rule"], "text": ftext})
+                    toa_examples.append(
+                        {"file": fname, "rule": f["rule"], "text": f["text"]})
     return {
         "words": total_words,
         "flags": total_flags,
@@ -200,6 +286,28 @@ def score_human(run, whitelist):
         "toa_per_1k": round(toa_hits / total_words * 1000, 3) if total_words else None,
         "toa_examples": toa_examples,
     }
+
+
+def aggregate_breakdown(per_run):
+    """Mean matched (with min and max) per key across N runs.
+
+    planted is identical in every run because it comes from the manifest, so
+    only matched varies. Deterministic tools have one run and no spread.
+    """
+    keys = sorted({k for d in per_run for k in d})
+    out = {}
+    for k in keys:
+        matched = [d[k]["matched"] for d in per_run if k in d]
+        planted = max(d[k]["planted"] for d in per_run if k in d)
+        mean = sum(matched) / len(matched)
+        out[k] = {
+            "matched_mean": round(mean, 2),
+            "matched_min": min(matched),
+            "matched_max": max(matched),
+            "planted": planted,
+            "recall": round(mean / planted, 4) if planted else None,
+        }
+    return out
 
 
 def main():
@@ -231,6 +339,14 @@ def main():
             entry["recall_mean"] = round(sum(recalls) / len(recalls), 4)
             entry["recall_min"] = round(min(recalls), 4)
             entry["recall_max"] = round(max(recalls), 4)
+            entry["n_runs"] = len(recalls)
+            # Aggregate the tier and pattern breakdowns across every run, so
+            # they reconcile with the headline mean. Publishing run 1 alone
+            # would put a single-run breakdown under an N-run headline.
+            entry["per_tier"] = aggregate_breakdown(
+                [r["per_tier"] for r in entry["runs"]["seeded"]])
+            entry["per_pattern"] = aggregate_breakdown(
+                [r["per_pattern"] for r in entry["runs"]["seeded"]])
         for run in human_runs.get(tool, []):
             entry["sha"] = entry["sha"] or run.get("sha")
             entry["runs"].setdefault("human", []).append(score_human(run, whitelist))
@@ -250,27 +366,40 @@ def main():
         "tells, and rule fire density on verifiably pre-ChatGPT text is evidence",
         "of style preference rather than AI signal. Readers judge the rows.",
         "",
-        "| tool | sha | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |",
-        "|---|---|---|---|---|---|",
+        "Recall assigns each quoted finding to at most one planted instance",
+        "(maximum bipartite matching). Document-level rules are exempt, because",
+        "one such flag legitimately covers every plant of its pattern. Tier and",
+        "pattern breakdowns are means across all runs, matching the headline.",
+        "",
+        "| tool | sha | runs | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |",
+        "|---|---|---|---|---|---|---|",
     ]
     for tool, e in out["tools"].items():
         sha = (e["sha"] or "")[:8]
         rec = f"{e['recall_mean']:.1%}" if e.get("recall_mean") is not None else "n/a"
-        rng = (f"{e['recall_min']:.1%}-{e['recall_max']:.1%}"
+        n = e.get("n_runs", 0)
+        rng = ("deterministic" if n == 1 else
+               f"{e['recall_min']:.1%}-{e['recall_max']:.1%}"
                if e.get("recall_min") is not None else "n/a")
         h = e["runs"].get("human", [{}])
         f1k = h[0].get("flags_per_1k", "n/a")
         toa = h[0].get("toa_per_1k", "n/a")
-        lines.append(f"| {tool} | {sha} | {rec} | {rng} | {f1k} | {toa} |")
+        lines.append(f"| {tool} | {sha} | {n or 'n/a'} | {rec} | {rng} | {f1k} | {toa} |")
     lines.append("")
-    # per-tier recall
+    # per-tier recall, aggregated across runs
     for tool, e in out["tools"].items():
-        seeded = e["runs"].get("seeded")
-        if not seeded:
+        if not e.get("per_tier"):
             continue
-        lines += [f"## {tool}: recall by tier", "", "| tier | matched/planted | recall |", "|---|---|---|"]
-        for tier, v in seeded[0]["per_tier"].items():
-            lines.append(f"| {tier} | {v['matched']}/{v['planted']} | {v['matched'] / v['planted']:.1%} |")
+        n = e.get("n_runs", 1)
+        basis = "single deterministic run" if n == 1 else f"mean of {n} runs"
+        lines += [f"## {tool}: recall by tier ({basis})", "",
+                  "| tier | matched/planted | recall | matched min-max |", "|---|---|---|---|"]
+        for tier, v in e["per_tier"].items():
+            spread = ("n/a" if n == 1 else
+                      f"{v['matched_min']}-{v['matched_max']}")
+            lines.append(
+                f"| {tier} | {v['matched_mean']:g}/{v['planted']} "
+                f"| {v['recall']:.1%} | {spread} |")
         lines.append("")
     (ROOT / "results" / f"{REGISTER}_{stamp}.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     print(f"scored {len(out['tools'])} tools -> results/{REGISTER}_{stamp}.md")

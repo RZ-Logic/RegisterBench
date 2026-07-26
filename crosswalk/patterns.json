@@ -1,7 +1,7 @@
 {
   "version": "0.1.0",
   "created": "2026-07-24",
-  "notes": "Canonical RegisterBench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact strings the tool emits (code track) or the exact pattern headings in its skill files (prompt track). An empty list means the tool does not claim the pattern; recall tables report those cells as unclaimed rather than missed. 'partial' lists rules that cover only a subset of the canonical pattern.",
+  "notes": "Canonical RegisterBench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact strings the tool emits (code track) or the exact pattern headings in its skill files (prompt track). An empty list means the tool does not claim the pattern. In v0.1 those plants are still counted against the tool as misses, so published recall is coverage of the full canonical taxonomy rather than accuracy on what each tool attempts; a claimed-patterns-only cut is on the v0.2 roadmap. Crosswalk attribution is used for analysis and for document-level rule credit, never to grant or withhold span-level recall credit. 'partial' lists rules that cover only a subset of the canonical pattern.",
   "tools": {
     "stop-slop": {
       "track": "prompt",

@@ -17,7 +17,7 @@ import json
 import os
 import subprocess
 import sys
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 TOOLS_DIR = Path(os.environ.get(
@@ -46,7 +46,9 @@ def main():
     result = {
         "tool": "unslop-deterministic",
         "sha": sha,
-        "run_date": date.today().isoformat(),
+        # UTC, matching run_avoid_ai_writing.js, so a single reproduction
+        # cannot stamp two different dates on its own outputs.
+        "run_date": datetime.now(timezone.utc).date().isoformat(),
         "options": {"intensity": INTENSITY, "structural": False, "soul": False},
         "files": {},
     }

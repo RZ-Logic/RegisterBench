@@ -1,0 +1,5614 @@
+{
+  "register": "finance-audit",
+  "date": "2026-07-26",
+  "crosswalk_version": "0.1.0",
+  "tools": {
+    "avoid-ai-writing-detector": {
+      "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.4672131147540984,
+            "matched": 57,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 0,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 2,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 18,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 5,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 2,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 0,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 2,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 20,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 25,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 8,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 12,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "tier1",
+                "text": "marking a pivotal moment"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "generic-conclusion",
+                "text": "Only time will tell"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "significance-inflation",
+                "text": "marking a pivotal moment"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "significance-inflation",
+                "text": "a pivotal moment in"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "tier2",
+                "text": "ecosystem"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "punct-distribution",
+                "text": "Punctuation density uniform across paragraphs (CV=0.17)"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "generic-conclusion",
+                "text": "The future looks bright"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "significance-inflation",
+                "text": "a watershed moment for"
+              },
+              {
+                "draft": "fin-07",
+                "rule": "generic-conclusion",
+                "text": "Only time will tell"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "punct-distribution",
+                "text": "Punctuation density uniform across paragraphs (CV=0.19)"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "uniformity",
+                "text": "All paragraphs are ~3 sentences"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 57,
+            "flags_per_1k": 0.51,
+            "toa_violations": 9,
+            "toa_per_1k": 0.081,
+            "toa_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "HD_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MSFT_2020_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.4672,
+      "recall_min": 0.4672,
+      "recall_max": 0.4672,
+      "n_runs": 1,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "lex-1": {
+          "matched_mean": 20.0,
+          "matched_min": 20,
+          "matched_max": 20,
+          "planted": 23,
+          "recall": 0.8696
+        },
+        "lex-2": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1667
+        },
+        "lex-3": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "phrasal": {
+          "matched_mean": 25.0,
+          "matched_min": 25,
+          "matched_max": 25,
+          "planted": 42,
+          "recall": 0.5952
+        },
+        "structural": {
+          "matched_mean": 8.0,
+          "matched_min": 8,
+          "matched_max": 8,
+          "planted": 29,
+          "recall": 0.2759
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 5,
+          "recall": 0.4
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 18.0,
+          "matched_min": 18,
+          "matched_max": 18,
+          "planted": 18,
+          "recall": 1.0
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1667
+        },
+        "lex-t3-density": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "phr-false-range": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.6667
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 3,
+          "recall": 0.0
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.3333
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "phr-transition": {
+          "matched_mean": 5.0,
+          "matched_min": 5,
+          "matched_max": 5,
+          "planted": 7,
+          "recall": 0.7143
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "str-colon-reveal": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.6667
+        },
+        "str-em-dash": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-false-agency": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-formatting-slop": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-listing": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 3,
+          "recall": 0.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 1,
+          "recall": 0.0
+        }
+      }
+    },
+    "avoid-ai-writing-skill": {
+      "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.7295081967213115,
+            "matched": 89,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 4,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 18,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 2,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 4,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 22,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 35,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 24,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 12,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
+                "text": "ecosystem in which partners build durable businesses on our infrastructure"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Vague attributions",
+                "text": "Management believes"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Copula avoidance",
+                "text": "the Company boasts a tax function with the depth to support that documentation"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Compulsive rule of three",
+                "text": "unprecedented, widespread and persistent"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Compulsive rule of three",
+                "text": "large public events were cancelled, governmental authorities imposed restrictions on non-essential activities, and popular leisure destinations temporarily closed to visitors"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Significance inflation",
+                "text": "a watershed moment for the industry"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "False concession structure",
+                "text": "Although demand has improved \u2014 slowly, unevenly \u2014 it remains significantly below pre-pandemic levels, and the exact timing and pace of the recovery remain uncertain as some markets that reopened have since experienced a resurgence of cases while others remain closed."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Compulsive rule of three",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Generic conclusions",
+                "text": "The future looks bright for carriers that adapt."
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "$12.2 billion was invested in research and development and $7.3 billion was spent on acquisitions."
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "both are managed as long-horizon assets"
+              }
+            ]
+          },
+          {
+            "recall": 0.7377049180327869,
+            "matched": 90,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 4,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 18,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 1,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 5,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 0,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 22,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 35,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 25,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 10,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace): \"genuinely / genuine (as intensifier)\"",
+                "text": "genuinely believes"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Hedge-stacked predictions",
+                "text": "could potentially affect"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Significance inflation",
+                "text": "marking a pivotal moment in the Company's product history"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Generic conclusions",
+                "text": "Only time will tell how durable these gains prove."
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Vague attributions",
+                "text": "Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Compulsive rule of three",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Compulsive rule of three",
+                "text": "The unprecedented, widespread and persistent impact of COVID-19"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Compulsive rule of three",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn."
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Generic conclusions",
+                "text": "Only time will tell."
+              }
+            ]
+          },
+          {
+            "recall": 0.7131147540983607,
+            "matched": 87,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 3,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 18,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 5,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 21,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 33,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 24,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 8,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "Words and phrases to replace \u2014 Tier 2 (Flag when 2+ appear in the same paragraph): ecosystem (metaphor)",
+                "text": "foster an ecosystem in which partners build durable businesses on our infrastructure"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Sentence structure \u2014 Compulsive rule of three",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Significance inflation",
+                "text": "a watershed moment for the industry"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "False concession structure",
+                "text": "Although demand has improved \u2014 slowly, unevenly \u2014 it remains significantly below pre-pandemic levels, and the exact timing and pace of the recovery remain uncertain as some markets that reopened have since experienced a resurgence of cases while others remain closed."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "Forecasted expense and liquidity management initiatives may be modified as the demand environment evolves"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Subjectless fragments and agentless passives",
+                "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Generic conclusions",
+                "text": "The future looks bright"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Hollow intensifiers",
+                "text": "real, durable growth"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 149,
+            "flags_per_1k": 1.34,
+            "toa_violations": 1,
+            "toa_per_1k": 0.009,
+            "toa_examples": [
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Tier 1 \u2014 Always replace (word table entry: \"comprehensive | thorough, complete, full\")",
+                "text": "comprehensive income"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.7268,
+      "recall_min": 0.7131,
+      "recall_max": 0.7377,
+      "n_runs": 3,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "lex-1": {
+          "matched_mean": 21.67,
+          "matched_min": 21,
+          "matched_max": 22,
+          "planted": 23,
+          "recall": 0.942
+        },
+        "lex-2": {
+          "matched_mean": 5.0,
+          "matched_min": 5,
+          "matched_max": 5,
+          "planted": 12,
+          "recall": 0.4167
+        },
+        "lex-3": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 12,
+          "recall": 0.0278
+        },
+        "phrasal": {
+          "matched_mean": 34.33,
+          "matched_min": 33,
+          "matched_max": 35,
+          "planted": 42,
+          "recall": 0.8175
+        },
+        "structural": {
+          "matched_mean": 24.33,
+          "matched_min": 24,
+          "matched_max": 25,
+          "planted": 29,
+          "recall": 0.8391
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 3.67,
+          "matched_min": 3,
+          "matched_max": 4,
+          "planted": 5,
+          "recall": 0.7333
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 18.0,
+          "matched_min": 18,
+          "matched_max": 18,
+          "planted": 18,
+          "recall": 1.0
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 5.0,
+          "matched_min": 5,
+          "matched_max": 5,
+          "planted": 12,
+          "recall": 0.4167
+        },
+        "lex-t3-density": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 12,
+          "recall": 0.0278
+        },
+        "phr-false-range": {
+          "matched_mean": 1.0,
+          "matched_min": 0,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.5556
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.3333
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-transition": {
+          "matched_mean": 4.67,
+          "matched_min": 4,
+          "matched_max": 5,
+          "planted": 7,
+          "recall": 0.6667
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-colon-reveal": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-em-dash": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-false-agency": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "str-formatting-slop": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-listing": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 2.0,
+          "matched_min": 1,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 3.67,
+          "matched_min": 3,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 0.9167
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 0.6667
+        }
+      }
+    },
+    "no-ai-slop": {
+      "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.5655737704918032,
+            "matched": 69,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 0,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 4,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 10,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 3,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 2,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 1,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 14,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 26,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 21,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 2,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "Patterns to cut: Summary-recap endings",
+                "text": "Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles."
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Colon reveals",
+                "text": "the momentum speaks for itself:"
+              }
+            ]
+          },
+          {
+            "recall": 0.5573770491803278,
+            "matched": 68,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 0,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 0,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 2,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 11,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 7,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 1,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 3,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 0,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 13,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 7,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 25,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 22,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 1,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "Summary-recap endings",
+                "text": "The result: a durable franchise. Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles."
+              }
+            ]
+          },
+          {
+            "recall": 0.5409836065573771,
+            "matched": 66,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 0,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 0,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 4,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 10,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 3,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 0,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 14,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 26,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 19,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 2,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "Patterns to cut \u2014 Summary-recap endings",
+                "text": "The result: a durable franchise. Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles."
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Patterns to cut \u2014 Robotic rhythm",
+                "text": "Office Commercial products and cloud services revenue increased 12%, driven by Office 365 Commercial growth of 24%. Server products and cloud services revenue increased 27%, driven by Azure growth of 56%."
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 61,
+            "flags_per_1k": 0.55,
+            "toa_violations": 0,
+            "toa_per_1k": 0.0,
+            "toa_examples": []
+          }
+        ]
+      },
+      "recall_mean": 0.5546,
+      "recall_min": 0.541,
+      "recall_max": 0.5656,
+      "n_runs": 3,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 4,
+          "recall": 0.0833
+        },
+        "lex-1": {
+          "matched_mean": 13.67,
+          "matched_min": 13,
+          "matched_max": 14,
+          "planted": 23,
+          "recall": 0.5942
+        },
+        "lex-2": {
+          "matched_mean": 5.67,
+          "matched_min": 5,
+          "matched_max": 7,
+          "planted": 12,
+          "recall": 0.4722
+        },
+        "lex-3": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1389
+        },
+        "phrasal": {
+          "matched_mean": 25.67,
+          "matched_min": 25,
+          "matched_max": 26,
+          "planted": 42,
+          "recall": 0.6111
+        },
+        "structural": {
+          "matched_mean": 20.67,
+          "matched_min": 19,
+          "matched_max": 22,
+          "planted": 29,
+          "recall": 0.7126
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 1,
+          "recall": 0.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 0.3333
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 3.33,
+          "matched_min": 2,
+          "matched_max": 4,
+          "planted": 5,
+          "recall": 0.6667
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 10.33,
+          "matched_min": 10,
+          "matched_max": 11,
+          "planted": 18,
+          "recall": 0.5741
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 5.67,
+          "matched_min": 5,
+          "matched_max": 7,
+          "planted": 12,
+          "recall": 0.4722
+        },
+        "lex-t3-density": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1389
+        },
+        "phr-false-range": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.1667
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.2222
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.5556
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-transition": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 7,
+          "recall": 0.4286
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-colon-reveal": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 2.67,
+          "matched_min": 2,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 0.8889
+        },
+        "str-em-dash": {
+          "matched_mean": 1.33,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.3333
+        },
+        "str-false-agency": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.3333
+        },
+        "str-formatting-slop": {
+          "matched_mean": 1.33,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.6667
+        },
+        "str-negative-listing": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 4,
+          "recall": 0.1667
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        }
+      }
+    },
+    "stop-slop": {
+      "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.5983606557377049,
+            "matched": 73,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 2,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 5,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 3,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 6,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 1,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 1,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 3,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 8,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 5,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 6,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 28,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 23,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 77,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Passive Voice",
+                "text": "were adversely affected by the COVID-19 pandemic"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "adversely"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "temporarily"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "remotely"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "decisively"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "cash, cash equivalents and marketable securities"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "primarily driven by higher net sales of Services and Wearables"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to the absence of new models"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "partially offset by the introduction of iPhone SE"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales of MacBook Pro"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales from the App Store"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "the App Store, advertising and cloud services"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "designing, manufacturing, and selling devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Adverbs",
+                "text": "relatively unchanged"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Passive Voice",
+                "text": "it is widely regarded as the primary engine of the Company's growth"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Emphasis Crutches",
+                "text": "Make no mistake:"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "software, services, and devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "False Agency",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "present fairly"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "generally accepted"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "predominantly siding"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Passive Voice",
+                "text": "were audited on the same basis"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Cut quotables",
+                "text": "This evaluation is not a formality. Not a checkbox. A judgment."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "significantly reduced demand for air travel"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "after initially impacting service to China"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "large public events were cancelled"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "popular leisure destinations temporarily closed to visitors"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "slowly, unevenly"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "it remains significantly below pre-pandemic levels"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "Load factors were capped and middle seats blocked through at least April 30, 2021"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "boarding and deplaning processes were modified to reduce physical touch points."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "What nobody tells you"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "truly tests every assumption in the operating plan"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "Forecasted expense and liquidity management initiatives may be modified as the demand environment evolves"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "vaccination becomes widespread globally and travel restrictions"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "locally"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "globally"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Vague Declaratives",
+                "text": "particularly significant"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "approximately"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development and $7.3 billion spent on acquisitions"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "respectively"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "the assessment was performed"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "is designed to provide reasonable assurance"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns (structures.md) \u2014 questions answered immediately",
+                "text": "So what changed this year? Quite a bit."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 kill all -ly words",
+                "text": "substantially"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns (structures.md) \u2014 three-item lists",
+                "text": "reconciliation, review, and certification"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Sentence Starters to Avoid (structures.md) \u2014 sentence starting with 'Where'",
+                "text": "Where COVID-19 disrupted the operation of a control"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 kill all -ly words",
+                "text": "carefully"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 kill all -ly words",
+                "text": "merely"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "had been identified in the fourth quarter"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "none were identified through the date of this memorandum"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "has been distributed to control owners"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor not named",
+                "text": "The committee is invited to direct questions"
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Adverbs",
+                "text": "roughly the proportions"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Adverbs",
+                "text": "accurately"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Adverbs",
+                "text": "quarterly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "developing an independent expectation of the accrual using disaggregated historical cost percentages; testing the completeness and accuracy of the underlying dealer sales data; and evaluating announced program terms against the accrual model's program-type assumptions"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "is recorded within trade accounts and notes receivable"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "a sale to a dealer is recognized"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "new programs are announced"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "which are reviewed quarterly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "is determined at the end of the measurement period"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "ultimately"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "both are managed as long-horizon assets"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "approximately"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$7.3 billion was spent on acquisitions"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "locally"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "globally"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Structures \u2192 Word Patterns (Lazy extremes: every)",
+                "text": "every competing bid"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Structures \u2192 Word Patterns (Lazy extremes: every)",
+                "text": "every geographic segment"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Structures \u2192 Word Patterns (Lazy extremes: every)",
+                "text": "every segment"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Structures \u2192 Rhythm Patterns (Three-item lists)",
+                "text": "software, services, and devices"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Phrases \u2192 Adverbs",
+                "text": "relatively"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Structures \u2192 False Agency",
+                "text": "continues its migration toward subscription economics"
+              }
+            ]
+          },
+          {
+            "recall": 0.5983606557377049,
+            "matched": 73,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 5,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 4,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 1,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 6,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 1,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 3,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 2,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 9,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 1,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 6,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 30,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 25,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 81,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Passive Voice",
+                "text": "were adversely affected by the COVID-19 pandemic"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "adversely affected"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "temporarily closed"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "working remotely"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "moved decisively"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "cash, cash equivalents and marketable securities"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "primarily driven by higher net sales"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to the absence of new models"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "partially offset by the introduction of iPhone SE"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales of MacBook Pro"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "the App Store, advertising and cloud services"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales from the App Store"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Word Patterns \u2014 Lazy extremes (every, always, never, everyone, everybody, nobody)",
+                "text": "every person and every organization"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "designing, manufacturing, and selling devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Adverbs",
+                "text": "relatively unchanged"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Passive Voice",
+                "text": "it is widely regarded as the primary engine of the Company's growth"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Emphasis Crutches",
+                "text": "Make no mistake"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "software, services, and devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "fairly"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "generally"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "predominantly"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "similarly"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Passive Voice",
+                "text": "were audited on the same basis"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Passive Voice",
+                "text": "could be upheld"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "significantly reduced"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "initially impacting"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "temporarily closed"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "slowly"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "unevenly"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "significantly below"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "large public events were cancelled"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points."
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns: Lazy extremes",
+                "text": "nobody"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns: Lazy extremes",
+                "text": "every"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "Forecasted expense and liquidity management initiatives may be modified as the demand environment evolves"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "globally"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rhythm Patterns: Three-item lists",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "both locally and globally"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "False Agency",
+                "text": "the healthcare giant's scale allows those investments to compound"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "approximately"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "worldwide, U.S. and international sales were 3.3%, 3.9% and 2.8%"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "respectively"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "False Agency",
+                "text": "the competitive environment requires substantial continuing investment"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'was performed'",
+                "text": "the assessment was performed based on criteria established in the Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
+                "text": "generally"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'is designed'",
+                "text": "Internal control over financial reporting is designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with generally accepted accounting principles."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns (structures.md) \u2014 'Questions answered immediately'",
+                "text": "So what changed this year? Quite a bit."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "False Agency (structures.md) \u2014 inanimate 'control environment' given a human verb",
+                "text": "The control environment absorbed a fiscal year conducted substantially under remote working conditions."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
+                "text": "substantially"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns (structures.md) \u2014 'Three-item lists'",
+                "text": "reconciliation, review, and certification"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'were covered by'",
+                "text": "the related statements of consolidated comprehensive income were covered by the same integrated audit."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
+                "text": "carefully"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
+                "text": "merely"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'had been identified'",
+                "text": "no control deficiencies aggregating to a significant deficiency had been identified in the fourth quarter"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'were identified'",
+                "text": "none were identified through the date of this memorandum."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'has been distributed'",
+                "text": "the certification schedule for the coming fiscal year has been distributed to control owners."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'is invited'",
+                "text": "The committee is invited to direct questions to the corporate controller in advance of the February meeting."
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Adverbs",
+                "text": "closely"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "$1,109 million is recorded within trade accounts and notes receivable and $609 million within accounts payable and accrued expenses"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "a sale to a dealer is recognized"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "These incentives may be based on a dealer's purchase volume"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "new programs are announced"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "which are reviewed quarterly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice",
+                "text": "The final cost of these programs is determined at the end of the measurement period"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "developing an independent expectation of the accrual using disaggregated historical cost percentages; testing the completeness and accuracy of the underlying dealer sales data; and evaluating announced program terms against the accrual model's program-type assumptions"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Adverbs",
+                "text": "accurately"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "heart, science and ingenuity"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "Consumer Health, Pharmaceutical and Medical Devices"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "ultimately delivering value to its patients"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "approximately 25% of 2020 sales"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "both locally and globally"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$7.3 billion was spent on acquisitions"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "both are managed as long-horizon assets"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2013 Lazy extremes (every)",
+                "text": "the cost floor beneath every competing bid"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2013 Lazy extremes (every)",
+                "text": "the pattern held in every geographic segment"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Adverbs",
+                "text": "was relatively unchanged"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Rhythm Patterns \u2013 Three-item lists",
+                "text": "software, services, and devices"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2013 Lazy extremes (every)",
+                "text": "above its entry run-rate in every segment"
+              }
+            ]
+          },
+          {
+            "recall": 0.5983606557377049,
+            "matched": 73,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 0,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 0,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 5,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 5,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 3,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 5,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 1,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 2,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 1,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 10,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 3,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 5,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 29,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 25,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 87,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Passive Voice",
+                "text": "were adversely affected by the COVID-19 pandemic"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "adversely"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Passive Voice",
+                "text": "many retail stores and channel partner points of sale temporarily closed at various times"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Vague Declaratives",
+                "text": "It was a structural shift."
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "decisively"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "primarily driven by higher net sales of Services and Wearables"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to the absence of new models in the fourth quarter"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "partially offset by the introduction of iPhone SE in the third quarter"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales of MacBook Pro and 10-inch versions of iPad"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Adverbs",
+                "text": "due primarily to higher net sales from the App Store, advertising and cloud services"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Cut quotables",
+                "text": "Only time will tell how durable these gains prove."
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Word Patterns \u2014 Lazy extremes (structures.md)",
+                "text": "every person and every organization"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Adverbs (phrases.md)",
+                "text": "relatively unchanged"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Passive Voice (structures.md)",
+                "text": "it is widely regarded as the primary engine of the Company's growth"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists (structures.md)",
+                "text": "designing, manufacturing, and selling devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Emphasis Crutches (phrases.md)",
+                "text": "Make no mistake:"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists (structures.md)",
+                "text": "our software, services, and devices"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rhythm Patterns \u2014 Three-item lists (structures.md)",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "in conformity with U.S. generally accepted accounting principles"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Adverbs",
+                "text": "issued an opinion predominantly siding with the IRS"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Passive Voice",
+                "text": "were audited on the same basis"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "Passive Voice",
+                "text": "positions that are more likely than not to be sustained"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "significantly reduced demand for air travel"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "initially impacting service to China"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "large public events were cancelled"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "temporarily closed to visitors"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "large public events were cancelled, governmental authorities imposed restrictions on non-essential activities, and popular leisure destinations temporarily closed to visitors"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "slowly, unevenly"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "it remains significantly below pre-pandemic levels"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "Load factors were capped and middle seats blocked"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "boarding and deplaning processes were modified"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "nobody"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "every assumption in the operating plan"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Passive Voice",
+                "text": "initiatives may be modified"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Adverbs",
+                "text": "vaccination becomes widespread globally"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Passive Voice",
+                "text": "The Company is organized into three business segments"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Passive Voice",
+                "text": "The Pharmaceutical segment is focused on six therapeutic areas"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "locally"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "globally"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "approximately"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development and $7.3 billion spent on acquisitions"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Three-item lists",
+                "text": "worldwide, U.S. and international sales"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Three-item lists",
+                "text": "3.3%, 3.9% and 2.8%"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Adverbs",
+                "text": "respectively"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns \u2014 Questions answered immediately",
+                "text": "So what changed this year? Quite a bit."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "False Agency",
+                "text": "The control environment absorbed a fiscal year conducted substantially under remote working conditions."
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "reconciliation, review, and certification controls"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice",
+                "text": "the assessment was performed based on criteria established in the Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice",
+                "text": "Internal control over financial reporting is designed to provide reasonable assurance"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice",
+                "text": "the related statements of consolidated comprehensive income were covered by the same integrated audit"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice",
+                "text": "no control deficiencies aggregating to a significant deficiency had been identified in the fourth quarter, and none were identified through the date of this memorandum"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Passive Voice",
+                "text": "the certification schedule for the coming fiscal year has been distributed to control owners"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs",
+                "text": "generally accepted accounting principles"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs",
+                "text": "conducted substantially under remote working conditions"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs",
+                "text": "one management considered carefully"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Adverbs",
+                "text": "merely relocated its risks"
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Adverbs",
+                "text": "closely"
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "maintain its quarterly dividend, complete the incremental repurchase authorization, and fund both from operating cash flow and debt issuance in roughly the proportions observed over the trailing eight quarters."
+              },
+              {
+                "draft": "fin-07",
+                "rule": "Adverbs",
+                "text": "roughly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Adverbs (phrases.md) \u2014 \"Kill all adverbs. No -ly words.\"",
+                "text": "quarterly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Adverbs (phrases.md) \u2014 \"Kill all adverbs. No -ly words.\"",
+                "text": "accurately"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Rhythm Patterns: Three-item lists (structures.md) \u2014 \"Use two items or one\"",
+                "text": "developing an independent expectation of the accrual using disaggregated historical cost percentages; testing the completeness and accuracy of the underlying dealer sales data; and evaluating announced program terms against the accrual model's program-type assumptions"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "$1,109 million is recorded within trade accounts and notes receivable"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "a sale to a dealer is recognized"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "These incentives may be based on a dealer's purchase volume"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "as new programs are announced"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "which are reviewed quarterly"
+              },
+              {
+                "draft": "fin-08",
+                "rule": "Passive Voice (structures.md) \u2014 \"Every sentence needs a subject doing something. Passive voice hides the actor\"",
+                "text": "is determined at the end of the measurement period"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Cut quotables",
+                "text": "The Credo is not a slogan. Not a poster. An operating system."
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "The Company is committed to bringing"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "ultimately"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "both are managed as long-horizon assets"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "approximately"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$12.2 billion was invested in research and development"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Passive Voice",
+                "text": "$7.3 billion was spent on acquisitions"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "locally"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Adverbs",
+                "text": "globally"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "False Agency",
+                "text": "shifting an ever larger share of the Company's income toward recurring, subscription-based contracts"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "every competing bid"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "every geographic segment"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Adverbs",
+                "text": "relatively"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "software, services, and devices"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Word Patterns \u2014 Lazy extremes",
+                "text": "every segment"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "commercial cloud annualized revenue exited the fiscal year above its entry run-rate in every segment, operating margins expanded despite the infrastructure build, and the balance of the Company's revenue continues its migration toward subscription economics"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "False Agency",
+                "text": "the balance of the Company's revenue continues its migration toward subscription economics"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 768,
+            "flags_per_1k": 6.9,
+            "toa_violations": 27,
+            "toa_per_1k": 0.243,
+            "toa_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Adverbs",
+                "text": "the financial statements present fairly, in all material respects, the financial position of Apple Inc."
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects"
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Rhythm Patterns",
+                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with U.S. generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "whether effective internal control over financial reporting was maintained in all material respects"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Rhythm Patterns: Em-dashes",
+                "text": "Reclassification of certain tax effects from accumulated other comprehensive income\u2014 \u2014 (108)108 \u2014 \u2014"
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "the consolidated financial statements present fairly, in all material respects, the financial position of the Company"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "Adverbs",
+                "text": "fairly"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects, the financial position"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
+              },
+              {
+                "file": "HD_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects, the financial position"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "can provide only reasonable assurance with respect to financial statement preparation"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "The Company's internal control over financial reporting is designed to provide reasonable assurance as to the reliability of the Company's financial reporting"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "fairly"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "whether effective internal control over financial reporting was maintained in all material respects"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.5984,
+      "recall_min": 0.5984,
+      "recall_max": 0.5984,
+      "n_runs": 3,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 2.0,
+          "matched_min": 1,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "lex-1": {
+          "matched_mean": 9.0,
+          "matched_min": 8,
+          "matched_max": 10,
+          "planted": 23,
+          "recall": 0.3913
+        },
+        "lex-2": {
+          "matched_mean": 3.0,
+          "matched_min": 1,
+          "matched_max": 5,
+          "planted": 12,
+          "recall": 0.25
+        },
+        "lex-3": {
+          "matched_mean": 5.67,
+          "matched_min": 5,
+          "matched_max": 6,
+          "planted": 12,
+          "recall": 0.4722
+        },
+        "phrasal": {
+          "matched_mean": 29.0,
+          "matched_min": 28,
+          "matched_max": 30,
+          "planted": 42,
+          "recall": 0.6905
+        },
+        "structural": {
+          "matched_mean": 24.33,
+          "matched_min": 23,
+          "matched_max": 25,
+          "planted": 29,
+          "recall": 0.8391
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 1.33,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.6667
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 1,
+          "recall": 0.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 0.6667
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 5.0,
+          "matched_min": 5,
+          "matched_max": 5,
+          "planted": 5,
+          "recall": 1.0
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 4.0,
+          "matched_min": 3,
+          "matched_max": 5,
+          "planted": 18,
+          "recall": 0.2222
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 3.0,
+          "matched_min": 1,
+          "matched_max": 5,
+          "planted": 12,
+          "recall": 0.25
+        },
+        "lex-t3-density": {
+          "matched_mean": 5.67,
+          "matched_min": 5,
+          "matched_max": 6,
+          "planted": 12,
+          "recall": 0.4722
+        },
+        "phr-false-range": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.4167
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 3.67,
+          "matched_min": 3,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 0.9167
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.6667
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.2222
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "phr-transition": {
+          "matched_mean": 2.67,
+          "matched_min": 2,
+          "matched_max": 3,
+          "planted": 7,
+          "recall": 0.381
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 2.33,
+          "matched_min": 2,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.5833
+        },
+        "str-colon-reveal": {
+          "matched_mean": 1.0,
+          "matched_min": 0,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 3,
+          "recall": 0.0
+        },
+        "str-em-dash": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-false-agency": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-formatting-slop": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.8333
+        },
+        "str-negative-listing": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 3.67,
+          "matched_min": 3,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 0.9167
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        }
+      }
+    },
+    "the-antislop": {
+      "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.4672131147540984,
+            "matched": 57,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 0,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 9,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 2,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 3,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 2,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 9,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 2,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 23,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 20,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 7,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Significance inflation",
+                "text": "marking a pivotal moment in the Company's product history"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Vague attributions",
+                "text": "Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles."
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rule of three",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rule of three",
+                "text": "unprecedented, widespread and persistent"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "Rule of three",
+                "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Language Patterns \u2014 Rule of three",
+                "text": "heart, science and ingenuity"
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Filler and Hedging \u2014 Generic conclusions",
+                "text": "Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021."
+              }
+            ]
+          },
+          {
+            "recall": 0.4344262295081967,
+            "matched": 53,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 0,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 8,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 2,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 4,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 2,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 1,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 2,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 8,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 23,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 18,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 8,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Significance inflation",
+                "text": "marking a pivotal moment in the Company's product history"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Vague attributions",
+                "text": "Management believes"
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rule of three",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Content Patterns \u2014 Significance inflation",
+                "text": "a testament to the research organization"
+              },
+              {
+                "draft": "fin-05",
+                "rule": "Content Patterns \u2014 Vague attributions",
+                "text": "management views sustained innovation as the primary defense against pricing pressure"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Rule of three \u2014 Language Patterns #9",
+                "text": "heart, science and ingenuity"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Promotional language \u2014 Content Patterns #4",
+                "text": "The Company is committed to bringing its full breadth and depth to ensure health for people today and for future generations."
+              },
+              {
+                "draft": "fin-10",
+                "rule": "Filler and Hedging \u2014 Generic conclusions",
+                "text": "Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021."
+              }
+            ]
+          },
+          {
+            "recall": 0.45901639344262296,
+            "matched": 56,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 1,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 0,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 9,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 2,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 2,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 2,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 3,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 3,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 4,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 1,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 3,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 9,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 0,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 1,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 23,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 20,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 6,
+            "unmatched_flags": [
+              {
+                "draft": "fin-01",
+                "rule": "Significance inflation (Content Patterns)",
+                "text": "marking a pivotal moment in the Company's product history"
+              },
+              {
+                "draft": "fin-01",
+                "rule": "Comparator Sentences (Structural Patterns)",
+                "text": "This was not a temporary disruption. It was a structural shift."
+              },
+              {
+                "draft": "fin-02",
+                "rule": "Rule of three",
+                "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Language Patterns \u2014 Clinical formality (\"implement\")",
+                "text": "implemented"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "Language Patterns \u2014 Rule of three",
+                "text": "Key reconciliation, review, and certification controls"
+              },
+              {
+                "draft": "fin-09",
+                "rule": "Rule of three (Language Patterns)",
+                "text": "blend heart, science and ingenuity"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 78,
+            "flags_per_1k": 0.7,
+            "toa_violations": 0,
+            "toa_per_1k": 0.0,
+            "toa_examples": []
+          }
+        ]
+      },
+      "recall_mean": 0.4536,
+      "recall_min": 0.4344,
+      "recall_max": 0.4672,
+      "n_runs": 3,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "lex-1": {
+          "matched_mean": 8.67,
+          "matched_min": 8,
+          "matched_max": 9,
+          "planted": 23,
+          "recall": 0.3768
+        },
+        "lex-2": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "lex-3": {
+          "matched_mean": 1.33,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1111
+        },
+        "phrasal": {
+          "matched_mean": 23.0,
+          "matched_min": 23,
+          "matched_max": 23,
+          "planted": 42,
+          "recall": 0.5476
+        },
+        "structural": {
+          "matched_mean": 19.33,
+          "matched_min": 18,
+          "matched_max": 20,
+          "planted": 29,
+          "recall": 0.6667
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 5,
+          "recall": 0.0
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 8.67,
+          "matched_min": 8,
+          "matched_max": 9,
+          "planted": 18,
+          "recall": 0.4815
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "lex-t3-density": {
+          "matched_mean": 1.33,
+          "matched_min": 1,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1111
+        },
+        "phr-false-range": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.2222
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 3.33,
+          "matched_min": 3,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 0.8333
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 0.33,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.1111
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 1.67,
+          "matched_min": 1,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 0.5556
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "phr-transition": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 7,
+          "recall": 0.2857
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-colon-reveal": {
+          "matched_mean": 1.0,
+          "matched_min": 0,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-em-dash": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-false-agency": {
+          "matched_mean": 0.67,
+          "matched_min": 0,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.3333
+        },
+        "str-formatting-slop": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-listing": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 2,
+          "recall": 1.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 3,
+          "recall": 1.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 2.67,
+          "matched_min": 2,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.6667
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 4.0,
+          "matched_min": 4,
+          "matched_max": 4,
+          "planted": 4,
+          "recall": 1.0
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        }
+      }
+    },
+    "unslop-deterministic": {
+      "sha": "5af59d9fcdbd0df7b1a0762be958f78c7805fc09",
+      "runs": {
+        "seeded": [
+          {
+            "recall": 0.28688524590163933,
+            "matched": 35,
+            "plants": 122,
+            "per_pattern": {
+              "con-chatbot-artifact": {
+                "matched": 1,
+                "planted": 2
+              },
+              "con-cutoff-disclaimer": {
+                "matched": 1,
+                "planted": 1
+              },
+              "con-sycophancy": {
+                "matched": 0,
+                "planted": 1
+              },
+              "lex-hollow-intensifier": {
+                "matched": 0,
+                "planted": 5
+              },
+              "lex-t1-vocab": {
+                "matched": 12,
+                "planted": 18
+              },
+              "lex-t2-cluster": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-t3-density": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phr-false-range": {
+                "matched": 0,
+                "planted": 2
+              },
+              "phr-filler-wordy": {
+                "matched": 3,
+                "planted": 4
+              },
+              "phr-generic-conclusion": {
+                "matched": 1,
+                "planted": 4
+              },
+              "phr-hedge-stack": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-novelty-inflation": {
+                "matched": 0,
+                "planted": 3
+              },
+              "phr-significance-inflation": {
+                "matched": 2,
+                "planted": 4
+              },
+              "phr-signposting-meta": {
+                "matched": 1,
+                "planted": 3
+              },
+              "phr-superficial-ing": {
+                "matched": 2,
+                "planted": 3
+              },
+              "phr-throat-clearing": {
+                "matched": 0,
+                "planted": 4
+              },
+              "phr-transition": {
+                "matched": 7,
+                "planted": 7
+              },
+              "phr-vague-attribution": {
+                "matched": 1,
+                "planted": 4
+              },
+              "str-colon-reveal": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-copula-avoidance": {
+                "matched": 2,
+                "planted": 3
+              },
+              "str-em-dash": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-false-agency": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-formatting-slop": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-listing": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-negative-parallelism": {
+                "matched": 0,
+                "planted": 3
+              },
+              "str-rhetorical-setup": {
+                "matched": 0,
+                "planted": 2
+              },
+              "str-rule-of-three": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-staccato-fragments": {
+                "matched": 0,
+                "planted": 4
+              },
+              "str-synonym-cycling": {
+                "matched": 0,
+                "planted": 1
+              }
+            },
+            "per_tier": {
+              "conversational": {
+                "matched": 2,
+                "planted": 4
+              },
+              "lex-1": {
+                "matched": 12,
+                "planted": 23
+              },
+              "lex-2": {
+                "matched": 2,
+                "planted": 12
+              },
+              "lex-3": {
+                "matched": 0,
+                "planted": 12
+              },
+              "phrasal": {
+                "matched": 17,
+                "planted": 42
+              },
+              "structural": {
+                "matched": 2,
+                "planted": 29
+              }
+            },
+            "unmatched_flag_count": 4,
+            "unmatched_flags": [
+              {
+                "draft": "fin-02",
+                "rule": "filler_phrase",
+                "text": "a wide range of"
+              },
+              {
+                "draft": "fin-03",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "draft": "fin-04",
+                "rule": "filler_phrase",
+                "text": "prior to"
+              },
+              {
+                "draft": "fin-06",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ],
+        "human": [
+          {
+            "words": 111313,
+            "flags": 229,
+            "flags_per_1k": 2.06,
+            "toa_violations": 19,
+            "toa_per_1k": 0.171,
+            "toa_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "Comprehensive"
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "HD_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MSFT_2020_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "comprehensive"
+              }
+            ]
+          }
+        ]
+      },
+      "recall_mean": 0.2869,
+      "recall_min": 0.2869,
+      "recall_max": 0.2869,
+      "n_runs": 1,
+      "per_tier": {
+        "conversational": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "lex-1": {
+          "matched_mean": 12.0,
+          "matched_min": 12,
+          "matched_max": 12,
+          "planted": 23,
+          "recall": 0.5217
+        },
+        "lex-2": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1667
+        },
+        "lex-3": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "phrasal": {
+          "matched_mean": 17.0,
+          "matched_min": 17,
+          "matched_max": 17,
+          "planted": 42,
+          "recall": 0.4048
+        },
+        "structural": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 29,
+          "recall": 0.069
+        }
+      },
+      "per_pattern": {
+        "con-chatbot-artifact": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 2,
+          "recall": 0.5
+        },
+        "con-cutoff-disclaimer": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 1,
+          "recall": 1.0
+        },
+        "con-sycophancy": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 1,
+          "recall": 0.0
+        },
+        "lex-hollow-intensifier": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 5,
+          "recall": 0.0
+        },
+        "lex-t1-vocab": {
+          "matched_mean": 12.0,
+          "matched_min": 12,
+          "matched_max": 12,
+          "planted": 18,
+          "recall": 0.6667
+        },
+        "lex-t2-cluster": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 12,
+          "recall": 0.1667
+        },
+        "lex-t3-density": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 12,
+          "recall": 0.0
+        },
+        "phr-false-range": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "phr-filler-wordy": {
+          "matched_mean": 3.0,
+          "matched_min": 3,
+          "matched_max": 3,
+          "planted": 4,
+          "recall": 0.75
+        },
+        "phr-generic-conclusion": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 4,
+          "recall": 0.25
+        },
+        "phr-hedge-stack": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "phr-novelty-inflation": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 3,
+          "recall": 0.0
+        },
+        "phr-significance-inflation": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 4,
+          "recall": 0.5
+        },
+        "phr-signposting-meta": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 3,
+          "recall": 0.3333
+        },
+        "phr-superficial-ing": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.6667
+        },
+        "phr-throat-clearing": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "phr-transition": {
+          "matched_mean": 7.0,
+          "matched_min": 7,
+          "matched_max": 7,
+          "planted": 7,
+          "recall": 1.0
+        },
+        "phr-vague-attribution": {
+          "matched_mean": 1.0,
+          "matched_min": 1,
+          "matched_max": 1,
+          "planted": 4,
+          "recall": 0.25
+        },
+        "str-colon-reveal": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-copula-avoidance": {
+          "matched_mean": 2.0,
+          "matched_min": 2,
+          "matched_max": 2,
+          "planted": 3,
+          "recall": 0.6667
+        },
+        "str-em-dash": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-false-agency": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-formatting-slop": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-negative-listing": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-negative-parallelism": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 3,
+          "recall": 0.0
+        },
+        "str-rhetorical-setup": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 2,
+          "recall": 0.0
+        },
+        "str-rule-of-three": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-staccato-fragments": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 4,
+          "recall": 0.0
+        },
+        "str-synonym-cycling": {
+          "matched_mean": 0.0,
+          "matched_min": 0,
+          "matched_max": 0,
+          "planted": 1,
+          "recall": 0.0
+        }
+      }
+    }
+  }
+}

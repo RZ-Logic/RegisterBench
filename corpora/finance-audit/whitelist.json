@@ -3,7 +3,7 @@
   "status": "pending_review",
   "reviewer": "Rizwan Ahmed",
   "created": "2026-07-24",
-  "matching": "Case-insensitive whole-phrase match with word boundaries. A tool flag counts as a term-of-art violation when its flagged span overlaps any occurrence of a whitelisted term in the text. Morphological variants listed explicitly in the variants array; no stemming.",
+  "matching": "Case-insensitive whole-phrase match with word boundaries, implemented as (?<!\\w)term(?!\\w) in scripts/score.py boundary_spans(). Boundaries are load-bearing: plain substring search would match 'qualified opinion' inside 'unqualified opinion', which is the opposite meaning and occurs 9 times in the v0.1 corpus. A tool flag counts as a term-of-art violation when its flagged span overlaps a whitelisted occurrence at 0.5 or more of the shorter span. Flags carrying a character offset are tested at that offset; flags carrying only quoted text are grouped by text and credited at most min(number of such flags, number of occurrences that actually collide), so one colliding occurrence cannot convict every flag sharing its wording. Morphological variants listed explicitly in the variants array; no stemming.",
   "terms": [
     {
       "term": "material weakness",
@@ -38,14 +38,14 @@
     {
       "term": "pervasive",
       "variants": ["pervasiveness"],
-      "citation": "PCAOB AS 3105 (pervasiveness threshold)",
-      "note": "Term of art. Pervasiveness is the threshold separating a qualified opinion from an adverse opinion (for misstatements) and from a disclaimer (for scope limitations). Reads as intensifier slop out of context."
+      "citation": "ISA 705 / AU-C 705 (pervasiveness threshold). NOT a PCAOB AS 3105 term.",
+      "note": "Term of art in the ISA and AICPA framework, where pervasiveness separates a qualified opinion from an adverse opinion. PCAOB AS 3105, which governs the issuer audits in this corpus, does not use that construction, so this entry is retained for cross-framework coverage rather than because PCAOB requires the word. Zero occurrences in the v0.1 corpus, so it contributes nothing to the current ToA metric. Reads as intensifier slop out of context. REVIEW: Rizwan to decide whether a PCAOB-audit corpus should carry ISA vocabulary at all."
     },
     {
       "term": "qualified opinion",
       "variants": ["qualified opinions"],
-      "citation": "PCAOB AS 3105",
-      "note": "Opinion type. Issued when a matter is material but not pervasive, arising from either a GAAP departure (material misstatement) or a scope limitation (inability to obtain sufficient appropriate evidence). 'Qualified' here means 'with reservations / except for', near-opposite of the everyday sense of competent or eligible."
+      "citation": "PCAOB AS 3105.02-.04 (GAAP departure), .05-.09 (scope limitation)",
+      "note": "Opinion type. Under PCAOB AS 3105 the auditor expresses a qualified 'except for' opinion when the financial statements are fairly presented apart from the effects of a specific matter, arising from either a GAAP departure or a scope limitation that does not preclude an opinion on the statements as a whole. PCAOB does not frame the choice using the ISA 'material but not pervasive' threshold; see the separate 'pervasive' entry. 'Qualified' here means 'with reservations / except for', near-opposite of the everyday sense of competent or eligible. Matching must exclude 'unqualified opinion', which is the opposite meaning and occurs 9 times in the v0.1 corpus."
     },
     {
       "term": "adverse opinion",
@@ -62,8 +62,8 @@
     {
       "term": "comprehensive income",
       "variants": ["statements of comprehensive income", "other comprehensive income"],
-      "citation": "FASB ASC 220 (Income Statement - Reporting Comprehensive Income)",
-      "note": "Defined GAAP term and required statement name. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; observed firing on real KO and DE audit opinions."
+      "citation": "FASB ASC 220 (Income Statement - Reporting Comprehensive Income); Master Glossary definition",
+      "note": "Defined GAAP term under ASC 220 and the conventional caption for the required statement. ASC 220 permits equivalent statement titles rather than prescribing one exact caption, so the defensible claim is that the TERM is defined, not that a specific statement name is mandated. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; 25 occurrences in the v0.1 corpus, and the single largest source of ToA violations in the results."
     },
     {
       "term": "critical audit matter",
