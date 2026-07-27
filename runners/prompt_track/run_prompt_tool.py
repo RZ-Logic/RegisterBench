@@ -27,7 +27,12 @@ from pathlib import Path
 
 MODEL = "claude-sonnet-5"   # pinned per Rizwan 2026-07-24 (supersedes the brief's 4-6); do not float
 N_RUNS = 3
-MAX_TOKENS = 4000
+# Sized for the worst case in the corpus: F_2021_mdna.txt is 20,281 words, and
+# an aggressive ruleset flagging ~7 per 1,000 words emits ~140 findings, each a
+# rule name plus a quote. A truncated response is a silent zero unless caught,
+# and the bias would run against exactly the tools that flag most, so the
+# harness treats truncation as fatal rather than recording an empty result.
+MAX_TOKENS = 16000
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 TOOLS_DIR = Path(os.environ.get("REGISTERBENCH_TOOLS_DIR", ROOT.parent / "tools"))
@@ -159,12 +164,22 @@ def main():
             resp = call_api(system, text, api_key)
             raw_path = raw_dir / f"{tool}_{file.stem}_run{n}.json"
             raw_path.write_text(json.dumps(resp, indent=2), encoding="utf-8")
+            if resp.get("stop_reason") == "max_tokens":
+                sys.exit(
+                    f"FATAL {file.name} run{n}: response hit max_tokens "
+                    f"({MAX_TOKENS}). Recording this as zero findings would "
+                    f"understate the most aggressive tools and silently bias "
+                    f"flags/1k. Raise MAX_TOKENS or chunk the input, then "
+                    f"re-run. Raw response saved to {raw_path}.")
             content = "".join(
                 b.get("text", "") for b in resp.get("content", []))
             findings = parse_findings(content)
             if findings is None:
-                print(f"WARN {file.name} run{n}: unparseable response, logged raw")
-                findings = []
+                sys.exit(
+                    f"FATAL {file.name} run{n}: response did not parse as the "
+                    f"requested JSON array. An empty result here is "
+                    f"indistinguishable from a genuine zero, so the harness "
+                    f"refuses to guess. Raw response saved to {raw_path}.")
             result["files"][file.name] = {
                 "words": len(text.split()),
                 "findings": findings,

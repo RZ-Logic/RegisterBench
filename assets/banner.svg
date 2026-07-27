@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="100%" role="img" aria-labelledby="banner-title banner-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
   <title id="banner-title">RegisterBench</title>
-  <desc id="banner-desc">RegisterBench — the first independent, cross-tool, register-split benchmark of anti-AI-slop rulesets. Recall on manually seeded ground truth, flag behavior on verifiably pre-ChatGPT human text, split by writing register. It measures rules, not writers.</desc>
+  <desc id="banner-desc">RegisterBench: independent, cross-tool, register-split measurement of anti-AI-slop rulesets. Recall on manually seeded ground truth, flag behavior on verifiably pre-ChatGPT human text, split by writing register. It measures rules, not writers.</desc>
 
   <rect width="1280" height="360" fill="#0B1220"/>
 
