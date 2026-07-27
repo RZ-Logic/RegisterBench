@@ -66,6 +66,12 @@
       "note": "Defined GAAP term under ASC 220 and the conventional caption for the required statement. ASC 220 permits equivalent statement titles rather than prescribing one exact caption, so the defensible claim is that the TERM is defined, not that a specific statement name is mandated. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; 25 occurrences in the v0.1 corpus, and the single largest source of ToA violations in the results."
     },
     {
+      "term": "leverage ratio",
+      "variants": ["covenant leverage ratio", "managed leverage", "financial statement leverage", "financial leverage", "operating leverage", "leverage framework"],
+      "citation": "SEC Regulation S-K Item 303 (MD&A liquidity and capital resources); Regulation G and Item 10(e) (non-GAAP measures must be consistently labelled and reconciled); covenant definitions in the filer's credit agreements",
+      "note": "Leverage as a financial metric, not as a verb. Where a filer defines 'managed leverage' or 'financial statement leverage' as a non-GAAP measure, Regulation G requires the label be used consistently and reconciled to GAAP, so renaming it is a disclosure problem rather than a style choice. 'Covenant leverage ratio' is defined contractually in the credit agreement. Direct collision with avoid-ai-writing Tier 1, whose table scopes the word to 'leverage (verb)' but whose detector regex does not honour that scoping and fires on these noun phrases in CAT and F filings. DELIBERATELY NOT PROTECTED: bare 'leverage', which in verb use ('leverage our position') is a fair flag and which these tools are right to catch. Protecting the bare word would excuse genuine slop and weaken the metric."
+    },
+    {
       "term": "critical audit matter",
       "variants": ["critical audit matters"],
       "citation": "PCAOB AS 3101.11-.17",
@@ -82,6 +88,24 @@
       "variants": ["presents fairly", "presented fairly", "fairly presents", "fair presentation"],
       "citation": "PCAOB AS 2815; AS 3101.08 (required opinion wording)",
       "note": "Mandatory opinion phrase with defined meaning."
+    }
+  ],
+  "deliberately_excluded": [
+    {
+      "term": "commenced",
+      "reason": "avoid-ai-writing Tier 1 hard-replaces commence with start, and 'commenced' occurs in 4 corpus documents ('commenced operations', 'commenced an action'). It is formal legal register, NOT a defined term with a standard behind it, so protecting it would dilute the metric. Register collisions are reported separately in the README rather than counted as term-of-art violations. Wikipedia's 'Ineffective indicators' section makes the same point: formal prose is not an AI signal, but it is also not a regulatory requirement."
+    },
+    {
+      "term": "utilize / utilized / utilizing",
+      "reason": "Fires in 3 corpus documents. Ordinary formal usage, no defined meaning, and the plain-language replacement ('use') is genuinely better writing. The tools are right here."
+    },
+    {
+      "term": "robust, enduring",
+      "reason": "One document each. Ordinary adjectives in these contexts, correctly flagged."
+    },
+    {
+      "term": "leverage (bare, unqualified)",
+      "reason": "See the leverage ratio entry. Only the defined noun phrases are protected; the bare word stays flaggable."
     }
   ],
   "proposed_additions": [

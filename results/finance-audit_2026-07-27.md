@@ -1,4 +1,4 @@
-# RegisterBench results: finance-audit (2026-07-26)
+# RegisterBench results: finance-audit (2026-07-27)
 
 RegisterBench measures rules, not writers. It never claims or implies AI
 authorship of any text. A flag on human text is not automatically wrong
@@ -13,12 +13,12 @@ pattern breakdowns are means across all runs, matching the headline.
 
 | tool | sha | runs | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |
 |---|---|---|---|---|---|---|
-| avoid-ai-writing-detector | 27156c7a | 1 | 46.7% | deterministic | 0.51 | 0.081 |
+| avoid-ai-writing-detector | 27156c7a | 1 | 46.7% | deterministic | 1.09 | 0.135 |
 | avoid-ai-writing-skill | 27156c7a | 3 | 72.7% | 71.3%-73.8% | 1.34 | 0.009 |
 | no-ai-slop | 61c21c35 | 3 | 55.5% | 54.1%-56.6% | 0.55 | 0.0 |
 | stop-slop | 8da1f030 | 3 | 59.8% | 59.8%-59.8% | 6.9 | 0.243 |
 | the-antislop | 5edbf856 | 3 | 45.4% | 43.4%-46.7% | 0.7 | 0.0 |
-| unslop-deterministic | 5af59d9f | 1 | 28.7% | deterministic | 2.06 | 0.171 |
+| unslop-deterministic | 5af59d9f | 1 | 28.7% | deterministic | 2.06 | 0.323 |
 
 ## avoid-ai-writing-detector: recall by tier (single deterministic run)
 

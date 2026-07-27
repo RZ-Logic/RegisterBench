@@ -1,13 +1,15 @@
 {
   "tool": "avoid-ai-writing-detector",
   "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
-  "run_date": "2026-07-24",
+  "run_date": "2026-07-27",
   "options": {
-    "contextMode": "general"
+    "contextMode": "general",
+    "chunking": "paragraph-packed at <=9000 words for inputs over the engine's 10000-word cap; document-level rules deduplicated across chunks"
   },
   "files": {
     "AAPL_2020_mdna.txt": {
       "words": 4264,
+      "chunks": 1,
       "score": 5,
       "label": "Minimal AI signals",
       "findings": [
@@ -57,6 +59,7 @@
     },
     "AAPL_2020_opinion.txt": {
       "words": 1380,
+      "chunks": 1,
       "score": 2,
       "label": "Minimal AI signals",
       "findings": [
@@ -76,12 +79,105 @@
     },
     "CAT_2021_mdna.txt": {
       "words": 14547,
-      "score": 0,
-      "label": "Text too long",
-      "findings": []
+      "chunks": 2,
+      "score": 4,
+      "label": "2 chunks, word-weighted score",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilize",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 46852,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.79 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 14.8% (1357 unique / 9177 tokens)",
+          "index": null,
+          "severity": "low"
+        },
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "In order to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizing",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilize",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 65543,
+          "severity": "low"
+        },
+        {
+          "rule": "em-dash",
+          "text": "57 em dashes in 5564 words",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 21.4% (1233 unique / 5764 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
     },
     "CAT_2021_opinion.txt": {
       "words": 1857,
+      "chunks": 1,
       "score": 2,
       "label": "Minimal AI signals",
       "findings": [
@@ -107,12 +203,87 @@
     },
     "DAL_2021_mdna.txt": {
       "words": 14759,
-      "score": 0,
-      "label": "Text too long",
-      "findings": []
+      "chunks": 2,
+      "score": 3,
+      "label": "2 chunks, word-weighted score",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "seamless",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 2189,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.81 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 801,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 17.1% (1575 unique / 9189 tokens)",
+          "index": null,
+          "severity": "low"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizing",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilize",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 67330,
+          "severity": "medium"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 73543,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 18.9% (1101 unique / 5839 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
     },
     "DAL_2021_opinion.txt": {
       "words": 1898,
+      "chunks": 1,
       "score": 2,
       "label": "Minimal AI signals",
       "findings": [
@@ -138,6 +309,7 @@
     },
     "DE_2020_opinion.txt": {
       "words": 2072,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [
@@ -169,12 +341,129 @@
     },
     "F_2021_mdna.txt": {
       "words": 20281,
-      "score": 0,
-      "label": "Text too long",
-      "findings": []
+      "chunks": 3,
+      "score": 4,
+      "label": "3 chunks, word-weighted score",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "Leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "In order to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Moreover",
+          "index": 3449,
+          "severity": "medium"
+        },
+        {
+          "rule": "transition",
+          "text": "notably",
+          "index": 8689,
+          "severity": "medium"
+        },
+        {
+          "rule": "transition",
+          "text": "when it comes to",
+          "index": 21096,
+          "severity": "medium"
+        },
+        {
+          "rule": "hedge-stack",
+          "text": "could potentially",
+          "index": 15770,
+          "severity": "high"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.82 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 12054,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 17.1% (1533 unique / 8979 tokens)",
+          "index": null,
+          "severity": "low"
+        },
+        {
+          "rule": "tier1",
+          "text": "robust",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "pivotal",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "Leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "in order to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilize",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Moreover",
+          "index": 59690,
+          "severity": "medium"
+        },
+        {
+          "rule": "em-dash",
+          "text": "61 em dashes in 8935 words",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 17.7% (1652 unique / 9337 tokens)",
+          "index": null,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 26.9% (669 unique / 2485 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
     },
     "F_2021_opinion.txt": {
       "words": 2160,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [
@@ -206,6 +495,7 @@
     },
     "HD_2021_mdna.txt": {
       "words": 4772,
+      "chunks": 1,
       "score": 1,
       "label": "Minimal AI signals",
       "findings": [
@@ -225,6 +515,7 @@
     },
     "HD_2021_opinion.txt": {
       "words": 1339,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [
@@ -256,6 +547,7 @@
     },
     "JNJ_2021_mdna.txt": {
       "words": 9300,
+      "chunks": 1,
       "score": 6,
       "label": "Minimal AI signals",
       "findings": [
@@ -323,6 +615,7 @@
     },
     "JNJ_2021_opinion.txt": {
       "words": 2980,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [
@@ -360,6 +653,7 @@
     },
     "KO_2021_opinion.txt": {
       "words": 1909,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [
@@ -385,12 +679,123 @@
     },
     "MMM_2021_mdna.txt": {
       "words": 16541,
-      "score": 0,
-      "label": "Text too long",
-      "findings": []
+      "chunks": 2,
+      "score": 5,
+      "label": "2 chunks, word-weighted score",
+      "findings": [
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Furthermore",
+          "index": 3416,
+          "severity": "medium"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 1401,
+          "severity": "medium"
+        },
+        {
+          "rule": "filler",
+          "text": "In terms of",
+          "index": 38683,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.79 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 13.7% (1255 unique / 9132 tokens)",
+          "index": null,
+          "severity": "low"
+        },
+        {
+          "rule": "tier1",
+          "text": "comprehensive",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "leverage",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "in order to",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizes",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilize",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilizing",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "utilized",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "tier1",
+          "text": "commenced",
+          "index": null,
+          "severity": "high"
+        },
+        {
+          "rule": "transition",
+          "text": "Additionally",
+          "index": 86850,
+          "severity": "medium"
+        },
+        {
+          "rule": "fnword-trigram-entropy",
+          "text": "Function-word trigram entropy 0.82 (low)",
+          "index": null,
+          "severity": "medium"
+        },
+        {
+          "rule": "confidence-calibration",
+          "text": "significantly",
+          "index": 93662,
+          "severity": "low"
+        },
+        {
+          "rule": "low-ttr",
+          "text": "Vocabulary diversity 18.1% (1390 unique / 7675 tokens)",
+          "index": null,
+          "severity": "low"
+        }
+      ]
     },
     "MMM_2021_opinion.txt": {
       "words": 1240,
+      "chunks": 1,
       "score": 2,
       "label": "Minimal AI signals",
       "findings": [
@@ -410,6 +815,7 @@
     },
     "MSFT_2020_mdna.txt": {
       "words": 8784,
+      "chunks": 1,
       "score": 2,
       "label": "Minimal AI signals",
       "findings": [
@@ -447,6 +853,7 @@
     },
     "MSFT_2020_opinion.txt": {
       "words": 1230,
+      "chunks": 1,
       "score": 3,
       "label": "Minimal AI signals",
       "findings": [

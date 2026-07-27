@@ -1,13 +1,15 @@
 {
   "tool": "avoid-ai-writing-detector",
   "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
-  "run_date": "2026-07-24",
+  "run_date": "2026-07-27",
   "options": {
-    "contextMode": "general"
+    "contextMode": "general",
+    "chunking": "paragraph-packed at <=9000 words for inputs over the engine's 10000-word cap; document-level rules deduplicated across chunks"
   },
   "files": {
     "fin-01.md": {
       "words": 371,
+      "chunks": 1,
       "score": 19,
       "label": "Some AI patterns",
       "findings": [
@@ -93,6 +95,7 @@
     },
     "fin-02.md": {
       "words": 379,
+      "chunks": 1,
       "score": 10,
       "label": "Minimal AI signals",
       "findings": [
@@ -142,6 +145,7 @@
     },
     "fin-03.md": {
       "words": 397,
+      "chunks": 1,
       "score": 16,
       "label": "Some AI patterns",
       "findings": [
@@ -209,6 +213,7 @@
     },
     "fin-04.md": {
       "words": 356,
+      "chunks": 1,
       "score": 12,
       "label": "Minimal AI signals",
       "findings": [
@@ -270,6 +275,7 @@
     },
     "fin-05.md": {
       "words": 349,
+      "chunks": 1,
       "score": 9,
       "label": "Minimal AI signals",
       "findings": [
@@ -313,6 +319,7 @@
     },
     "fin-06.md": {
       "words": 342,
+      "chunks": 1,
       "score": 9,
       "label": "Minimal AI signals",
       "findings": [
@@ -344,6 +351,7 @@
     },
     "fin-07.md": {
       "words": 355,
+      "chunks": 1,
       "score": 10,
       "label": "Minimal AI signals",
       "findings": [
@@ -393,6 +401,7 @@
     },
     "fin-08.md": {
       "words": 361,
+      "chunks": 1,
       "score": 7,
       "label": "Minimal AI signals",
       "findings": [
@@ -424,6 +433,7 @@
     },
     "fin-09.md": {
       "words": 354,
+      "chunks": 1,
       "score": 5,
       "label": "Minimal AI signals",
       "findings": [
@@ -449,6 +459,7 @@
     },
     "fin-10.md": {
       "words": 330,
+      "chunks": 1,
       "score": 7,
       "label": "Minimal AI signals",
       "findings": [

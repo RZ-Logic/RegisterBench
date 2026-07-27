@@ -1,6 +1,6 @@
 {
   "register": "finance-audit",
-  "date": "2026-07-26",
+  "date": "2026-07-27",
   "crosswalk_version": "0.1.0",
   "tools": {
     "avoid-ai-writing-detector": {
@@ -223,15 +223,30 @@
         "human": [
           {
             "words": 111313,
-            "flags": 57,
-            "flags_per_1k": 0.51,
-            "toa_violations": 9,
-            "toa_per_1k": 0.081,
+            "flags": 121,
+            "flags_per_1k": 1.09,
+            "toa_violations": 15,
+            "toa_per_1k": 0.135,
             "toa_examples": [
               {
                 "file": "AAPL_2020_opinion.txt",
                 "rule": "tier1",
                 "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "tier1",
+                "text": "leverage"
               },
               {
                 "file": "CAT_2021_opinion.txt",
@@ -242,6 +257,16 @@
                 "file": "DE_2020_opinion.txt",
                 "rule": "tier1",
                 "text": "comprehensive"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "tier1",
+                "text": "Leverage"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "tier1",
+                "text": "Leverage"
               },
               {
                 "file": "F_2021_opinion.txt",
@@ -260,6 +285,11 @@
               },
               {
                 "file": "KO_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "MMM_2021_mdna.txt",
                 "rule": "tier1",
                 "text": "comprehensive"
               },
@@ -5254,8 +5284,8 @@
             "words": 111313,
             "flags": 229,
             "flags_per_1k": 2.06,
-            "toa_violations": 19,
-            "toa_per_1k": 0.171,
+            "toa_violations": 36,
+            "toa_per_1k": 0.323,
             "toa_examples": [
               {
                 "file": "AAPL_2020_opinion.txt",
@@ -5266,6 +5296,16 @@
                 "file": "AAPL_2020_opinion.txt",
                 "rule": "stock_vocab",
                 "text": "comprehensive"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
+              },
+              {
+                "file": "CAT_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
               },
               {
                 "file": "CAT_2021_mdna.txt",
@@ -5313,44 +5353,64 @@
                 "text": "comprehensive"
               },
               {
-                "file": "F_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "Leverage"
               },
               {
-                "file": "HD_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "Leverage"
               },
               {
-                "file": "JNJ_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "Leverage"
               },
               {
-                "file": "KO_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "leverage"
               },
               {
-                "file": "KO_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "leverage"
               },
               {
-                "file": "MMM_2021_mdna.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "leverage"
               },
               {
-                "file": "MMM_2021_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "leverage"
               },
               {
-                "file": "MSFT_2020_opinion.txt",
+                "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "comprehensive"
+                "text": "Leverage"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
+              },
+              {
+                "file": "F_2021_mdna.txt",
+                "rule": "stock_vocab",
+                "text": "leverage"
               }
             ]
           }

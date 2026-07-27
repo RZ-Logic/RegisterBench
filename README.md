@@ -152,7 +152,7 @@ Six faces across five repositories. `avoid-ai-writing` appears twice by design, 
 
 ## 📊 v0.1 Results: finance-audit
 
-Run dated 2026-07-26. Model `claude-sonnet-5`. 122 planted instances across 10 drafts; 111,313 words of human corpus. Full tables: [`results/finance-audit_2026-07-26.md`](results/finance-audit_2026-07-26.md) · raw per-tool findings: [`results/raw_*.json`](results/).
+Run dated 2026-07-27. Model `claude-sonnet-5`. 122 planted instances across 10 drafts; 111,313 words of human corpus. Full tables: [`results/finance-audit_2026-07-27.md`](results/finance-audit_2026-07-27.md) · raw per-tool findings: [`results/raw_*.json`](results/).
 
 ### Reading the tables
 
@@ -187,13 +187,13 @@ Cells in the tier table read *matched / planted*, and for prompt-track tools mat
 | avoid-ai-writing skill | prompt | **72.7%** | 71.3% to 73.8% | 1.34 | 0.009 |
 | stop-slop | prompt | 59.8% | 59.8% to 59.8% | **6.90** | **0.243** |
 | no-ai-slop | prompt | 55.5% | 54.1% to 56.6% | 0.55 | **0.0** |
-| avoid-ai-writing detector | code | 46.7% | deterministic | 0.51 | 0.081 |
+| avoid-ai-writing detector | code | 46.7% | deterministic | 1.09 | 0.135 |
 | the-antislop | prompt | 45.4% | 43.4% to 46.7% | 0.70 | **0.0** |
-| unslop deterministic | code | 28.7% | deterministic | 2.06 | 0.171 |
+| unslop deterministic | code | 28.7% | deterministic | 2.06 | **0.323** |
 
 ### Recall by tier
 
-Percentages, because prompt-track cells are 3-run means. Planted counts per tier are in the tier table above. Full fractions and per-run spread: [`results/finance-audit_2026-07-26.md`](results/finance-audit_2026-07-26.md).
+Percentages, because prompt-track cells are 3-run means. Planted counts per tier are in the tier table above. Full fractions and per-run spread: [`results/finance-audit_2026-07-27.md`](results/finance-audit_2026-07-27.md).
 
 | Tier | aaw skill | stop-slop | no-ai-slop | aaw detector | the-antislop | unslop |
 |---|---|---|---|---|---|---|
@@ -210,7 +210,11 @@ Percentages, because prompt-track cells are 3-run means. Planted counts per tier
 
 **Aggression concentrates in very few rules.** 87.4% of `stop-slop`'s 768 human-corpus flags come from two rules: Adverbs (446 flags, 58.1%) and Passive Voice (225 flags, 29.3%). Both are hard global bans. In filing prose, "primarily driven by", "partially offset by", and "was recorded" are the register rather than a tell. Its vocabulary table is 11 business-jargon entries (`references/phrases.md`), which overlaps the canonical always-flag list at only two terms, so it reaches 39.1% on that tier while firing five times more often than any other tool overall. High volume did not buy coverage.
 
-**Regulated language collides with rulesets in two distinct ways, and the second is the serious one.** The systematic collision is `comprehensive`, a Tier 1 always-replace word, firing on `comprehensive income`, a term defined in FASB ASC 220 that occurs 25 times in the corpus: 9 hits for the detector and 19 for `unslop`. The severe collision belongs to `stop-slop`, whose 27 violations land almost entirely on mandated audit language: **"present fairly, in all material respects"** (PCAOB AS 3101.08, flagged as an adverb violation on *fairly*), **"reasonable assurance"** inside the standard ICFR definition paragraph, and "effective internal control over financial reporting was maintained in all material respects" (Exchange Act Rule 13a-15(f) wording, flagged as passive voice). Flagging a defined accounting term is embarrassing. Flagging the auditor's opinion sentence and the ICFR definition would break the filing. Two tools score 0.0 here, `no-ai-slop` and `the-antislop`, because neither carries vocabulary that overlaps the whitelist at all: their `toa_examples` arrays are empty rather than merely small.
+**Regulated language collides with rulesets in three distinct ways, and they are not equally serious.** The systematic collision is `comprehensive`, a Tier 1 always-replace word, firing on `comprehensive income`, a term defined in FASB ASC 220 that occurs 25 times in the corpus: 12 hits for the detector and 11 for `unslop`.
+
+The precise collision is `leverage`, and it is the one with the cleanest fix. `avoid-ai-writing`'s word table scopes the entry to `leverage (verb)`, and its guidance on inflected forms says to judge by context when a variant "carries a distinct, legitimate meaning". Its regex engine cannot do that, so it fires on the finance noun: Caterpillar's *"covenant leverage ratio was 6.74 to 1"*, a contractually defined covenant metric, and Ford's *"Leverage."* section heading introducing its debt-to-equity disclosure. Applying the prescribed replacement yields "covenant use ratio". `unslop` makes the same error 14 times. Notably the engine is also sometimes right: 3M's *"businesses share technology and leverage common fundamental strengths"* is genuine verb use and a fair flag. The distinction is exactly the one a regex cannot draw and a context profile could.
+
+The severe collision belongs to `stop-slop`, whose 27 violations land almost entirely on mandated audit language: **"present fairly, in all material respects"** (PCAOB AS 3101.08, flagged as an adverb violation on *fairly*), **"reasonable assurance"** inside the standard ICFR definition paragraph, and "effective internal control over financial reporting was maintained in all material respects" (Exchange Act Rule 13a-15(f) wording, flagged as passive voice). Flagging a defined accounting term is embarrassing. Flagging the auditor's opinion sentence and the ICFR definition would break the filing. Two tools score 0.0 here, `no-ai-slop` and `the-antislop`, because neither carries vocabulary that overlaps the whitelist at all: their `toa_examples` arrays are empty rather than merely small.
 
 **Variance is small, but it does not separate every adjacent pair.** Widest spread across three independent runs is `the-antislop` at 3.3 points, and `stop-slop` returned an identical 73/122 in all three runs. The top three tools are separated by non-overlapping ranges. The bottom of the table is not: `the-antislop`'s best run reaches 46.7%, which exactly ties the `avoid-ai-writing detector`'s deterministic 46.7%, so those two rows are a tie rather than an ordering and should not be read as a rank. The spread is published precisely so that distinction is visible.
 
@@ -358,7 +362,7 @@ The second argument is an output prefix, not a path: the harness resolves it und
 
 ## 🛠️ Build Decisions & Lessons Learned
 
-Six non-obvious choices and the alternatives rejected.
+Seven non-obvious choices and the alternatives rejected.
 
 ### 1. Recall is span-based, not attribution-based, and each quoted finding is consumed once
 
@@ -398,7 +402,17 @@ The same reasoning applies to `str-em-dash`, and it was not spotted until a comp
 
 > **The principle:** When ground truth and a tool's threshold disagree, check which one is unrealistic before changing either. Sometimes the finding is the threshold. Check this for every tier, not just the one where it is obvious.
 
-### 5. The human corpus is prose-filtered, and `raw/` is kept anyway
+### 5. Long documents are chunked, because a tool that refuses input is not a tool that found nothing
+
+`avoid-ai-writing`'s engine caps input at 10,000 words (`MAX_WORDS`, `detector/patterns.js:718`) and returns `Text too long` with zero issues above it. Four MD&A documents in this corpus exceed that. v0.1.0 recorded those zeros as results while keeping all 66,128 of their words in the flags-per-1,000 denominator, so the engine was credited with perfect silence on 59% of a corpus it never read. Its published rate of 0.51 was really 1.09, and `unslop`, which has no such cap, read every one of those documents. The comparison was not like-for-like.
+
+Inputs over the cap are now split at paragraph boundaries into sub-9,000-word chunks and analyzed in pieces, with offsets shifted back into document coordinates. Document-level rules report a rate rather than a located span, so they would otherwise fire once per chunk; they are deduplicated by rule and text across chunks of the same document. The runner exits nonzero if any chunk still trips the cap, so this cannot silently regress.
+
+The honest cost of the fix is that document-level rules now see a 9,000-word window rather than the whole document, which slightly changes what "uniform paragraph length" or "low type-token ratio" means. Dropping the four documents instead would have been simpler and worse: the finance-specific language this register exists to test is concentrated in exactly those long MD&A sections.
+
+> **The principle:** A tool declining to answer and a tool answering "nothing here" are different events, and a benchmark that conflates them rewards refusal. Check what your harness does with every non-answer a tool can return.
+
+### 6. The human corpus is prose-filtered, and `raw/` is kept anyway
 
 Filing HTML flattens financial tables into number-heavy lines. Left in, they inflate the denominator of flags per 1,000 words and make every tool look more precise than it is. [`scripts/clean_corpus.py`](scripts/clean_corpus.py) drops numeric-majority and short heading-fragment lines. All scoring runs against `clean/`.
 
@@ -406,7 +420,7 @@ Filing HTML flattens financial tables into number-heavy lines. Left in, they inf
 
 > **The principle:** Any preprocessing step that moves a headline metric has to ship with its own input. A cleaned corpus without its raw counterpart is an unfalsifiable number.
 
-### 6. `unslop` runs with its structural and soul passes disabled
+### 7. `unslop` runs with its structural and soul passes disabled
 
 `unslop`'s deterministic layer at `intensity=full` covers the widest rule set, but two of its passes (`structural`, `soul`) split long sentences and insert contractions. Those are rewrites, not detections. Counting them as flags would have credited it for finding slop when it was reformatting prose.
 

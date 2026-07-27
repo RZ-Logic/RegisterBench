@@ -31,9 +31,14 @@ from scripts.humanize import humanize_deterministic_with_report  # noqa: E402
 INTENSITY = "full"
 
 
+SKIP = {"readme.md", "provenance.md", "notes.md"}
+
+
 def collect(p: Path):
     if p.is_dir():
-        return sorted(f for f in p.iterdir() if f.suffix in (".txt", ".md"))
+        # Documentation living alongside fixtures is not itself a fixture.
+        return sorted(f for f in p.iterdir()
+                      if f.suffix in (".txt", ".md") and f.name.lower() not in SKIP)
     return [p]
 
 
