@@ -1,31 +1,43 @@
 {
-  "version": "0.1.0",
+  "version": "0.2.0",
   "created": "2026-07-24",
-  "notes": "Canonical RegisterBench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact strings the tool emits (code track) or the exact pattern headings in its skill files (prompt track). An empty list means the tool does not claim the pattern. In v0.1 those plants are still counted against the tool as misses, so published recall is coverage of the full canonical taxonomy rather than accuracy on what each tool attempts; a claimed-patterns-only cut is on the v0.2 roadmap. Crosswalk attribution is used for analysis and for document-level rule credit, never to grant or withhold span-level recall credit. 'partial' lists rules that cover only a subset of the canonical pattern.",
+  "notes": "Canonical RegisterBench pattern IDs mapped to each tool's own rule identifiers. 'map' values are the exact identifiers the tool emits (code track) or the rule, section or table headings in its ruleset files (prompt track). An empty list means the tool does not claim the pattern. v0.2.0 was produced by blind double-coding: for each of the 6 tool faces, two independent coders read only that tool's source (never this file), one working pattern-first and one rule-first, under a single written claim standard applied identically to every tool. Coders agreed on 172 of 174 cells (98.9%); the remaining cells were adjudicated against source. A later consistency review put three cells to a 3-adjudicator vote: two original decisions were upheld and one agreed cell (the-antislop, phr-novelty-inflation) was overturned to unclaimed, 0 votes to 3, so the same claim standard applies to the-antislop and stop-slop. Full per-cell evidence is in coding_record.json. v0.1.0 of this file was hand-authored by the same person who wrote the drafts and the scorer, and 15 of its 174 claim decisions differ in this version. Full-taxonomy recall counts unclaimed plants as misses; the claimed-only cut restricts to claimed plants. Crosswalk attribution grants span-level recall credit nowhere; it is used for claimed-only recall and for document-level rule credit.",
   "tools": {
     "stop-slop": {
       "track": "prompt",
       "repo": "https://github.com/hardikpandya/stop-slop",
       "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
-      "ruleset_files": ["SKILL.md", "references/phrases.md", "references/structures.md", "references/examples.md"]
+      "ruleset_files": [
+        "SKILL.md",
+        "references/phrases.md",
+        "references/structures.md",
+        "references/examples.md"
+      ]
     },
     "no-ai-slop": {
       "track": "prompt",
       "repo": "https://github.com/petergyang/no-ai-slop",
       "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
-      "ruleset_files": ["SKILL.md", "eval.md"]
+      "ruleset_files": [
+        "SKILL.md",
+        "eval.md"
+      ]
     },
     "the-antislop": {
       "track": "prompt",
       "repo": "https://github.com/aplaceforallmystuff/the-antislop",
       "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
-      "ruleset_files": ["SKILL.md"]
+      "ruleset_files": [
+        "SKILL.md"
+      ]
     },
     "avoid-ai-writing-skill": {
       "track": "prompt",
       "repo": "https://github.com/conorbronsdon/avoid-ai-writing",
       "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
-      "ruleset_files": ["SKILL.md"]
+      "ruleset_files": [
+        "SKILL.md"
+      ]
     },
     "avoid-ai-writing-detector": {
       "track": "code",
@@ -46,12 +58,25 @@
       "tier": "lex-1",
       "description": "Always-flag stock vocabulary: delve, tapestry, robust, seamless, leverage, pivotal, comprehensive, testament to, underscores, meticulous, game-changer, utilize, cutting-edge, intricate, ever-evolving, holistic",
       "map": {
-        "stop-slop": ["Business Jargon"],
-        "no-ai-slop": ["Banned outright"],
-        "the-antislop": ["Tier 1: Almost Always AI"],
-        "avoid-ai-writing-skill": ["Tier 1"],
-        "avoid-ai-writing-detector": ["tier1"],
-        "unslop-deterministic": ["stock_vocab"]
+        "stop-slop": [
+          "Business Jargon"
+        ],
+        "no-ai-slop": [
+          "Banned outright"
+        ],
+        "the-antislop": [
+          "Tier 1: Almost Always AI",
+          "Tier 3: Watch for Clusters"
+        ],
+        "avoid-ai-writing-skill": [
+          "Tier 1 — Always replace"
+        ],
+        "avoid-ai-writing-detector": [
+          "tier1"
+        ],
+        "unslop-deterministic": [
+          "stock_vocab"
+        ]
       }
     },
     {
@@ -59,12 +84,23 @@
       "tier": "lex-2",
       "description": "Cluster-gated vocabulary: crucial, facilitate, foster, paramount, cornerstone, transformative, harness, navigate, elevate, empower, streamline, nuanced, myriad, plethora",
       "map": {
-        "stop-slop": ["Business Jargon"],
-        "no-ai-slop": ["Banned outright"],
-        "the-antislop": ["Tier 3: Watch for Clusters"],
-        "avoid-ai-writing-skill": ["Tier 2"],
-        "avoid-ai-writing-detector": ["tier2"],
-        "unslop-deterministic": ["stock_vocab"]
+        "stop-slop": [
+          "Adverbs",
+          "Business Jargon"
+        ],
+        "no-ai-slop": [
+          "Banned outright"
+        ],
+        "the-antislop": [],
+        "avoid-ai-writing-skill": [
+          "Tier 2 — Flag when 2+ appear in the same paragraph"
+        ],
+        "avoid-ai-writing-detector": [
+          "tier2"
+        ],
+        "unslop-deterministic": [
+          "stock_vocab"
+        ]
       }
     },
     {
@@ -74,10 +110,18 @@
       "map": {
         "stop-slop": [],
         "no-ai-slop": [],
-        "the-antislop": ["Tier 3: Watch for Clusters"],
-        "avoid-ai-writing-skill": ["Tier 3"],
-        "avoid-ai-writing-detector": ["tier3"],
-        "unslop-deterministic": ["stock_vocab"]
+        "the-antislop": [
+          "Tier 3: Watch for Clusters"
+        ],
+        "avoid-ai-writing-skill": [
+          "Tier 3 — Flag only at high density"
+        ],
+        "avoid-ai-writing-detector": [
+          "tier3"
+        ],
+        "unslop-deterministic": [
+          "stock_vocab"
+        ]
       }
     },
     {
@@ -85,12 +129,26 @@
       "tier": "lex-1",
       "description": "Empty intensifying adverbs: genuinely, truly, really, literally, honestly, actually, fundamentally, deeply",
       "map": {
-        "stop-slop": ["Adverbs"],
-        "no-ai-slop": ["Often-empty adverbs"],
+        "stop-slop": [
+          "Adverbs",
+          "Word Patterns"
+        ],
+        "no-ai-slop": [
+          "Often-empty adverbs"
+        ],
         "the-antislop": [],
-        "avoid-ai-writing-skill": ["Tier 1 (genuinely)", "Hollow intensifiers"],
-        "avoid-ai-writing-detector": ["hollow-intensifier", "confidence-calibration"],
-        "unslop-deterministic": []
+        "avoid-ai-writing-skill": [
+          "Confidence calibration phrases (persuasive-authority tropes)",
+          "Hollow intensifiers",
+          "Tier 2 — deeply"
+        ],
+        "avoid-ai-writing-detector": [
+          "hollow-intensifier"
+        ],
+        "unslop-deterministic": [
+          "authority_trope",
+          "significance_inflation"
+        ]
       }
     },
     {
@@ -98,12 +156,21 @@
       "tier": "phrasal",
       "description": "Essay-glue transitions at sentence start: Moreover, Furthermore, Additionally, Firstly/Secondly, In conclusion, To summarize",
       "map": {
-        "stop-slop": ["Meta-joiners"],
-        "no-ai-slop": ["Summary-recap endings"],
-        "the-antislop": ["Tier 1: Almost Always AI (Moreover/Furthermore)", "Tier 3: Watch for Clusters (Firstly/Secondly/Thirdly)"],
-        "avoid-ai-writing-skill": ["Transition phrases"],
-        "avoid-ai-writing-detector": ["transition"],
-        "unslop-deterministic": ["transition_tic"]
+        "stop-slop": [],
+        "no-ai-slop": [],
+        "the-antislop": [
+          "Tier 1: Almost Always AI",
+          "Tier 3: Watch for Clusters"
+        ],
+        "avoid-ai-writing-skill": [
+          "Transition phrases to remove or rewrite"
+        ],
+        "avoid-ai-writing-detector": [
+          "transition"
+        ],
+        "unslop-deterministic": [
+          "transition_tic"
+        ]
       }
     },
     {
@@ -111,12 +178,31 @@
       "tier": "phrasal",
       "description": "Wordy filler: in order to, due to the fact that, it is important to note that, it's worth noting, at the end of the day, when it comes to, in terms of",
       "map": {
-        "stop-slop": ["Adverbs (filler phrases)"],
-        "no-ai-slop": ["Often-empty phrases"],
-        "the-antislop": ["Tier 1: Almost Always AI (It's worth noting)", "22 Filler phrases"],
-        "avoid-ai-writing-skill": ["Tier 1 (in order to, due to the fact that)", "Filler phrases"],
-        "avoid-ai-writing-detector": ["filler", "tier1"],
-        "unslop-deterministic": ["filler_phrase", "hedging_opener"]
+        "stop-slop": [
+          "Adverbs"
+        ],
+        "no-ai-slop": [
+          "Often-empty phrases"
+        ],
+        "the-antislop": [
+          "Filler and Hedging 22: Filler phrases",
+          "Tier 1: Almost Always AI",
+          "Tier 2: Suspicious When Repeated"
+        ],
+        "avoid-ai-writing-skill": [
+          "Filler phrases",
+          "Tier 1 — Always replace",
+          "Transition phrases to remove or rewrite"
+        ],
+        "avoid-ai-writing-detector": [
+          "filler",
+          "tier1",
+          "transition"
+        ],
+        "unslop-deterministic": [
+          "filler_phrase",
+          "hedging_opener"
+        ]
       }
     },
     {
@@ -124,12 +210,28 @@
       "tier": "phrasal",
       "description": "Announcement openers: Here's the thing, Let me be clear, The uncomfortable truth is, Make no mistake",
       "map": {
-        "stop-slop": ["Throat-Clearing Openers", "Emphasis Crutches"],
-        "no-ai-slop": ["Throat-clearing openers"],
-        "the-antislop": ["Tier 2: Suspicious When Repeated (Here's the thing)"],
-        "avoid-ai-writing-skill": ["Hollow intensifiers (let's be clear)"],
-        "avoid-ai-writing-detector": ["hollow-intensifier"],
-        "unslop-deterministic": ["hedging_opener", "authority_trope"]
+        "stop-slop": [
+          "Emphasis Crutches",
+          "Throat-Clearing Openers"
+        ],
+        "no-ai-slop": [
+          "Throat-clearing openers"
+        ],
+        "the-antislop": [
+          "Tier 2: Suspicious When Repeated"
+        ],
+        "avoid-ai-writing-skill": [
+          "Confidence calibration phrases (persuasive-authority tropes)",
+          "Hollow intensifiers",
+          "Infomercial engagement hooks"
+        ],
+        "avoid-ai-writing-detector": [
+          "filler",
+          "hollow-intensifier"
+        ],
+        "unslop-deterministic": [
+          "authority_trope"
+        ]
       }
     },
     {
@@ -137,12 +239,26 @@
       "tier": "phrasal",
       "description": "Meta-announcements: Let's dive in, In this article we'll, Let me walk you through, Without further ado",
       "map": {
-        "stop-slop": ["Meta-Commentary"],
-        "no-ai-slop": ["Often-empty phrases (let's dive in, in this article)"],
-        "the-antislop": ["Tier 2: Suspicious When Repeated (Let's dive in; In this post, we'll cover)"],
-        "avoid-ai-writing-skill": ["Let's constructions"],
-        "avoid-ai-writing-detector": ["lets-construction"],
-        "unslop-deterministic": ["signposting"]
+        "stop-slop": [
+          "Meta-Commentary"
+        ],
+        "no-ai-slop": [
+          "Often-empty phrases"
+        ],
+        "the-antislop": [
+          "Tier 2: Suspicious When Repeated"
+        ],
+        "avoid-ai-writing-skill": [
+          "\"Let's\" constructions",
+          "Chatbot artifacts"
+        ],
+        "avoid-ai-writing-detector": [
+          "chatbot",
+          "lets-construction"
+        ],
+        "unslop-deterministic": [
+          "signposting"
+        ]
       }
     },
     {
@@ -150,12 +266,28 @@
       "tier": "phrasal",
       "description": "Unearned importance framing: marks a pivotal moment, watershed moment, underscores its importance, stands as a testament, plays a vital role",
       "map": {
-        "stop-slop": ["Vague Declaratives"],
-        "no-ai-slop": ["Importance puffery"],
-        "the-antislop": ["Content 1: Significance inflation"],
-        "avoid-ai-writing-skill": ["Significance inflation"],
-        "avoid-ai-writing-detector": ["significance-inflation"],
-        "unslop-deterministic": ["significance_inflation"]
+        "stop-slop": [
+          "Telling Instead of Showing",
+          "Vague Declaratives"
+        ],
+        "no-ai-slop": [
+          "Importance puffery"
+        ],
+        "the-antislop": [
+          "Content 1: Significance inflation",
+          "Tier 1: Almost Always AI"
+        ],
+        "avoid-ai-writing-skill": [
+          "Significance inflation"
+        ],
+        "avoid-ai-writing-detector": [
+          "significance-inflation",
+          "tier1"
+        ],
+        "unslop-deterministic": [
+          "significance_inflation",
+          "stock_vocab"
+        ]
       }
     },
     {
@@ -163,12 +295,25 @@
       "tier": "phrasal",
       "description": "Weasel attribution: experts believe, studies show, research suggests, widely regarded as, observers note",
       "map": {
-        "stop-slop": [],
-        "no-ai-slop": ["Weasel attribution"],
-        "the-antislop": ["Content 5: Vague attributions"],
-        "avoid-ai-writing-skill": ["Vague attribution"],
-        "avoid-ai-writing-detector": ["vague-attribution"],
-        "unslop-deterministic": ["vague_attribution"]
+        "stop-slop": [
+          "Passive Voice"
+        ],
+        "no-ai-slop": [
+          "Weasel attribution"
+        ],
+        "the-antislop": [
+          "Content 5: Vague attributions"
+        ],
+        "avoid-ai-writing-skill": [
+          "Vague attributions",
+          "Vague third-party validation"
+        ],
+        "avoid-ai-writing-detector": [
+          "vague-attribution"
+        ],
+        "unslop-deterministic": [
+          "vague_attribution"
+        ]
       }
     },
     {
@@ -177,11 +322,20 @@
       "description": "Trailing filler participle clause: ', highlighting/underscoring/reflecting the importance of X'",
       "map": {
         "stop-slop": [],
-        "no-ai-slop": ["Superficial analysis"],
-        "the-antislop": ["Content 3: Superficial -ing analyses"],
-        "avoid-ai-writing-skill": [],
+        "no-ai-slop": [
+          "Superficial analysis"
+        ],
+        "the-antislop": [
+          "Content 3: Superficial -ing analyses"
+        ],
+        "avoid-ai-writing-skill": [
+          "Superficial -ing analyses"
+        ],
         "avoid-ai-writing-detector": [],
-        "unslop-deterministic": ["superficial_ing"]
+        "unslop-deterministic": [
+          "significance_inflation",
+          "superficial_ing"
+        ]
       }
     },
     {
@@ -189,11 +343,24 @@
       "tier": "phrasal",
       "description": "Generic closers: the future looks bright, only time will tell, In conclusion + recap",
       "map": {
-        "stop-slop": ["Cut quotables"],
-        "no-ai-slop": ["Summary-recap endings", "Fake-profound kickers"],
-        "the-antislop": ["24 Generic conclusions", "Content 7: Outline-like conclusions"],
-        "avoid-ai-writing-skill": ["Generic conclusions"],
-        "avoid-ai-writing-detector": ["generic-conclusion", "tier1"],
+        "stop-slop": [],
+        "no-ai-slop": [
+          "Fake-profound kickers",
+          "Summary-recap endings"
+        ],
+        "the-antislop": [
+          "Content 7: Outline-like conclusions",
+          "Filler and Hedging 24: Generic conclusions"
+        ],
+        "avoid-ai-writing-skill": [
+          "Generic conclusions",
+          "Generic future-narrative closers"
+        ],
+        "avoid-ai-writing-detector": [
+          "future-narrative",
+          "generic-conclusion",
+          "tier1"
+        ],
         "unslop-deterministic": []
       }
     },
@@ -202,11 +369,19 @@
       "tier": "phrasal",
       "description": "Stacked hedges on predictions: could potentially, may eventually, might possibly",
       "map": {
-        "stop-slop": ["Rhythm Patterns (Not always. Not perfectly.)"],
+        "stop-slop": [
+          "Adverbs"
+        ],
         "no-ai-slop": [],
-        "the-antislop": ["23 Excessive hedging"],
-        "avoid-ai-writing-skill": ["Hedge-stacked predictions"],
-        "avoid-ai-writing-detector": ["hedge-stack"],
+        "the-antislop": [
+          "Filler and Hedging 23: Excessive hedging"
+        ],
+        "avoid-ai-writing-skill": [
+          "Hedge-stacked predictions"
+        ],
+        "avoid-ai-writing-detector": [
+          "hedge-stack"
+        ],
         "unslop-deterministic": []
       }
     },
@@ -217,8 +392,12 @@
       "map": {
         "stop-slop": [],
         "no-ai-slop": [],
-        "the-antislop": ["Language 11: False ranges"],
-        "avoid-ai-writing-skill": ["False ranges"],
+        "the-antislop": [
+          "Language 11: False ranges"
+        ],
+        "avoid-ai-writing-skill": [
+          "False ranges"
+        ],
         "avoid-ai-writing-detector": [],
         "unslop-deterministic": []
       }
@@ -228,11 +407,17 @@
       "tier": "phrasal",
       "description": "Faux-insight setups: what nobody tells you, the part most people skip, the insight everyone's missing",
       "map": {
-        "stop-slop": ["Throat-Clearing Openers"],
-        "no-ai-slop": ["Faux-insight setups"],
+        "stop-slop": [],
+        "no-ai-slop": [
+          "Faux-insight setups"
+        ],
         "the-antislop": [],
-        "avoid-ai-writing-skill": ["Novelty inflation"],
-        "avoid-ai-writing-detector": ["novelty-inflation"],
+        "avoid-ai-writing-skill": [
+          "Novelty inflation"
+        ],
+        "avoid-ai-writing-detector": [
+          "novelty-inflation"
+        ],
         "unslop-deterministic": []
       }
     },
@@ -241,12 +426,23 @@
       "tier": "structural",
       "description": "Binary contrast frames: It's not X, it's Y; not just X but Y; The question isn't X, it's Y",
       "map": {
-        "stop-slop": ["Binary Contrasts"],
-        "no-ai-slop": ["Binary contrasts"],
-        "the-antislop": ["Language 8: Negative parallelisms"],
-        "avoid-ai-writing-skill": ["It's not X — it's Y structures"],
+        "stop-slop": [
+          "Binary Contrasts"
+        ],
+        "no-ai-slop": [
+          "Binary contrasts"
+        ],
+        "the-antislop": [
+          "Language 8: Negative parallelisms",
+          "Structural Patterns: Comparator Sentences"
+        ],
+        "avoid-ai-writing-skill": [
+          "\"It's not X — it's Y\" / \"This isn't about X, it's about Y\""
+        ],
         "avoid-ai-writing-detector": [],
-        "unslop-deterministic": ["negative_parallelism"]
+        "unslop-deterministic": [
+          "negative_parallelism"
+        ]
       }
     },
     {
@@ -254,12 +450,20 @@
       "tier": "structural",
       "description": "Rhetorical striptease: Not a X. Not a Y. A Z.",
       "map": {
-        "stop-slop": ["Negative Listing"],
-        "no-ai-slop": ["Negative listing"],
-        "the-antislop": ["Language 8: Negative parallelisms"],
-        "avoid-ai-writing-skill": [],
+        "stop-slop": [
+          "Negative Listing"
+        ],
+        "no-ai-slop": [
+          "Negative listing"
+        ],
+        "the-antislop": [],
+        "avoid-ai-writing-skill": [
+          "\"It's not X — it's Y\" / \"This isn't about X, it's about Y\" (multi-negation countdown)"
+        ],
         "avoid-ai-writing-detector": [],
-        "unslop-deterministic": ["negative_parallelism"]
+        "unslop-deterministic": [
+          "negative_parallelism"
+        ]
       }
     },
     {
@@ -267,10 +471,17 @@
       "tier": "structural",
       "description": "Triadic lists and three-part parallel constructions used as default rhythm",
       "map": {
-        "stop-slop": ["Rhythm Patterns (three-item lists)"],
-        "no-ai-slop": ["Robotic rhythm"],
-        "the-antislop": ["Language 9: Rule of three"],
-        "avoid-ai-writing-skill": [],
+        "stop-slop": [
+          "Core Rules 6 (Vary rhythm)",
+          "Rhythm Patterns"
+        ],
+        "no-ai-slop": [],
+        "the-antislop": [
+          "Language 9: Rule of three"
+        ],
+        "avoid-ai-writing-skill": [
+          "Compulsive rule of three"
+        ],
         "avoid-ai-writing-detector": [],
         "unslop-deterministic": []
       }
@@ -280,10 +491,22 @@
       "tier": "structural",
       "description": "Dramatic fragmentation: short punchy fragments stacked for effect. That's it. That's the pattern.",
       "map": {
-        "stop-slop": ["Dramatic Fragmentation"],
-        "no-ai-slop": ["Dramatic fragmentation"],
-        "the-antislop": ["Staccato Fragment Spam"],
-        "avoid-ai-writing-skill": ["Subjectless fragments"],
+        "stop-slop": [
+          "Dramatic Fragmentation",
+          "Rhythm Patterns"
+        ],
+        "no-ai-slop": [
+          "Dramatic fragmentation",
+          "Robotic rhythm"
+        ],
+        "the-antislop": [
+          "Advanced Structural Tells: Manufactured Personality",
+          "Structural Patterns: Sentence Uniformity",
+          "Structural Patterns: Staccato Fragment Spam"
+        ],
+        "avoid-ai-writing-skill": [
+          "Manufactured punchlines and staccato drama"
+        ],
         "avoid-ai-writing-detector": [],
         "unslop-deterministic": []
       }
@@ -293,12 +516,25 @@
       "tier": "structural",
       "description": "Em dash overuse as default rhythm punctuation",
       "map": {
-        "stop-slop": ["Rhythm Patterns (Em-dashes)"],
-        "no-ai-slop": ["Em dashes"],
-        "the-antislop": ["Style 13: Em dash overuse"],
-        "avoid-ai-writing-skill": ["Em dashes"],
-        "avoid-ai-writing-detector": ["em-dash"],
-        "unslop-deterministic": ["em_dash_cap"]
+        "stop-slop": [
+          "Core Rules 6 (Vary rhythm)",
+          "Rhythm Patterns"
+        ],
+        "no-ai-slop": [
+          "Em dashes"
+        ],
+        "the-antislop": [
+          "Style 13: Em dash overuse"
+        ],
+        "avoid-ai-writing-skill": [
+          "Em dashes (— and --)"
+        ],
+        "avoid-ai-writing-detector": [
+          "em-dash"
+        ],
+        "unslop-deterministic": [
+          "em_dash_cap"
+        ]
       }
     },
     {
@@ -307,11 +543,21 @@
       "description": "Latinate copula avoidance: serves as, boasts, features (verb), stands as, being a",
       "map": {
         "stop-slop": [],
-        "no-ai-slop": ["Fake-strong verbs"],
-        "the-antislop": ["Language 7: Copula avoidance"],
-        "avoid-ai-writing-skill": ["Tier 1 (serves as, boasts, features)", "Copula avoidance"],
-        "avoid-ai-writing-detector": ["tier1"],
-        "unslop-deterministic": ["copula_avoidance"]
+        "no-ai-slop": [
+          "Fake-strong verbs"
+        ],
+        "the-antislop": [
+          "Language 7: Copula avoidance"
+        ],
+        "avoid-ai-writing-skill": [
+          "Copula avoidance"
+        ],
+        "avoid-ai-writing-detector": [
+          "tier1"
+        ],
+        "unslop-deterministic": [
+          "copula_avoidance"
+        ]
       }
     },
     {
@@ -319,8 +565,13 @@
       "tier": "structural",
       "description": "Inanimate things given human verbs: the decision emerged, the data tells us, culture shifts, the market rewards",
       "map": {
-        "stop-slop": ["False Agency"],
-        "no-ai-slop": [],
+        "stop-slop": [
+          "Core Rules 3 (Use active voice)",
+          "False Agency"
+        ],
+        "no-ai-slop": [
+          "Use active voice."
+        ],
         "the-antislop": [],
         "avoid-ai-writing-skill": [],
         "avoid-ai-writing-detector": [],
@@ -332,11 +583,21 @@
       "tier": "structural",
       "description": "Rhetorical setups and self-answered questions: What if I told you, Think about it, But what does this mean for X?",
       "map": {
-        "stop-slop": ["Rhetorical Setups", "Sentence Starters to Avoid"],
-        "no-ai-slop": ["Rhetorical setups"],
+        "stop-slop": [
+          "Rhetorical Setups",
+          "Rhythm Patterns"
+        ],
+        "no-ai-slop": [
+          "Rhetorical setups"
+        ],
         "the-antislop": [],
-        "avoid-ai-writing-skill": ["Rhetorical questions"],
-        "avoid-ai-writing-detector": ["rhetorical-question"],
+        "avoid-ai-writing-skill": [
+          "Rhetorical question openers",
+          "Speculative scenario openers"
+        ],
+        "avoid-ai-writing-detector": [
+          "rhetorical-question"
+        ],
         "unslop-deterministic": []
       }
     },
@@ -345,10 +606,16 @@
       "tier": "structural",
       "description": "Noun phrase + colon + dramatic reveal: 'The result: chaos.'",
       "map": {
-        "stop-slop": [],
-        "no-ai-slop": ["Colon reveals"],
+        "stop-slop": [
+          "Meta-Commentary"
+        ],
+        "no-ai-slop": [
+          "Colon reveals"
+        ],
         "the-antislop": [],
-        "avoid-ai-writing-skill": [],
+        "avoid-ai-writing-skill": [
+          "Infomercial engagement hooks"
+        ],
         "avoid-ai-writing-detector": [],
         "unslop-deterministic": []
       }
@@ -359,9 +626,15 @@
       "description": "Rotating synonyms for the same referent to avoid repetition",
       "map": {
         "stop-slop": [],
-        "no-ai-slop": ["Synonym cycling"],
-        "the-antislop": ["Language 10: Synonym cycling"],
-        "avoid-ai-writing-skill": ["Synonym cycling"],
+        "no-ai-slop": [
+          "Synonym cycling"
+        ],
+        "the-antislop": [
+          "Language 10: Synonym cycling"
+        ],
+        "avoid-ai-writing-skill": [
+          "Synonym cycling"
+        ],
         "avoid-ai-writing-detector": [],
         "unslop-deterministic": []
       }
@@ -372,10 +645,27 @@
       "description": "Formatting tells: bold overuse, emoji headers, Title Case Headings, over-bulleting",
       "map": {
         "stop-slop": [],
-        "no-ai-slop": ["Formatting slop"],
-        "the-antislop": ["Style 14: Boldface overuse", "Style 15: Emoji headers", "Style 16: Title Case Headings", "Style 17: List addiction"],
-        "avoid-ai-writing-skill": ["Bold overuse", "Emoji in headers", "Excessive bullets"],
-        "avoid-ai-writing-detector": ["formatting", "title-case-header", "bullet-np-list"],
+        "no-ai-slop": [
+          "Formatting slop"
+        ],
+        "the-antislop": [
+          "Style 14: Boldface overuse",
+          "Style 15: Emoji headers",
+          "Style 16: Title Case Headings",
+          "Style 17: List addiction"
+        ],
+        "avoid-ai-writing-skill": [
+          "Bold overuse",
+          "Emoji in headers",
+          "Excessive bullet lists",
+          "Excessive structure",
+          "Title case headings"
+        ],
+        "avoid-ai-writing-detector": [
+          "bullet-np-list",
+          "formatting",
+          "title-case-header"
+        ],
         "unslop-deterministic": []
       }
     },
@@ -386,10 +676,18 @@
       "map": {
         "stop-slop": [],
         "no-ai-slop": [],
-        "the-antislop": ["Communication 18: Chatbot artifacts"],
-        "avoid-ai-writing-skill": ["Chatbot artifacts"],
-        "avoid-ai-writing-detector": ["chatbot"],
-        "unslop-deterministic": ["sycophancy"]
+        "the-antislop": [
+          "Communication 18: Chatbot artifacts"
+        ],
+        "avoid-ai-writing-skill": [
+          "Chatbot artifacts"
+        ],
+        "avoid-ai-writing-detector": [
+          "chatbot"
+        ],
+        "unslop-deterministic": [
+          "sycophancy"
+        ]
       }
     },
     {
@@ -399,10 +697,19 @@
       "map": {
         "stop-slop": [],
         "no-ai-slop": [],
-        "the-antislop": ["Communication 20: Sycophantic tone"],
-        "avoid-ai-writing-skill": ["Sycophantic tone"],
-        "avoid-ai-writing-detector": ["sycophantic"],
-        "unslop-deterministic": ["sycophancy"]
+        "the-antislop": [
+          "Communication 20: Sycophantic tone"
+        ],
+        "avoid-ai-writing-skill": [
+          "Sycophantic tone"
+        ],
+        "avoid-ai-writing-detector": [
+          "chatbot",
+          "sycophantic"
+        ],
+        "unslop-deterministic": [
+          "sycophancy"
+        ]
       }
     },
     {
@@ -412,11 +719,20 @@
       "map": {
         "stop-slop": [],
         "no-ai-slop": [],
-        "the-antislop": ["Communication 19: Cutoff disclaimers"],
-        "avoid-ai-writing-skill": ["Cutoff disclaimers"],
-        "avoid-ai-writing-detector": ["cutoff-disclaimer"],
-        "unslop-deterministic": ["knowledge_cutoff"]
+        "the-antislop": [
+          "Communication 19: Cutoff disclaimers"
+        ],
+        "avoid-ai-writing-skill": [
+          "Cutoff disclaimers"
+        ],
+        "avoid-ai-writing-detector": [
+          "cutoff-disclaimer"
+        ],
+        "unslop-deterministic": [
+          "knowledge_cutoff"
+        ]
       }
     }
-  ]
+  ],
+  "coded": "2026-10-11"
 }

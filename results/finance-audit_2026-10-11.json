@@ -1,7 +1,7 @@
 {
   "register": "finance-audit",
-  "date": "2026-07-27",
-  "crosswalk_version": "0.1.0",
+  "date": "2026-10-11",
+  "crosswalk_version": "0.2.0",
   "tools": {
     "avoid-ai-writing-detector": {
       "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
@@ -225,8 +225,34 @@
             "words": 111313,
             "flags": 121,
             "flags_per_1k": 1.09,
-            "toa_violations": 15,
-            "toa_per_1k": 0.135,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
+            "toa_violations": 16,
+            "toa_per_1k": 0.144,
+            "toa_containment": 16,
+            "toa_containment_per_1k": 0.144,
+            "toa_doc_term_pairs": 14,
+            "toa_by_term": {
+              "comprehensive income": 13,
+              "leverage ratio": 3
+            },
+            "toa_doc_term_pairs_by_term": {
+              "comprehensive income": 12,
+              "leverage ratio": 2
+            },
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 6,
+                "toa_per_1k": 0.064,
+                "toa_containment": 6
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 10,
+                "toa_per_1k": 0.554,
+                "toa_containment": 10
+              }
+            },
             "toa_examples": [
               {
                 "file": "AAPL_2020_opinion.txt",
@@ -250,6 +276,11 @@
               },
               {
                 "file": "CAT_2021_opinion.txt",
+                "rule": "tier1",
+                "text": "comprehensive"
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
                 "rule": "tier1",
                 "text": "comprehensive"
               },
@@ -303,7 +334,8 @@
                 "rule": "tier1",
                 "text": "comprehensive"
               }
-            ]
+            ],
+            "containment_only_examples": []
           }
         ]
       },
@@ -314,6 +346,7 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 4,
@@ -321,20 +354,23 @@
         },
         "lex-1": {
           "matched_mean": 20.0,
+          "matched_mean_exact": 20.0,
           "matched_min": 20,
           "matched_max": 20,
           "planted": 23,
-          "recall": 0.8696
+          "recall": 0.869565
         },
         "lex-2": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "lex-3": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -342,22 +378,25 @@
         },
         "phrasal": {
           "matched_mean": 25.0,
+          "matched_mean_exact": 25.0,
           "matched_min": 25,
           "matched_max": 25,
           "planted": 42,
-          "recall": 0.5952
+          "recall": 0.595238
         },
         "structural": {
           "matched_mean": 8.0,
+          "matched_mean_exact": 8.0,
           "matched_min": 8,
           "matched_max": 8,
           "planted": 29,
-          "recall": 0.2759
+          "recall": 0.275862
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -365,6 +404,7 @@
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -372,6 +412,7 @@
         },
         "con-sycophancy": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -379,6 +420,7 @@
         },
         "lex-hollow-intensifier": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 5,
@@ -386,6 +428,7 @@
         },
         "lex-t1-vocab": {
           "matched_mean": 18.0,
+          "matched_mean_exact": 18.0,
           "matched_min": 18,
           "matched_max": 18,
           "planted": 18,
@@ -393,13 +436,15 @@
         },
         "lex-t2-cluster": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "lex-t3-density": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -407,6 +452,7 @@
         },
         "phr-false-range": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -414,6 +460,7 @@
         },
         "phr-filler-wordy": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -421,6 +468,7 @@
         },
         "phr-generic-conclusion": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -428,6 +476,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -435,13 +484,15 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "phr-significance-inflation": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -449,6 +500,7 @@
         },
         "phr-signposting-meta": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 3,
@@ -456,13 +508,15 @@
         },
         "phr-superficial-ing": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "phr-throat-clearing": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -470,13 +524,15 @@
         },
         "phr-transition": {
           "matched_mean": 5.0,
+          "matched_mean_exact": 5.0,
           "matched_min": 5,
           "matched_max": 5,
           "planted": 7,
-          "recall": 0.7143
+          "recall": 0.714286
         },
         "phr-vague-attribution": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 4,
@@ -484,6 +540,7 @@
         },
         "str-colon-reveal": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -491,13 +548,15 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "str-em-dash": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -505,6 +564,7 @@
         },
         "str-false-agency": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -512,6 +572,7 @@
         },
         "str-formatting-slop": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -519,6 +580,7 @@
         },
         "str-negative-listing": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -526,6 +588,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 3,
@@ -533,6 +596,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -540,6 +604,7 @@
         },
         "str-rule-of-three": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -547,6 +612,7 @@
         },
         "str-staccato-fragments": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -554,11 +620,19 @@
         },
         "str-synonym-cycling": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 1,
           "recall": 0.0
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 20,
+        "plants_claimed": 99,
+        "recall_mean": 0.5657,
+        "recall_min": 0.5657,
+        "recall_max": 0.5657
       }
     },
     "avoid-ai-writing-skill": {
@@ -1177,15 +1251,40 @@
             "words": 111313,
             "flags": 149,
             "flags_per_1k": 1.34,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 1,
             "toa_per_1k": 0.009,
+            "toa_containment": 1,
+            "toa_containment_per_1k": 0.009,
+            "toa_doc_term_pairs": 1,
+            "toa_by_term": {
+              "comprehensive income": 1
+            },
+            "toa_doc_term_pairs_by_term": {
+              "comprehensive income": 1
+            },
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 1,
+                "toa_per_1k": 0.055,
+                "toa_containment": 1
+              }
+            },
             "toa_examples": [
               {
                 "file": "JNJ_2021_opinion.txt",
                 "rule": "Tier 1 \u2014 Always replace (word table entry: \"comprehensive | thorough, complete, full\")",
                 "text": "comprehensive income"
               }
-            ]
+            ],
+            "containment_only_examples": []
           }
         ]
       },
@@ -1196,6 +1295,7 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -1203,43 +1303,49 @@
         },
         "lex-1": {
           "matched_mean": 21.67,
+          "matched_mean_exact": 21.666666666666668,
           "matched_min": 21,
           "matched_max": 22,
           "planted": 23,
-          "recall": 0.942
+          "recall": 0.942029
         },
         "lex-2": {
           "matched_mean": 5.0,
+          "matched_mean_exact": 5.0,
           "matched_min": 5,
           "matched_max": 5,
           "planted": 12,
-          "recall": 0.4167
+          "recall": 0.416667
         },
         "lex-3": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 12,
-          "recall": 0.0278
+          "recall": 0.027778
         },
         "phrasal": {
           "matched_mean": 34.33,
+          "matched_mean_exact": 34.333333333333336,
           "matched_min": 33,
           "matched_max": 35,
           "planted": 42,
-          "recall": 0.8175
+          "recall": 0.81746
         },
         "structural": {
           "matched_mean": 24.33,
+          "matched_mean_exact": 24.333333333333332,
           "matched_min": 24,
           "matched_max": 25,
           "planted": 29,
-          "recall": 0.8391
+          "recall": 0.83908
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -1247,6 +1353,7 @@
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -1254,6 +1361,7 @@
         },
         "con-sycophancy": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -1261,13 +1369,15 @@
         },
         "lex-hollow-intensifier": {
           "matched_mean": 3.67,
+          "matched_mean_exact": 3.6666666666666665,
           "matched_min": 3,
           "matched_max": 4,
           "planted": 5,
-          "recall": 0.7333
+          "recall": 0.733333
         },
         "lex-t1-vocab": {
           "matched_mean": 18.0,
+          "matched_mean_exact": 18.0,
           "matched_min": 18,
           "matched_max": 18,
           "planted": 18,
@@ -1275,20 +1385,23 @@
         },
         "lex-t2-cluster": {
           "matched_mean": 5.0,
+          "matched_mean_exact": 5.0,
           "matched_min": 5,
           "matched_max": 5,
           "planted": 12,
-          "recall": 0.4167
+          "recall": 0.416667
         },
         "lex-t3-density": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 12,
-          "recall": 0.0278
+          "recall": 0.027778
         },
         "phr-false-range": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 0,
           "matched_max": 2,
           "planted": 2,
@@ -1296,6 +1409,7 @@
         },
         "phr-filler-wordy": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1303,6 +1417,7 @@
         },
         "phr-generic-conclusion": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1310,6 +1425,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1317,6 +1433,7 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -1324,6 +1441,7 @@
         },
         "phr-significance-inflation": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -1331,20 +1449,23 @@
         },
         "phr-signposting-meta": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.5556
+          "recall": 0.555556
         },
         "phr-superficial-ing": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "phr-throat-clearing": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1352,13 +1473,15 @@
         },
         "phr-transition": {
           "matched_mean": 4.67,
+          "matched_mean_exact": 4.666666666666667,
           "matched_min": 4,
           "matched_max": 5,
           "planted": 7,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "phr-vague-attribution": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1366,6 +1489,7 @@
         },
         "str-colon-reveal": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -1373,6 +1497,7 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -1380,6 +1505,7 @@
         },
         "str-em-dash": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -1387,6 +1513,7 @@
         },
         "str-false-agency": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -1394,6 +1521,7 @@
         },
         "str-formatting-slop": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -1401,6 +1529,7 @@
         },
         "str-negative-listing": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -1408,6 +1537,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -1415,6 +1545,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -1422,6 +1553,7 @@
         },
         "str-rule-of-three": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 1,
           "matched_max": 3,
           "planted": 4,
@@ -1429,18 +1561,27 @@
         },
         "str-staccato-fragments": {
           "matched_mean": 3.67,
+          "matched_mean_exact": 3.6666666666666665,
           "matched_min": 3,
           "matched_max": 4,
           "planted": 4,
-          "recall": 0.9167
+          "recall": 0.916667
         },
         "str-synonym-cycling": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 1,
-          "recall": 0.6667
+          "recall": 0.666667
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 28,
+        "plants_claimed": 120,
+        "recall_mean": 0.7306,
+        "recall_min": 0.7167,
+        "recall_max": 0.7417
       }
     },
     "no-ai-slop": {
@@ -1934,9 +2075,30 @@
             "words": 111313,
             "flags": 61,
             "flags_per_1k": 0.55,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
-            "toa_examples": []
+            "toa_containment": 0,
+            "toa_containment_per_1k": 0.0,
+            "toa_doc_term_pairs": 0,
+            "toa_by_term": {},
+            "toa_doc_term_pairs_by_term": {},
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              }
+            },
+            "toa_examples": [],
+            "containment_only_examples": []
           }
         ]
       },
@@ -1947,50 +2109,57 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 4,
-          "recall": 0.0833
+          "recall": 0.083333
         },
         "lex-1": {
           "matched_mean": 13.67,
+          "matched_mean_exact": 13.666666666666666,
           "matched_min": 13,
           "matched_max": 14,
           "planted": 23,
-          "recall": 0.5942
+          "recall": 0.594203
         },
         "lex-2": {
           "matched_mean": 5.67,
+          "matched_mean_exact": 5.666666666666667,
           "matched_min": 5,
           "matched_max": 7,
           "planted": 12,
-          "recall": 0.4722
+          "recall": 0.472222
         },
         "lex-3": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1389
+          "recall": 0.138889
         },
         "phrasal": {
           "matched_mean": 25.67,
+          "matched_mean_exact": 25.666666666666668,
           "matched_min": 25,
           "matched_max": 26,
           "planted": 42,
-          "recall": 0.6111
+          "recall": 0.611111
         },
         "structural": {
           "matched_mean": 20.67,
+          "matched_mean_exact": 20.666666666666668,
           "matched_min": 19,
           "matched_max": 22,
           "planted": 29,
-          "recall": 0.7126
+          "recall": 0.712644
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -1998,6 +2167,7 @@
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 1,
@@ -2005,48 +2175,55 @@
         },
         "con-sycophancy": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 1,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "lex-hollow-intensifier": {
           "matched_mean": 3.33,
+          "matched_mean_exact": 3.3333333333333335,
           "matched_min": 2,
           "matched_max": 4,
           "planted": 5,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "lex-t1-vocab": {
           "matched_mean": 10.33,
+          "matched_mean_exact": 10.333333333333334,
           "matched_min": 10,
           "matched_max": 11,
           "planted": 18,
-          "recall": 0.5741
+          "recall": 0.574074
         },
         "lex-t2-cluster": {
           "matched_mean": 5.67,
+          "matched_mean_exact": 5.666666666666667,
           "matched_min": 5,
           "matched_max": 7,
           "planted": 12,
-          "recall": 0.4722
+          "recall": 0.472222
         },
         "lex-t3-density": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1389
+          "recall": 0.138889
         },
         "phr-false-range": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 2,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "phr-filler-wordy": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -2054,6 +2231,7 @@
         },
         "phr-generic-conclusion": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -2061,6 +2239,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -2068,6 +2247,7 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -2075,6 +2255,7 @@
         },
         "phr-significance-inflation": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 4,
@@ -2082,20 +2263,23 @@
         },
         "phr-signposting-meta": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.2222
+          "recall": 0.222222
         },
         "phr-superficial-ing": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.5556
+          "recall": 0.555556
         },
         "phr-throat-clearing": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -2103,13 +2287,15 @@
         },
         "phr-transition": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 7,
-          "recall": 0.4286
+          "recall": 0.428571
         },
         "phr-vague-attribution": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -2117,6 +2303,7 @@
         },
         "str-colon-reveal": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -2124,34 +2311,39 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 2.67,
+          "matched_mean_exact": 2.6666666666666665,
           "matched_min": 2,
           "matched_max": 3,
           "planted": 3,
-          "recall": 0.8889
+          "recall": 0.888889
         },
         "str-em-dash": {
           "matched_mean": 1.33,
+          "matched_mean_exact": 1.3333333333333333,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 4,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "str-false-agency": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 2,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "str-formatting-slop": {
           "matched_mean": 1.33,
+          "matched_mean_exact": 1.3333333333333333,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 2,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "str-negative-listing": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -2159,6 +2351,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -2166,6 +2359,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -2173,13 +2367,15 @@
         },
         "str-rule-of-three": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 4,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "str-staccato-fragments": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -2187,11 +2383,19 @@
         },
         "str-synonym-cycling": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
           "recall": 1.0
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 21,
+        "plants_claimed": 89,
+        "recall_mean": 0.6929,
+        "recall_min": 0.6854,
+        "recall_max": 0.6966
       }
     },
     "stop-slop": {
@@ -3885,48 +4089,37 @@
             "words": 111313,
             "flags": 768,
             "flags_per_1k": 6.9,
-            "toa_violations": 27,
-            "toa_per_1k": 0.243,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
+            "toa_violations": 8,
+            "toa_per_1k": 0.072,
+            "toa_containment": 28,
+            "toa_containment_per_1k": 0.252,
+            "toa_doc_term_pairs": 8,
+            "toa_by_term": {
+              "present fairly": 8
+            },
+            "toa_doc_term_pairs_by_term": {
+              "present fairly": 8
+            },
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 8,
+                "toa_per_1k": 0.443,
+                "toa_containment": 28
+              }
+            },
             "toa_examples": [
-              {
-                "file": "AAPL_2020_opinion.txt",
-                "rule": "Adverbs",
-                "text": "the financial statements present fairly, in all material respects, the financial position of Apple Inc."
-              },
-              {
-                "file": "AAPL_2020_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "effective internal control over financial reporting was maintained in all material respects"
-              },
-              {
-                "file": "AAPL_2020_opinion.txt",
-                "rule": "Rhythm Patterns",
-                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with U.S. generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
-              },
               {
                 "file": "CAT_2021_opinion.txt",
                 "rule": "Adverbs",
                 "text": "present fairly, in all material respects"
-              },
-              {
-                "file": "CAT_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "whether effective internal control over financial reporting was maintained in all material respects"
-              },
-              {
-                "file": "CAT_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes"
-              },
-              {
-                "file": "CAT_2021_opinion.txt",
-                "rule": "Rhythm Patterns: Em-dashes",
-                "text": "Reclassification of certain tax effects from accumulated other comprehensive income\u2014 \u2014 (108)108 \u2014 \u2014"
-              },
-              {
-                "file": "DAL_2021_opinion.txt",
-                "rule": "Adverbs",
-                "text": "the consolidated financial statements present fairly, in all material respects, the financial position of the Company"
               },
               {
                 "file": "DE_2020_opinion.txt",
@@ -3934,34 +4127,9 @@
                 "text": "fairly"
               },
               {
-                "file": "DE_2020_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "effective internal control over financial reporting was maintained in all material respects"
-              },
-              {
                 "file": "F_2021_opinion.txt",
                 "rule": "Adverbs",
                 "text": "present fairly, in all material respects, the financial position"
-              },
-              {
-                "file": "F_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting"
-              },
-              {
-                "file": "F_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "effective internal control over financial reporting was maintained in all material respects"
-              },
-              {
-                "file": "F_2021_opinion.txt",
-                "rule": "Rhythm Patterns (Three-item lists)",
-                "text": "obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk"
-              },
-              {
-                "file": "F_2021_opinion.txt",
-                "rule": "Rhythm Patterns (Three-item lists)",
-                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
               },
               {
                 "file": "HD_2021_opinion.txt",
@@ -3974,34 +4142,9 @@
                 "text": "present fairly, in all material respects, the financial position"
               },
               {
-                "file": "JNJ_2021_opinion.txt",
-                "rule": "Adverbs",
-                "text": "can provide only reasonable assurance with respect to financial statement preparation"
-              },
-              {
-                "file": "JNJ_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "The Company's internal control over financial reporting is designed to provide reasonable assurance as to the reliability of the Company's financial reporting"
-              },
-              {
-                "file": "JNJ_2021_opinion.txt",
-                "rule": "Rhythm Patterns \u2014 Three-item lists",
-                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements."
-              },
-              {
                 "file": "KO_2021_opinion.txt",
                 "rule": "Adverbs",
                 "text": "fairly"
-              },
-              {
-                "file": "KO_2021_opinion.txt",
-                "rule": "Passive Voice",
-                "text": "effective internal control over financial reporting was maintained in all material respects"
-              },
-              {
-                "file": "KO_2021_opinion.txt",
-                "rule": "Rhythm Patterns (Three-item lists)",
-                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements"
               },
               {
                 "file": "MMM_2021_opinion.txt",
@@ -4009,9 +4152,131 @@
                 "text": "present fairly, in all material respects"
               },
               {
+                "file": "MSFT_2020_opinion.txt",
+                "rule": "Adverbs",
+                "text": "present fairly, in all material respects"
+              }
+            ],
+            "containment_only_examples": [
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Adverbs",
+                "text": "the financial statements present fairly, in all material respects, the financial position of Apple Inc.",
+                "chars": 103
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects",
+                "chars": 91
+              },
+              {
+                "file": "AAPL_2020_opinion.txt",
+                "rule": "Rhythm Patterns",
+                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with U.S. generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+                "chars": 714
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "whether effective internal control over financial reporting was maintained in all material respects",
+                "chars": 99
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "is a process designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements for external purposes",
+                "chars": 168
+              },
+              {
+                "file": "CAT_2021_opinion.txt",
+                "rule": "Rhythm Patterns: Em-dashes",
+                "text": "Reclassification of certain tax effects from accumulated other comprehensive income\u2014 \u2014 (108)108 \u2014 \u2014",
+                "chars": 99
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "Consolidated Statements of Comprehensive (Loss)/Income for the years ended December 31, 2020, 2019 and 2018",
+                "chars": 107
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "the consolidated financial statements present fairly, in all material respects, the financial position of the Company",
+                "chars": 117
+              },
+              {
+                "file": "DE_2020_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects",
+                "chars": 91
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "internal control over financial reporting is a process designed to provide reasonable assurance regarding the reliability of financial reporting",
+                "chars": 144
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects",
+                "chars": 91
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "obtaining an understanding of internal control over financial reporting, assessing the risk that a material weakness exists, and testing and evaluating the design and operating effectiveness of internal control based on the assessed risk",
+                "chars": 237
+              },
+              {
+                "file": "F_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+                "chars": 712
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Adverbs",
+                "text": "can provide only reasonable assurance with respect to financial statement preparation",
+                "chars": 85
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "The Company's internal control over financial reporting is designed to provide reasonable assurance as to the reliability of the Company's financial reporting",
+                "chars": 158
+              },
+              {
+                "file": "JNJ_2021_opinion.txt",
+                "rule": "Rhythm Patterns \u2014 Three-item lists",
+                "text": "(i) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (ii) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (iii) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements.",
+                "chars": 712
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "effective internal control over financial reporting was maintained in all material respects",
+                "chars": 91
+              },
+              {
+                "file": "KO_2021_opinion.txt",
+                "rule": "Rhythm Patterns (Three-item lists)",
+                "text": "(1) pertain to the maintenance of records that, in reasonable detail, accurately and fairly reflect the transactions and dispositions of the assets of the company; (2) provide reasonable assurance that transactions are recorded as necessary to permit preparation of financial statements in accordance with generally accepted accounting principles, and that receipts and expenditures of the company are being made only in accordance with authorizations of management and directors of the company; and (3) provide reasonable assurance regarding prevention or timely detection of unauthorized acquisition, use, or disposition of the company's assets that could have a material effect on the financial statements",
+                "chars": 708
+              },
+              {
                 "file": "MMM_2021_opinion.txt",
                 "rule": "Passive Voice",
-                "text": "whether effective internal control over financial reporting was maintained in all material respects"
+                "text": "whether effective internal control over financial reporting was maintained in all material respects",
+                "chars": 99
+              },
+              {
+                "file": "MMM_2021_opinion.txt",
+                "rule": "Passive Voice",
+                "text": "internal control over financial reporting is a process designed to provide reasonable assurance",
+                "chars": 95
               }
             ]
           }
@@ -4024,6 +4289,7 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 1,
           "matched_max": 3,
           "planted": 4,
@@ -4031,13 +4297,15 @@
         },
         "lex-1": {
           "matched_mean": 9.0,
+          "matched_mean_exact": 9.0,
           "matched_min": 8,
           "matched_max": 10,
           "planted": 23,
-          "recall": 0.3913
+          "recall": 0.391304
         },
         "lex-2": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 1,
           "matched_max": 5,
           "planted": 12,
@@ -4045,36 +4313,41 @@
         },
         "lex-3": {
           "matched_mean": 5.67,
+          "matched_mean_exact": 5.666666666666667,
           "matched_min": 5,
           "matched_max": 6,
           "planted": 12,
-          "recall": 0.4722
+          "recall": 0.472222
         },
         "phrasal": {
           "matched_mean": 29.0,
+          "matched_mean_exact": 29.0,
           "matched_min": 28,
           "matched_max": 30,
           "planted": 42,
-          "recall": 0.6905
+          "recall": 0.690476
         },
         "structural": {
           "matched_mean": 24.33,
+          "matched_mean_exact": 24.333333333333332,
           "matched_min": 23,
           "matched_max": 25,
           "planted": 29,
-          "recall": 0.8391
+          "recall": 0.83908
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 1.33,
+          "matched_mean_exact": 1.3333333333333333,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 2,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 1,
@@ -4082,13 +4355,15 @@
         },
         "con-sycophancy": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 1,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "lex-hollow-intensifier": {
           "matched_mean": 5.0,
+          "matched_mean_exact": 5.0,
           "matched_min": 5,
           "matched_max": 5,
           "planted": 5,
@@ -4096,13 +4371,15 @@
         },
         "lex-t1-vocab": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 3,
           "matched_max": 5,
           "planted": 18,
-          "recall": 0.2222
+          "recall": 0.222222
         },
         "lex-t2-cluster": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 1,
           "matched_max": 5,
           "planted": 12,
@@ -4110,13 +4387,15 @@
         },
         "lex-t3-density": {
           "matched_mean": 5.67,
+          "matched_mean_exact": 5.666666666666667,
           "matched_min": 5,
           "matched_max": 6,
           "planted": 12,
-          "recall": 0.4722
+          "recall": 0.472222
         },
         "phr-false-range": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -4124,13 +4403,15 @@
         },
         "phr-filler-wordy": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 4,
-          "recall": 0.4167
+          "recall": 0.416667
         },
         "phr-generic-conclusion": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -4138,6 +4419,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -4145,6 +4427,7 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -4152,27 +4435,31 @@
         },
         "phr-significance-inflation": {
           "matched_mean": 3.67,
+          "matched_mean_exact": 3.6666666666666665,
           "matched_min": 3,
           "matched_max": 4,
           "planted": 4,
-          "recall": 0.9167
+          "recall": 0.916667
         },
         "phr-signposting-meta": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "phr-superficial-ing": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.2222
+          "recall": 0.222222
         },
         "phr-throat-clearing": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -4180,20 +4467,23 @@
         },
         "phr-transition": {
           "matched_mean": 2.67,
+          "matched_mean_exact": 2.6666666666666665,
           "matched_min": 2,
           "matched_max": 3,
           "planted": 7,
-          "recall": 0.381
+          "recall": 0.380952
         },
         "phr-vague-attribution": {
           "matched_mean": 2.33,
+          "matched_mean_exact": 2.3333333333333335,
           "matched_min": 2,
           "matched_max": 3,
           "planted": 4,
-          "recall": 0.5833
+          "recall": 0.583333
         },
         "str-colon-reveal": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 0,
           "matched_max": 2,
           "planted": 2,
@@ -4201,6 +4491,7 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 3,
@@ -4208,6 +4499,7 @@
         },
         "str-em-dash": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -4215,6 +4507,7 @@
         },
         "str-false-agency": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -4222,13 +4515,15 @@
         },
         "str-formatting-slop": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 2,
-          "recall": 0.8333
+          "recall": 0.833333
         },
         "str-negative-listing": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -4236,6 +4531,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -4243,6 +4539,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -4250,13 +4547,15 @@
         },
         "str-rule-of-three": {
           "matched_mean": 3.67,
+          "matched_mean_exact": 3.6666666666666665,
           "matched_min": 3,
           "matched_max": 4,
           "planted": 4,
-          "recall": 0.9167
+          "recall": 0.916667
         },
         "str-staccato-fragments": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -4264,11 +4563,19 @@
         },
         "str-synonym-cycling": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
           "recall": 1.0
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 17,
+        "plants_claimed": 81,
+        "recall_mean": 0.6337,
+        "recall_min": 0.6173,
+        "recall_max": 0.6543
       }
     },
     "the-antislop": {
@@ -4842,9 +5149,30 @@
             "words": 111313,
             "flags": 78,
             "flags_per_1k": 0.7,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
-            "toa_examples": []
+            "toa_containment": 0,
+            "toa_containment_per_1k": 0.0,
+            "toa_doc_term_pairs": 0,
+            "toa_by_term": {},
+            "toa_doc_term_pairs_by_term": {},
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 0,
+                "toa_per_1k": 0.0,
+                "toa_containment": 0
+              }
+            },
+            "toa_examples": [],
+            "containment_only_examples": []
           }
         ]
       },
@@ -4855,6 +5183,7 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -4862,13 +5191,15 @@
         },
         "lex-1": {
           "matched_mean": 8.67,
+          "matched_mean_exact": 8.666666666666666,
           "matched_min": 8,
           "matched_max": 9,
           "planted": 23,
-          "recall": 0.3768
+          "recall": 0.376812
         },
         "lex-2": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -4876,29 +5207,33 @@
         },
         "lex-3": {
           "matched_mean": 1.33,
+          "matched_mean_exact": 1.3333333333333333,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1111
+          "recall": 0.111111
         },
         "phrasal": {
           "matched_mean": 23.0,
+          "matched_mean_exact": 23.0,
           "matched_min": 23,
           "matched_max": 23,
           "planted": 42,
-          "recall": 0.5476
+          "recall": 0.547619
         },
         "structural": {
           "matched_mean": 19.33,
+          "matched_mean_exact": 19.333333333333332,
           "matched_min": 18,
           "matched_max": 20,
           "planted": 29,
-          "recall": 0.6667
+          "recall": 0.666667
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -4906,6 +5241,7 @@
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -4913,6 +5249,7 @@
         },
         "con-sycophancy": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -4920,6 +5257,7 @@
         },
         "lex-hollow-intensifier": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 5,
@@ -4927,13 +5265,15 @@
         },
         "lex-t1-vocab": {
           "matched_mean": 8.67,
+          "matched_mean_exact": 8.666666666666666,
           "matched_min": 8,
           "matched_max": 9,
           "planted": 18,
-          "recall": 0.4815
+          "recall": 0.481481
         },
         "lex-t2-cluster": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -4941,13 +5281,15 @@
         },
         "lex-t3-density": {
           "matched_mean": 1.33,
+          "matched_mean_exact": 1.3333333333333333,
           "matched_min": 1,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1111
+          "recall": 0.111111
         },
         "phr-false-range": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -4955,6 +5297,7 @@
         },
         "phr-filler-wordy": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -4962,6 +5305,7 @@
         },
         "phr-generic-conclusion": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -4969,6 +5313,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -4976,34 +5321,39 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.2222
+          "recall": 0.222222
         },
         "phr-significance-inflation": {
           "matched_mean": 3.33,
+          "matched_mean_exact": 3.3333333333333335,
           "matched_min": 3,
           "matched_max": 4,
           "planted": 4,
-          "recall": 0.8333
+          "recall": 0.833333
         },
         "phr-signposting-meta": {
           "matched_mean": 0.33,
+          "matched_mean_exact": 0.3333333333333333,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.1111
+          "recall": 0.111111
         },
         "phr-superficial-ing": {
           "matched_mean": 1.67,
+          "matched_mean_exact": 1.6666666666666667,
           "matched_min": 1,
           "matched_max": 3,
           "planted": 3,
-          "recall": 0.5556
+          "recall": 0.555556
         },
         "phr-throat-clearing": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5011,13 +5361,15 @@
         },
         "phr-transition": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 7,
-          "recall": 0.2857
+          "recall": 0.285714
         },
         "phr-vague-attribution": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -5025,6 +5377,7 @@
         },
         "str-colon-reveal": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 0,
           "matched_max": 2,
           "planted": 2,
@@ -5032,6 +5385,7 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -5039,6 +5393,7 @@
         },
         "str-em-dash": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5046,13 +5401,15 @@
         },
         "str-false-agency": {
           "matched_mean": 0.67,
+          "matched_mean_exact": 0.6666666666666666,
           "matched_min": 0,
           "matched_max": 1,
           "planted": 2,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "str-formatting-slop": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -5060,6 +5417,7 @@
         },
         "str-negative-listing": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 2,
@@ -5067,6 +5425,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 3,
@@ -5074,6 +5433,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5081,13 +5441,15 @@
         },
         "str-rule-of-three": {
           "matched_mean": 2.67,
+          "matched_mean_exact": 2.6666666666666665,
           "matched_min": 2,
           "matched_max": 3,
           "planted": 4,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "str-staccato-fragments": {
           "matched_mean": 4.0,
+          "matched_mean_exact": 4.0,
           "matched_min": 4,
           "matched_max": 4,
           "planted": 4,
@@ -5095,11 +5457,19 @@
         },
         "str-synonym-cycling": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
           "recall": 1.0
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 22,
+        "plants_claimed": 94,
+        "recall_mean": 0.5426,
+        "recall_min": 0.5213,
+        "recall_max": 0.5638
       }
     },
     "unslop-deterministic": {
@@ -5284,8 +5654,34 @@
             "words": 111313,
             "flags": 229,
             "flags_per_1k": 2.06,
-            "toa_violations": 36,
-            "toa_per_1k": 0.323,
+            "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
+            "toa_violations": 38,
+            "toa_per_1k": 0.341,
+            "toa_containment": 38,
+            "toa_containment_per_1k": 0.341,
+            "toa_doc_term_pairs": 14,
+            "toa_by_term": {
+              "comprehensive income": 21,
+              "leverage ratio": 17
+            },
+            "toa_doc_term_pairs_by_term": {
+              "comprehensive income": 12,
+              "leverage ratio": 2
+            },
+            "by_doc_type": {
+              "mdna": {
+                "words": 93248,
+                "toa": 20,
+                "toa_per_1k": 0.214,
+                "toa_containment": 20
+              },
+              "opinion": {
+                "words": 18065,
+                "toa": 18,
+                "toa_per_1k": 0.996,
+                "toa_containment": 18
+              }
+            },
             "toa_examples": [
               {
                 "file": "AAPL_2020_opinion.txt",
@@ -5340,10 +5736,20 @@
               {
                 "file": "CAT_2021_opinion.txt",
                 "rule": "stock_vocab",
-                "text": "Comprehensive"
+                "text": "comprehensive"
               },
               {
                 "file": "CAT_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "Comprehensive"
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
+                "rule": "stock_vocab",
+                "text": "Comprehensive"
+              },
+              {
+                "file": "DAL_2021_opinion.txt",
                 "rule": "stock_vocab",
                 "text": "comprehensive"
               },
@@ -5390,16 +5796,6 @@
               {
                 "file": "F_2021_mdna.txt",
                 "rule": "stock_vocab",
-                "text": "Leverage"
-              },
-              {
-                "file": "F_2021_mdna.txt",
-                "rule": "stock_vocab",
-                "text": "leverage"
-              },
-              {
-                "file": "F_2021_mdna.txt",
-                "rule": "stock_vocab",
                 "text": "leverage"
               },
               {
@@ -5412,7 +5808,8 @@
                 "rule": "stock_vocab",
                 "text": "leverage"
               }
-            ]
+            ],
+            "containment_only_examples": []
           }
         ]
       },
@@ -5423,6 +5820,7 @@
       "per_tier": {
         "conversational": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 4,
@@ -5430,20 +5828,23 @@
         },
         "lex-1": {
           "matched_mean": 12.0,
+          "matched_mean_exact": 12.0,
           "matched_min": 12,
           "matched_max": 12,
           "planted": 23,
-          "recall": 0.5217
+          "recall": 0.521739
         },
         "lex-2": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "lex-3": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -5451,22 +5852,25 @@
         },
         "phrasal": {
           "matched_mean": 17.0,
+          "matched_mean_exact": 17.0,
           "matched_min": 17,
           "matched_max": 17,
           "planted": 42,
-          "recall": 0.4048
+          "recall": 0.404762
         },
         "structural": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 29,
-          "recall": 0.069
+          "recall": 0.068966
         }
       },
       "per_pattern": {
         "con-chatbot-artifact": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 2,
@@ -5474,6 +5878,7 @@
         },
         "con-cutoff-disclaimer": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 1,
@@ -5481,6 +5886,7 @@
         },
         "con-sycophancy": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 1,
@@ -5488,6 +5894,7 @@
         },
         "lex-hollow-intensifier": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 5,
@@ -5495,20 +5902,23 @@
         },
         "lex-t1-vocab": {
           "matched_mean": 12.0,
+          "matched_mean_exact": 12.0,
           "matched_min": 12,
           "matched_max": 12,
           "planted": 18,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "lex-t2-cluster": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 12,
-          "recall": 0.1667
+          "recall": 0.166667
         },
         "lex-t3-density": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 12,
@@ -5516,6 +5926,7 @@
         },
         "phr-false-range": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5523,6 +5934,7 @@
         },
         "phr-filler-wordy": {
           "matched_mean": 3.0,
+          "matched_mean_exact": 3.0,
           "matched_min": 3,
           "matched_max": 3,
           "planted": 4,
@@ -5530,6 +5942,7 @@
         },
         "phr-generic-conclusion": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 4,
@@ -5537,6 +5950,7 @@
         },
         "phr-hedge-stack": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5544,6 +5958,7 @@
         },
         "phr-novelty-inflation": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 3,
@@ -5551,6 +5966,7 @@
         },
         "phr-significance-inflation": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 4,
@@ -5558,20 +5974,23 @@
         },
         "phr-signposting-meta": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 3,
-          "recall": 0.3333
+          "recall": 0.333333
         },
         "phr-superficial-ing": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "phr-throat-clearing": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5579,6 +5998,7 @@
         },
         "phr-transition": {
           "matched_mean": 7.0,
+          "matched_mean_exact": 7.0,
           "matched_min": 7,
           "matched_max": 7,
           "planted": 7,
@@ -5586,6 +6006,7 @@
         },
         "phr-vague-attribution": {
           "matched_mean": 1.0,
+          "matched_mean_exact": 1.0,
           "matched_min": 1,
           "matched_max": 1,
           "planted": 4,
@@ -5593,6 +6014,7 @@
         },
         "str-colon-reveal": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5600,13 +6022,15 @@
         },
         "str-copula-avoidance": {
           "matched_mean": 2.0,
+          "matched_mean_exact": 2.0,
           "matched_min": 2,
           "matched_max": 2,
           "planted": 3,
-          "recall": 0.6667
+          "recall": 0.666667
         },
         "str-em-dash": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5614,6 +6038,7 @@
         },
         "str-false-agency": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5621,6 +6046,7 @@
         },
         "str-formatting-slop": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5628,6 +6054,7 @@
         },
         "str-negative-listing": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5635,6 +6062,7 @@
         },
         "str-negative-parallelism": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 3,
@@ -5642,6 +6070,7 @@
         },
         "str-rhetorical-setup": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 2,
@@ -5649,6 +6078,7 @@
         },
         "str-rule-of-three": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5656,6 +6086,7 @@
         },
         "str-staccato-fragments": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 4,
@@ -5663,12 +6094,114 @@
         },
         "str-synonym-cycling": {
           "matched_mean": 0.0,
+          "matched_mean_exact": 0.0,
           "matched_min": 0,
           "matched_max": 0,
           "planted": 1,
           "recall": 0.0
         }
+      },
+      "claimed_only": {
+        "patterns_claimed": 18,
+        "plants_claimed": 92,
+        "recall_mean": 0.3696,
+        "recall_min": 0.3696,
+        "recall_max": 0.3696
       }
+    }
+  },
+  "weighting_sensitivity": {
+    "plant-weighted (published)": {
+      "recall": {
+        "avoid-ai-writing-detector": 0.4672,
+        "avoid-ai-writing-skill": 0.7268,
+        "no-ai-slop": 0.5546,
+        "stop-slop": 0.5984,
+        "the-antislop": 0.4536,
+        "unslop-deterministic": 0.2869
+      },
+      "ranking": [
+        "avoid-ai-writing-skill",
+        "stop-slop",
+        "no-ai-slop",
+        "avoid-ai-writing-detector",
+        "the-antislop",
+        "unslop-deterministic"
+      ],
+      "skill_minus_detector_points": 26.0
+    },
+    "equal weight per tier": {
+      "recall": {
+        "avoid-ai-writing-detector": 0.4012,
+        "avoid-ai-writing-skill": 0.6322,
+        "no-ai-slop": 0.4354,
+        "stop-slop": 0.5238,
+        "the-antislop": 0.4087,
+        "unslop-deterministic": 0.277
+      },
+      "ranking": [
+        "avoid-ai-writing-skill",
+        "stop-slop",
+        "no-ai-slop",
+        "the-antislop",
+        "avoid-ai-writing-detector",
+        "unslop-deterministic"
+      ],
+      "skill_minus_detector_points": 23.1
+    },
+    "lexical tiers only": {
+      "recall": {
+        "avoid-ai-writing-detector": 0.4681,
+        "avoid-ai-writing-skill": 0.5745,
+        "no-ai-slop": 0.4468,
+        "stop-slop": 0.3759,
+        "the-antislop": 0.2128,
+        "unslop-deterministic": 0.2979
+      },
+      "ranking": [
+        "avoid-ai-writing-skill",
+        "avoid-ai-writing-detector",
+        "no-ai-slop",
+        "stop-slop",
+        "unslop-deterministic",
+        "the-antislop"
+      ],
+      "skill_minus_detector_points": 10.6
+    },
+    "phrasal + structural only": {
+      "recall": {
+        "avoid-ai-writing-detector": 0.4648,
+        "avoid-ai-writing-skill": 0.8263,
+        "no-ai-slop": 0.6526,
+        "stop-slop": 0.7512,
+        "the-antislop": 0.5962,
+        "unslop-deterministic": 0.2676
+      },
+      "ranking": [
+        "avoid-ai-writing-skill",
+        "stop-slop",
+        "no-ai-slop",
+        "the-antislop",
+        "avoid-ai-writing-detector",
+        "unslop-deterministic"
+      ],
+      "skill_minus_detector_points": 36.2
+    }
+  },
+  "whitelist_stats": {
+    "occurrences": 170,
+    "by_doc_type": {
+      "mdna": 21,
+      "opinion": 149
+    },
+    "by_term": {
+      "critical audit matter": 54,
+      "reasonable assurance": 37,
+      "in all material respects": 24,
+      "comprehensive income": 21,
+      "leverage ratio": 17,
+      "present fairly": 10,
+      "material weakness": 7
     }
   }
 }

@@ -3,17 +3,21 @@
   "status": "pending_review",
   "reviewer": "Rizwan Ahmed",
   "created": "2026-07-24",
-  "matching": "Case-insensitive whole-phrase match with word boundaries, implemented as (?<!\\w)term(?!\\w) in scripts/score.py boundary_spans(). Boundaries are load-bearing: plain substring search would match 'qualified opinion' inside 'unqualified opinion', which is the opposite meaning and occurs 9 times in the v0.1 corpus. A tool flag counts as a term-of-art violation when its flagged span overlaps a whitelisted occurrence at 0.5 or more of the shorter span. Flags carrying a character offset are tested at that offset; flags carrying only quoted text are grouped by text and credited at most min(number of such flags, number of occurrences that actually collide), so one colliding occurrence cannot convict every flag sharing its wording. Morphological variants listed explicitly in the variants array; no stemming.",
+  "matching": "Case-insensitive whole-phrase match with word boundaries, implemented as (?<!\\w)term(?!\\w) in scripts/score.py boundary_spans(). Boundaries are load-bearing: plain substring search would match 'qualified opinion' inside 'unqualified opinion', which is the opposite meaning and occurs 9 times in the v0.1 corpus. HEADLINE RULE (flag-anchored): a tool flag counts as a term-of-art violation when whitelisted text makes up at least half of the flagged span (union across overlapping terms). This stops a wide quote that merely encloses a term, flagged for some other reason, from counting. SECONDARY RULE (containment, also published): the flag overlaps a whitelisted occurrence at 0.5 or more of the shorter span, so any enclosing quote counts. Flags carrying a character offset are used only when the flagged text is actually at that offset; otherwise they are located by search, case-sensitive first. Index-less flags are grouped by exact text and credited at most min(number of such flags, number of qualifying occurrences). A granularity-neutral count of distinct (document, term) pairs is also published, because engines differ in whether they report every occurrence or once per document. Occurrence statistics merge nested variants so no character range is counted twice. Morphological variants listed explicitly in the variants array; no stemming.",
   "terms": [
     {
       "term": "material weakness",
-      "variants": ["material weaknesses"],
+      "variants": [
+        "material weaknesses"
+      ],
       "citation": "PCAOB AS 2201 Appendix A (.A7); SEC Regulation S-K Item 308",
       "note": "Defined term. Required wording in adverse ICFR opinions and SOX 404 management reports. No synonym is permissible."
     },
     {
       "term": "significant deficiency",
-      "variants": ["significant deficiencies"],
+      "variants": [
+        "significant deficiencies"
+      ],
       "citation": "PCAOB AS 2201 Appendix A (.A11); AS 1305 (communication to audit committees)",
       "note": "Defined term with a severity meaning distinct from 'material weakness'. Collides with density rules on 'significant'."
     },
@@ -37,43 +41,66 @@
     },
     {
       "term": "pervasive",
-      "variants": ["pervasiveness"],
+      "variants": [
+        "pervasiveness"
+      ],
       "citation": "ISA 705 / AU-C 705 (pervasiveness threshold). NOT a PCAOB AS 3105 term.",
       "note": "Term of art in the ISA and AICPA framework, where pervasiveness separates a qualified opinion from an adverse opinion. PCAOB AS 3105, which governs the issuer audits in this corpus, does not use that construction, so this entry is retained for cross-framework coverage rather than because PCAOB requires the word. Zero occurrences in the v0.1 corpus, so it contributes nothing to the current ToA metric. Reads as intensifier slop out of context. REVIEW: Rizwan to decide whether a PCAOB-audit corpus should carry ISA vocabulary at all."
     },
     {
       "term": "qualified opinion",
-      "variants": ["qualified opinions"],
+      "variants": [
+        "qualified opinions"
+      ],
       "citation": "PCAOB AS 3105.02-.04 (GAAP departure), .05-.09 (scope limitation)",
       "note": "Opinion type. Under PCAOB AS 3105 the auditor expresses a qualified 'except for' opinion when the financial statements are fairly presented apart from the effects of a specific matter, arising from either a GAAP departure or a scope limitation that does not preclude an opinion on the statements as a whole. PCAOB does not frame the choice using the ISA 'material but not pervasive' threshold; see the separate 'pervasive' entry. 'Qualified' here means 'with reservations / except for', near-opposite of the everyday sense of competent or eligible. Matching must exclude 'unqualified opinion', which is the opposite meaning and occurs 9 times in the v0.1 corpus."
     },
     {
       "term": "adverse opinion",
-      "variants": ["adverse opinions"],
+      "variants": [
+        "adverse opinions"
+      ],
       "citation": "PCAOB AS 3105; AS 2201.90 (ICFR)",
       "note": "Opinion type."
     },
     {
       "term": "comprehensive basis of accounting",
-      "variants": ["other comprehensive basis of accounting"],
+      "variants": [
+        "other comprehensive basis of accounting"
+      ],
       "citation": "PCAOB AS 3305 (Special Reports); OCBOA",
       "note": "Direct collision: 'comprehensive' is a Tier 1 hard-replace word in avoid-ai-writing."
     },
     {
       "term": "comprehensive income",
-      "variants": ["statements of comprehensive income", "other comprehensive income"],
+      "variants": [
+        "statements of comprehensive income",
+        "other comprehensive income",
+        "comprehensive (loss)/income",
+        "comprehensive (loss) income",
+        "comprehensive loss"
+      ],
       "citation": "FASB ASC 220 (Income Statement - Reporting Comprehensive Income); Master Glossary definition",
-      "note": "Defined GAAP term under ASC 220 and the conventional caption for the required statement. ASC 220 permits equivalent statement titles rather than prescribing one exact caption, so the defensible claim is that the TERM is defined, not that a specific statement name is mandated. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; 25 occurrences in the v0.1 corpus, and the single largest source of ToA violations in the results."
+      "note": "Defined GAAP term under ASC 220 and the conventional caption for the required statement. ASC 220 permits equivalent statement titles rather than prescribing one exact caption, so the defensible claim is that the TERM is defined, not that a specific statement name is mandated. Direct collision with Tier 1 'comprehensive' in avoid-ai-writing and stock_vocab in unslop; 21 occurrences in the v0.1 corpus after merging nested variants, and the single largest source of ToA violations in the results. Variants include the loss-year captions ('Comprehensive (Loss)/Income', 'comprehensive loss'), which are the same ASC 220 statement in a year of net loss; Delta's FY2020 opinion uses the first."
     },
     {
       "term": "leverage ratio",
-      "variants": ["covenant leverage ratio", "managed leverage", "financial statement leverage", "financial leverage", "operating leverage", "leverage framework"],
+      "variants": [
+        "covenant leverage ratio",
+        "managed leverage",
+        "financial statement leverage",
+        "financial leverage",
+        "operating leverage",
+        "leverage framework"
+      ],
       "citation": "SEC Regulation S-K Item 303 (MD&A liquidity and capital resources); Regulation G and Item 10(e) (non-GAAP measures must be consistently labelled and reconciled); covenant definitions in the filer's credit agreements",
       "note": "Leverage as a financial metric, not as a verb. Where a filer defines 'managed leverage' or 'financial statement leverage' as a non-GAAP measure, Regulation G requires the label be used consistently and reconciled to GAAP, so renaming it is a disclosure problem rather than a style choice. 'Covenant leverage ratio' is defined contractually in the credit agreement. Direct collision with avoid-ai-writing Tier 1, whose table scopes the word to 'leverage (verb)' but whose detector regex does not honour that scoping and fires on these noun phrases in CAT and F filings. DELIBERATELY NOT PROTECTED: bare 'leverage', which in verb use ('leverage our position') is a fair flag and which these tools are right to catch. Protecting the bare word would excuse genuine slop and weaken the metric."
     },
     {
       "term": "critical audit matter",
-      "variants": ["critical audit matters"],
+      "variants": [
+        "critical audit matters"
+      ],
       "citation": "PCAOB AS 3101.11-.17",
       "note": "Required auditor communication for large accelerated filers since fiscal years ending on or after 2019-06-30, so it appears throughout the 2019-2021 corpus window."
     },
@@ -85,7 +112,12 @@
     },
     {
       "term": "present fairly",
-      "variants": ["presents fairly", "presented fairly", "fairly presents", "fair presentation"],
+      "variants": [
+        "presents fairly",
+        "presented fairly",
+        "fairly presents",
+        "fair presentation"
+      ],
       "citation": "PCAOB AS 2815; AS 3101.08 (required opinion wording)",
       "note": "Mandatory opinion phrase with defined meaning."
     }
@@ -123,7 +155,9 @@
     },
     {
       "term": "forward-looking statements",
-      "variants": ["forward-looking statement"],
+      "variants": [
+        "forward-looking statement"
+      ],
       "citation": "PSLRA of 1995, Securities Act Section 27A / Exchange Act Section 21E",
       "note": "Proposed. Safe-harbor language is statutorily motivated hedging."
     },
@@ -135,7 +169,9 @@
     },
     {
       "term": "free of material misstatement",
-      "variants": ["free from material misstatement"],
+      "variants": [
+        "free from material misstatement"
+      ],
       "citation": "PCAOB AS 3101.09 (required basis-for-opinion wording)",
       "note": "Proposed. Mandatory phrase."
     }

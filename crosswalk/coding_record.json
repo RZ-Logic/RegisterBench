@@ -1,0 +1,1535 @@
+{
+ "coded": "2026-10-11",
+ "method": "blind double-coding, pattern-first coder A and rule-first coder B per tool face, disagreements adjudicated against source",
+ "claim_standard": "A tool claims a canonical pattern if its ruleset contains an explicit rule, section, table entry, or working detection logic whose stated target is the phenomenon in the pattern description, or a central instance of it. Partial coverage counts if central. Generic advice that only incidentally catches the pattern does not count. Code tools: the code must detect it; a documentation label is not enough.",
+ "agreement": {
+  "stop-slop": {
+   "agreed": 28,
+   "of": 29
+  },
+  "no-ai-slop": {
+   "agreed": 29,
+   "of": 29
+  },
+  "the-antislop": {
+   "agreed": 29,
+   "of": 29
+  },
+  "avoid-ai-writing-skill": {
+   "agreed": 29,
+   "of": 29
+  },
+  "avoid-ai-writing-detector": {
+   "agreed": 28,
+   "of": 29
+  },
+  "unslop-deterministic": {
+   "agreed": 29,
+   "of": 29
+  }
+ },
+ "overall_agreement": {
+  "agreed": 172,
+  "of": 174
+ },
+ "cells": {
+  "stop-slop": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "Business Jargon"
+    ],
+    "evidence": "references/phrases.md:45 \"| Game-changer | Significant, important |\" (partial: game-changer is the only listed word it bans)",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": true,
+    "rules": [
+     "Adverbs",
+     "Business Jargon"
+    ],
+    "evidence": "references/phrases.md:41 \"| Navigate (challenges) | Handle, address |\"; phrases.md:73 \"crucially\" (partial)",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule names significant/innovative/effective etc.; phrases.md:45 even suggests \"Significant\" as a replacement. The blanket -ly adverb ban only catches these incidentally.",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": true,
+    "rules": [
+     "Adverbs",
+     "Word Patterns"
+    ],
+    "evidence": "references/phrases.md:55-68 \"Kill all adverbs... no intensifiers\" listing \"really\", \"literally\", \"genuinely\", \"honestly\", \"actually\", \"deeply\", \"truly\", \"fundamentally\"",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule lists Moreover/Furthermore/Additionally/In conclusion. The -ly adverb ban would only catch 'Additionally' incidentally.",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "Adverbs"
+    ],
+    "evidence": "references/phrases.md:75-81 \"Also cut these filler phrases:\" ... \"It's worth noting\", \"At the end of the day\", \"When it comes to\"",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "Emphasis Crutches",
+     "Throat-Clearing Openers"
+    ],
+    "evidence": "references/phrases.md:3-16 \"Remove these announcement phrases\": \"Here's the thing:\", \"The uncomfortable truth is\", \"Let me be clear\"; phrases.md:32 \"Make no mistake\"",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "Meta-Commentary"
+    ],
+    "evidence": "references/phrases.md:87-97 \"Remove self-referential asides... not announce its own structure\": \"Let me walk you through...\", \"In this section, we'll...\"; SKILL.md:46 \"Meta-joiners\"",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "Telling Instead of Showing",
+     "Vague Declaratives"
+    ],
+    "evidence": "references/phrases.md:120 \"Sentences that announce importance without naming the specific thing\" e.g. \"The stakes are high\"; phrases.md:111 \"Announcing difficulty or significance rather than demonstrating it\"",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "Passive Voice"
+    ],
+    "evidence": "references/structures.md:102 \"| \\\"It is believed that\\\" | Name who believes it |\" (partial: covers the passive weasel form, not 'experts believe'/'studies show')",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses trailing participle clauses like ', highlighting the importance of X'.",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule lists generic closers; 'Every paragraph ends punchily' (structures.md:124) targets punchy endings, not recap/'future looks bright' closers.",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses 'from X to Y' false ranges.",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule lists faux-insight setups like 'what nobody tells you'; the closest items are throat-clearing openers, which map to phr-throat-clearing.",
+    "source": "agreed"
+   },
+   "str-negative-parallelism": {
+    "claimed": true,
+    "rules": [
+     "Binary Contrasts"
+    ],
+    "evidence": "references/structures.md:13-19 \"The question isn't X. It's Y.\", \"not X, it's Y\", \"not just X but also Y\"; SKILL.md:40 \"Any 'not X, it's Y' contrasts? State Y directly.\"",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": true,
+    "rules": [
+     "Negative Listing"
+    ],
+    "evidence": "references/structures.md:25-29 \"Listing what something is *not* before revealing what it *is*. A rhetorical striptease.\" \"Not a X... Not a Y... A Z.\"",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": true,
+    "rules": [
+     "Core Rules 6 (Vary rhythm)",
+     "Rhythm Patterns"
+    ],
+    "evidence": "references/structures.md:122 \"| Three-item lists | Use two items or one |\"; SKILL.md:25 \"Two items beat three.\"",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": true,
+    "rules": [
+     "Dramatic Fragmentation",
+     "Rhythm Patterns"
+    ],
+    "evidence": "references/structures.md:40 \"[Noun]. That's it. That's the [thing].\"; structures.md:126 \"Staccato fragmentation | Don't stack short punchy sentences\"",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "Core Rules 6 (Vary rhythm)",
+     "Rhythm Patterns"
+    ],
+    "evidence": "references/structures.md:125 \"| Em-dashes | Remove. Use commas or periods. No em dashes at all. |\"; SKILL.md:25 \"No em dashes.\"",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses 'serves as', 'boasts', 'stands as' or other copula substitutes.",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": true,
+    "rules": [
+     "Core Rules 3 (Use active voice)",
+     "False Agency"
+    ],
+    "evidence": "references/structures.md:68 \"Giving inanimate things human verbs\" with \"the decision emerges\", \"the culture shifts\", \"the data tells us\", \"the market rewards\"",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": true,
+    "rules": [
+     "Rhetorical Setups",
+     "Rhythm Patterns"
+    ],
+    "evidence": "references/structures.md:52-54 \"What if [reframe]?\", \"Think about it:\"; structures.md:123 \"Questions answered immediately\"; examples.md:54 \"What if I told you...\"",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": true,
+    "rules": [
+     "Meta-Commentary"
+    ],
+    "evidence": "references/phrases.md:89-90 \"Hint:\" / \"Plot twist:\" / \"Spoiler:\" (partial: lists only label-colon reveal setups, not the general 'The result: chaos.' form)",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses rotating synonyms for one referent.",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule on bold overuse, emoji headers, Title Case or over-bulleting (em dash is handled separately).",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule lists chat residue like 'I hope this helps' or 'Certainly!'.",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses 'Great question' or 'You're absolutely right'.",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule addresses 'as of my last update' or 'as an AI language model'.",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": true,
+    "rules": [
+     "Adverbs"
+    ],
+    "evidence": "references/phrases.md:53-55 \"## Adverbs / Kill all adverbs. No -ly words. No softeners, no intensifiers, no hedges.\" Both coders quoted this text accurately. structures.md:127 (Rhythm Patterns) \"\\\"Not always. Not perfectly.\\\" | Hedging disguised as reassurance\" is also quoted accurately, but it targets staccato reassurance fragments, not stacked modal hedges on predictions. Supporting context: SKILL.md:27 \"Skip softening\" and examples.md:23 \"Cut hedging (\\\"most\\\")\".",
+    "source": "adjudicated"
+   }
+  },
+  "no-ai-slop": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "Banned outright"
+    ],
+    "evidence": "SKILL.md:44 \"Banned outright: delve, foster, leverage, utilize, ... robust, cutting-edge, ... tapestry, ... meticulous, intricate, ... ever-evolving.\"",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": true,
+    "rules": [
+     "Banned outright"
+    ],
+    "evidence": "SKILL.md:44 \"Banned outright: ... foster, ... facilitate, empower, streamline, ... paramount, transformative, elevate, ... harness\" (banned unconditionally, not cluster-gated, but targets the listed words)",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule lists significant(ly), innovative, effective, dynamic, scalable, compelling, unprecedented, remarkable or sophisticated; SKILL.md:36 uses \"significantly improves\" only as an example of vague claims vs concrete facts, not a word rule.",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": true,
+    "rules": [
+     "Often-empty adverbs"
+    ],
+    "evidence": "SKILL.md:46 \"Often-empty adverbs: just, literally, honestly, simply, actually, truly, fundamentally, ...\"",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets Moreover/Furthermore/Additionally/Firstly; \"In conclusion\" appears only under Summary-recap endings (SKILL.md:80), which targets recap endings, not sentence-start transitions.",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "Often-empty phrases"
+    ],
+    "evidence": "SKILL.md:48 \"Often-empty phrases: it's worth noting, it's important to note, at the end of the day, when it comes to, ... in terms of, ... in order to\"",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "Throat-clearing openers"
+    ],
+    "evidence": "SKILL.md:54 \"**Throat-clearing openers.** \"Here's the thing,\" ... \"Let me be clear,\" ... \"The uncomfortable truth is.\"\"",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "Often-empty phrases"
+    ],
+    "evidence": "SKILL.md:48 \"Often-empty phrases: ... in this article, let's dive in.\"",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "Importance puffery"
+    ],
+    "evidence": "SKILL.md:62 \"**Importance puffery.** \"Stands as a testament,\" \"marks a pivotal moment,\" \"plays a vital role,\" ... \"underscores its significance.\"\"",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "Weasel attribution"
+    ],
+    "evidence": "SKILL.md:64 \"**Weasel attribution.** \"Experts agree,\" \"industry reports suggest,\" ... \"widely regarded as,\" \"studies show.\"\"",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": true,
+    "rules": [
+     "Superficial analysis"
+    ],
+    "evidence": "SKILL.md:60 \"Cut trailing `-ing` clauses that pretend to explain meaning: \"highlighting,\" \"underscoring,\" \"reflecting,\" \"showcasing.\"\"",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": true,
+    "rules": [
+     "Fake-profound kickers",
+     "Summary-recap endings"
+    ],
+    "evidence": "SKILL.md:80 \"**Summary-recap endings.** \"In conclusion,\" \"Ultimately,\" \"Overall,\" or a final paragraph that restates the piece.\"; SKILL.md:78 cut final mic-drop/aphorism lines",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets stacked hedges (could potentially, may eventually); SKILL.md:33 only says to keep \"maybe\" when it expresses real uncertainty.",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets \"from X to Y\" false ranges.",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": true,
+    "rules": [
+     "Faux-insight setups"
+    ],
+    "evidence": "SKILL.md:56 \"**Faux-insight setups.** \"This is the part most people skip,\" ... \"Here's what nobody tells you,\" \"The part everyone misses.\"\"",
+    "source": "agreed"
+   },
+   "str-negative-parallelism": {
+    "claimed": true,
+    "rules": [
+     "Binary contrasts"
+    ],
+    "evidence": "SKILL.md:52 \"**Binary contrasts.** \"This is not X. It's Y.\" / \"The question isn't X, it's Y.\" / \"It's not just X but Y.\"\"",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": true,
+    "rules": [
+     "Negative listing"
+    ],
+    "evidence": "SKILL.md:70 \"**Negative listing.** \"Not a X. Not a Y. A Z.\" Just say Z.\"",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets triadic lists as default rhythm; Robotic rhythm (SKILL.md:74) addresses repeated sentence shapes generally, not triads.",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": true,
+    "rules": [
+     "Dramatic fragmentation",
+     "Robotic rhythm"
+    ],
+    "evidence": "SKILL.md:72 \"**Dramatic fragmentation.** \"X. And Y. And Z.\" or \"That's it. That's the whole thing.\"\"; SKILL.md:74 \"stacked punchy fragments\"",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "Em dashes"
+    ],
+    "evidence": "SKILL.md:84 \"**Em dashes.** Do not use them as a default rhythm crutch.\"",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": true,
+    "rules": [
+     "Fake-strong verbs"
+    ],
+    "evidence": "SKILL.md:66 \"**Fake-strong verbs.** Prefer \"is\" and \"has\" when they are clearer. \"The app serves as a centralized hub...\"\"",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": true,
+    "rules": [
+     "Use active voice."
+    ],
+    "evidence": "SKILL.md:32 \"\"The team shipped it Tuesday\" beats \"the decision emerged.\" Never let inanimate things do human verbs.\"",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": true,
+    "rules": [
+     "Rhetorical setups"
+    ],
+    "evidence": "SKILL.md:76 \"**Rhetorical setups.** \"What if I told you...\", \"Think about it:\", \"Plot twist:\", and self-answered \"Question? Answer.\" pairs.\"",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": true,
+    "rules": [
+     "Colon reveals"
+    ],
+    "evidence": "SKILL.md:58 \"**Colon reveals.** A noun phrase, a colon, then a lowercase dramatic reveal: ... \"The best part: it learns.\"\"",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": true,
+    "rules": [
+     "Synonym cycling"
+    ],
+    "evidence": "SKILL.md:68 \"**Synonym cycling.** If the clear word is right, repeat it. Don't rotate terms for style.\"",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": true,
+    "rules": [
+     "Formatting slop"
+    ],
+    "evidence": "SKILL.md:82 \"**Formatting slop.** Emoji in headings, bold sprinkled mid-sentence for emphasis, bullet lists where two sentences of prose would read better\"",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets chat residue such as \"I hope this helps\" or \"Certainly!\".",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets sycophantic phrases such as \"Great question\".",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets model-limitation residue such as \"as of my last update\".",
+    "source": "agreed"
+   }
+  },
+  "the-antislop": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "Tier 1: Almost Always AI",
+     "Tier 3: Watch for Clusters"
+    ],
+    "evidence": "SKILL.md:70-80 Tier 1 table bans \"Delve\", \"Game-changer\", \"Leverage (as verb)\", \"Cutting-edge\", \"Tapestry (abstract)\", \"Intricate/intricacies\"; SKILL.md:117 Tier 3 \"Robust/Seamless/Scalable | Corporate buzzwords\"",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule lists any of crucial/facilitate/foster/paramount/cornerstone/transformative/harness/navigate/elevate/empower/streamline/nuanced/myriad/plethora; they appear only inside the Full Example Before text (SKILL.md:336-338), which is not a rule.",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": true,
+    "rules": [
+     "Tier 3: Watch for Clusters"
+    ],
+    "evidence": "SKILL.md:108-117 \"Tier 3: Watch for Clusters / Fine individually, problematic together\" with \"Robust/Seamless/Scalable | Corporate buzzwords\"; scored as \"Tier 3 cluster (3+ in section)\" (SKILL.md:272). Partial: only scalable from the list, but the density gating is the stated mechanism.",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets empty intensifiers (genuinely, truly, really, actually, etc.); \"Actually\"/\"Really\" appear only inside header-template examples (SKILL.md:247-250) whose target is template headers.",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": true,
+    "rules": [
+     "Tier 1: Almost Always AI",
+     "Tier 3: Watch for Clusters"
+    ],
+    "evidence": "SKILL.md:76 \"Moreover/Furthermore | \"Moreover, this approach...\" | Remove or use \"Also\"\"; SKILL.md:115 \"Firstly/Secondly/Thirdly | Enumerated points\"",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "Filler and Hedging 22: Filler phrases",
+     "Tier 1: Almost Always AI",
+     "Tier 2: Suspicious When Repeated"
+    ],
+    "evidence": "SKILL.md:260 \"Filler phrases | \"In order to\" / \"Due to the fact that\"\"; SKILL.md:75 \"It's worth noting\"; SKILL.md:100 \"At the end of the day\"",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "Tier 2: Suspicious When Repeated"
+    ],
+    "evidence": "SKILL.md:99 \"Here's the thing | Used repeatedly\"; SKILL.md:101 \"The bottom line | \"The bottom line is...\" | Just state it\"",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "Tier 2: Suspicious When Repeated"
+    ],
+    "evidence": "SKILL.md:102 \"Let's dive in | \"Without further ado, let's dive in\" | Remove\"; SKILL.md:105-106 \"In this post, we'll cover\", \"By the end of this article\"",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "Content 1: Significance inflation",
+     "Tier 1: Almost Always AI"
+    ],
+    "evidence": "SKILL.md:126 \"Significance inflation | \"marking a pivotal moment in the evolution of...\"\"; SKILL.md:79 \"Pivotal moment | \"Marking a pivotal moment in...\"\"",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "Content 5: Vague attributions"
+    ],
+    "evidence": "SKILL.md:130 \"Vague attributions | \"Experts believe it plays a crucial role\" | \"according to a 2019 survey by...\"\"",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": true,
+    "rules": [
+     "Content 3: Superficial -ing analyses"
+    ],
+    "evidence": "SKILL.md:128 \"Superficial -ing analyses | \"symbolizing... reflecting... showcasing...\"\"",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": true,
+    "rules": [
+     "Content 7: Outline-like conclusions",
+     "Filler and Hedging 24: Generic conclusions"
+    ],
+    "evidence": "SKILL.md:262 \"Generic conclusions | \"The future looks bright\"\"; SKILL.md:132 \"Outline-like conclusions | \"Challenges\" section ending with optimistic outlook\"",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": true,
+    "rules": [
+     "Filler and Hedging 23: Excessive hedging"
+    ],
+    "evidence": "SKILL.md:261 \"Excessive hedging | \"could potentially possibly\" | \"may\"\"",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": true,
+    "rules": [
+     "Language 11: False ranges"
+    ],
+    "evidence": "SKILL.md:144 \"False ranges | \"from the Big Bang to dark matter\" | List topics directly\"",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": false,
+    "rules": [],
+    "source": "consistency re-adjudication, 0/3 claimed",
+    "evidence": "Explanatory Header Templates: \"Headers that promise insight but deliver template structure\" with examples \"Why This Actually Works\", \"What This Means For You\", \"The Real Reason...\", \"Here's What's Really Going On\"; fix is \"Replace with descriptive headers that summarize the actual content.\" Scoring: \"Template headers (per instance) +2\". Self-Promotional Framing gives as the preferred After: \"Most developers aren't aware that [observation about the reader's situation]. Here's what's changing...\" No rule, table row, or example anywhere in the file uses \"nobody tells you\", \"most people skip/miss\", \"everyone's missing\", or any framing where others lack the insight. Tier 1/2/3 tables cover \"Here's the thing\", \"The bottom line\", \"It's worth noting\", but none of these frame the insight as one others lack."
+   },
+   "str-negative-parallelism": {
+    "claimed": true,
+    "rules": [
+     "Language 8: Negative parallelisms",
+     "Structural Patterns: Comparator Sentences"
+    ],
+    "evidence": "SKILL.md:141 \"Negative parallelisms | \"It's not just X, it's Y\"\"; SKILL.md:188-190 \"This isn't theoretical. It's practical.\" / \"It's not about X. It's about Y.\"",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets the stacked \"Not a X. Not a Y. A Z.\" form; Comparator Sentences (SKILL.md:185-196) cover single binary contrasts only.",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": true,
+    "rules": [
+     "Language 9: Rule of three"
+    ],
+    "evidence": "SKILL.md:142 \"Rule of three | \"innovation, inspiration, and insights\" | Use natural number of items\"",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": true,
+    "rules": [
+     "Advanced Structural Tells: Manufactured Personality",
+     "Structural Patterns: Sentence Uniformity",
+     "Structural Patterns: Staccato Fragment Spam"
+    ],
+    "evidence": "SKILL.md:177 \"Detection rule: 3+ consecutive sentences that are all under 10 words\"; SKILL.md:181 \"Short. Punchy. Exhausting.\"; SKILL.md:222 \"Five services. Five tabs. Five headaches.\"",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "Style 13: Em dash overuse"
+    ],
+    "evidence": "SKILL.md:153 \"Em dash overuse | \"institutions--not the people--yet this continues--\" | Use commas or periods\"",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": true,
+    "rules": [
+     "Language 7: Copula avoidance"
+    ],
+    "evidence": "SKILL.md:140 \"Copula avoidance | \"serves as... features... boasts...\" | \"is... has...\"\"",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets inanimate subjects given human verbs.",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets self-answered questions or setups like \"What if I told you\" / \"Think about it\".",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets noun phrase + colon + reveal; a colon construction appears only in the Full Example Before text (SKILL.md:338), not as a rule.",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": true,
+    "rules": [
+     "Language 10: Synonym cycling"
+    ],
+    "evidence": "SKILL.md:143 \"Synonym cycling | \"protagonist... main character... central figure...\" | \"protagonist\" (repeat when clearest)\"",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": true,
+    "rules": [
+     "Style 14: Boldface overuse",
+     "Style 15: Emoji headers",
+     "Style 16: Title Case Headings",
+     "Style 17: List addiction"
+    ],
+    "evidence": "SKILL.md:154-157 \"Boldface overuse\", \"Emoji headers\", \"Title Case Headings\", \"List addiction | Everything becomes bullets\"",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": true,
+    "rules": [
+     "Communication 18: Chatbot artifacts"
+    ],
+    "evidence": "SKILL.md:208 \"Chatbot artifacts | \"I hope this helps! Let me know if...\" | Remove entirely\"",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": true,
+    "rules": [
+     "Communication 20: Sycophantic tone"
+    ],
+    "evidence": "SKILL.md:210 \"Sycophantic tone | \"Great question! You're absolutely right!\" | Respond directly\"",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": true,
+    "rules": [
+     "Communication 19: Cutoff disclaimers"
+    ],
+    "evidence": "SKILL.md:209 \"Cutoff disclaimers | \"While details are limited in available sources...\" | Find sources or remove\"",
+    "source": "agreed"
+   }
+  },
+  "avoid-ai-writing-skill": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "Tier 1 — Always replace"
+    ],
+    "evidence": "SKILL.md:96-158 Tier 1 table lists delve, tapestry, testament to, robust, comprehensive, cutting-edge, leverage (verb), pivotal, underscores, meticulous, seamless, game-changer, utilize, intricate, ever-evolving, holistic",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": true,
+    "rules": [
+     "Tier 2 — Flag when 2+ appear in the same paragraph"
+    ],
+    "evidence": "SKILL.md:164-209 \"Tier 2 — Flag when 2+ appear in the same paragraph\"; lists harness, navigate, foster, elevate, streamline, empower, facilitate, nuanced, crucial, myriad, plethora, transformative, cornerstone, paramount",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": true,
+    "rules": [
+     "Tier 3 — Flag only at high density"
+    ],
+    "evidence": "SKILL.md:211-228 \"Only flag them when the text is saturated with them\"; lists significant/significantly, innovative, effective, dynamic, scalable, compelling, unprecedented, remarkable, sophisticated",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": true,
+    "rules": [
+     "Confidence calibration phrases (persuasive-authority tropes)",
+     "Hollow intensifiers",
+     "Tier 2 — deeply"
+    ],
+    "evidence": "SKILL.md:80 \"Hollow intensifiers: Cut genuine / genuinely, real ..., truly, quite frankly\"; :452 \"fundamentally\"; :208 deeply (significance collocations)",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": true,
+    "rules": [
+     "Transition phrases to remove or rewrite"
+    ],
+    "evidence": "SKILL.md:257 \"\"Moreover\" / \"Furthermore\" / \"Additionally\" → restructure\"; :261 \"\"In conclusion\" / \"In summary\" / \"To summarize\"\"",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "Filler phrases",
+     "Tier 1 — Always replace",
+     "Transition phrases to remove or rewrite"
+    ],
+    "evidence": "SKILL.md:325-326 \"\"It is important to note that\" ... \"In terms of\"\"; :145-146 \"in order to | to\", \"due to the fact that | because\"; :262-263 \"When it comes to\", \"At the end of the day\"",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "Confidence calibration phrases (persuasive-authority tropes)",
+     "Hollow intensifiers",
+     "Infomercial engagement hooks"
+    ],
+    "evidence": "SKILL.md:407 hooks include \"Here's the thing.\"; :452 \"\"make no mistake,\" \"the truth is\"\"; :80 \"let's be clear\"",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "\"Let's\" constructions",
+     "Chatbot artifacts"
+    ],
+    "evidence": "SKILL.md:335 \"\"In this article, we will explore…\" or \"Let's dive in!\" — these are AI-generated meta-narration\"; :338 \"Let's explore,\" \"Let's take a look\"",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "Significance inflation"
+    ],
+    "evidence": "SKILL.md:272 \"\"marking a pivotal moment in the evolution of...\" or \"a watershed moment for the industry\" inflate routine events\"",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "Vague attributions",
+     "Vague third-party validation"
+    ],
+    "evidence": "SKILL.md:321 \"\"Experts believe,\" \"Studies show,\" \"Research suggests,\" \"Industry leaders agree\"\"",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": true,
+    "rules": [
+     "Superficial -ing analyses"
+    ],
+    "evidence": "SKILL.md:351 \"Strings of present participles used as pseudo-analysis: \"symbolizing ..., reflecting decades of investment, and showcasing...\"\"",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": true,
+    "rules": [
+     "Generic conclusions",
+     "Generic future-narrative closers"
+    ],
+    "evidence": "SKILL.md:331 \"\"The future looks bright,\" \"Only time will tell,\" ... these are filler disguised as conclusions\"",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": true,
+    "rules": [
+     "Hedge-stacked predictions"
+    ],
+    "evidence": "SKILL.md:287 \"Stacking a modal with a hedge adverb: \"could potentially create,\" \"may eventually unlock\"\"",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": true,
+    "rules": [
+     "False ranges"
+    ],
+    "evidence": "SKILL.md:366 \"AI creates false breadth by pairing unrelated extremes: \"from the Big Bang to dark matter\"\"",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": true,
+    "rules": [
+     "Novelty inflation"
+    ],
+    "evidence": "SKILL.md:403 \"\"the insight everyone's missing,\" \"what nobody tells you about.\" These are engagement-bait framings\"",
+    "source": "agreed"
+   },
+   "str-negative-parallelism": {
+    "claimed": true,
+    "rules": [
+     "\"It's not X — it's Y\" / \"This isn't about X, it's about Y\""
+    ],
+    "evidence": "SKILL.md:79 \"\"It's not X — it's Y\" / \"This isn't about X, it's about Y\": Rewrite as a direct positive statement\"",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": true,
+    "rules": [
+     "\"It's not X — it's Y\" / \"This isn't about X, it's about Y\" (multi-negation countdown)"
+    ],
+    "evidence": "SKILL.md:79 \"AI also stacks the negation across several options before the reveal (\"It's not the price. It's not the features. It's the trust.\")\"",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": true,
+    "rules": [
+     "Compulsive rule of three"
+    ],
+    "evidence": "SKILL.md:84 \"Compulsive rule of three: Vary groupings ... instead of triads\"",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": true,
+    "rules": [
+     "Manufactured punchlines and staccato drama"
+    ],
+    "evidence": "SKILL.md:488 \"A run of clipped fragments engineered so every beat lands like a quotable closer\"",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "Em dashes (— and --)"
+    ],
+    "evidence": "SKILL.md:71 \"Em dashes (— and --): Replace with commas, periods ... Target: zero. Hard max: one per 1,000 words\"",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": true,
+    "rules": [
+     "Copula avoidance"
+    ],
+    "evidence": "SKILL.md:308 \"AI text avoids \"is\" and \"has\" by substituting fancier verbs: \"serves as,\" \"features,\" \"boasts\"\"",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "Not claimed: no rule targets inanimate subjects given human verbs; \"Subjectless fragments and agentless passives\" (SKILL.md:311) targets hidden actors, the opposite phenomenon.",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": true,
+    "rules": [
+     "Rhetorical question openers",
+     "Speculative scenario openers"
+    ],
+    "evidence": "SKILL.md:428 \"\"But what does this mean for developers?\" / \"So why should you care?\" — AI uses rhetorical questions to stall\"",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": true,
+    "rules": [
+     "Infomercial engagement hooks"
+    ],
+    "evidence": "SKILL.md:407 \"Punchy fragment-hooks that tee up a reveal: ... \"But here's the kicker:\", \"The best part?\", \"Plot twist:\", \"The result?\"\"",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": true,
+    "rules": [
+     "Synonym cycling"
+    ],
+    "evidence": "SKILL.md:317 \"AI rotates synonyms to avoid repeating a word: \"developers… engineers… practitioners… builders\"\"",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": true,
+    "rules": [
+     "Bold overuse",
+     "Emoji in headers",
+     "Excessive bullet lists",
+     "Excessive structure",
+     "Title case headings"
+    ],
+    "evidence": "SKILL.md:72 \"Bold overuse: Strip bold from most phrases\"; :73 \"Emoji in headers: Remove entirely\"; :375 \"AI over-capitalizes headings\"",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": true,
+    "rules": [
+     "Chatbot artifacts"
+    ],
+    "evidence": "SKILL.md:334 \"\"I hope this helps!\", \"Certainly!\", \"Absolutely!\" ... conversational tics from chat interfaces\"",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": true,
+    "rules": [
+     "Sycophantic tone"
+    ],
+    "evidence": "SKILL.md:441 \"\"Great question!\", \"Excellent point!\", \"You're absolutely right!\"\"",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": true,
+    "rules": [
+     "Cutoff disclaimers"
+    ],
+    "evidence": "SKILL.md:381 \"\"As of my last update,\" \"I don't have access to real-time data.\" These are model limitations leaking into prose\"",
+    "source": "agreed"
+   }
+  },
+  "avoid-ai-writing-detector": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "tier1"
+    ],
+    "evidence": "patterns.js:79-113 TIER1 {'delve','tapestry','robust','comprehensive','cutting-edge','pivotal','meticulous','seamless','game-changer','intricate','ever-evolving','holistic'}; :116-145 TIER1_PHRASES /\\btestament\\s+to\\b/, /\\bleverag(?:e|es|ing|ed)\\b/, /\\butiliz(?:e|es|ing|ed)\\b/, /\\bunderscor(?:es|ing|ed)\\b/; emitted type 'tier1' at :813-818",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": true,
+    "rules": [
+     "tier2"
+    ],
+    "evidence": "patterns.js:164-209 TIER2 includes 'harness','navigate','foster','elevate','streamline','empower','facilitate','nuanced','crucial','myriad','plethora','transformative','cornerstone','paramount'; :859 'if (found.length >= 2)' per paragraph emits type 'tier2'",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": true,
+    "rules": [
+     "tier3"
+    ],
+    "evidence": "patterns.js:226-233 TIER3 ['significant','significantly','innovative',...,'effective','effectively','dynamic','scalable','compelling','unprecedented','remarkable','sophisticated']; :881 'densityThreshold = Math.max(3, Math.floor(wordCount * 0.03))' emits type 'tier3'",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": true,
+    "rules": [
+     "transition"
+    ],
+    "evidence": "patterns.js:339-353 TRANSITIONS /\\bmoreover\\b/, /\\bfurthermore\\b/, /\\badditionally\\b/, /\\bin\\s+conclusion\\b/, /\\bto\\s+summarize\\b/; wired at :896 as 'transition' (not sentence-start anchored)",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "filler",
+     "tier1",
+     "transition"
+    ],
+    "evidence": "patterns.js:377-382 FILLERS /\\bit\\s+is\\s+important\\s+to\\s+note\\s+that\\b/, /\\bin\\s+terms\\s+of\\b/ ('filler'); :134-135 TIER1_PHRASES /\\bin\\s+order\\s+to\\b/ -> 'to', /\\bdue\\s+to\\s+the\\s+fact\\s+that\\b/ ('tier1'); :345,350,351 TRANSITIONS it's worth noting that / when it comes to / at the end of the day ('transition')",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "filler",
+     "hollow-intensifier"
+    ],
+    "evidence": "patterns.js:380 FILLERS /\\bthe\\s+reality\\s+is\\s+that\\b/ ('filler'); :440 HOLLOW_INTENSIFIERS /\\blet'?s\\s+be\\s+clear\\b/ and :439 /\\bto\\s+be\\s+honest\\b/ ('hollow-intensifier'). No regex for 'Here's the thing' or 'Make no mistake'; partial coverage of central instances",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "chatbot",
+     "lets-construction"
+    ],
+    "evidence": "patterns.js:364-365 CHATBOT_ARTIFACTS /\\bin\\s+this\\s+article,?\\s+we\\s+will\\s+explore\\b/, /\\blet'?s\\s+dive\\s+in!?\\b/ ('chatbot'); :393-399 LETS_PATTERNS let's explore / take a look / break this down / walk through ('lets-construction')",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "significance-inflation",
+     "tier1"
+    ],
+    "evidence": "patterns.js:419-424 SIGNIFICANCE_INFLATION /\\bmarking\\s+a\\s+(?:pivotal|significant|important)\\s+moment\\b/, /\\ba\\s+watershed\\s+moment\\s+for\\b/, /\\ba\\s+(?:pivotal|defining)\\s+moment\\s+in\\b/; :120,122,123 TIER1_PHRASES testament to / watershed moment / marking a pivotal moment",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "vague-attribution"
+    ],
+    "evidence": "patterns.js:427-432 VAGUE_ATTRIBUTIONS /\\bexperts\\s+(?:believe|say|suggest|agree)\\b/, /\\bstudies\\s+(?:show|suggest|indicate)\\b/, /\\bresearch\\s+(?:shows|suggests|indicates)\\b/; wired at :905",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No regex targets trailing participle clauses. CATEGORIES.md:43 maps 'emotional-flatline' to 'Superficial -ing analyses' but EMOTIONAL_FLATLINE (patterns.js:448-459) only matches 'what surprised me most' etc.; docs label only. tier1 'underscoring' is a vocabulary hit, not the clause",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": true,
+    "rules": [
+     "future-narrative",
+     "generic-conclusion",
+     "tier1"
+    ],
+    "evidence": "patterns.js:385-390 GENERIC_CONCLUSIONS /\\bthe\\s+future\\s+looks\\s+bright\\b/, /\\bonly\\s+time\\s+will\\s+tell\\b/ ('generic-conclusion'); :124-125 same in TIER1_PHRASES; :569-572 FUTURE_NARRATIVE 'Generic future-narrative closers' ('future-narrative')",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": true,
+    "rules": [
+     "hedge-stack"
+    ],
+    "evidence": "patterns.js:560-563 HEDGE_STACK /\\b(?:could|may|might)\\s+(?:\\w+\\s+){0,2}(?:potentially|eventually|ultimately|possibly|conceivably)\\b/; wired at :916",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No 'from X to Y' regex in patterns.js; CATEGORIES.md:93 lists 'False ranges' under skill-only (no detector type)",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": true,
+    "rules": [
+     "novelty-inflation"
+    ],
+    "evidence": "patterns.js:462-467 NOVELTY_INFLATION /\\bwhat\\s+nobody\\s+tells\\s+you\\b/, /\\bthe\\s+insight\\s+everyone'?s?\\s+missing\\b/; wired at :908",
+    "source": "agreed"
+   },
+   "str-negative-parallelism": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No 'not X, it's Y' / 'not just X but Y' regex in patterns.js; CATEGORIES.md:91 lists 'It's not X — it's Y' as skill-only",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No detector for 'Not a X. Not a Y. A Z.'; CATEGORIES.md:91 multi-negation countdown is skill-only",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No triad detector. Oxford-comma triple regex at patterns.js:981 is only one co-signal of smart-punct-signature (punctuation fingerprint), not a rule targeting triadic rhythm",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No fragment detector; 'uniformity' (:1310) flags low sentence-length variance, the opposite shape. CATEGORIES.md:102 'Manufactured punchlines / staccato drama' is skill-only",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "em-dash"
+    ],
+    "evidence": "patterns.js:1289-1300 'const emDashRate = emDashCount / (wordCount / 1000); if (emDashRate > 1)' emits type 'em-dash'",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": true,
+    "rules": [
+     "tier1"
+    ],
+    "evidence": "patterns.js:136-138 TIER1_PHRASES { /\\bserves\\s+as\\b/, replace: 'is' }, { /\\bfeatures\\b/, replace: 'has, includes' }, { /\\bboasts\\b/, replace: 'has' } (the filter:true flag is never read, so 'features' always fires). CATEGORIES.md:89 calls copula avoidance skill-only, but the code detects central instances",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No regex for inanimate subjects with human verbs ('the data tells us', 'the market rewards') in patterns.js",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": true,
+    "rules": [
+     "rhetorical-question"
+    ],
+    "evidence": "patterns.js:550-554 RHETORICAL_QUESTIONS /\\bbut\\s+what\\s+does\\s+this\\s+mean\\s+for\\b/, /\\bso\\s+why\\s+should\\s+you\\s+care\\b/, /\\bwhat'?s\\s+next\\?/; wired at :915",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No 'Noun phrase: reveal' detector; emotional-flatline :458 matches only 'Interesting part/thing:' header openers, not the reveal construction",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No detector; CATEGORIES.md:88 'Synonym cycling' is skill-only. 'low-ttr' (:1338-1348) flags too little vocabulary variety, the opposite",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": true,
+    "rules": [
+     "bullet-np-list",
+     "formatting",
+     "title-case-header"
+    ],
+    "evidence": "patterns.js:1367-1374 'boldMatches.length > 3' -> 'formatting'; :621 TITLE_CASE_HEADER, :928 'if (contextMode !== 'technical')' (active under general) -> 'title-case-header'; :1219-1231 >=5 bare-NP bullets -> 'bullet-np-list'. No emoji-header check",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": true,
+    "rules": [
+     "chatbot"
+    ],
+    "evidence": "patterns.js:356-366 CHATBOT_ARTIFACTS /\\bi\\s+hope\\s+this\\s+helps\\b/, /\\bcertainly!\\b/, /\\babsolutely!\\b/, /\\bfeel\\s+free\\s+to\\s+reach\\s+out\\b/; wired at :897",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": true,
+    "rules": [
+     "chatbot",
+     "sycophantic"
+    ],
+    "evidence": "patterns.js:369-374 SYCOPHANTIC /\\byou'?re\\s+absolutely\\s+right\\b/, /\\bthat'?s\\s+a\\s+great\\s+question\\b/, /\\bexcellent\\s+question\\b/ ('sycophantic'); :360-361 CHATBOT_ARTIFACTS /\\bgreat\\s+question!\\b/, /\\bexcellent\\s+point!\\b/ ('chatbot')",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": true,
+    "rules": [
+     "cutoff-disclaimer"
+    ],
+    "evidence": "patterns.js:474-483 CUTOFF_DISCLAIMERS /\\bas\\s+of\\s+my\\s+last\\s+update\\b/, /\\bas\\s+an?\\s+(?:ai|artificial\\s+intelligence|large\\s+language|ai\\s+language)\\s+(?:language\\s+)?model\\b/; wired at :909",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": true,
+    "rules": [
+     "hollow-intensifier"
+    ],
+    "evidence": "patterns.js:434-441 HOLLOW_INTENSIFIERS [/\\bgenuine(?:ly)?\\b/gi, /\\btruly\\b/gi, /\\bquite\\s+frankly\\b/gi, /\\bto\\s+be\\s+honest\\b/gi, /\\blet'?s\\s+be\\s+clear\\b/gi]; wired unconditionally at :906 matchPatterns(text, HOLLOW_INTENSIFIERS, 'hollow-intensifier', 'medium'), so it fires under contextMode \"general\". TYPE_LABELS :1708 'hollow-intensifier'. Not counted: :217-223 TIER2_CONDITIONAL 'deeply' collocation, which only joins a 2+-per-paragraph tier2 cluster (:853-866) and emits type 'tier2'; :578-579 REAL_ACTUAL_INFLATION (adjectives real/actual/genuine/true before abstract nouns, type 'real-actual-inflation').",
+    "source": "adjudicated"
+   }
+  },
+  "unslop-deterministic": {
+   "lex-t1-vocab": {
+    "claimed": true,
+    "rules": [
+     "stock_vocab"
+    ],
+    "evidence": "humanize.py:278-388 STOCK_VOCAB, e.g. L285 `\\bdelve\\b` -> \"look at\", L286 `\\btapestry\\b`, L325 `\\bpivotal\\b`, L328 `\\bseamless\\b`, L334 `\\bleverage\\b`, L339 `\\bcomprehensive\\b`, L340 `\\brobust(?=...)`, L357 `\\bintricate\\b`, L362 underscores, L368 ever-evolving, L379 meticulous, L388 game-changer; emitted rule=\"stock_vocab\" (L1071)",
+    "source": "agreed"
+   },
+   "lex-t2-cluster": {
+    "claimed": true,
+    "rules": [
+     "stock_vocab"
+    ],
+    "evidence": "humanize.py STOCK_VOCAB: L366 `\\bcrucial\\b` -> \"important\", L326 `\\bparamount\\b`, L344-347 foster/fostering, L397 `\\btransformative\\b`, L304-311 navigate (guarded), L407-409 myriad/plethora, L417 nuanced (guarded). Fires unconditionally (no cluster gate), but the words are explicit targets",
+    "source": "agreed"
+   },
+   "lex-t3-density": {
+    "claimed": true,
+    "rules": [
+     "stock_vocab"
+    ],
+    "evidence": "humanize.py:403 `\\bunprecedented(?=\\s+(?:opportunity|...|growth|success|impact|change)\\b)` -> \"major\"; L371 `\\bdynamic landscape\\b` -> \"world\". Narrow: only unprecedented and dynamic (compound), no density gating; significant/innovative/effective are not targets",
+    "source": "agreed"
+   },
+   "lex-hollow-intensifier": {
+    "claimed": true,
+    "rules": [
+     "authority_trope",
+     "significance_inflation"
+    ],
+    "evidence": "humanize.py:456 `(^|(?<=[.!?]\\s))Fundamentally[,]?[ \\t]+` (rule=authority_trope); L604 `\\bdeeply\\s+rooted\\s+in\\b` -> \"rooted in\" (rule=significance_inflation). Partial: only sentence-initial Fundamentally and deeply-rooted; genuinely/truly/really/literally/honestly/actually not targeted",
+    "source": "agreed"
+   },
+   "phr-transition": {
+    "claimed": true,
+    "rules": [
+     "transition_tic"
+    ],
+    "evidence": "humanize.py:257 `(?:Furthermore|Moreover|Additionally)[,]?`; L259 `In conclusion`; L261 `To summarize`; L263 `(?:Firstly|Secondly|Thirdly|Finally)`; emitted rule=\"transition_tic\" (L1045)",
+    "source": "agreed"
+   },
+   "phr-filler-wordy": {
+    "claimed": true,
+    "rules": [
+     "filler_phrase",
+     "hedging_opener"
+    ],
+    "evidence": "humanize.py:501 `\\bin order to\\b` -> \"to\", L502 `\\bdue to the fact that\\b` -> \"because\" (rule=filler_phrase, full only, L1099); L242 `It(?:'s| is) (?:also )?important to note that`, L243 `worth (?:mentioning|noting|pointing out) that` (rule=hedging_opener, L1041)",
+    "source": "agreed"
+   },
+   "phr-throat-clearing": {
+    "claimed": true,
+    "rules": [
+     "authority_trope"
+    ],
+    "evidence": "humanize.py:452-459 AUTHORITY_TROPES: `In reality[,]?`, `What really matters is that`, `The heart of the matter is that`, `At the heart of ... (?:is|lies)` stripped at sentence start. Announcement openers framing a truth; Here's the thing / Let me be clear / Make no mistake not literally listed",
+    "source": "agreed"
+   },
+   "phr-signposting-meta": {
+    "claimed": true,
+    "rules": [
+     "signposting"
+    ],
+    "evidence": "humanize.py:467 `Let(?:'s| us) dive in`, L468 `Let(?:'s| us) (?:break|walk) (?:this|it) down`, L470 `Without further ado`, L471 `In this (?:article|post|guide|...), (?:I|we)(?:'ll| will)`; rule=\"signposting\" (L1055)",
+    "source": "agreed"
+   },
+   "phr-significance-inflation": {
+    "claimed": true,
+    "rules": [
+     "significance_inflation",
+     "stock_vocab"
+    ],
+    "evidence": "humanize.py:574-576 `(?:marks?|represents?|stands?\\s+as)\\s+(?:a|an|the)\\s+(?:pivotal|defining|...|watershed|seminal)\\s+(?:moment|turning point|milestone|chapter)`; L585-587 `underscor(?:es|ing)... (?:importance|significance|...)` (rule=significance_inflation); L292 `stand(?:s|ing)?|stood)\\s+as\\s+(?:a|an|the)\\s+testament\\s+to` and L367 `vital(?=\\s+(?:role|...))` (rule=stock_vocab)",
+    "source": "agreed"
+   },
+   "phr-vague-attribution": {
+    "claimed": true,
+    "rules": [
+     "vague_attribution"
+    ],
+    "evidence": "humanize.py:490-494 `(^|(?<=[.!?]\\s))Observers (?:say|note|suggest)(?: that)?`; rule=\"vague_attribution\" (L1066). Partial: experts believe / studies show not covered",
+    "source": "agreed"
+   },
+   "phr-superficial-ing": {
+    "claimed": true,
+    "rules": [
+     "significance_inflation",
+     "superficial_ing"
+    ],
+    "evidence": "humanize.py:677-683 `,\\s+(?:highlighting|underscoring|emphasizing|illustrating|reflecting|showcasing|...)\\s+(?:the|its|...)\\s+(?:importance|significance|role|...)` -> \"\" (rule=superficial_ing, full only); L585 `,?\\s+(?:underscor(?:es|ing)|emphasiz(?:es|ing)|highlight(?:s|ing))\\s+(?:the|its|...)\\s+(?:importance|...)` (rule=significance_inflation)",
+    "source": "agreed"
+   },
+   "phr-generic-conclusion": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule targets generic closers (the future looks bright, only time will tell). transition_tic L259 strips only the 'In conclusion,' connective, which is phr-transition; the recap/closer itself is untouched",
+    "source": "agreed"
+   },
+   "phr-hedge-stack": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule for could potentially / may eventually / might possibly. HEDGING_OPENERS (L241-250) despite its name targets filler openers like 'It's important to note that', not stacked modal hedges",
+    "source": "agreed"
+   },
+   "phr-false-range": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No 'from X to Y' detection. L504 `a (?:wide )?(?:variety|range) of` -> \"many\" is wordy filler, not a false range",
+    "source": "agreed"
+   },
+   "phr-novelty-inflation": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule for 'what nobody tells you' / 'the part most people skip' style setups",
+    "source": "agreed"
+   },
+   "str-negative-parallelism": {
+    "claimed": true,
+    "rules": [
+     "negative_parallelism"
+    ],
+    "evidence": "humanize.py:531-533 `Not (?:just|only) [^,.!?\\n]{1,80},\\s*but (?:also )?`; L537-539 `It'?s not [^—.!?\\n]{1,80}\\s+[—–]\\s+(?=[Ii]t'?s )`; L543-545 `It'?s not ...[.!]\\s+(?=[Ii]t'?s )`; rule=\"negative_parallelism\" (full only, L1104)",
+    "source": "agreed"
+   },
+   "str-negative-listing": {
+    "claimed": true,
+    "rules": [
+     "negative_parallelism"
+    ],
+    "evidence": "humanize.py:521-524 comment '\"No guesswork, no bloat, no surprises.\" — three-clause tricolon of negations', regex `No [A-Za-z][A-Za-z -]{1,20}(?:, no [A-Za-z][A-Za-z -]{1,20}){2,}[.!]`. Partial: only the comma-joined 'No X, no Y, no Z.' stack; period-separated 'Not a X. Not a Y. A Z.' not matched",
+    "source": "agreed"
+   },
+   "str-rule-of-three": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "humanize.py:758-761 explicit exclusion: 'Tricolon padding is intentionally NOT handled deterministically... stays in LLM mode only.'",
+    "source": "agreed"
+   },
+   "str-staccato-fragments": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No emitted rule detects fragment stacking; sentence-length work lives in the structural pass, which the runner disables (structural=False, run_unslop.py:64)",
+    "source": "agreed"
+   },
+   "str-em-dash": {
+    "claimed": true,
+    "rules": [
+     "em_dash_cap"
+    ],
+    "evidence": "humanize.py:829-874 `_cap_em_dashes_per_paragraph(text, max_dashes=2)` called at L1135; run_unslop.py:71-75 emits rule \"em_dash_cap\" per dash removed (em_dashes_before - em_dashes_after)",
+    "source": "agreed"
+   },
+   "str-copula-avoidance": {
+    "claimed": true,
+    "rules": [
+     "copula_avoidance"
+    ],
+    "evidence": "humanize.py:698-701 `,\\s+being\\s+(?=(?:a|an|the)\\s+[a-z])`; L712-713 `\\bserves\\s+as\\s+(?=...promotional noun...)` -> \"is \"; L736 `\\bboasts\\s+(?=(?:a|an)\\s+[a-z])` -> \"has \"; L745-746 `\\bfeatures\\s+(?=(?:a|an)\\s+(?:stunning|...))` -> \"has \"; rule=\"copula_avoidance\" (L1088)",
+    "source": "agreed"
+   },
+   "str-false-agency": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule detects inanimate subjects with human verbs (the data tells us, the market rewards)",
+    "source": "agreed"
+   },
+   "str-rhetorical-setup": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule for self-answered questions or 'What if I told you' / 'Think about it' setups",
+    "source": "agreed"
+   },
+   "str-colon-reveal": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule for 'Noun: reveal.' constructions; L469 'Here'?s what you need to know[:.!]?' is signposting, not the colon-reveal shape",
+    "source": "agreed"
+   },
+   "str-synonym-cycling": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule tracks referents or rotating synonyms",
+    "source": "agreed"
+   },
+   "str-formatting-slop": {
+    "claimed": false,
+    "rules": [],
+    "evidence": "No rule for bold overuse, emoji headers, Title Case or over-bulleting; headings are protected verbatim (L114, L201); bullet-soup merging is in the disabled structural pass",
+    "source": "agreed"
+   },
+   "con-chatbot-artifact": {
+    "claimed": true,
+    "rules": [
+     "sycophancy"
+    ],
+    "evidence": "humanize.py:228 `^[ \\t]*(?:Certainly|Absolutely|Sure)[!.,]`; L230-232 `I(?:'m| am) happy to help`, `I(?:'d| would) be happy to help`; L234 `I hope this (?:email|message) finds you well`; rule=\"sycophancy\" (L1035). 'I hope this helps' not covered",
+    "source": "agreed"
+   },
+   "con-sycophancy": {
+    "claimed": true,
+    "rules": [
+     "sycophancy"
+    ],
+    "evidence": "humanize.py:227 `(?:Great|Excellent|Wonderful|Fantastic|Awesome) question`; L233 `What a (?:fascinating|wonderful|great|terrific)`; L236 `Thank you for (?:your |the )?(?:question|asking)`; rule=\"sycophancy\". 'You're absolutely right' not covered",
+    "source": "agreed"
+   },
+   "con-cutoff-disclaimer": {
+    "claimed": true,
+    "rules": [
+     "knowledge_cutoff"
+    ],
+    "evidence": "humanize.py:477 `As of my (?:last update|knowledge cutoff)`; L481 `I do not have access to real-time information`; L485 `My training data only goes up to`; rule=\"knowledge_cutoff\" (L1061). 'as an AI language model' not covered",
+    "source": "agreed"
+   }
+  }
+ },
+ "adjudications": {
+  "stop-slop": [
+   {
+    "pattern_id": "phr-hedge-stack",
+    "why": "claimed status differs",
+    "A": {
+     "pattern_id": "phr-hedge-stack",
+     "claimed": true,
+     "rules": [
+      "Adverbs",
+      "Rhythm Patterns"
+     ],
+     "evidence": "references/phrases.md:55 \"Kill all adverbs. No -ly words. No softeners, no intensifiers, no hedges.\"; structures.md:127 \"Hedging disguised as reassurance\" (partial: targets hedges in general, not stacking specifically)"
+    },
+    "B": {
+     "pattern_id": "phr-hedge-stack",
+     "claimed": false,
+     "rules": [],
+     "evidence": "Generic 'no hedges' adverb advice (phrases.md:55) and 'Not always. Not perfectly.' (structures.md:127) do not target stacked hedges on predictions."
+    },
+    "verdict": {
+     "claimed": true,
+     "rules": [
+      "Adverbs"
+     ],
+     "evidence": "references/phrases.md:53-55 \"## Adverbs / Kill all adverbs. No -ly words. No softeners, no intensifiers, no hedges.\" Both coders quoted this text accurately. structures.md:127 (Rhythm Patterns) \"\\\"Not always. Not perfectly.\\\" | Hedging disguised as reassurance\" is also quoted accurately, but it targets staccato reassurance fragments, not stacked modal hedges on predictions. Supporting context: SKILL.md:27 \"Skip softening\" and examples.md:23 \"Cut hedging (\\\"most\\\")\".",
+     "reasoning": "This is not generic advice like \"be concise.\" The Adverbs rule names hedges as a banned category, so it meets the \"names the phenomenon\" bar. Its mechanical test (\"No -ly words\") also removes the hedge adverb in each central example of the pattern: \"could potentially\", \"might possibly\" and \"may eventually\" all lose potentially, possibly or eventually. That counts as partial coverage of a central instance. The rule targets hedging in general rather than stacking specifically, and it does not list potentially or possibly. That limits it to partial coverage; it does not undo the claim. The Rhythm Patterns entry \"Not always. Not perfectly.\" is about fragmented reassurance, not stacked hedges on predictions. Counting it would stretch, so it is left out of the rules. Coder A is right on the claimed status but over-included Rhythm Patterns. Coder B is wrong to dismiss an explicit \"no hedges\" rule as generic.",
+     "which_coder_was_right": "A"
+    }
+   }
+  ],
+  "no-ai-slop": [],
+  "the-antislop": [],
+  "avoid-ai-writing-skill": [],
+  "avoid-ai-writing-detector": [
+   {
+    "pattern_id": "lex-hollow-intensifier",
+    "why": "both claim it but identifiers differ (code track)",
+    "A": {
+     "pattern_id": "lex-hollow-intensifier",
+     "claimed": true,
+     "rules": [
+      "hollow-intensifier"
+     ],
+     "evidence": "patterns.js:435-441 HOLLOW_INTENSIFIERS [/\\bgenuine(?:ly)?\\b/gi, /\\btruly\\b/gi, ...]; wired at :906 as 'hollow-intensifier'. (Also :217-223 TIER2_CONDITIONAL 'deeply' collocations, cluster-gated, not counted here)"
+    },
+    "B": {
+     "pattern_id": "lex-hollow-intensifier",
+     "claimed": true,
+     "rules": [
+      "hollow-intensifier",
+      "tier2"
+     ],
+     "evidence": "patterns.js:435-441 HOLLOW_INTENSIFIERS /\\bgenuine(?:ly)?\\b/, /\\btruly\\b/ -> type 'hollow-intensifier' (:906); :217-223 TIER2_CONDITIONAL word 'deeply' gated to 'deeply (integrated|committed|rooted|...)' joins tier2 cluster (partial: no really/literally/honestly/actually/fundamentally)"
+    },
+    "verdict": {
+     "claimed": true,
+     "rules": [
+      "hollow-intensifier"
+     ],
+     "evidence": "patterns.js:434-441 HOLLOW_INTENSIFIERS [/\\bgenuine(?:ly)?\\b/gi, /\\btruly\\b/gi, /\\bquite\\s+frankly\\b/gi, /\\bto\\s+be\\s+honest\\b/gi, /\\blet'?s\\s+be\\s+clear\\b/gi]; wired unconditionally at :906 matchPatterns(text, HOLLOW_INTENSIFIERS, 'hollow-intensifier', 'medium'), so it fires under contextMode \"general\". TYPE_LABELS :1708 'hollow-intensifier'. Not counted: :217-223 TIER2_CONDITIONAL 'deeply' collocation, which only joins a 2+-per-paragraph tier2 cluster (:853-866) and emits type 'tier2'; :578-579 REAL_ACTUAL_INFLATION (adjectives real/actual/genuine/true before abstract nouns, type 'real-actual-inflation').",
+     "reasoning": "HOLLOW_INTENSIFIERS is working detection logic aimed directly at this phenomenon. It catches genuinely and truly, which are central instances, and honest-intensifier phrasing (\"to be honest\"). Under the partial-coverage rule that is enough to claim, even though really, literally, actually, fundamentally and deeply are missing. Both coders got this part right. Coder B also added 'tier2', and that should be dropped. The 'tier2' identifier is the cluster-gated vocabulary rule, which the crosswalk maps to lex-t2-cluster. Its stated target (comment :211-216) is \"a specific significance collocation\". The conditional 'deeply' entry only contributes to a tier2 cluster when the paragraph has at least two Tier 2 words, so a lone \"deeply committed\" never fires. Mapping 'tier2' to this pattern would credit every harness, navigate or crucial cluster hit as a hollow-intensifier detection, which goes past the claim standard. 'real-actual-inflation' was also considered and left out: it targets adjectives on abstract nouns to imply other things are fake, not intensifying adverbs.",
+     "which_coder_was_right": "A"
+    }
+   }
+  ],
+  "unslop-deterministic": []
+ },
+ "consistency_readjudications": [
+  {
+   "cell": "stop-slop/phr-novelty-inflation",
+   "votes_claimed": 1,
+   "of": 3,
+   "decision_claimed": false,
+   "votes": [
+    {
+     "claimed": false,
+     "evidence": "phrases.md:3-23 heads the section \"Throat-Clearing Openers\" with the instruction \"Remove these announcement phrases. State the content directly.\" (line 5). Entries include \"The uncomfortable truth is\" (12), \"It turns out\" (13), \"The real [X] is\" (14), \"The truth is,\" (16) and \"Here's what I find interesting\" (20). structures.md:46-55, under \"Rhetorical Setups\", says \"These announce insight rather than deliver it.\" (48). Its only entries are \"What if [reframe]?\", \"Here's what I mean:\", \"Think about it:\" and \"And that's okay.\" structures.md:133 lists \"Lazy extremes (every, always, never, everyone, everybody, nobody)\" with the problem \"False authority\". No rule, entry or example in SKILL.md, phrases.md, structures.md or examples.md names or illustrates the novelty or exclusivity claim. That claim says the point is something others miss: \"what nobody tells you\", \"most people skip\", \"everyone's missing\", or any similar wording.",
+     "reasoning": "The pattern's defining feature is novelty inflation: the writer frames a point as insight that other people lack (\"nobody tells you\", \"most people skip\", \"everyone's missing\"). Under the standard, a rule must name or exemplify that phenomenon or one of its central instances.\n\n1) The closest entries are \"The uncomfortable truth is\", \"The truth is,\" and \"The real [X] is\". stop-slop files them as throat-clearing, and the section says its target is \"announcement phrases\" before the point. That target is preamble filler in general, not the claim that others are ignorant. These are hidden-truth openers next to the pattern, not central instances of it. They catch some novelty-inflation sentences only by accident, because they delete a preamble.\n\n2) The Rhetorical Setups heading (\"announce insight rather than deliver it\") comes closest in wording. But the heading describes the table below it, and every entry targets something else: Socratic \"what if\" posturing, a redundant preview, a condescending prompt and a granted permission. None of them is a claim that the insight is new or that others missed it. A generic heading whose examples cover other phenomena is not a rule aimed at this pattern.\n\n3) The \"nobody/everyone\" lazy-extremes rule targets sweeping factual claims (\"False authority\"), not framing a point as insight. It overlaps only by sharing a word.\n\nSo stop-slop has adjacent coverage, and none of it is a stated target. That matches both original coders.\n\nOn consistency: the-antislop's credit was a closer call than this one. Its rule names the promise of insight as its stated target (\"Headers that promise insight\"), and its examples are reveal templates. Even so, \"The Real Reason...\" and \"Here's What's Really Going On\" are hidden-truth reveal headers, not claims that others lack the knowledge. If that credit rested only on that rule, it was somewhat generous. The more consistent fix is to tighten the-antislop's cell, not to loosen stop-slop's. Moderate confidence: a reasonable adjudicator could treat \"The uncomfortable truth is\" and \"The real [X] is\" as central enough to count. I don't, because the \"others miss this\" element is what defines the pattern, and stop-slop's lists never contain it."
+    },
+    {
+     "claimed": false,
+     "evidence": "Closest text, none sufficient:\n(1) C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\stop-slop\\references\\structures.md:46-55, \"## Rhetorical Setups / These announce insight rather than deliver it.\" The rule then lists only: \"What if [reframe]?\" (Socratic posturing), \"Here's what I mean:\" (Redundant preview), \"Think about it:\" (Condescending prompt) and \"And that's okay.\" (Unnecessary permission).\n(2) C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\stop-slop\\references\\phrases.md:3-23, \"## Throat-Clearing Openers / Remove these announcement phrases.\" The entries include \"The uncomfortable truth is\" (line 12), \"It turns out\" (13), \"The real [X] is\" (14), \"The truth is,\" (16) and \"Here's what I find interesting\" (20).\n(3) structures.md:133, \"Lazy extremes (every, always, never, everyone, everybody, nobody) | False authority.\" This is a generic word rule.\nNo rule, table entry or example in SKILL.md, phrases.md, structures.md or examples.md names or illustrates claims that others don't know or skip something (\"what nobody tells you\", \"most people skip/miss\", \"the insight everyone's missing\", \"the secret\", \"little-known\").",
+     "reasoning": "The pattern's defining feature is novelty inflation. Content is framed as exclusive or overlooked by contrasting it with what \"nobody\", \"most people\" or \"everyone\" knows or does. To claim the pattern, stop-slop would need a rule aimed at that framing or at a central instance of it.\n\n- **Rhetorical Setups.** The heading does say \"announce insight rather than deliver it.\" But the rule is defined by its table, and every entry is a different device: a Socratic question, a preview, a \"think about it\" prompt and a permission line. None claims that others are missing something. The heading describes a broad family; the pattern is one specific member that the rule never names or exemplifies.\n- **Throat-Clearing Openers.** The rule's stated target is filler before the point (\"announcement phrases\"), not novelty claims. \"The uncomfortable truth is\", \"The truth is\" and \"The real [X] is\" frame something as a revelation. At most they imply a contrast with a received view, and they carry none of the \"others don't know this\" marker. They would catch some faux-insight sentences, but only as a side effect of a filler rule. The standard excludes that unless the rule names or exemplifies the phenomenon.\n- **Lazy extremes.** \"nobody\" and \"everyone\" are listed as false-authority words. That is generic word-level advice that happens to overlap with the pattern's wording; it does not target the setup.\n\nMy conclusion matches both original coders: no rule lists faux-insight or novelty setups. I treat the reviewer's consistency argument as legitimate below; it does not change this result."
+    },
+    {
+     "claimed": true,
+     "evidence": "C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\stop-slop\\references\\structures.md:46-48: \"## Rhetorical Setups\" / \"These announce insight rather than deliver it.\" (with the instruction at :57 \"**Instead:** Make the point. Let readers draw conclusions.\"). C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\stop-slop\\references\\phrases.md:12 \"\\\"The uncomfortable truth is\\\"\", :14 \"\\\"The real [X] is\\\"\", :16 \"\\\"The truth is,\\\"\", under \"## Throat-Clearing Openers\" / \"Remove these announcement phrases. State the content directly.\" (:3-5). Supporting text: SKILL.md:54 \"| Directness | Statements or announcements? |\". No rule uses novelty or overlooked-insight wording such as \"nobody tells you\", \"most people skip\" or \"everyone's missing\". \"Nobody\" appears only as a lazy extreme (structures.md:133) and in narrator-from-a-distance (structures.md:88). Those catch it only incidentally.",
+     "reasoning": "The pattern is faux-insight setups: framing that presents a claim as a hidden or overlooked insight instead of delivering it. stop-slop has a section called \"Rhetorical Setups\", and the stated target of that section is exactly this: \"announce insight rather than deliver it.\" That meets the \"stated target is the phenomenon\" prong. The section's own table entries are not novelty claims, though. \"What if [reframe]?\", \"Here's what I mean:\", \"Think about it:\" and \"And that's okay.\" are Socratic or preview moves. So the section alone gives the genus without a central example.\n\nThe examples come from the throat-clearing list. \"The uncomfortable truth is\", \"The real [X] is\" and \"The truth is,\" are hidden-truth reveal framings. Each one tells the reader that what follows is the truth behind the surface. \"The uncomfortable truth is\" is a close cousin of \"the truth nobody wants to hear\", which is a central faux-insight setup. Taken together, the section's stated target plus these named reveal forms count as partial coverage of a central instance. That partial coverage meets the standard.\n\nThe originals coded \"no\" because the explicit novelty marker is missing: nothing says nobody, most people or everyone. That observation is correct, and the coverage is only partial. stop-slop does not catch the \"others miss this\" element as such.\n\nConsistency with the-antislop points the same way. That tool was credited for \"Headers that promise insight but deliver template structure\" with \"The Real Reason...\" and \"Here's What's Really Going On\". Those are the same reveal framings stop-slop names (\"The real [X] is\", \"The truth is\"), and the stated targets match (\"promise insight\" against \"announce insight rather than deliver it\"). If anything, stop-slop's match is slightly broader, because its rule covers prose and not only headers. Crediting the-antislop and not stop-slop would be inconsistent. My verdict is claimed, as partial coverage."
+    }
+   ]
+  },
+  {
+   "cell": "no-ai-slop/phr-transition",
+   "votes_claimed": 0,
+   "of": 3,
+   "decision_claimed": false,
+   "votes": [
+    {
+     "claimed": false,
+     "evidence": "C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\no-ai-slop\\SKILL.md:80: \"**Summary-recap endings.** \\\"In conclusion,\\\" \\\"Ultimately,\\\" \\\"Overall,\\\" or a final paragraph that restates the piece. The reader was just there. End on the last concrete point, takeaway, or next action instead.\" eval.md:30: \"Are summary-recap endings cut so the piece ends on a concrete point, takeaway, or next action?\" No rule, word list or phrase list anywhere in SKILL.md or eval.md names Moreover, Furthermore, Additionally, Firstly/Secondly, To summarize, or sentence-initial connective transitions as a category. The \"Often-empty phrases\" list (SKILL.md:48) covers \"it's worth noting\", \"in terms of\", \"going forward\", etc., none of which are essay-glue transitions.",
+     "reasoning": "The claim standard asks whether the rule's stated target is the pattern's phenomenon or a central instance of it. The phenomenon in phr-transition is sentence-initial essay-glue connectives: words that chain sentences together mechanically. Its central instances are Moreover/Furthermore/Additionally and the Firstly/Secondly enumeration, and no-ai-slop names none of them. The Summary-recap rule's stated target is a structural ending: a closing paragraph that restates the piece. \"In conclusion\" appears there as one marker of that ending, next to \"Ultimately\" and \"Overall\", which are recap signals rather than glue transitions. The fix the rule prescribes (\"End on the last concrete point, takeaway, or next action\") is about how the piece ends. It does not touch transitional connectives between sentences. The eval check repeats this framing (\"summary-recap endings cut so the piece ends on...\"). This is exactly the phenomenon of phr-generic-conclusion (\"In conclusion + recap\"), and the taxonomy deliberately files \"In conclusion\" under both patterns. A shared token does not mean the rule targets both phenomena. \"In conclusion\" is a listed but peripheral instance of phr-transition, and the rule targets it as a recap-ending marker, not as sentence-start glue. A tool that flags \"In conclusion\" only as the start of a recap ending would not flag \"Moreover,\" or \"Additionally,\" at the start of a sentence, so it catches the transition pattern only incidentally. The reviewer's argument proves only that the token appears in both descriptions; it does not show that the rule's stated target is the transition phenomenon. Decision: not claimed (the rule should be credited to phr-generic-conclusion instead)."
+    },
+    {
+     "claimed": false,
+     "evidence": "C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\no-ai-slop\\SKILL.md:80: \"**Summary-recap endings.** \"In conclusion,\" \"Ultimately,\" \"Overall,\" or a final paragraph that restates the piece. The reader was just there. End on the last concrete point, takeaway, or next action instead.\" C:\\Users\\HomePC\\Desktop\\ai-portfolio\\RegisterBench\\tools\\no-ai-slop\\eval.md:30: \"Are summary-recap endings cut so the piece ends on a concrete point, takeaway, or next action?\" Neither file has a rule, list entry or example for Moreover, Furthermore, Additionally, Firstly/Secondly or To summarize, and no rule covers sentence-initial connectives in general. The \"Often-empty phrases\" list (SKILL.md:48) has no essay-glue transitions in it.",
+     "reasoning": "The rule's stated target is the recap ending: a closing that restates the piece. \"In conclusion,\" \"Ultimately\" and \"Overall\" appear only as signals of that ending. The fix (\"End on the last concrete point... instead\") removes the recap paragraph. It does not treat the connective as glue or offer a direct replacement. The eval check (eval.md:30) is also framed around endings only. The central phenomenon of phr-transition is mechanical connectives at the start of sentences anywhere in the text. Its core instances are Moreover, Furthermore, Additionally and Firstly/Secondly, and the ruleset names none of them. \"In conclusion\" is listed in phr-transition, but it is the item that overlaps with phr-generic-conclusion. That pattern spells out \"In conclusion + recap\", which is exactly the phenomenon this rule describes, so the rule belongs to phr-generic-conclusion. Counting it as a partial claim on phr-transition too would mean a single overlap word claims two patterns. The rule does not genuinely target transition use, such as a mid-essay \"In conclusion\" or \"To summarize\" kept as glue. Under the standard, an incidental catch through a shared word does not count unless the rule targets that phenomenon, and here it targets endings. Verdict: not claimed."
+    },
+    {
+     "claimed": false,
+     "evidence": "The only possible match is at SKILL.md:80. It reads: \"**Summary-recap endings.** \"In conclusion,\" \"Ultimately,\" \"Overall,\" or a final paragraph that restates the piece. The reader was just there. End on the last concrete point, takeaway, or next action instead.\" Its eval counterpart is eval.md:29: \"Are summary-recap endings cut so the piece ends on a concrete point, takeaway, or next action?\" Nothing in either file names Moreover, Furthermore, Additionally, Firstly/Secondly, To summarize, or sentence-start connectives in general. \"Words to cut\" (SKILL.md:44-48) and \"Often-empty phrases\" (SKILL.md:48) do not list any of them.",
+     "reasoning": "Under the claim standard, the question is what the rule's stated target is. The Summary-recap rule targets endings that restate the piece. Its name says so (\"endings\"), its fix says so (\"End on the last concrete point\"), and the eval check says so (\"so the piece ends on...\"). Of its three examples, \"Ultimately\" and \"Overall\" are recap words, not essay-glue connectives, which shows the rule is about closing recaps rather than transition words at the start of sentences. That is exactly the phenomenon of phr-generic-conclusion (\"In conclusion + recap\").\n\nThe central instances of phr-transition are additive and sequencing connectives used mid-text: Moreover, Furthermore, Additionally, Firstly/Secondly. \"In conclusion\" is a fringe member of that list. It shows up in phr-transition only because it is also formulaic glue, and the taxonomy gives it a home in phr-generic-conclusion as well. Matching on a shared token is not targeting the phenomenon. A rule that tells you to cut recap endings does not tell you to cut \"Moreover\" at the start of a body sentence. It would also not flag \"In conclusion\" used as a transition anywhere other than the ending. Taken by itself, the rule never reaches the phenomenon this pattern describes: connective glue at the start of sentences throughout the text.\n\nThe reviewer's argument confuses an instance that is listed in the pattern with a central instance of it. The standard requires a central one. So any catch of phr-transition here is incidental overlap, and the claim belongs to phr-generic-conclusion, not phr-transition. Not claimed."
+    }
+   ]
+  },
+  {
+   "cell": "the-antislop/phr-novelty-inflation",
+   "votes_claimed": 0,
+   "of": 3,
+   "decision_claimed": false,
+   "votes": [
+    {
+     "claimed": false,
+     "evidence": "Explanatory Header Templates: \"Headers that promise insight but deliver template structure\" with examples \"Why This Actually Works\", \"What This Means For You\", \"The Real Reason...\", \"Here's What's Really Going On\"; fix is \"Replace with descriptive headers that summarize the actual content.\" Scoring: \"Template headers (per instance) +2\". Self-Promotional Framing gives as the preferred After: \"Most developers aren't aware that [observation about the reader's situation]. Here's what's changing...\" No rule, table row, or example anywhere in the file uses \"nobody tells you\", \"most people skip/miss\", \"everyone's missing\", or any framing where others lack the insight. Tier 1/2/3 tables cover \"Here's the thing\", \"The bottom line\", \"It's worth noting\", but none of these frame the insight as one others lack.",
+     "reasoning": "The pattern's defining feature is the faux-insight setup that says OTHERS lack the insight (\"nobody\", \"most people\", \"everyone\"). The only candidate, Explanatory Header Templates, is about headers and targets template structure presented as a hidden truth or payoff (\"The Real Reason...\", \"Here's What's Really Going On\", \"What This Means For You\"). None of its examples say that others lack the insight. It is the same hidden-truth framing (\"The real [X] is\", \"The truth is\") that the stop-slop adjudication ruled 2-1 does NOT claim this pattern. For consistency across tools, the-antislop should get the same ruling. This rule would catch a header like \"What Nobody Tells You About X\" only incidentally, through its general \"promises insight\" wording, and the standard excludes that kind of incidental catch. The file also points the other way: in Self-Promotional Framing it recommends a \"Most developers aren't aware that...\" opener as the fix, which is a central instance of this pattern. A ruleset that recommends the phenomenon cannot be said to target it. I read the whole file and found no more specific rule. The original credit was too generous: not claimed."
+    },
+    {
+     "claimed": false,
+     "evidence": "Explanatory Header Templates, SKILL.md lines 243-252: \"Headers that promise insight but deliver template structure\" with examples \"Why This Actually Works\", \"What This Means For You\", \"The Real Reason...\", \"Here's What's Really Going On\". None of these says that others lack the insight; there is no \"nobody\", \"most people\" or \"everyone\". The rule's stated target is header form (\"Replace with descriptive headers\"), not the faux-insight claim. Self-Promotional Framing, lines 236-239: the recommended \"After\" text is \"Most developers aren't aware that [observation about the reader's situation]. Here's what's changing...\". That is a central instance of phr-novelty-inflation, offered as the fix. A full read found no other rule, table row, scoring entry or example that targets \"what nobody tells you\", \"the part most people skip\" or \"the insight everyone's missing\".",
+     "reasoning": "The pattern's defining feature is the claim that other people lack the insight (\"nobody\", \"most people\", \"everyone\"). The only rule close to it is Explanatory Header Templates, which targets hidden-truth and explanatory headers (\"The Real Reason\", \"What's Really Going On\"). These are the same kind of framing that the stop-slop panel ruled 2-1 does not claim this pattern. That rule is also limited to headers and to the template-versus-content mismatch. It is not about the others-don't-know move. So it at most catches the pattern by accident, which the standard excludes. The Self-Promotional Framing section points the other way: its rewrite is the pattern itself (\"Most developers aren't aware that...\"). The ruleset therefore does not treat this framing as slop at all. For consistency with the stop-slop ruling, and on the file's own merits, the original credit was too generous: NOT CLAIMED."
+    },
+    {
+     "claimed": false,
+     "evidence": "Explanatory Header Templates, lines 245-250: \"Headers that promise insight but deliver template structure\", with the examples \"Why This Actually Works\", \"What This Means For You\", \"The Real Reason...\", \"Here's What's Really Going On\". The fix is to use descriptive headers. Self-Promotional Framing, line 239: the recommended AFTER text is \"Most developers aren't aware that [observation about the reader's situation]. Here's what's changing...\". Tier 2, line 99: \"Here's the thing\", flagged only when repeated. Nowhere in the 409-line file is there a rule, example or scoring line naming \"nobody tells you\", \"most people skip/miss\", \"everyone's missing\" or any framing built on others lacking the insight.",
+     "reasoning": "I read the whole file. The best candidate is Explanatory Header Templates, but its stated target is something else: header templates that promise insight and deliver template structure. Its examples are hidden-truth or significance framings (\"The Real Reason\", \"What's Really Going On\"). They do not claim that other people lack the insight, and that claim is what defines phr-novelty-inflation (\"nobody\", \"most people\", \"everyone\"). These are the same hidden-truth framings that were ruled not to claim the pattern for stop-slop (\"The real [X] is\", \"The truth is\"). Applying the same standard gives the same result here. The rule is also limited to headers, while the pattern is a phrasal setup in running prose. Stronger counter-evidence: the Self-Promotional Framing section recommends \"Most developers aren't aware that [observation]... Here's what's changing\" as the fix. That is a central instance of novelty inflation (the \"most people don't know\" setup), offered as good writing. A ruleset that prescribes the pattern cannot be said to target it. \"Here's the thing\" is a generic signpost, flagged only when repeated, with no others-lack-insight element. At most these catch the pattern incidentally, which the claim standard excludes. The original credit was too generous: not claimed."
+    }
+   ]
+  }
+ ]
+}

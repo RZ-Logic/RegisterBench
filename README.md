@@ -40,9 +40,9 @@
 
 I'm an ACCA with audit roots who pivoted into AI automation architecture. Working in audit, you learn that *"the policy says X"* and *"the code does X"* are different sentences, and the second one is the only one that matters when the regulator shows up.
 
-That gap turns out to be the central finding of this repo, and it is measurable. The anti-AI-slop ecosystem ships rulesets as prose documents. The most rigorous of them, `avoid-ai-writing`, also ships a deterministic regex engine that implements the executable subset of the same catalog. Nobody had measured the distance between the two faces. The answer on this register is **26 points of recall**: 72.7% for the prose read by a model, 46.7% for the engine, same repository, same pinned commit, same rules. The document says X. The code does a demonstrably narrower X.
+That gap turns out to be the central finding of this repo, and it is measurable. The anti-AI-slop ecosystem ships rulesets as prose documents. The most rigorous of them, `avoid-ai-writing`, also ships a deterministic regex engine that implements the executable subset of the same catalog. Nobody had measured the distance between the two faces. On this register the prose read by a model beats its own engine under **every scoring cut tested**: by 26.0 points of recall on the published weighting (72.7% against 46.7%), by 16.5 on the patterns each face claims, and by between 10.6 and 36.2 points across alternative tier weightings. Same repository, same pinned commit, same rules. The document says X. The code does a demonstrably narrower X. The size of the gap depends on how you weight the taxonomy; its direction does not.
 
-The second gap is the one my audit background is actually for. Every tool in this space maintains word lists that fire on regulated financial language. On 111,313 words of real pre-ChatGPT SEC filings, Tier 1 `comprehensive` fires on **`comprehensive income`**, a term defined in FASB ASC 220, 25 times over. Worse, one tool's adverb ban flags **"present fairly, in all material respects"**, the auditor's opinion sentence prescribed by PCAOB AS 3101.08, and its passive-voice ban flags the standard internal-control-over-financial-reporting definition. A filer cannot rewrite any of those. No existing benchmark would have caught this, because measuring it requires knowing which phrases are legally load-bearing.
+The second gap is the one my audit background is actually for. Several tools in this space maintain word lists that fire on regulated financial language. On 111,313 words of real pre-ChatGPT SEC filings, Tier 1 `comprehensive` fires on **`comprehensive income`**, a term defined in FASB ASC 220, and Tier 1 `leverage`, which the ruleset's own table scopes to the verb, fires on Caterpillar's **"covenant leverage ratio"**, a contractually defined debt covenant. One tool's adverb ban flags **"present fairly, in all material respects"**, the auditor's opinion sentence prescribed by PCAOB AS 3101.08. A filer cannot rewrite any of those. No existing benchmark would have caught this, because measuring it requires knowing which phrases are legally load-bearing.
 
 **On why measurement and not another editor.** The ecosystem has two maintained, capable editors already. What it does not have is a neutral scorekeeper: nearly every published number is a tool's own rules run against that tool's own fixtures. `unslop` is the only tool in the cohort that publishes benchmark numbers at all, and even its comparison table concedes that the blind human-preference result is *"not publicly measured"* for a competitor. That is the gap this fills.
 
@@ -78,7 +78,7 @@ This is the architectural through-line, adapted from the *"Where is the AI?"* en
 | 2 | **Prose filtering** | ✅ | Line-level filter dropping numeric-majority and heading-fragment lines from flattened filing tables. `raw/` is preserved untouched as the provenance record. |
 | 3 | **Seeding** | ✅ *(manual, recorded at write time)* | Patterns planted by hand into lightly adapted real filing text. Never model-generated, which would contaminate the ground truth. |
 | 4 | **Manifest verification** | ✅ | Every span re-located, word counts and plant counts range-checked, every pattern ID validated against the crosswalk. Exits nonzero on any drift. |
-| 5 | **Crosswalk** | ✅ | 29 canonical pattern IDs mapped to each tool's own rule identifiers, recording which patterns each tool claims at all. |
+| 5 | **Crosswalk** | ✅ *(blind double-coded)* | 29 canonical pattern IDs mapped to each tool's own rule identifiers, recording which patterns each tool claims at all. Coded independently by two coders per tool reading only that tool's source; 98.9% agreement, disagreements adjudicated. Per-cell evidence in [`coding_record.json`](crosswalk/coding_record.json). |
 | 6 | **Code-track detection** | ✅ | `avoid-ai-writing` `analyzeText()` and `unslop` `humanize_deterministic_with_report()`, both SHA-pinned. Byte-identical across runs. |
 | **7** | **Prompt-track detection** | **❌ stochastic** | Each tool's ruleset files verbatim, uniform detect-only instruction appended, model pinned to `claude-sonnet-5`. **N=3 independent runs per seeded draft**, mean/min/max reported; the human corpus is a single pass per tool. ⚠️ **v0.1's published numbers did not run through this stage as specified.** They came from an equivalent subagent path in which the rulesets were delivered as task instructions rather than in the API `system` parameter. See [Limitations](#-limitations). |
 | 8 | **Flag matching** | ✅ | Character-overlap at threshold 0.5 against the manifest span, or quoted-text containment. Document-level rules (density, rates, rhythm) match by crosswalked pattern. Unmatched flags logged separately. |
@@ -128,7 +128,7 @@ Eight deterministic stages, one stochastic stage, bounded and reported with its 
 | Component | What it is | Role of the model |
 |-----------|-----------|:-:|
 | **Corpus** ([`corpora/finance-audit/`](corpora/finance-audit/)) | 18 documents, 111,313 clean words. 10-K MD&A sections and audit opinions from 10 issuers, filed 2020-07-30 to 2021-03-24 (fiscal years ending 2020). Accession numbers and URLs per file. | None |
-| **Term-of-art whitelist** ([`whitelist.json`](corpora/finance-audit/whitelist.json)) | 13 defined terms, each with a PCAOB, FASB ASC, or statutory citation and a note on the collision it creates. | None |
+| **Term-of-art whitelist** ([`whitelist.json`](corpora/finance-audit/whitelist.json)) | 14 defined terms, each with a PCAOB, FASB ASC, SEC or statutory citation (or, for `pervasive`, ISA 705 / AU-C 705) and a note on the collision it creates, plus a `deliberately_excluded` block recording register words that were considered and rejected. | None |
 | **Seeded drafts** ([`seeded/finance-audit/`](seeded/finance-audit/)) | 10 drafts, 330 to 397 words, 122 planted instances across a 29-pattern taxonomy spanning 6 tiers. Manual planting, recorded at write time. | None |
 | **Crosswalk** ([`crosswalk/patterns.json`](crosswalk/patterns.json)) | Canonical IDs mapped to all 6 tool faces, with claimed-versus-unclaimed recorded per pattern. | None |
 | **Code-track runners** ([`runners/code_track/`](runners/code_track/)) | Node and Python invocations, SHA-pinned, emitting a normalized findings schema. | None |
@@ -152,18 +152,19 @@ Six faces across five repositories. `avoid-ai-writing` appears twice by design, 
 
 ## 📊 v0.1 Results: finance-audit
 
-Run dated 2026-07-27. Model `claude-sonnet-5`. 122 planted instances across 10 drafts; 111,313 words of human corpus. Full tables: [`results/finance-audit_2026-07-27.md`](results/finance-audit_2026-07-27.md) · raw per-tool findings: [`results/raw_*.json`](results/).
+Detection runs 2026-07-24 to 2026-07-27, model `claude-sonnet-5`; scoring and crosswalk dated 2026-10-11. 122 planted instances across 10 drafts; 111,313 words of human corpus. Full tables: [`results/finance-audit_2026-10-11.md`](results/finance-audit_2026-10-11.md) · raw per-tool findings: [`results/raw_*.json`](results/).
 
 ### Reading the tables
 
-**The four metrics.** Two describe what a tool catches, two describe what it disturbs.
+**The metrics.** Three describe what a tool catches, two describe what it disturbs.
 
 | Metric | What it measures | Higher is |
 |---|---|:-:|
 | **Recall (mean)** | Of the 122 pattern instances planted by hand into the seeded drafts, the share a tool flagged. Each quoted finding is credited to at most one plant (see [matching](#%EF%B8%8F-build-decisions--lessons-learned), decision 1). Averaged across 3 independent runs for prompt-track tools. | better |
 | **Recall range** | Lowest and highest single-run recall across those 3 runs, so readers can see how much of any gap between tools is run-to-run noise. Deterministic engines produce one value and no spread. | narrower |
+| **Claimed-only recall** | The same matches, restricted to plants whose canonical pattern the tool's crosswalk row says it claims. Full recall measures coverage of the whole taxonomy; this measures accuracy on what the tool attempts. A tool that claims little loses less here. | better |
 | **Flags/1k human** | Total flags a tool raised per 1,000 words of the human corpus. Because that corpus predates November 2022, no flag on it can be an AI catch, so this is a measure of how readily a ruleset fires on ordinary filing prose. | context |
-| **Term-of-art violations/1k** | The subset of those flags landing inside a defined regulatory term from the [whitelist](corpora/finance-audit/whitelist.json), per 1,000 words. These are phrases a filer is not free to rewrite, so a flag here is the least defensible kind. | lower |
+| **Term-of-art violations/1k** | Flags on the human corpus whose flagged text is at least half protected regulatory phrasing from the [whitelist](corpora/finance-audit/whitelist.json), per 1,000 words. These are phrases a filer is not free to rewrite, so a flag here is the least defensible kind. The half-coverage rule stops a wide quote that merely encloses a term, flagged for some other reason, from counting. Reported two ways: per flag, and as distinct (document, term) pairs, because engines differ in whether they report every occurrence or once per document. | lower |
 
 Flags per 1k has no "good" direction on its own, which is the point of reporting it next to recall rather than instead of it. A tool that never fires scores well on it and badly on recall.
 
@@ -178,43 +179,57 @@ Flags per 1k has no "good" direction on its own, which is the point of reporting
 | **structural** | 29 | Sentence and paragraph shapes. No fixed string exists to match, so finding these requires reading form rather than tokens. | "The question isn't X. It's Y.", "Demand collapsed. Fleets parked.", em-dash rhythm, false agency |
 | **conversational** | 4 | Chat-assistant residue left in a document that is not a chat. | "I hope this summary helps", "That's a great question", "As of my last update" |
 
-Cells in the tier table read *matched / planted*, and for prompt-track tools matched is a mean across 3 runs, so fractional values are expected. The tier split is the most diagnostic view in this repo: it is where the [executable-subset gap](#-the-executable-subset-gap) becomes visible, because deterministic engines hold their own on the lexical tiers and collapse on the structural one.
+Cells in the tier table below are recall percentages; for prompt-track tools they are means across 3 runs. The tier split is the most diagnostic view in this repo: it is where the [executable-subset gap](#-the-executable-subset-gap) becomes visible, because deterministic engines hold their own on the lexical tiers and collapse on the structural one.
 
 ### Headline
 
-| Tool | Track | Recall (mean) | Recall range | Flags/1k human | Term-of-art violations/1k |
-|---|:-:|---|---|---|---|
-| avoid-ai-writing skill | prompt | **72.7%** | 71.3% to 73.8% | 1.34 | 0.009 |
-| stop-slop | prompt | 59.8% | 59.8% to 59.8% | **6.90** | **0.243** |
-| no-ai-slop | prompt | 55.5% | 54.1% to 56.6% | 0.55 | **0.0** |
-| avoid-ai-writing detector | code | 46.7% | deterministic | 1.09 | 0.135 |
-| the-antislop | prompt | 45.4% | 43.4% to 46.7% | 0.70 | **0.0** |
-| unslop deterministic | code | 28.7% | deterministic | 2.06 | **0.323** |
+| Tool | Track | Recall (mean) | Recall range | Claimed-only recall | Flags/1k human | Term-of-art /1k (doc-term pairs) |
+|---|:-:|---|---|---|---|---|
+| avoid-ai-writing skill | prompt | **72.7%** | 71.3% to 73.8% | **73.1%** (28/29 patterns) | 1.34 | 0.009 (1) |
+| stop-slop | prompt | 59.8% | 59.8% to 59.8% | 63.4% (17/29) | **6.90** | 0.072 (8) |
+| no-ai-slop | prompt | 55.5% | 54.1% to 56.6% | 69.3% (21/29) | 0.55 | **0.0** (0) |
+| avoid-ai-writing detector | code | 46.7% | deterministic | 56.6% (20/29) | 1.09 | 0.144 (14) |
+| the-antislop | prompt | 45.4% | 43.4% to 46.7% | 54.3% (22/29) | 0.70 | **0.0** (0) |
+| unslop deterministic | code | 28.7% | deterministic | 37.0% (18/29) | 2.06 | 0.341 (14) |
+
+### What survives every cut, and what does not
+
+A benchmark whose taxonomy, drafts and scorer share one author owes readers a test of whether its conclusions are artifacts of that authorship. Recall is recomputed below under four tier weightings and on claimed patterns only. Full tables: [`results/finance-audit_2026-10-11.md`](results/finance-audit_2026-10-11.md).
+
+| Cut | skill minus its own detector | rank 1 | rank order below rank 1 |
+|---|---|---|---|
+| Plant-weighted (published) | **+26.0** | aaw skill | stop-slop, no-ai-slop, detector, the-antislop, unslop |
+| Equal weight per tier | **+23.1** | aaw skill | stop-slop, no-ai-slop, the-antislop, detector, unslop |
+| Lexical tiers only | **+10.6** | aaw skill | detector, no-ai-slop, stop-slop, unslop, the-antislop |
+| Phrasal + structural only | **+36.2** | aaw skill | stop-slop, no-ai-slop, the-antislop, detector, unslop |
+| Claimed patterns only | **+16.5** | aaw skill | no-ai-slop, stop-slop, detector, the-antislop, unslop |
+
+**Two conclusions are invariant.** `avoid-ai-writing`'s prose ranks first in every cut, and it beats its own regex engine in every cut. **Everything else moves.** The size of the executable-subset gap ranges from 10.6 to 36.2 points depending on how the tiers are weighted, because the engine is competitive on vocabulary and collapses on structure, so any weighting that favours structure widens it. The order of rows 2 through 6 differs from the published order in all four alternative cuts. Read the headline table's ordering below rank 1 as a property of this taxonomy's composition, not of the tools.
 
 ### Recall by tier
 
-Percentages, because prompt-track cells are 3-run means. Planted counts per tier are in the tier table above. Full fractions and per-run spread: [`results/finance-audit_2026-07-27.md`](results/finance-audit_2026-07-27.md).
+Percentages, because prompt-track cells are 3-run means. Planted counts per tier are in the tier table above. Full fractions and per-run spread: [`results/finance-audit_2026-10-11.md`](results/finance-audit_2026-10-11.md).
 
 | Tier | aaw skill | stop-slop | no-ai-slop | aaw detector | the-antislop | unslop |
 |---|---|---|---|---|---|---|
 | lex-1 (always-flag vocabulary) | **94.2%** | 39.1% | 59.4% | 87.0% | 37.7% | 52.2% |
 | lex-2 (cluster-gated vocabulary) | 41.7% | 25.0% | **47.2%** | 16.7% | 0.0% | 16.7% |
 | lex-3 (density-gated vocabulary) | 2.8% | **47.2%** | 13.9% | 0.0% | 11.1% | 0.0% |
-| phrasal | **81.8%** | 69.0% | 61.1% | 59.5% | 54.8% | 40.5% |
+| phrasal | **81.7%** | 69.0% | 61.1% | 59.5% | 54.8% | 40.5% |
 | structural | **83.9%** | **83.9%** | 71.3% | 27.6% | 66.7% | 6.9% |
 | conversational | **75.0%** | 50.0% | 8.3% | 50.0% | **75.0%** | 50.0% |
 
 ### What the data shows
 
-**Recall and flag density are decoupled, not traded off.** The intuition that a tool flagging more will catch more does not hold here. `stop-slop` fires 6.90 times per 1,000 words, five times the rate of `avoid-ai-writing skill` at 1.34, and still scores 12.9 points lower on recall. One tool is strictly better on both axes at once, which is a dominance relation rather than a tradeoff. The two metrics are measuring different properties: recall measures whether a ruleset *covers* the taxonomy, and flag density measures whether its rules are *indiscriminate*. A ruleset can be simultaneously blunt and narrow.
+**Recall and flag density are decoupled, not traded off.** The intuition that a tool flagging more will catch more does not hold here. `stop-slop` fires 6.90 times per 1,000 words, five times the rate of `avoid-ai-writing skill` at 1.34, and still scores 12.8 points lower on recall. One tool is strictly better on both axes at once, which is a dominance relation rather than a tradeoff. The two metrics are measuring different properties: recall measures whether a ruleset *covers* the taxonomy, and flag density measures whether its rules are *indiscriminate*. A ruleset can fire often and still cover little.
 
-**Aggression concentrates in very few rules.** 87.4% of `stop-slop`'s 768 human-corpus flags come from two rules: Adverbs (446 flags, 58.1%) and Passive Voice (225 flags, 29.3%). Both are hard global bans. In filing prose, "primarily driven by", "partially offset by", and "was recorded" are the register rather than a tell. Its vocabulary table is 11 business-jargon entries (`references/phrases.md`), which overlaps the canonical always-flag list at only two terms, so it reaches 39.1% on that tier while firing five times more often than any other tool overall. High volume did not buy coverage.
+**Aggression concentrates in very few rules.** 87.4% of `stop-slop`'s 768 human-corpus flags come from two rules: Adverbs (446 flags, 58.1%) and Passive Voice (225 flags, 29.3%). Both are hard global bans. In filing prose, "primarily driven by", "partially offset by", and "was recorded" are the register rather than a tell. Its vocabulary table is 11 business-jargon entries (`references/phrases.md`), which overlaps the canonical always-flag list at one term (`game-changer`), so it catches only 4 of 18 always-flag vocabulary plants while firing more than three times as often as any other tool overall. Its 39.1% lex-1 tier figure is lifted by the adverb ban catching all 5 hollow intensifiers. High volume did not buy coverage.
 
-**Regulated language collides with rulesets in three distinct ways, and they are not equally serious.** The systematic collision is `comprehensive`, a Tier 1 always-replace word, firing on `comprehensive income`, a term defined in FASB ASC 220 that occurs 25 times in the corpus: 12 hits for the detector and 11 for `unslop`.
+**Regulated language collides with rulesets in three distinct ways, and they are not equally serious.** The systematic collision is `comprehensive`, a Tier 1 always-replace word, firing on `comprehensive income`, a term defined in FASB ASC 220 that occurs 21 times in the corpus, including Delta's loss-year caption "Comprehensive (Loss)/Income". The detector and `unslop` both flag it in the same 12 documents. `unslop`'s per-flag rate is higher only because it reports every occurrence (21 flags) where the detector reports once per analyzed chunk, which is once per document except for the long MD&As split under build decision 5 (13 flags); counted as distinct (document, term) pairs, the two engines are identical at 14 each across `comprehensive income` and the leverage terms below. Per-flag rates partly measure reporting style, which is why both counts are published.
 
-The precise collision is `leverage`, and it is the one with the cleanest fix. `avoid-ai-writing`'s word table scopes the entry to `leverage (verb)`, and its guidance on inflected forms says to judge by context when a variant "carries a distinct, legitimate meaning". Its regex engine cannot do that, so it fires on the finance noun: Caterpillar's *"covenant leverage ratio was 6.74 to 1"*, a contractually defined covenant metric, and Ford's *"Leverage."* section heading introducing its debt-to-equity disclosure. Applying the prescribed replacement yields "covenant use ratio". `unslop` makes the same error 14 times. Notably the engine is also sometimes right: 3M's *"businesses share technology and leverage common fundamental strengths"* is genuine verb use and a fair flag. The distinction is exactly the one a regex cannot draw and a context profile could.
+The precise collision is `leverage`, and it is the one with the cleanest fix. `avoid-ai-writing`'s word table scopes the entry to `leverage (verb)`, and its guidance on inflected forms says to judge by context when a variant "carries a distinct, legitimate meaning". Its regex engine cannot do that, so it fires on the finance noun: Caterpillar's *"covenant leverage ratio was 6.74 to 1"*, a contractually defined covenant metric, and Ford's *"Leverage."* section heading introducing its debt-to-equity disclosure. Applying the prescribed replacement yields "covenant use ratio". `unslop` makes the same error, flagging 17 occurrences across the same two filings. Notably the engine is also sometimes right: 3M's *"businesses share technology and leverage common fundamental strengths"* is genuine verb use and a fair flag. The distinction is exactly the one a regex cannot draw and a context profile could.
 
-The severe collision belongs to `stop-slop`, whose 27 violations land almost entirely on mandated audit language: **"present fairly, in all material respects"** (PCAOB AS 3101.08, flagged as an adverb violation on *fairly*), **"reasonable assurance"** inside the standard ICFR definition paragraph, and "effective internal control over financial reporting was maintained in all material respects" (Exchange Act Rule 13a-15(f) wording, flagged as passive voice). Flagging a defined accounting term is embarrassing. Flagging the auditor's opinion sentence and the ICFR definition would break the filing. Two tools score 0.0 here, `no-ai-slop` and `the-antislop`, because neither carries vocabulary that overlaps the whitelist at all: their `toa_examples` arrays are empty rather than merely small.
+The severe collision belongs to `stop-slop`, and it is narrower than first published. Its blanket adverb ban flags *fairly* in **"present fairly, in all material respects"**, the auditor's opinion wording prescribed by PCAOB AS 3101.08, in all 10 audit opinions in the corpus. Eight count under the headline rule; the other two quoted the whole clause (103 and 117 characters), so protected text is only 37% and 32% of the quote and they drop out, a residual sensitivity to quote width at the margin that is disclosed in Limitations. Flagging a defined accounting term is embarrassing; flagging the opinion sentence would break the filing. v0.1.0 credited `stop-slop` with 27 violations and the worst rate in the cohort under a containment rule that counted any quote enclosing a protected term. Of the 19 that rule counted and the current one does not, 17 were flagged for something else, such as a 714-character quote of the ICFR definition flagged for its three-item list. Its passive-voice and list rules are the only rules in the cohort whose quotes enclose protected opinion wording without targeting it: every other tool's containment count equals its anchored count. It ranked worst under containment at v0.1.0, second under containment once `leverage` joined the whitelist, and third under the current rule, behind the two engines. Two tools score 0.0, `no-ai-slop` and `the-antislop`. Both list `leverage`, but none of their flags landed on whitelisted phrasing.
 
 **Variance is small, but it does not separate every adjacent pair.** Widest spread across three independent runs is `the-antislop` at 3.3 points, and `stop-slop` returned an identical 73/122 in all three runs. The top three tools are separated by non-overlapping ranges. The bottom of the table is not: `the-antislop`'s best run reaches 46.7%, which exactly ties the `avoid-ai-writing detector`'s deterministic 46.7%, so those two rows are a tie rather than an ordering and should not be read as a rank. The spread is published precisely so that distinction is visible.
 
@@ -224,7 +239,7 @@ The severe collision belongs to `stop-slop`, whose 27 violations land almost ent
 
 The most interesting result is the one where a single repository competes against itself.
 
-`avoid-ai-writing` ships a 714-line SKILL.md and a 45-category regex engine. Same commit, same rule catalog, same taxonomy. Scored against the same 122 plants, the prose reaches 72.7% and the engine reaches 46.7%, a gap of **26.0 points**. The gap is not distributed evenly, and where it concentrates is the whole story.
+`avoid-ai-writing` ships a 714-line SKILL.md and a 45-category regex engine. Same commit, same rule catalog, same taxonomy. Scored against the same 122 plants, the prose reaches 72.7% and the engine reaches 46.7%, a gap of **26.0 points** on the published weighting. The gap is positive under every cut in [the robustness table](#what-survives-every-cut-and-what-does-not) but its size is not fixed: 10.6 points on lexical tiers alone, 36.2 on phrasal and structural alone. Where it concentrates is the whole story.
 
 Skill cells are means across 3 runs; detector cells are a single deterministic run.
 
@@ -246,28 +261,30 @@ On anything reducible to string presence, the engine is not merely adequate, it 
 
 | Pattern | Skill | Detector |
 |---|---|---|
-| `phr-throat-clearing` ("Here's the thing:", "Let me be clear:") | 4/4 | **0/4** |
+| `phr-throat-clearing` ("Here's the thing:", "Let me be clear:") ¹ | 4/4 | **0/4** |
 | `str-staccato-fragments` ("Demand collapsed. Fleets parked.") | 3.67/4 | **0/4** |
 | `str-negative-parallelism` ("The question isn't X. It's Y.") | 3/3 | **0/3** |
 | `str-negative-listing` ("Not a slogan. Not a poster. An operating system.") | 2/2 | **0/2** |
-| `str-rhetorical-setup` ("So what changed this year?") | 2/2 | **0/2** |
+| `str-rhetorical-setup` ("So what changed this year?") ¹ | 2/2 | **0/2** |
 | `str-rule-of-three` | 2/4 | **0/4** |
-| `phr-signposting-meta` ("In this memorandum, we'll walk through") | 1.67/3 | **0/3** |
+| `phr-signposting-meta` ("In this memorandum, we'll walk through") ¹ | 1.67/3 | **0/3** |
 | `str-colon-reveal` ("The takeaway: cloud is the business.") | 1/2 | **0/2** |
 | `str-false-agency` ("The market decided for us.") | 1/2 | **0/2** |
 | `phr-false-range` ("from startups to superpowers") | 1/2 | **0/2** |
 | `str-synonym-cycling` | 0.67/1 | **0/1** |
-| `con-chatbot-artifact` ("I hope this summary helps") | 1/2 | **0/2** |
+| `con-chatbot-artifact` ("I hope this summary helps") ¹ | 1/2 | **0/2** |
 
-Twelve patterns where the engine never fires and the prose does. Every one requires reading a sentence and judging its shape against its neighbours. At the tier level the same split appears cleanly: structural recall is 83.9% for the prose and 27.6% for the engine.
+¹ The engine has a rule for this pattern; it did not fire on these drafts' wording.
+
+Twelve patterns where the engine never fires and the prose does. For eight of them the engine has no rule. For four (throat-clearing, signposting, rhetorical questions, chatbot residue) it has a rule, but the rule's fixed phrase list did not match these drafts' wording, which is a finding about regex brittleness rather than about absence. At the tier level the same split appears cleanly: structural recall is 83.9% for the prose and 27.6% for the engine.
 
 One caveat on that 27.6%, surfaced by a completeness review of this repo. Six of the engine's eight structural matches come from document-level rules, which report a rate rather than locate a span: four `em-dash` matches whose flag text is `"2 em dashes in 371 words"`, and one `formatting` flag credited to both formatting plants in the same draft. Scored on located spans alone, the engine's structural recall is 2/29, identical to `unslop`. The concession is deliberate and is described in build decision 1, and it runs *against* the headline by making the engine look better, so it is not inflating the gap. But the honest reading of that cell is that the engine mostly does not locate structural slop; it reports that some exists.
 
 ### This is documented architecture, not a defect
 
-The repository's own [`detector/CATEGORIES.md`](https://github.com/conorbronsdon/avoid-ai-writing/blob/main/detector/CATEGORIES.md) maintains a "skill-only" list for exactly these rules, naming them as LLM-judgment patterns with no detector type. The maintainer is not claiming the engine is complete, and RegisterBench is not accusing it of being incomplete. The contribution is putting a number on a boundary that both sides already knew existed: on this register, 26.0 points of the canonical taxonomy is judgment that a deterministic engine does not attempt.
+The repository's own [`detector/CATEGORIES.md`](https://github.com/conorbronsdon/avoid-ai-writing/blob/main/detector/CATEGORIES.md) maintains a "skill-only" list of rules it implements in prose but not in the engine, naming them as LLM-judgment patterns, and it covers several of the eight no-rule patterns above (contrast structures, false ranges, synonym cycling, punchline fragments). The maintainer is not claiming the engine is complete, and RegisterBench is not accusing it of being incomplete. The contribution is putting a number on a boundary that both sides already knew existed, and showing how much that number depends on what you count. On the published weighting it is 26.0 points. On the patterns each face claims it is 16.5, because the engine claims 20 patterns and the prose claims 28, so full-taxonomy scoring charges the engine for patterns it never attempts. The 16.5 is the fairer measure of implementation distance; the 26.0 is the fairer measure of what a user gets from each face.
 
-Not all 26 points are pure judgment, and the honest decomposition matters. Roughly 19 points come from the twelve patterns above where the engine has no rule at all. The remainder is threshold and gating divergence rather than absence: the engine's cluster gate costs it 25 points of `lex-t2-cluster` recall against the prose reading the same word list, and its 3% density floor costs the whole `lex-3` tier (see build decision 4). Both faces score 0.0 on `lex-3`, so that tier contributes nothing to the gap.
+Not all 26 points are pure judgment, and the honest decomposition matters. 11.7 points come from the eight patterns where the engine has no rule at all. 7.1 come from the four where it has a rule that did not fire on these plants. 2.5 come from cluster gating: the engine's gate costs it 25 points of `lex-t2-cluster` recall against the prose reading the same word list. The density tier contributes 0.3, since the prose reaches 2.8% there and the engine 0.0% (see build decision 4). The rest is scattered partial differences.
 
 That number is useful in three directions. For a user, it says a regex pre-commit hook is a floor rather than a substitute. For the maintainer, it locates where engine investment would pay. For anyone comparing tools, it says an artifact's execution mode matters as much as its rule count, and a benchmark that measures only one face of a two-faced tool is measuring the wrong thing.
 
@@ -296,7 +313,7 @@ For a reviewer with limited time:
 
 1. **[The "Where is the Judgment?" table](#-where-is-the-judgment)** above. ~90 seconds. The benchmark's stance on its own stochasticity, in one table.
 2. **[The executable-subset gap](#-the-executable-subset-gap)** above. ~4 minutes. The headline finding and why it is a finding rather than an accusation.
-3. **[`corpora/finance-audit/whitelist.json`](corpora/finance-audit/whitelist.json)**. ~3 minutes. 13 defined terms with citations. This is the file that makes the false-positive claims defensible rather than aesthetic.
+3. **[`corpora/finance-audit/whitelist.json`](corpora/finance-audit/whitelist.json)**. ~3 minutes. 14 defined terms with citations, and the words deliberately left out. This is the file that makes the false-positive claims defensible rather than aesthetic.
 4. **[`seeded/finance-audit/manifest.json`](seeded/finance-audit/manifest.json)** next to any draft, for example [`fin-04.md`](seeded/finance-audit/fin-04.md). ~4 minutes. The ground truth in raw form, including the `distractors` block that keeps retained terms of art out of recall.
 5. **[`scripts/score.py`](scripts/score.py)**. ~5 minutes. Span matching and the three metrics. `DOC_LEVEL_RULES` is where document-scoped rules are handled separately from quoted spans.
 
@@ -362,7 +379,7 @@ The second argument is an output prefix, not a path: the harness resolves it und
 
 ## 🛠️ Build Decisions & Lessons Learned
 
-Seven non-obvious choices and the alternatives rejected.
+Eight non-obvious choices and the alternatives rejected.
 
 ### 1. Recall is span-based, not attribution-based, and each quoted finding is consumed once
 
@@ -374,7 +391,9 @@ The alternative was requiring the tool's rule name to map to the canonical patte
 
 Document-level rules are deliberately exempt from consumption. A flag that says "you overuse em dashes" describes the whole document, so it legitimately covers every plant of its canonical pattern, and this is the one place crosswalk attribution does grant credit. Applying strict consumption there instead would have introduced an equal and opposite understatement. Correcting this moved published recall by 0.8 to 8.5 points depending on how verbose a tool's quoting style is, and it reordered two rows.
 
-> **The principle:** Decide what your metric is allowed to be confounded by. A detection benchmark that punishes naming differences is partly a naming benchmark. One that rewards quote length is partly a verbosity benchmark. Neither is visible in the headline number, so both have to be designed out on purpose.
+**The same confound existed on the human corpus and was fixed later than it should have been.** Term-of-art violations originally counted any flag that overlapped a protected term at half of the shorter span, so any quote enclosing a term counted, however wide. That is the identical `min()` denominator, applied in the opposite direction: it punished wide quoting instead of rewarding it. `stop-slop`, whose passive-voice and list rules are the only rules in the cohort whose quotes enclose protected opinion wording without targeting it, was credited with 27 violations and the worst rate in the cohort. Of the 19 the stricter rule removes, 17 were quotes flagged for something else that happened to contain a protected phrase. The rule now requires protected-term text to make up at least half of the flagged span. Both counts are published. It now ranks third: one place of that fall is this fix, and the other is `leverage` joining the whitelist, which added hits for the two engines. The fix is not perfect: two of `stop-slop`'s adverb flags on the opinion sentence quote the whole clause and fall under the threshold (protected text is 37% and 32% of the quote), so quote width still matters at the margin.
+
+> **The principle:** Decide what your metric is allowed to be confounded by. A detection benchmark that punishes naming differences is partly a naming benchmark. One that rewards or punishes quote length is partly a verbosity benchmark. Neither is visible in the headline number, so both have to be designed out on purpose, and a guard added on one metric has to be checked for on every other metric that uses the same arithmetic.
 
 ### 2. Distractors live in the manifest as first-class entries
 
@@ -398,7 +417,7 @@ Density-gated words (`significant`, `innovative`, `effective`) are planted at ro
 
 The temptation was to raise plant density until the gate opened. Rejected: the drafts are 300 to 600 words because that is the length the brief specifies and the length real filing excerpts run. A rule whose threshold cannot be reached at realistic document length within a realistic register is a finding about the threshold. `stop-slop` and `no-ai-slop` reach 47.2% and 13.9% on the same tier, but incidentally, catching `significantly` through adverb bans rather than any density logic. The prose face of `avoid-ai-writing` reaches 2.8%, meaning the model reading the same rule also declined to treat three repeats as density. Nobody in this cohort is doing density detection well, and the row is honest about that rather than tuned to flatter it.
 
-The same reasoning applies to `str-em-dash`, and it was not spotted until a completeness review of this repo. All four plants are paired dashes, giving exactly 2 em dashes per draft. `unslop` caps at 2 per paragraph and `the-antislop` ships an em-dash overuse rule, and both score 0/4 because the plant density sits exactly at, not above, the threshold they document. Only the detector fires, and it does so with a document-level rate flag rather than a located span. This matters more than the `lex-3` case because it lands in the `structural` tier, which is the tier the executable-subset argument rests on.
+The same reasoning applies to `str-em-dash`, and it was not spotted until a completeness review of this repo. All four plants are paired dashes, giving exactly 2 em dashes per draft. `unslop` caps at 2 per paragraph and `the-antislop` ships an em-dash overuse rule, and both score 0/4 because the plant density sits exactly at, not above, the threshold they document. Among the threshold-based rules only the detector fires, and it does so with a document-level rate flag rather than a located span; the prose skill and `stop-slop` catch all four from quoted spans. This matters more than the `lex-3` case because it lands in the `structural` tier, which is the tier the executable-subset argument rests on.
 
 > **The principle:** When ground truth and a tool's threshold disagree, check which one is unrealistic before changing either. Sometimes the finding is the threshold. Check this for every tier, not just the one where it is obvious.
 
@@ -428,20 +447,30 @@ Its voice-profile machinery needed no special handling: the deterministic path i
 
 > **The principle:** When a tool blends detection and rewriting, the benchmark has to draw the line the tool does not. Read the source to find out where the line actually is rather than trusting the flag name.
 
+### 8. The crosswalk was re-coded blind, because the person who wrote the drafts also wrote the map
+
+The crosswalk decides which patterns each tool "claims", and claimed-only recall inherits every decision in it. v0.1.0's crosswalk was hand-authored by the same person who wrote the seeded drafts and the scorer, which is exactly the setup in which a benchmark quietly favours its expectations. A completeness review found five mappings wrong against the tools' own source, three of them under-crediting `avoid-ai-writing` on rules its SKILL.md states explicitly.
+
+Patching those five would have fixed the known errors and left the method unchanged. Instead every cell was re-coded from scratch. For each of the six tool faces, two coders read only that tool's source, never the existing crosswalk, under one written claim standard applied identically to every tool. One worked pattern-first, the other rule-first, so they could not share a blind spot through a shared reading order. They agreed on 172 of 174 cells (98.9%); the two disagreements were adjudicated against source. A later review flagged three cells as applying the standard inconsistently between tools, and each went to a fresh 3-adjudicator vote: two decisions were upheld, and one cell both coders had agreed on (the-antislop crediting a hidden-truth header rule as novelty inflation) was overturned 0 votes to 3, so the same reading now applies to the-antislop and stop-slop. The final map differs from the hand-authored version in 15 claim decisions, in both directions and across five of the six tools, which is the signature of noise in a hand-built map rather than of a thumb on the scale. Every cell's evidence, with file, line and quote, is in [`coding_record.json`](crosswalk/coding_record.json).
+
+> **The principle:** When an artifact encodes judgment and its author also authored the thing it judges, fixing the errors someone found is not enough. Re-derive it by a method that cannot inherit the author's priors, and publish the agreement rate so readers can see how much judgment was involved.
+
 ---
 
 ## 🫡 Limitations
 
-The gaps a reviewer would find, surfaced here so they don't have to dig. Most of this section exists because an adversarial multi-agent review of this repo produced 60 findings, of which 37 were refuted and 23 survived verification. The two scoring defects it confirmed are fixed and the numbers above are the corrected ones; what remains is listed below.
+The gaps a reviewer would find, surfaced here so they don't have to dig. Most of this section exists because an adversarial multi-agent review of this repo produced 60 findings, of which 37 were refuted and 23 survived verification, followed by a completeness review aimed at benchmark-design bias. The scoring defects, crosswalk errors and quoting-granularity confound those reviews confirmed are fixed and the numbers above are the corrected ones; what remains is listed below.
 
 ### Wired but not yet complete
 
 - **The prompt track ran through subagents, not the raw API, so the protocol table above describes a path v0.1's numbers did not take.** [`runners/prompt_track/run_prompt_tool.py`](runners/prompt_track/run_prompt_tool.py) is the protocol-exact harness that puts each ruleset in the literal `system` parameter, and it is built and gated behind `--approved`. The published numbers came from an equivalent path where the same ruleset files, at the same pinned commits, were delivered as task instructions to subagents pinned to the same model. This is a faithful approximation, not the canonical protocol. Treat every prompt-track figure as provisional until the canonical rerun lands as v0.1.1; the code-track figures are unaffected. Both paths write the same result schema. See [`NOTES.md`](NOTES.md).
 - **The human corpus ran at N=1, only the seeded drafts ran at N=3.** The 192 passes break down as 120 seeded (4 tools x 10 drafts x 3 runs) plus 72 human-corpus (4 tools x 18 files, single pass). So prompt-track recall carries a published spread while prompt-track flags/1k and term-of-art rates are single-run point estimates with no spread to show. Nothing displayed is false, because ranges appear only on recall, but those two columns are less firm than the recall column beside them. Bringing the human corpus to N=3 costs 144 more passes.
-- **Recall counts patterns a tool never claimed.** All 122 plants are scored against all 6 tools, including patterns absent from a tool's ruleset. `the-antislop` scores 0/5 on hollow intensifiers and 0/2 on rhetorical setups because it makes no claim on either, not because it missed them. The crosswalk already records claimed-versus-unclaimed per pattern, so a "recall on claimed patterns only" column is a small change to [`scripts/score.py`](scripts/score.py). Both cuts should be published; v0.2 adds the second.
+- **Full-taxonomy recall counts patterns a tool never claimed.** All 122 plants are scored against all 6 tools, so a narrowly scoped ruleset is charged for patterns it never attempts. `the-antislop` scores 0/5 on hollow intensifiers and 0/2 on rhetorical setups because it makes no claim on either. The claimed-only column corrects for this and is published beside full recall rather than instead of it, because each answers a different question: what a user gets, versus how well a tool does what it sets out to do. Claimed-only recall is only as good as the crosswalk that defines "claimed", which is why that crosswalk is double-coded (build decision 8).
 - **Term-of-art matching is whole-phrase and case-insensitive, with no morphology.** Variants are enumerated explicitly in [`whitelist.json`](corpora/finance-audit/whitelist.json) rather than stemmed. This under-counts rather than over-counts, which is the safer direction for a false-positive claim. Word boundaries are enforced, which matters more than it sounds: without them `qualified opinion` matches inside `unqualified opinion`, the opposite meaning, and that alone accounted for 9 spurious violations before it was fixed.
-- **Seven of thirteen whitelist terms have zero corpus occurrences.** `significant deficiency`, `going concern`, `pervasive`, `qualified opinion`, `adverse opinion`, `comprehensive basis of accounting`, and `materiality` never appear in these 18 documents, so the term-of-art metric is effectively driven by the remaining six, led by `critical audit matter` (54), `reasonable assurance` (37), and `comprehensive income` (25). The unused entries are retained for the other registers and for corpus expansion, but they are currently carrying no weight.
-- **Term-of-art density is concentrated in the audit opinions, and the headline rate understates it.** 150 of the 157 whitelist occurrences sit in the 10 opinion documents, which are only 16.2% of the corpus by word count. Measured against opinion text alone the rates are roughly six times higher (`stop-slop` 1.495 rather than 0.243). Tool ordering is identical either way, so this is an interpretability limit rather than a fairness one, but "0.243 per 1,000 words" reads as negligible when the number a filer would care about is the opinion-only rate.
+- **Seven of fourteen whitelist terms have zero corpus occurrences.** `significant deficiency`, `going concern`, `pervasive`, `qualified opinion`, `adverse opinion`, `comprehensive basis of accounting`, and `materiality` never appear in these 18 documents, so the term-of-art metric is effectively driven by the remaining seven, led by `critical audit matter` (54), `reasonable assurance` (37), `in all material respects` (24), and `comprehensive income` (21). Counts merge nested variants, so `comprehensive income` inside `other comprehensive income` is one occurrence. The unused entries are retained for the other registers and for corpus expansion, but they are currently carrying no weight.
+- **Term-of-art density is concentrated in the audit opinions, and the headline rate understates it.** 149 of the 170 whitelist occurrences sit in the 10 opinion documents, which are only 16.2% of the corpus by word count. Measured against opinion text alone the rates are several times higher (`unslop` 0.996 rather than 0.341; `stop-slop` 0.443 rather than 0.072). Tool ordering is identical either way, so this is an interpretability limit rather than a fairness one. [`score.py`](scripts/score.py) now reports the opinion and MD&A rates separately.
+- **The term-of-art rule still depends on quote width at the margin.** Requiring protected text to be half the flagged span removes wide quotes flagged for something else, but it also drops a correct flag that happens to be quoted wide. Two of `stop-slop`'s adverb flags on the opinion sentence are excluded this way. A rule that tested only the flagged token inside a quote would avoid this, but prompt-track tools return quotes rather than the token they targeted, so the benchmark cannot see it.
+- **Per-flag term-of-art rates partly measure reporting style.** `unslop` reports every occurrence and the detector reports once per analyzed chunk, so their per-flag rates differ (0.341 against 0.144) while the protected phrases they flag are identical. The (document, term) pair count beside each rate removes this; read the two together.
 - **The `pervasive` entry cites the wrong framework for this corpus.** Pervasiveness is the ISA 705 and AU-C 705 threshold, not a PCAOB AS 3105 construction, and these are all PCAOB issuer audits. The entry is annotated and flagged for review rather than silently dropped. Zero corpus occurrences, so no published number depends on it.
 
 ### Deliberately deferred
@@ -464,7 +493,6 @@ Each item has a roadmap entry below.
 ## 🗺️ Roadmap
 
 - [ ] **v0.2: the upstream PR to `avoid-ai-writing`.** New `regulated` context profile, tolerance-matrix rows, word-table exception list with a citation per term, hedging and significance-inflation carve-outs for defined-term usage, auto-detection cues, and detector fixtures passing `npm test`. Argued from the finance-audit data above. This is the second deliverable of the project and the more important one.
-- [ ] **v0.2: recall on claimed patterns only, as a second column.** Uses the claimed-versus-unclaimed data already in the crosswalk. Published alongside full-taxonomy recall, not instead of it.
 - [ ] **v0.2: canonical prompt-track rerun through the API harness.** Removes the approximation caveat from the published numbers.
 - [ ] **v0.2: casual-email register.** Enron corpus (CMU release), prose bodies, personal names redacted.
 - [ ] **v0.2: social register.** Pre-2022 Hacker News comments and personal-blog posts.
@@ -488,7 +516,7 @@ RegisterBench measures other people's work, so the acknowledgements are load-bea
 - **[sam-paech/slop-forensics](https://github.com/sam-paech/slop-forensics)**: corpus over-representation against a human baseline as a *method*, and the insight that the resulting word lists are decaying assets tied to model generations while the method is not. Directly responsible for this repo pinning every SHA, model string, and date.
 - **[Wikipedia: Signs of AI writing](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing)**: the canonical taxonomy with per-pattern study citations, and the *"Ineffective indicators"* section, which is the evidence base against hard global bans. Transition words in isolation, formal prose, and correct grammar are documented non-signals.
 - **Classifier false-positive literature** (Liang et al. on non-native English writers, the HC3 and RAID lineage): the prior art for measuring false positives in this domain at all. Those benchmarks target GPTZero-class *classifiers*. RegisterBench targets *rulesets*, and that distinction is the positioning.
-- **[FASB ASC 220](https://asc.fasb.org/), [PCAOB AS 2201, AS 3101, AS 3105](https://pcaobus.org/oversight/standards/auditing-standards), SEC SAB 99**: every entry in the term-of-art whitelist carries a citation to one of these. The false-positive argument in this repo is only as good as those references.
+- **[FASB ASC 220](https://asc.fasb.org/), [PCAOB AS 2201, AS 3101, AS 3105](https://pcaobus.org/oversight/standards/auditing-standards), SEC SAB 99, Regulation S-K Item 303 and Regulation G, ISA 705 / AU-C 705**: every entry in the term-of-art whitelist carries a citation to one of these. The false-positive argument in this repo is only as good as those references.
 
 Adopted patterns are cited above. RegisterBench extends them by combining cross-tool comparison under one protocol, flag behavior on verifiably pre-ChatGPT human text, and register-level splits, which no published work in this space had done together.
 
