@@ -1,60 +1,79 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 360" width="100%" role="img" aria-labelledby="banner-title banner-desc" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif">
-  <title id="banner-title">RegisterBench</title>
-  <desc id="banner-desc">RegisterBench: independent, cross-tool, register-split measurement of anti-AI-slop rulesets. Recall on manually seeded ground truth, flag behavior on verifiably pre-ChatGPT human text, split by writing register. It measures rules, not writers.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 540" width="1600" height="540" role="img" aria-labelledby="banner-title banner-desc">
+  <title id="banner-title">RegisterBench — a benchmark for anti-AI-slop rules</title>
+  <desc id="banner-desc">RegisterBench measures rules, not writers. A dark editorial banner with a green Bench wordmark and an annotated specimen of the financial term comprehensive income. Only comprehensive is highlighted in amber, with registration marks and dimension lines illustrating language being measured.</desc>
 
-  <rect width="1280" height="360" fill="#0B1220"/>
+  <defs>
+    <pattern id="specimen-grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#8293A7" stroke-width="0.8"/>
+    </pattern>
+    <clipPath id="graphic-clip">
+      <rect x="975" y="0" width="625" height="540"/>
+    </clipPath>
+  </defs>
 
-  <g opacity="0.06" stroke="#94A3B8" stroke-width="0.5">
-    <line x1="0" y1="80"  x2="1280" y2="80"/>
-    <line x1="0" y1="280" x2="1280" y2="280"/>
+  <rect width="1600" height="540" fill="#0B1220"/>
+  <g clip-path="url(#graphic-clip)">
+    <rect x="975" width="625" height="540" fill="url(#specimen-grid)" opacity="0.07"/>
   </g>
 
-  <text x="80" y="116" font-size="56" font-weight="500" fill="#F8FAFC" letter-spacing="-0.5">RegisterBench</text>
-
-  <text x="80" y="160" font-size="20" font-weight="400" fill="#CBD5E1" letter-spacing="0.1">Independent, cross-tool, register-split measurement of anti-AI-slop rulesets.</text>
-
-  <text x="80" y="186" font-size="13" font-weight="400" fill="#64748B" letter-spacing="0.2">It measures rules, not writers.</text>
-
-  <line x1="170" y1="236" x2="1110" y2="236" stroke="#334155" stroke-width="0.5" stroke-dasharray="2 4"/>
-
-  <g font-size="11" font-weight="500" letter-spacing="0.2">
-    <g>
-      <rect x="170" y="210" width="88" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="214" y="241" fill="#CBD5E1" text-anchor="middle">corpus</text>
-    </g>
-    <g>
-      <rect x="272" y="210" width="88" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="316" y="241" fill="#CBD5E1" text-anchor="middle">seed</text>
-    </g>
-    <g>
-      <rect x="374" y="210" width="88" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="418" y="241" fill="#CBD5E1" text-anchor="middle">crosswalk</text>
-    </g>
-    <g>
-      <rect x="476" y="210" width="132" height="52" rx="6" fill="none" stroke="#D97706" stroke-width="1"/>
-      <text x="542" y="235" fill="#FBBF24" text-anchor="middle">detect</text>
-      <text x="542" y="251" font-size="9" font-weight="400" fill="#A16207" text-anchor="middle">6 tools, 2 tracks</text>
-    </g>
-    <g>
-      <rect x="622" y="210" width="88" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="666" y="241" fill="#CBD5E1" text-anchor="middle">match</text>
-    </g>
-    <g>
-      <rect x="724" y="210" width="88" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="768" y="241" fill="#CBD5E1" text-anchor="middle">score</text>
-    </g>
-    <g>
-      <rect x="826" y="210" width="284" height="52" rx="6" fill="none" stroke="#475569" stroke-width="0.75"/>
-      <text x="968" y="235" fill="#CBD5E1" text-anchor="middle">recall  ·  flags/1k  ·  term-of-art rate</text>
-      <text x="968" y="251" font-size="9" font-weight="400" fill="#64748B" text-anchor="middle">per tool, per tier, per pattern</text>
-    </g>
+  <!-- Native text keeps the copy editable and exact. No embedded raster or external fonts. -->
+  <g font-family="'Segoe UI', Helvetica, Arial, sans-serif">
+    <text id="wordmark" x="68" y="225" font-size="124" font-weight="800" letter-spacing="-5.2"><tspan fill="#F2F5F4">Register</tspan><tspan fill="#7BC4AC">Bench</tspan></text>
+    <text id="subtitle" x="72" y="302" font-size="36" font-weight="400" letter-spacing="-0.6" fill="#D7DFE5">A benchmark for anti-AI-slop rules.</text>
+    <text id="tagline" x="73" y="418" font-size="28" font-weight="400" letter-spacing="-0.3" fill="#AAB7C3">It measures rules, not writers.</text>
   </g>
 
-  <g font-size="11" font-weight="400" fill="#475569" letter-spacing="0.3">
-    <text x="170" y="300">Deterministic corpus, manifest, matching, and scoring. One stochastic detection stage, bounded at N=3.</text>
-  </g>
+  <!-- A registered prose specimen: illustration, not invented benchmark data. -->
+  <g id="specimen" transform="rotate(3 1288 270)">
+    <rect x="1032" y="59" width="500" height="426" fill="#101B2A"/>
 
-  <g font-size="10" font-weight="400" fill="#334155" letter-spacing="0.4">
-    <text x="1110" y="300" text-anchor="end">finance-audit shipped  ·  casual-email, social, technical-docs planned</text>
+    <!-- Print registration frame and measuring ticks. -->
+    <g fill="none" stroke="#688E8C" stroke-width="1.5">
+      <path d="M1001 59H1563 M1032 27V516 M1508 27V516 M1001 485H1563"/>
+      <path d="M996 110V447 M996 110H1005 M996 138H1001 M996 166H1001 M996 194H1005 M996 222H1001 M996 250H1001 M996 278H1005 M996 306H1001 M996 334H1001 M996 362H1005 M996 390H1001 M996 418H1001 M996 447H1005"/>
+      <path d="M1562 155V403 M1550 155H1574 M1556 186H1568 M1556 217H1568 M1550 248H1574 M1556 279H1568 M1556 310H1568 M1550 341H1574 M1556 372H1568 M1550 403H1574"/>
+      <path d="M1274 47V71 M1274 473V497"/>
+    </g>
+    <g stroke="#8AA8A0" stroke-width="1.7" fill="#0B1220">
+      <circle cx="1032" cy="59" r="8"/>
+      <circle cx="1508" cy="59" r="8"/>
+      <circle cx="1032" cy="485" r="8"/>
+      <circle cx="1508" cy="485" r="8"/>
+      <path d="M1014 59H1050 M1032 41V77 M1490 59H1526 M1508 41V77 M1014 485H1050 M1032 467V503 M1490 485H1526 M1508 467V503" fill="none"/>
+    </g>
+
+    <!-- Quiet lines of surrounding prose. -->
+    <g fill="#A1AFBD">
+      <rect x="1075" y="114" width="391" height="5" opacity="0.42"/>
+      <rect x="1075" y="136" width="334" height="5" opacity="0.28"/>
+      <rect x="1075" y="158" width="375" height="5" opacity="0.35"/>
+      <rect x="1075" y="180" width="284" height="5" opacity="0.23"/>
+      <rect x="1075" y="202" width="14" height="5" opacity="0.3"/>
+      <rect x="1075" y="349" width="388" height="5" opacity="0.35"/>
+      <rect x="1075" y="371" width="313" height="5" opacity="0.25"/>
+      <rect x="1075" y="393" width="350" height="5" opacity="0.32"/>
+      <rect x="1075" y="415" width="236" height="5" opacity="0.22"/>
+      <rect x="1075" y="437" width="12" height="5" opacity="0.3"/>
+    </g>
+
+    <!-- Only the word comprehensive is highlighted; income remains outside. -->
+    <rect x="1067" y="244" width="279" height="54" fill="#D7A24E" opacity="0.18"/>
+    <path d="M1067 244H1346V298H1067Z" fill="none" stroke="#D7A24E" stroke-width="1" opacity="0.42"/>
+    <g font-family="Georgia, 'Times New Roman', serif" font-size="38">
+      <text id="protected-word" x="1075" y="283" fill="#F0C982" textLength="264" lengthAdjust="spacingAndGlyphs">comprehensive</text>
+      <text id="protected-context" x="1355" y="283" fill="#E3E9EC">income</text>
+    </g>
+
+    <!-- Dimension lines align to the exact highlighted word. -->
+    <g fill="none" stroke="#D7A24E" stroke-width="1.3" opacity="0.88">
+      <path d="M1075 214V237 M1339 214V237 M1075 225H1339"/>
+      <path d="M1082 221L1075 225L1082 229 M1332 221L1339 225L1332 229"/>
+      <path d="M1112 306V329 M1339 306V329 M1112 318H1339"/>
+      <path d="M1119 314L1112 318L1119 322 M1332 314L1339 318L1332 322"/>
+    </g>
+    <g fill="none" stroke="#8AA8A0" stroke-width="1.2" opacity="0.8">
+      <path d="M1476 249V293 M1470 249H1482 M1470 293H1482"/>
+      <path d="M1048 248V294 M1043 259H1053 M1043 283H1053"/>
+    </g>
   </g>
 </svg>
