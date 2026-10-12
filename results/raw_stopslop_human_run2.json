@@ -1,0 +1,284 @@
+{
+  "tool": "stop-slop",
+  "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
+  "run_date": "2026-10-12",
+  "run_n": 2,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "88bf6ee4f0416b26492ceb1166531d2f19578a66e6f10d06d3d5b8411ebcc94f",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 92970,
+      "output": 15378,
+      "thinking": 13904,
+      "cost_usd": 0.3201
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Adverbs",
+          "text": "significantly reduced demand for air travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly affected our entire network",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "we quickly reduced capacity to more closely align with demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Suspending share repurchases and dividends indefinitely",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "temporarily parked approximately 125 aircraft",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "largely due to the significant decrease in the demand for jet fuel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially adverse impact on our results of operations and financial position",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Payments are typically due to us monthly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "regularly scheduled passenger aircraft",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "we currently expect three phases in 2021",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We review our rate of return on plan assets assumptions annually.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "must be used exclusively for the payment of employee wages",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "We recognize breakage proportionally during the period in which the remaining miles are actually redeemed.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "the Coronavirus Aid, Relief, and Economic Security Act (\"CARES Act\") was enacted into law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "an additional COVID-19 support bill was enacted into law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The support payments were conditioned on our agreement to comply with a variety of conditions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The relative fair value of the warrants issued in 2020 is recorded within stockholder's equity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "were recorded in cash and cash equivalents when received and were recognized as contra-expense",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Impairments and other charges related to the retirement of these fleets are reflected in restructuring charges.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "These charges were calculated using Level 3 fair value inputs based primarily upon recent market transactions and third-party bids",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "there was no indication that goodwill was impaired",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When traveling, customers earn miles based on the passenger's loyalty program status and ticket price.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we receive a cash payment at the time of sale, we record the cash received on advance sales as deferred revenue in air traffic liability.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we evaluate goodwill for impairment using a quantitative approach, we estimate the fair value of the reporting unit by considering both comparable public company multiples",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence Starters to Avoid",
+          "text": "When we perform a quantitative impairment assessment of our indefinite-lived intangible assets, fair value is estimated based on",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Binary Contrasts",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "Our forecasted expense and liquidity management initiatives may be modified as the demand environment evolves.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "we believe that many of the cost savings achieved during 2020 were structural in nature",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Word Patterns",
+          "text": "requiring all customers and customer-facing employees to wear masks",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Word Patterns",
+          "text": "Encouraging social distancing throughout all aspects of our operation.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": []
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

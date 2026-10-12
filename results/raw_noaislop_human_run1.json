@@ -1,0 +1,160 @@
+{
+  "tool": "no-ai-slop",
+  "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
+  "run_date": "2026-10-12",
+  "run_n": 1,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "1d793d5aabd68bb1016dda98eac1a7a96122221cbc6692f6b00211752dae719a",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01STw8mybo6A47sJ8g6XCeW3",
+      "msgbatch_01WmJCpAx4CDeBMH9okexKho"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 4759,
+      "cache_read": 80903,
+      "output": 6931,
+      "thinking": 6303,
+      "cost_usd": 0.2862
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "faux-insight setups",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": []
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": [
+        {
+          "rule": "Words to cut",
+          "text": "where businesses share technology and leverage common fundamental strengths and capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "3M utilizes a number of tools to hedge currency risk related to earnings.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "The Company does not utilize derivative instruments linked to the Company's stock.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "the Company has not utilized special purpose entities to facilitate off-balance sheet financing arrangements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "to facilitate off-balance sheet financing arrangements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Often-empty phrases",
+          "text": "3M is increasing its investment in manufacturing and sourcing capability in order to more closely align its product capability with its sales in major geographic areas in order to best serve its customers throughout the world with proprietary, automated, efficient, safe and sustainable processes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Often-empty phrases",
+          "text": "3M's strong balance sheet and liquidity provide the Company with significant flexibility to fund its numerous opportunities going forward.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Often-empty phrases",
+          "text": "In terms of SG&A as a percent of sales, partially offsetting these decreases was the overall effect of the COVID-19 pandemic on sales that resulted in higher costs as a percent of sales.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

@@ -1,0 +1,386 @@
+{
+  "tool": "stop-slop",
+  "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
+  "run_date": "2026-10-12",
+  "run_n": 3,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "88bf6ee4f0416b26492ceb1166531d2f19578a66e6f10d06d3d5b8411ebcc94f",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 92970,
+      "output": 1785,
+      "thinking": 0,
+      "cost_usd": 0.2521
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Lazy extremes (every, always, never, everyone, everybody, nobody)",
+          "text": "nearly all other discretionary spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes (every, always, never, everyone, everybody, nobody)",
+          "text": "nearly all discretionary spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False agency",
+          "text": "the refinery's shift to producing more non-jet fuel products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False agency",
+          "text": "the refinery shifted production to more non-jet fuel products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly reduced demand for air travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly affected our entire network",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "has remained depressed",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "improved at a slow pace",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "remains significantly below pre-pandemic levels",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily focus",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily due to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily related to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily composed of",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily driven by",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily incurred",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily funded",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily on",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "largely on",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "largely due to",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "quickly reduced capacity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "quick and decisive action",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly lower than prior to the COVID-19 pandemic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly affected",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly below",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly impacted",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly exceeded",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly influence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially adverse impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially affect",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially from",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "materially impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "we believe that many of the cost savings achieved during 2020 were structural in nature",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative Listing",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Binary Contrasts",
+          "text": "not primarily driven by the reduction in capacity or revenue",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "large public events were cancelled, governmental authorities began imposing restrictions on non-essential activities, businesses suspended travel and popular leisure destinations temporarily closed to visitors",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Certain countries that are key markets for our business have imposed bans",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The support payments were conditioned on our agreement to comply with a variety of conditions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "These charges were calculated using Level 3 fair value inputs",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Construction is underway",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Construction is expected to be completed by 2023",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Construction will be phased to limit passenger inconvenience and is expected to be completed by 2026",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "The facility will also offer direct access",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Wh- sentence openers",
+          "text": "When we receive a cash payment at the time of sale, we record the cash received on advance sales as deferred revenue in air traffic liability.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Wh- sentence openers",
+          "text": "When traveling, customers earn miles based on the passenger's loyalty program status and ticket price.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Wh- sentence openers",
+          "text": "When we evaluate goodwill for impairment using a quantitative approach, we estimate the fair value of the reporting unit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Wh- sentence openers",
+          "text": "When we perform a quantitative impairment assessment of our indefinite-lived intangible assets, fair value is estimated",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": []
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

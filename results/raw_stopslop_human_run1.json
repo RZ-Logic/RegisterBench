@@ -1,0 +1,315 @@
+{
+  "tool": "stop-slop",
+  "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
+  "run_date": "2026-10-12",
+  "run_n": 1,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "88bf6ee4f0416b26492ceb1166531d2f19578a66e6f10d06d3d5b8411ebcc94f",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01STw8mybo6A47sJ8g6XCeW3",
+      "msgbatch_01WmJCpAx4CDeBMH9okexKho"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 5165,
+      "cache_read": 87805,
+      "output": 1564,
+      "thinking": 0,
+      "cost_usd": 0.2608
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Lazy extremes",
+          "text": "all flights",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "all aspects of our operation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "all U.S.-based employees",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "nearly all other discretionary spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
+          "text": "nearly all discretionary spending",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague declaratives",
+          "text": "we believe that many of the cost savings achieved during 2020 were structural in nature",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "The support payments were conditioned on our agreement to comply with a variety of conditions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "The relative fair value of the warrants issued in 2020 is recorded within stockholder's equity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "the discount reducing the carrying value of the loan which is being amortized as interest expense",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "were recognized as contra-expense in government grant recognition in our income statement",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "This provided us with approximately $200 million of additional liquidity during 2020.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "an additional COVID-19 support bill was enacted into law",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive voice",
+          "text": "Approximately one-half of the expected warrants were issued on January 15, 2021",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False agency",
+          "text": "the refinery's shift to producing more non-jet fuel products due to the decline in demand for jet fuel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False agency",
+          "text": "the refinery shifted production to more non-jet fuel products",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Narrator-from-a-distance",
+          "text": "We believe that the jet fuel supply resulting from the refinery's operation generally contributes to reducing the market price of jet fuel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly reduced demand for air travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "significantly affected our entire network",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "has remained depressed, which has had an unprecedented and materially adverse impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "Although demand has improved at a slow pace since that time, it remains significantly below pre-pandemic levels",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "remains depressed until effective vaccines become broadly available, vaccination becomes widespread globally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "quickly reduced capacity to more closely align with demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "took quick and decisive action to mitigate liquidity risk",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "increased significantly in 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "decreased significantly in 2020 compared to 2019",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "vary and impact the comparability",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily composed of lounge access and codeshare revenues",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "primarily due to the impact of, and our response to, the COVID-19 pandemic",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague declaratives",
+          "text": "The length and severity of the reduction in travel demand due to the COVID-19 pandemic are uncertain",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague declaratives",
+          "text": "actual results may differ materially from these estimates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague declaratives",
+          "text": "actual results may vary materially from the amounts discussed herein",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague declaratives",
+          "text": "actual transaction amounts may differ materially from these estimates",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em-dashes",
+          "text": "we expect three phases in 2021",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhetorical setups",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Binary contrasts",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": []
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

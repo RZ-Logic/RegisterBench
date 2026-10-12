@@ -1,0 +1,390 @@
+{
+  "tool": "the-antislop",
+  "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
+  "run_date": "2026-10-12",
+  "run_n": 3,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "6ef63359c21fd05be8271cbf8f97fd3aa9a835cf29ef78d7dadee49935ff6675",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 119394,
+      "output": 52035,
+      "thinking": 49477,
+      "cost_usd": 0.506
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Align with",
+          "text": "align with expected demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Align with",
+          "text": "align with demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "a seamless travel experience",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "unprecedented, widespread and persistent impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "employee wages, salaries and benefits",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Paired adjectives",
+          "text": "quick and decisive action",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Paired adjectives",
+          "text": "consistently safe and sanitized experience",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "utilized available seating capacity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "we have implemented, and will continue to implement, cost saving initiatives",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "Implementing significant workforce social distancing and protection measures",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "The terminal will feature a new, larger Delta Sky Club, wider concourses, more gate seating and 75% more concessions space than the existing terminals.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Flattery sandwiches",
+          "text": "While we have increased capacity compared to the lowest levels in April 2020, system capacity remains significantly lower than prior to the COVID-19 pandemic.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Flattery sandwiches",
+          "text": "While the Pension Protection Act makes our funding obligations for these plans more predictable, factors outside our control continue to have an impact on the funding requirements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Flattery sandwiches",
+          "text": "Although we are in a three year cumulative loss position as of December 31, 2020, we have a recent history of significant earnings prior to the onset of the COVID-19 pandemic.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "However/But",
+          "text": "However, due to the decrease in customer demand beginning in March, passenger unit revenue related to our domestic region decreased 42% with capacity down 43% compared to the prior year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "However/But",
+          "text": "However, we believe that many of the cost savings achieved during 2020 were structural in nature, which we expect to lead to lower non-fuel unit cost in the future.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "However/But",
+          "text": "However, we expect to reduce those expenses during 2021 by paying down our debt in addition to scheduled maturities.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "However/But",
+          "text": "However, during 2019, we voluntarily contributed $1 billion to these plans.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "Adopting new cleaning procedures on all flights, including regular disinfectant electrostatic spraying on aircraft and sanitizing high-touch areas like tray tables, entertainment screens, armrests and seat-back pockets.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": [
+        {
+          "rule": "Copula avoidance",
+          "text": "We have served as the Company's auditor since 1979.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Opinion on the Consolidated Financial Statements",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Title Case Headings",
+          "text": "Description of the Company and Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "blend heart, science and ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Promotional language",
+          "text": "The Company is committed to bringing its full breadth and depth to ensure health for people today and for future generations.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "the Company is poised to fulfill its purpose and successfully meet the demands of the rapidly evolving markets in which it competes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "accessible, high quality, innovative",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "partnerships that will profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "This ensures the Company can remain focused on addressing the unmet needs of society every day and invest for an enduring impact, ultimately delivering value to its patients, consumers and healthcare professionals, employees, communities and shareholders.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "the Company utilized three wholesalers",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Analysis of Sales by Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging in the Pharmaceutical and Consumer Health businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging in selling, marketing and administrative expense",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "The robust, active business continuity plans",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Moreover/Furthermore",
+          "text": "Moreover, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "We have served as the Company's auditor since at least 1920.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "utilizing third party information on price and market conditions in the U.S. pharmaceutical market, the terms of the specific rebate programs, and the historical experience and trend analysis of actual rebate claims paid",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Opinions on the Financial Statements and Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": [
+        {
+          "rule": "Copula avoidance",
+          "text": "We have served as the Company's auditor since 1921.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "We obtained an understanding, evaluated the design, and tested the effectiveness of controls over the Company's accounting process for uncertain tax positions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "We obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's annual impairment assessments for trademarks with indefinite lives and reporting units with goodwill.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "comparing significant judgmental inputs to observable third party and industry sources, considering other observable market transactions, and evaluating the reasonableness of management's projected financial information by comparing to third party industry projections, third party economic growth projections, and other internal and external data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

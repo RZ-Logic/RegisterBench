@@ -1,43 +1,62 @@
 {
   "tool": "no-ai-slop",
   "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
-  "run_date": "2026-07-24",
+  "run_date": "2026-10-12",
   "run_n": 3,
   "options": {
     "model": "claude-sonnet-5",
-    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. One independent pass per draft per run (matches the API harness's per-file call granularity). Supersedes the earlier N=1 preview files, which used coarser per-tool-all-drafts granularity."
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "1d793d5aabd68bb1016dda98eac1a7a96122221cbc6692f6b00211752dae719a",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 7355,
+      "cache_write": 0,
+      "cache_read": 47590,
+      "output": 34126,
+      "thinking": 30456,
+      "cost_usd": 0.1827
+    }
   },
   "files": {
     "fin-01.md": {
       "words": 371,
       "findings": [
         {
-          "rule": "Patterns to cut \u2014 Binary contrasts",
+          "rule": "Binary contrasts",
           "text": "This was not a temporary disruption. It was a structural shift.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Often-empty phrases (\"in order to\")",
-          "text": "the Company adapted its fulfillment operations in order to meet that demand",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Patterns to cut \u2014 Importance puffery",
+          "rule": "Importance puffery",
           "text": "marking a pivotal moment in the Company's product history",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright (\"leverage\")",
-          "text": "the Company leverages its installed base across products, services, and experiences",
+          "rule": "Words to cut",
+          "text": "leverages its installed base",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Fake-profound kickers",
-          "text": "Only time will tell how durable these gains prove.",
+          "rule": "Importance puffery",
+          "text": "The seamless integration of hardware and services continued to differentiate the Company's offerings from those of its competitors.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Fake-profound kickers",
+          "text": "Whether the demand gains recorded during the pandemic period persist as public health conditions normalize remains an open question. Only time will tell how durable these gains prove.",
           "index": null,
           "severity": null
         }
@@ -47,68 +66,68 @@
       "words": 379,
       "findings": [
         {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "to empower every person and every organization on the planet to achieve more",
+          "rule": "Words to cut",
+          "text": "empower every person and every organization on the planet to achieve more",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "we work to foster an ecosystem in which partners build durable businesses on our infrastructure",
+          "rule": "Words to cut",
+          "text": "foster an ecosystem in which partners build durable businesses on our infrastructure",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "supported by a robust balance sheet",
+          "rule": "Throat-clearing openers",
+          "text": "Let's take a closer look at the drivers behind these results.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "in an ever-evolving market",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Patterns to cut \u2014 Fake-strong verbs",
+          "rule": "Fake-strong verbs",
           "text": "Azure serves as a cornerstone of the commercial cloud",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Weasel attribution",
+          "rule": "Weasel attribution",
           "text": "it is widely regarded as the primary engine of the Company's growth",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Rhetorical setups",
+          "rule": "Words to cut",
+          "text": "ever-evolving market",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "robust balance sheet",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhetorical setups",
           "text": "What does this mean for the year ahead?",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Throat-clearing openers",
-          "text": "Make no mistake:",
+          "rule": "Colon reveals",
+          "text": "Make no mistake: aggregate demand for our software, services, and devices remains correlated to global macroeconomic and geopolitical factors.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Colon reveals",
+          "rule": "Colon reveals",
           "text": "The result: a durable franchise.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Patterns to cut \u2014 Summary-recap endings",
+          "rule": "Summary-recap endings",
           "text": "The result: a durable franchise. Management believes the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel position the Company to sustain growth across economic cycles.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Patterns to cut \u2014 Robotic rhythm",
-          "text": "Office Commercial products and cloud services revenue increased 12%, driven by Office 365 Commercial growth of 24%. Server products and cloud services revenue increased 27%, driven by Azure growth of 56%.",
           "index": null,
           "severity": null
         }
@@ -118,31 +137,37 @@
       "words": 397,
       "findings": [
         {
-          "rule": "Weasel attribution",
+          "rule": "weasel attribution",
           "text": "experts believe transfer-pricing disputes of this size can take a decade to resolve",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Superficial analysis",
+          "rule": "superficial analysis",
           "text": "underscoring the importance of rigorous transfer-pricing documentation",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 banned outright",
-          "text": "a meticulous assessment",
+          "rule": "words to cut",
+          "text": "meticulous assessment",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Negative listing",
+          "rule": "negative listing",
           "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Fake-strong verbs",
+          "rule": "dramatic fragmentation",
+          "text": "Not a checkbox. A judgment.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "importance puffery",
           "text": "the Company boasts a tax function with the depth to support that documentation",
           "index": null,
           "severity": null
@@ -154,12 +179,12 @@
       "findings": [
         {
           "rule": "Throat-clearing openers",
-          "text": "Here's the thing: after initially impacting service to China beginning in January 2020, the spread of the virus affected the entire network within eight weeks.",
+          "text": "Here's the thing:",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Robotic rhythm",
+          "rule": "Dramatic fragmentation",
           "text": "Demand collapsed. Fleets parked. Cash burned.",
           "index": null,
           "severity": null
@@ -201,7 +226,7 @@
         },
         {
           "rule": "Formatting slop",
-          "text": "is **particularly significant**",
+          "text": "particularly significant",
           "index": null,
           "severity": null
         },
@@ -213,13 +238,7 @@
         },
         {
           "rule": "Binary contrasts",
-          "text": "not just a product portfolio but a platform",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Synonym cycling",
-          "text": "the enterprise treats its breadth as not just a product portfolio but a platform. The organization invests accordingly, and the healthcare giant's scale allows those investments to compound.",
+          "text": "the enterprise treats its breadth as not just a product portfolio but a platform",
           "index": null,
           "severity": null
         },
@@ -236,8 +255,8 @@
           "severity": null
         },
         {
-          "rule": "Banned outright",
-          "text": "The transformative potential of this innovation pipeline",
+          "rule": "Words to cut (banned outright)",
+          "text": "transformative potential of this innovation pipeline",
           "index": null,
           "severity": null
         }
@@ -247,14 +266,38 @@
       "words": 342,
       "findings": [
         {
+          "rule": "Often-empty phrases",
+          "text": "In this memorandum, we'll walk through",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Use active voice",
+          "text": "The control environment absorbed a fiscal year conducted substantially under remote working conditions.",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Rhetorical setups",
           "text": "So what changed this year? Quite a bit.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Robotic rhythm",
+          "rule": "Dramatic fragmentation",
           "text": "Tested. Documented. Certified.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Colon reveals",
+          "text": "That's a great question from the committee, and one management considered carefully: whether remote certification streamlined the close process or merely relocated its risks.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "streamlined the close process",
           "index": null,
           "severity": null
         },
@@ -266,7 +309,7 @@
         },
         {
           "rule": "Summary-recap endings",
-          "text": "In conclusion, management's assessment stands, the external auditor concurs, and the certification schedule for the coming fiscal year has been distributed to control owners. I hope this summary helps clarify our approach.",
+          "text": "In conclusion, management's assessment stands, the external auditor concurs, and the certification schedule for the coming fiscal year has been distributed to control owners.",
           "index": null,
           "severity": null
         }
@@ -288,14 +331,20 @@
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 banned outright (utilize)",
-          "text": "The Company utilizes commercial paper markets",
+          "rule": "Often-empty phrases",
+          "text": "At the end of the day,",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 often-empty phrases",
-          "text": "At the end of the day,",
+          "rule": "Superficial analysis",
+          "text": "indicating that incremental debt issuance funded returns rather than operations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Use active voice",
+          "text": "The balance sheet tells us a story of discipline.",
           "index": null,
           "severity": null
         },
@@ -307,7 +356,7 @@
         },
         {
           "rule": "Summary-recap endings",
-          "text": "To summarize, the Company expects to maintain its quarterly dividend, complete the incremental repurchase authorization, and fund both from operating cash flow and debt issuance in roughly the proportions observed over the trailing eight quarters.",
+          "text": "To summarize,",
           "index": null,
           "severity": null
         },
@@ -330,12 +379,12 @@
         },
         {
           "rule": "Weasel attribution",
-          "text": "Observers note that",
+          "text": "Observers note",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
+          "rule": "Words to cut",
           "text": "multifaceted",
           "index": null,
           "severity": null
@@ -348,12 +397,18 @@
         },
         {
           "rule": "Faux-insight setups",
-          "text": "Here is the part most reviewers skip:",
+          "text": "Here is the part most reviewers skip",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Often-empty adverbs",
+          "rule": "Colon reveals",
+          "text": "Here is the part most reviewers skip: the predictive value of the historical percentage of sales incentive costs to retail sales from dealers is itself an assumption, and it is fundamentally the assumption on which the accrual turns.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Often-empty adverbs",
           "text": "fundamentally",
           "index": null,
           "severity": null
@@ -363,24 +418,6 @@
     "fin-09.md": {
       "words": 354,
       "findings": [
-        {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "the ever-evolving markets in which it competes",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence",
-          "index": null,
-          "severity": null
-        },
         {
           "rule": "Negative listing",
           "text": "The Credo is not a slogan. Not a poster. An operating system.",
@@ -394,8 +431,74 @@
           "severity": null
         },
         {
+          "rule": "Words to cut",
+          "text": "Certainly, the Credo remains central",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "committed to bringing its full breadth and depth to ensure health for people today and for future generations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "the Company is poised to fulfill its purpose",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "ever-evolving markets",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "A critical driver of the Company's success",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "empowered and inspired",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Robotic rhythm",
-          "text": "Firstly, the scale of the enterprise compounds the impact of individual initiative: Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence, and to invest for an enduring impact, ultimately delivering value to its patients, consumers and healthcare professionals, employees, communities and shareholders. Secondly, the significant investment in talent development mirrors the significant investment in research: both are managed as long-horizon assets, and both showed significantly higher retention and productivity metrics in 2020 than in the prior year.",
+          "text": "Firstly, the scale of the enterprise compounds the impact of individual initiative",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut",
+          "text": "Leveraging the extensive resources across the enterprise",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Summary-recap endings",
+          "text": "ultimately delivering value to its patients, consumers and healthcare professionals, employees, communities and shareholders",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robotic rhythm",
+          "text": "Secondly, the significant investment in talent development mirrors the significant investment in research",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Be concrete and specific",
+          "text": "showed significantly higher retention and productivity metrics in 2020 than in the prior year",
           "index": null,
           "severity": null
         }
@@ -411,7 +514,7 @@
           "severity": null
         },
         {
-          "rule": "Robotic rhythm",
+          "rule": "Dramatic fragmentation",
           "text": "Azure grew 56%. Office held. Gaming climbed.",
           "index": null,
           "severity": null
@@ -423,14 +526,14 @@
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
+          "rule": "Words to cut (banned word: game changer)",
           "text": "a game-changer for the revenue mix",
           "index": null,
           "severity": null
         },
         {
           "rule": "Faux-insight setups",
-          "text": "the insight everyone's missing is how much of that shift happened inside existing enterprise agreements rather than through new customer acquisition.",
+          "text": "the insight everyone's missing is how much of that shift happened inside existing enterprise agreements rather than through new customer acquisition",
           "index": null,
           "severity": null
         },
@@ -441,26 +544,44 @@
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
+          "rule": "Words to cut (banned word: harness)",
           "text": "harnessing a global datacenter footprint",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Often-empty adverbs",
+          "rule": "Often-empty adverbs",
           "text": "regional competitors literally cannot match",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words to cut \u2014 Banned outright",
-          "text": "the cutting-edge infrastructure investments",
+          "rule": "Words to cut (banned word: cutting-edge)",
+          "text": "the cutting-edge infrastructure investments of the past five years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes",
+          "text": "Growth \u2014 real, durable growth \u2014 across products, platforms, and partnerships defined the fiscal year",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "defined the fiscal year",
           "index": null,
           "severity": null
         },
         {
           "rule": "Summary-recap endings",
           "text": "In conclusion, the momentum speaks for itself:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Colon reveals",
+          "text": "the momentum speaks for itself: commercial cloud annualized revenue exited the fiscal year above its entry run-rate in every segment",
           "index": null,
           "severity": null
         }

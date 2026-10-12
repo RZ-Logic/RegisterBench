@@ -1,0 +1,262 @@
+{
+  "tool": "avoid-ai-writing-skill",
+  "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
+  "run_date": "2026-10-12",
+  "run_n": 2,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "955986644cea356586b35a13518f018bb4542ce065d5c98785472bbc65117ca4",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 480186,
+      "output": 35336,
+      "thinking": 33552,
+      "cost_usd": 0.4586
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": []
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Tier 1 word \u2014 robust",
+          "text": "Ford Credit's liquidity profile continues to be diverse, robust, and focused on maintaining liquidity levels that meet its business and funding requirements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word \u2014 utilize",
+          "text": "the utilized portion of the corporate credit facility was $27 million, representing amounts utilized for letters of credit, and no portion of the supplemental revolving credit facility was utilized.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word \u2014 utilize",
+          "text": "while more than 50% of the aggregate amount of commitments under the two facilities is utilized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word \u2014 in order to",
+          "text": "In order to compensate Ford Credit for the lower interest or lease payments offered to the retail customer, we pay the discounted value of the incentive directly to Ford Credit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite \u2014 Moreover",
+          "text": "Moreover, our suspension of production earlier this year put pressure on our Automotive liquidity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite \u2014 Moreover",
+          "text": "Moreover, new restrictions could have an adverse effect on production, supply chains, distribution, and demand for vehicles.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Tier 1 word: leverage (verb)",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word: leverage (verb)",
+          "text": "Leveraging in the Pharmaceutical and Consumer Health businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word: leverage (verb)",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities while closely monitoring and maintaining critical inventory at major distribution centers away from high-risk areas to ensure adequate and effective distribution.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word: robust",
+          "text": "The robust, active business continuity plans across the Company's network have been instrumental in preparing the Company for events like COVID-19 and the ability to meet the majority of patient and consumer needs remains uninterrupted.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word: enduring",
+          "text": "invest for an enduring impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word: utilize",
+          "text": "the Company utilized three wholesalers distributing products for all three segments that represented approximately 16.0%, 12.0% and 12.0% of the total consolidated revenues",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Compulsive rule of three",
+          "text": "to blend heart, science and ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Compulsive rule of three",
+          "text": "developing accessible, high quality, innovative products and services",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Compulsive rule of three",
+          "text": "critical capabilities, technologies and solutions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Inline-header lists",
+          "text": "\u2022Business Continuity: The robust, active business continuity plans across the Company's network have been instrumental in preparing the Company for events like COVID-19 and the ability to meet the majority of patient and consumer needs remains uninterrupted.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Description of the Company and Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title case headings",
+          "text": "Analysis of Sales by Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, the growth was negatively impacted by declining sales of ZYTIGA\u00ae (abiraterone acetate) and VELCADE\u00ae (bortezomib) due to generic competition.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, sales of TRACLEER\u00ae (bosentan) were negatively impacted by generics and migration to OPSUMIT\u00ae.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, the Company has entered into certain vaccine development cost sharing arrangements with government related organizations.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally, as a result of the Tax Cuts and Jobs Act (TCJA), the Company has access to its cash outside the U.S. at a significantly reduced cost.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": [
+        {
+          "rule": "Tier 1 word replacement \u2014 comprehensive",
+          "text": "comprehensive multi-party settlements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word replacement \u2014 comprehensive",
+          "text": "comprehensive multi-party settlements",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word replacement \u2014 utilize",
+          "text": "utilizing third party information",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite \u2014 Moreover",
+          "text": "Moreover, projections of any evaluation of effectiveness to future periods are subject to the risk that controls may become inadequate because of changes in conditions, or that the degree of compliance with the policies or procedures may deteriorate.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

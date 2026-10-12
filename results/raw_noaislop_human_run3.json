@@ -1,0 +1,207 @@
+{
+  "tool": "no-ai-slop",
+  "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
+  "run_date": "2026-10-12",
+  "run_n": 3,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "1d793d5aabd68bb1016dda98eac1a7a96122221cbc6692f6b00211752dae719a",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 85662,
+      "output": 15882,
+      "thinking": 14791,
+      "cost_usd": 0.3219
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Words to cut (banned word: facilitate)",
+          "text": "To facilitate transactions with participating companies, we sell miles to non-airline businesses, customers and other airlines.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut (banned word: facilitate)",
+          "text": "receive a Port Authority contribution of $481 million to facilitate construction of the terminal and other supporting infrastructure",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut (banned word: utilize)",
+          "text": "using aircraft in our fleet not then being utilized for passenger travel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words to cut (often-empty phrase: going forward)",
+          "text": "baggage system upgrades designed to increase the terminals' operational efficiency going forward.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Make verbs do the work (fake-strong verb phrase)",
+          "text": "do not have the ability to work remotely",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Binary contrasts / Negative listing",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "it also represented the first major phasing milestone",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Banned outright",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Banned outright",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Banned outright",
+          "text": "Leveraging in the Pharmaceutical and Consumer Health businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Banned outright",
+          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Banned outright",
+          "text": "The robust, active business continuity plans across the Company's network have been instrumental in preparing the Company for events like COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial analysis",
+          "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships that will profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "the Company's purpose is to blend heart, science and ingenuity to profoundly change the trajectory of health for humanity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "A critical driver of the Company's success is the 134,500 diverse employees worldwide.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "This ensures the Company can remain focused on addressing the unmet needs of society every day and invest for an enduring impact, ultimately delivering value to its patients, consumers and healthcare professionals, employees, communities and shareholders.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "United around this common ambition, the Company is poised to fulfill its purpose and successfully meet the demands of the rapidly evolving markets in which it competes.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

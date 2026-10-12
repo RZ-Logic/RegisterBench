@@ -1,42 +1,55 @@
 {
   "tool": "the-antislop",
   "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
-  "run_date": "2026-07-24",
+  "run_date": "2026-10-12",
   "run_n": 2,
   "options": {
     "model": "claude-sonnet-5",
-    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. One independent pass per draft per run (matches the API harness's per-file call granularity). Supersedes the earlier N=1 preview files, which used coarser per-tool-all-drafts granularity."
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "6ef63359c21fd05be8271cbf8f97fd3aa9a835cf29ef78d7dadee49935ff6675",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 7355,
+      "cache_write": 0,
+      "cache_read": 66330,
+      "output": 24366,
+      "thinking": 20730,
+      "cost_usd": 0.1358
+    }
   },
   "files": {
     "fin-01.md": {
       "words": 371,
       "findings": [
         {
-          "rule": "Comparator Sentences",
+          "rule": "Comparator sentences",
           "text": "This was not a temporary disruption. It was a structural shift.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Filler phrases",
-          "text": "in order to meet that demand",
+          "rule": "Em dash overuse",
+          "text": "Customers \u2014 and, by extension, channel partners \u2014 moved decisively toward online purchasing",
           "index": null,
           "severity": null
         },
         {
           "rule": "Excessive hedging",
-          "text": "could potentially affect",
+          "text": "could potentially affect demand for consumer products into the next fiscal year",
           "index": null,
           "severity": null
         },
         {
           "rule": "Pivotal moment",
-          "text": "marking a pivotal moment in the Company's product history",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Significance inflation",
           "text": "marking a pivotal moment in the Company's product history",
           "index": null,
           "severity": null
@@ -49,7 +62,19 @@
         },
         {
           "rule": "Leverage (as verb)",
-          "text": "leverages its installed base",
+          "text": "as the Company leverages its installed base across products, services, and experiences",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "products, services, and experiences",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "The seamless integration of hardware and services continued to differentiate the Company's offerings from those of its competitors.",
           "index": null,
           "severity": null
         },
@@ -65,8 +90,8 @@
       "words": 379,
       "findings": [
         {
-          "rule": "False ranges",
-          "text": "from startups to superpowers",
+          "rule": "Let's dive in",
+          "text": "Let's take a closer look at the drivers behind these results.",
           "index": null,
           "severity": null
         },
@@ -83,8 +108,32 @@
           "severity": null
         },
         {
-          "rule": "Vague attributions",
-          "text": "Management believes",
+          "rule": "Comprehensive and thorough",
+          "text": "dynamic and highly competitive",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "robust balance sheet",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Explanatory Header Templates",
+          "text": "What does this mean for the year ahead?",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Manufactured Personality",
+          "text": "Make no mistake:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Manufactured Personality",
+          "text": "The result: a durable franchise.",
           "index": null,
           "severity": null
         },
@@ -106,14 +155,26 @@
           "severity": null
         },
         {
+          "rule": "Superficial -ing analyses",
+          "text": "underscoring the importance of rigorous transfer-pricing documentation",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Moreover/Furthermore",
-          "text": "Furthermore",
+          "text": "Furthermore, due to the fact that some portion or all of the adjustment proposed by the IRS could be upheld",
           "index": null,
           "severity": null
         },
         {
           "rule": "Filler phrases",
           "text": "due to the fact that",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Staccato Fragment Spam",
+          "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
           "index": null,
           "severity": null
         },
@@ -128,12 +189,6 @@
           "text": "the Company boasts a tax function with the depth to support that documentation",
           "index": null,
           "severity": null
-        },
-        {
-          "rule": "Comparator Sentences",
-          "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
-          "index": null,
-          "severity": null
         }
       ]
     },
@@ -141,25 +196,61 @@
       "words": 356,
       "findings": [
         {
-          "rule": "Structural Patterns \u2014 Staccato Fragment Spam",
+          "rule": "Suspicious when repeated - Here's the thing",
+          "text": "Here's the thing: after initially impacting service to China beginning in January 2020",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Staccato fragment spam",
           "text": "Demand collapsed. Fleets parked. Cash burned.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Language Patterns \u2014 Rule of three",
-          "text": "safety, liquidity, and recovery",
+          "rule": "Significance inflation",
+          "text": "The unprecedented, widespread and persistent impact of COVID-19 and the related travel restrictions implemented throughout the world significantly reduced demand for air travel.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Content Patterns \u2014 Significance inflation",
+          "rule": "Significance inflation",
           "text": "a watershed moment for the industry",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Filler and Hedging \u2014 Generic conclusions",
+          "rule": "Manufactured Personality",
+          "text": "The market decided for us.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Explanatory Header Templates",
+          "text": "What nobody tells you about airline recoveries is that the cost base recovers faster than the revenue base.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "management organized its actions around safety, liquidity, and recovery",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Self-Promotional Framing",
+          "text": "We believe the airline enters the recovery with a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
           "text": "The future looks bright for carriers that adapt.",
           "index": null,
           "severity": null
@@ -170,68 +261,44 @@
       "words": 349,
       "findings": [
         {
-          "rule": "Style Patterns \u2014 Boldface overuse",
-          "text": "**Consumer Health**, **Pharmaceutical**, and **Medical Devices**",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Style Patterns \u2014 Boldface overuse",
-          "text": "**particularly significant**",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 1: Almost Always AI \u2014 It's worth noting",
+          "rule": "It's worth noting",
           "text": "It is important to note that",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Content Patterns \u2014 Vague attributions",
+          "rule": "Vague attributions",
           "text": "Studies show that diversified healthcare companies outperform single-segment peers across economic cycles",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Language Patterns \u2014 Negative parallelisms",
-          "text": "not just a product portfolio but a platform",
+          "rule": "Negative parallelisms",
+          "text": "the enterprise treats its breadth as not just a product portfolio but a platform",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Language Patterns \u2014 Synonym cycling",
-          "text": "the enterprise treats its breadth as not just a product portfolio but a platform. The organization invests accordingly, and the healthcare giant's scale allows those investments to compound.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Language Patterns \u2014 Synonym cycling",
+          "rule": "Significance inflation",
           "text": "a testament to the research organization",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Content Patterns \u2014 Significance inflation",
-          "text": "a testament to the research organization",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Language Patterns \u2014 Superficial -ing analyses",
+          "rule": "Superficial -ing analyses",
           "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Filler and Hedging \u2014 Excessive hedging",
-          "text": "could potentially reshape",
+          "rule": "Revolutionary",
+          "text": "The transformative potential of this innovation pipeline",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Content Patterns \u2014 Vague attributions",
-          "text": "management views sustained innovation as the primary defense against pricing pressure",
+          "rule": "Excessive hedging",
+          "text": "could potentially reshape",
           "index": null,
           "severity": null
         }
@@ -241,26 +308,38 @@
       "words": 342,
       "findings": [
         {
-          "rule": "Structural Patterns (Critical) \u2014 Staccato Fragment Spam",
+          "rule": "In this post, we'll cover",
+          "text": "In this memorandum, we'll walk through management's assessment of internal control over financial reporting as of November 1, 2020.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Staccato fragment spam",
           "text": "Tested. Documented. Certified.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Communication Patterns \u2014 Sycophantic tone",
+          "rule": "Sycophantic tone",
           "text": "That's a great question from the committee, and one management considered carefully",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Communication Patterns \u2014 Cutoff disclaimers",
-          "text": "As of my last update",
+          "rule": "Cutoff disclaimers",
+          "text": "As of my last update, no control deficiencies aggregating to a significant deficiency had been identified in the fourth quarter",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Communication Patterns \u2014 Chatbot artifacts",
+          "rule": "Chatbot artifacts",
           "text": "I hope this summary helps clarify our approach.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Outline-like conclusions",
+          "text": "In conclusion, management's assessment stands, the external auditor concurs, and the certification schedule for the coming fiscal year has been distributed to control owners.",
           "index": null,
           "severity": null
         }
@@ -270,26 +349,38 @@
       "words": 355,
       "findings": [
         {
+          "rule": "Clinical formality",
+          "text": "The Company utilizes commercial paper markets to bolster short-term flexibility between the timing of operating cash flows and scheduled shareholder returns.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dash overuse",
+          "text": "the Company repurchased \u2014 $72.5 billion of it \u2014 and paid dividends and dividend equivalents of $14.1 billion",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms",
+          "text": "The question isn't whether to return capital. It's how fast.",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Comparator Sentences",
           "text": "The question isn't whether to return capital. It's how fast.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Clinical formality",
-          "text": "The Company utilizes commercial paper markets",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Excessive hedging",
-          "text": "might possibly compress",
+          "text": "Interest rate movements might possibly compress the yield earned on the investment portfolio faster than they reduce the coupon paid on outstanding debt",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Copula avoidance",
-          "text": "The balance sheet tells us a story of discipline.",
+          "rule": "At the end of the day",
+          "text": "At the end of the day, the effective conversion of earnings into distributable cash is the measure management watches most closely.",
           "index": null,
           "severity": null
         },
@@ -312,13 +403,13 @@
         },
         {
           "rule": "Copula avoidance",
-          "text": "The accrual stands as the single largest management estimate in the revenue cycle",
+          "text": "The accrual stands as the single largest management estimate in the revenue cycle, which underscores its importance to the audit.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Significance inflation",
-          "text": "which underscores its importance to the audit",
+          "rule": "It's worth noting",
+          "text": "Here is the part most reviewers skip:",
           "index": null,
           "severity": null
         },
@@ -329,20 +420,20 @@
           "severity": null
         },
         {
+          "rule": "Rule of three",
+          "text": "since programs reach from the shop floor to the boardroom, highlighting the significance of dealer-level data",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "False ranges",
           "text": "programs reach from the shop floor to the boardroom",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Superficial -ing analyses",
-          "text": "highlighting the significance of dealer-level data",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Manufactured Personality",
-          "text": "Here is the part most reviewers skip:",
+          "rule": "Clinical formality",
+          "text": "fundamentally the assumption on which the accrual turns",
           "index": null,
           "severity": null
         }
@@ -352,38 +443,50 @@
       "words": 354,
       "findings": [
         {
-          "rule": "Leverage (as verb) \u2014 Tier 1: Almost Always AI",
-          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence",
+          "rule": "Staccato fragment spam",
+          "text": "Heart. Science. Ingenuity.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rule of three \u2014 Language Patterns #9",
-          "text": "heart, science and ingenuity",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Staccato Fragment Spam \u2014 Structural Patterns (Critical)",
-          "text": "Heart. Science. Ingenuity. The Credo is not a slogan. Not a poster. An operating system.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Comparator Sentences \u2014 Structural Patterns (Critical)",
+          "rule": "Negative parallelisms",
           "text": "The Credo is not a slogan. Not a poster. An operating system.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Significance inflation \u2014 Content Patterns #1",
+          "rule": "Firstly/Secondly/Thirdly",
+          "text": "Firstly, the scale of the enterprise compounds the impact of individual initiative",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Firstly/Secondly/Thirdly",
+          "text": "Secondly, the significant investment in talent development mirrors the significant investment in research",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
           "text": "to profoundly change the trajectory of health for humanity",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Promotional language \u2014 Content Patterns #4",
-          "text": "The Company is committed to bringing its full breadth and depth to ensure health for people today and for future generations.",
+          "rule": "Comprehensive and thorough",
+          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Today's digital landscape",
+          "text": "the ever-evolving markets in which it competes",
           "index": null,
           "severity": null
         }
@@ -393,32 +496,50 @@
       "words": 330,
       "findings": [
         {
-          "rule": "Tier 1: Almost Always AI (Remove Immediately) \u2014 Game-changer",
-          "text": "a game-changer for the revenue mix",
+          "rule": "Let's dive in",
+          "text": "Without further ado, the highlights:",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1: Almost Always AI (Remove Immediately) \u2014 Cutting-edge",
-          "text": "the cutting-edge infrastructure investments",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Structural Patterns (Critical) \u2014 Staccato Fragment Spam",
+          "rule": "Staccato fragment spam",
           "text": "Azure grew 56%. Office held. Gaming climbed. The takeaway: cloud is the business.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Language Patterns \u2014 Rule of three",
-          "text": "products, platforms, and partnerships",
+          "rule": "Game-changer",
+          "text": "is a game-changer for the revenue mix",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Filler and Hedging \u2014 Generic conclusions",
-          "text": "Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021.",
+          "rule": "Here's the thing",
+          "text": "Here's the thing about scale:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Cutting-edge",
+          "text": "the cutting-edge infrastructure investments of the past five years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "across products, platforms, and partnerships",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dash overuse",
+          "text": "Growth \u2014 real, durable growth \u2014 across products, platforms, and partnerships",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Generic conclusions",
+          "text": "In conclusion, the momentum speaks for itself",
           "index": null,
           "severity": null
         }

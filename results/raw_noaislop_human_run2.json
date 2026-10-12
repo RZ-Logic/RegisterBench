@@ -1,0 +1,140 @@
+{
+  "tool": "no-ai-slop",
+  "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
+  "run_date": "2026-10-12",
+  "run_n": 2,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "1d793d5aabd68bb1016dda98eac1a7a96122221cbc6692f6b00211752dae719a",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 85662,
+      "output": 1160,
+      "thinking": 742,
+      "cost_usd": 0.2483
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Importance puffery",
+          "text": "This enhanced joint venture is designed to strengthen collaboration between the three airlines and is expected to provide customers with increased access to destinations across North America, the U.K. and Europe.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "We believe this alliance will generate growth opportunities, building upon Delta's and LATAM's global footprint and joint ventures.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Importance puffery",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial analysis",
+          "text": "we have taken numerous steps to help promote the safety of our customers and employees on the ground and in the air in keeping with current health-expert recommendations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Banned words",
+          "text": "robust",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em dashes",
+          "text": "the lowest level for which there are identifiable cash flows",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": []
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": []
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": []
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

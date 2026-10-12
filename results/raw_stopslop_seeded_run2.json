@@ -1,25 +1,44 @@
 {
   "tool": "stop-slop",
   "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
-  "run_date": "2026-07-24",
+  "run_date": "2026-10-12",
   "run_n": 2,
   "options": {
     "model": "claude-sonnet-5",
-    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. One independent pass per draft per run (matches the API harness's per-file call granularity). Supersedes the earlier N=1 preview files, which used coarser per-tool-all-drafts granularity."
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "88bf6ee4f0416b26492ceb1166531d2f19578a66e6f10d06d3d5b8411ebcc94f",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 7355,
+      "cache_write": 0,
+      "cache_read": 51650,
+      "output": 41246,
+      "thinking": 36264,
+      "cost_usd": 0.2188
+    }
   },
   "files": {
     "fin-01.md": {
       "words": 371,
       "findings": [
         {
-          "rule": "Passive Voice",
-          "text": "were adversely affected by the COVID-19 pandemic",
+          "rule": "Binary Contrasts",
+          "text": "This was not a temporary disruption. It was a structural shift.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "adversely affected",
+          "rule": "Em-dashes",
+          "text": "Customers \u2014 and, by extension, channel partners \u2014 moved decisively toward online purchasing",
           "index": null,
           "severity": null
         },
@@ -31,55 +50,25 @@
         },
         {
           "rule": "Adverbs",
-          "text": "working remotely",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Binary Contrasts",
-          "text": "This was not a temporary disruption. It was a structural shift.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Em-dashes",
-          "text": "Customers \u2014 and, by extension, channel partners \u2014 moved decisively toward online purchasing",
+          "text": "moved decisively toward online purchasing",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "moved decisively",
+          "text": "The Company genuinely believes",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "genuinely believes",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "cash, cash equivalents and marketable securities",
+          "text": "could potentially affect demand",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "could potentially affect",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "primarily driven by higher net sales",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Vague Declaratives",
-          "text": "marking a pivotal moment in the Company's product history",
+          "text": "primarily driven by higher net sales of Services and Wearables, Home and Accessories",
           "index": null,
           "severity": null
         },
@@ -91,19 +80,7 @@
         },
         {
           "rule": "Adverbs",
-          "text": "partially offset by the introduction of iPhone SE",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
           "text": "due primarily to higher net sales of MacBook Pro",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "the App Store, advertising and cloud services",
           "index": null,
           "severity": null
         },
@@ -114,7 +91,13 @@
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "rule": "Vague Declaratives",
+          "text": "marking a pivotal moment in the Company's product history",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns",
           "text": "products, services, and experiences",
           "index": null,
           "severity": null
@@ -126,7 +109,13 @@
           "severity": null
         },
         {
-          "rule": "Vary rhythm",
+          "rule": "Vague Declaratives",
+          "text": "Whether the demand gains recorded during the pandemic period persist as public health conditions normalize remains an open question.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Cut quotables",
           "text": "Only time will tell how durable these gains prove.",
           "index": null,
           "severity": null
@@ -137,32 +126,14 @@
       "words": 379,
       "findings": [
         {
-          "rule": "Word Patterns \u2014 Lazy extremes (every, always, never, everyone, everybody, nobody)",
-          "text": "every person and every organization",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "designing, manufacturing, and selling devices",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Meta-Commentary",
           "text": "Let's take a closer look at the drivers behind these results.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "relatively unchanged",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "widely regarded",
+          "rule": "Lazy extremes (every, always, never, everyone, everybody, nobody)",
+          "text": "every person and every organization on the planet",
           "index": null,
           "severity": null
         },
@@ -174,13 +145,19 @@
         },
         {
           "rule": "Adverbs",
-          "text": "highly competitive",
+          "text": "widely regarded",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "software, devices, and cloud-based services",
+          "rule": "Vague Declaratives",
+          "text": "Each industry shift is an opportunity to conceive new products in an ever-evolving market.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "supported by a robust balance sheet",
           "index": null,
           "severity": null
         },
@@ -191,32 +168,32 @@
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Questions answered immediately",
-          "text": "What does this mean for the year ahead? Make no mistake: aggregate demand for our software, services, and devices remains correlated to global macroeconomic and geopolitical factors.",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Emphasis Crutches",
-          "text": "Make no mistake",
+          "text": "Make no mistake:",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "software, services, and devices",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Cut quotables",
+          "rule": "Dramatic Fragmentation",
           "text": "The result: a durable franchise.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
+          "rule": "Three-item lists",
           "text": "the breadth of the commercial cloud, the scale of the installed base, and the depth of the partner channel",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "relatively unchanged",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "highly competitive",
           "index": null,
           "severity": null
         }
@@ -256,12 +233,6 @@
           "severity": null
         },
         {
-          "rule": "Negative Listing",
-          "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Passive Voice",
           "text": "were audited on the same basis",
           "index": null,
@@ -270,6 +241,42 @@
         {
           "rule": "Passive Voice",
           "text": "could be upheld",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative Listing",
+          "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "experts believe transfer-pricing disputes of this size can take a decade to resolve",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "underscoring the importance of rigorous transfer-pricing documentation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Cut quotables",
+          "text": "the Company boasts a tax function with the depth to support that documentation",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Cut quotables",
+          "text": "It demands a holistic reading of the interplay between jurisdictional tax law and the Company's documented intent",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "subsequent rulings extend the Tax Court's methodology to later years",
           "index": null,
           "severity": null
         }
@@ -285,31 +292,13 @@
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "significantly reduced",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "initially impacting",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "temporarily closed",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns: Staccato fragmentation",
+          "rule": "Dramatic Fragmentation",
           "text": "Demand collapsed. Fleets parked. Cash burned.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Vague Declaratives",
+          "rule": "Cut quotables",
           "text": "a watershed moment for the industry",
           "index": null,
           "severity": null
@@ -321,50 +310,20 @@
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns: Em-dashes",
+          "rule": "Em-dashes",
           "text": "\u2014 slowly, unevenly \u2014",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "slowly",
+          "text": "significantly reduced demand for air travel",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "unevenly",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "significantly below",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "Additionally",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns: Three-item lists",
-          "text": "safety, liquidity, and recovery",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "large public events were cancelled",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points.",
+          "text": "it remains significantly below pre-pandemic levels",
           "index": null,
           "severity": null
         },
@@ -375,43 +334,25 @@
           "severity": null
         },
         {
-          "rule": "Word Patterns: Lazy extremes",
-          "text": "nobody",
+          "rule": "Rhetorical Setups",
+          "text": "What nobody tells you about airline recoveries is that the cost base recovers faster than the revenue base.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Business Jargon",
+          "text": "navigating a network airline through a demand shock",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "truly",
+          "text": "it truly tests every assumption in the operating plan",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Word Patterns: Lazy extremes",
-          "text": "every",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "Forecasted expense and liquidity management initiatives may be modified as the demand environment evolves",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "globally",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns: Three-item lists",
-          "text": "a stronger safety proposition, a leaner cost structure, and a loyalty program that held its value through the downturn",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Cut Quotables",
+          "rule": "Cut quotables",
           "text": "The future looks bright for carriers that adapt.",
           "index": null,
           "severity": null
@@ -422,12 +363,6 @@
       "words": 349,
       "findings": [
         {
-          "rule": "Rhythm Patterns (Three-item lists)",
-          "text": "**Consumer Health**, **Pharmaceutical**, and **Medical Devices**",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Throat-Clearing Openers",
           "text": "It is important to note that",
           "index": null,
@@ -435,31 +370,19 @@
         },
         {
           "rule": "Adverbs",
-          "text": "both locally and globally",
+          "text": "particularly significant",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Business Jargon",
-          "text": "competitive landscape",
+          "rule": "Vague Declaratives",
+          "text": "Studies show that diversified healthcare companies outperform single-segment peers across economic cycles",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "particularly",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Binary Contrasts",
+          "rule": "Formulaic Constructions",
           "text": "not just a product portfolio but a platform",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "accordingly",
           "index": null,
           "severity": null
         },
@@ -470,44 +393,32 @@
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "approximately",
+          "rule": "Vague Declaratives",
+          "text": "a testament to the research organization",
           "index": null,
           "severity": null
         },
         {
           "rule": "Passive Voice",
-          "text": "$12.2 billion was invested in research and development",
+          "text": "$12.2 billion was invested in research and development and $7.3 billion spent on acquisitions",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "The transformative potential of this innovation pipeline could potentially reshape the composition of segment revenue over the next decade",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "potentially",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "False Agency",
-          "text": "The transformative potential of this innovation pipeline could potentially reshape the composition of segment revenue",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns (Three-item lists)",
-          "text": "worldwide, U.S. and international sales were 3.3%, 3.9% and 2.8%",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "respectively",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "False Agency",
-          "text": "the competitive environment requires substantial continuing investment",
+          "text": "could potentially reshape",
           "index": null,
           "severity": null
         }
@@ -517,122 +428,92 @@
       "words": 342,
       "findings": [
         {
-          "rule": "Meta-Commentary (phrases.md) \u2014 self-referential opener announcing document structure, cf. 'In this section, we'll...'",
+          "rule": "Meta-Commentary",
           "text": "In this memorandum, we'll walk through",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'was performed'",
-          "text": "the assessment was performed based on criteria established in the Internal Control - Integrated Framework (2013) issued by the Committee of Sponsoring Organizations of the Treadway Commission.",
+          "rule": "Passive Voice",
+          "text": "the assessment was performed based on criteria established",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
-          "text": "generally",
+          "rule": "Passive Voice",
+          "text": "is designed to provide reasonable assurance",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'is designed'",
-          "text": "Internal control over financial reporting is designed to provide reasonable assurance regarding the reliability of financial reporting and the preparation of financial statements in accordance with generally accepted accounting principles.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Sentence Starters to Avoid (structures.md) \u2014 'Paragraphs starting with \"So\"'",
+          "rule": "Sentence Starters to Avoid",
           "text": "So what changed this year?",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns (structures.md) \u2014 'Questions answered immediately'",
+          "rule": "Rhythm Patterns",
           "text": "So what changed this year? Quite a bit.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "False Agency (structures.md) \u2014 inanimate 'control environment' given a human verb",
+          "rule": "False Agency",
           "text": "The control environment absorbed a fiscal year conducted substantially under remote working conditions.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
+          "rule": "Adverbs",
           "text": "substantially",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns (structures.md) \u2014 'Three-item lists'",
-          "text": "reconciliation, review, and certification",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Dramatic Fragmentation (structures.md) \u2014 sentence fragments for emphasis",
+          "rule": "Dramatic Fragmentation",
           "text": "Tested. Documented. Certified.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Sentence Starters to Avoid (structures.md) \u2014 'Sentences starting with What, When, Where, Which, Who, Why, How'",
-          "text": "Where COVID-19 disrupted the operation of a control, management implemented a comprehensive framework of compensating controls, and the external auditor evaluated those compensating controls as part of its integrated audit.",
+          "rule": "Rhetorical Setups",
+          "text": "That's a great question from the committee, and one management considered carefully",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'were covered by'",
-          "text": "the related statements of consolidated comprehensive income were covered by the same integrated audit.",
+          "rule": "Adverbs",
+          "text": "merely relocated its risks",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhetorical Setups (structures.md) \u2014 announces insight via a colon-setup rather than delivering it directly, cf. 'Here's what I mean:'",
-          "text": "That's a great question from the committee, and one management considered carefully: whether remote certification streamlined the close process or merely relocated its risks.",
+          "rule": "Adverbs",
+          "text": "Honestly,",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
-          "text": "carefully",
+          "rule": "False Agency",
+          "text": "the evidence supports the former",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs (phrases.md) \u2014 'No -ly words'",
-          "text": "merely",
+          "rule": "Passive Voice",
+          "text": "has been distributed to control owners",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs (phrases.md) \u2014 specific offender 'honestly'",
-          "text": "Honestly",
+          "rule": "Passive Voice",
+          "text": "had been identified in the fourth quarter",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'had been identified'",
-          "text": "no control deficiencies aggregating to a significant deficiency had been identified in the fourth quarter",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'were identified'",
-          "text": "none were identified through the date of this memorandum.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'has been distributed'",
-          "text": "the certification schedule for the coming fiscal year has been distributed to control owners.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice (structures.md) \u2014 actor hidden behind 'is invited'",
-          "text": "The committee is invited to direct questions to the corporate controller in advance of the February meeting.",
+          "rule": "Passive Voice",
+          "text": "is invited to direct questions",
           "index": null,
           "severity": null
         }
@@ -654,32 +535,8 @@
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2014 Em-dashes",
-          "text": "\u2014 $72.5 billion of it \u2014",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "effectively",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "possibly",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
+          "rule": "Emphasis Crutches",
           "text": "At the end of the day",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "closely",
           "index": null,
           "severity": null
         },
@@ -690,8 +547,26 @@
           "severity": null
         },
         {
-          "rule": "Passive Voice",
-          "text": "the effective duration of the portfolio is managed against that scenario",
+          "rule": "Adverbs",
+          "text": "effectively manages",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "might possibly compress",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Adverbs",
+          "text": "roughly the proportions observed",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Em-dashes",
+          "text": "\u2014 $72.5 billion of it \u2014",
           "index": null,
           "severity": null
         },
@@ -707,54 +582,6 @@
       "words": 361,
       "findings": [
         {
-          "rule": "Passive Voice",
-          "text": "$1,109 million is recorded within trade accounts and notes receivable and $609 million within accounts payable and accrued expenses",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "a sale to a dealer is recognized",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "These incentives may be based on a dealer's purchase volume",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "new programs are announced",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Vague Declaratives",
-          "text": "which underscores its importance to the audit",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Narrator-from-a-Distance",
-          "text": "Observers note that",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "False Agency",
-          "text": "programs reach from the shop floor to the boardroom",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Vague Declaratives",
-          "text": "highlighting the significance of dealer-level data",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Throat-Clearing Openers",
           "text": "Here is the part most reviewers skip:",
           "index": null,
@@ -767,26 +594,62 @@
           "severity": null
         },
         {
-          "rule": "Passive Voice",
-          "text": "which are reviewed quarterly",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "The final cost of these programs is determined at the end of the measurement period",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "developing an independent expectation of the accrual using disaggregated historical cost percentages; testing the completeness and accuracy of the underlying dealer sales data; and evaluating announced program terms against the accrual model's program-type assumptions",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Adverbs",
           "text": "accurately",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is determined",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "is recognized",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "The accrual stands as the single largest management estimate in the revenue cycle",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "The estimation rests on historical data, announced programs, and forecasted volumes",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Narrator-from-a-Distance",
+          "text": "Observers note that dealer-network incentive structures of this kind are multifaceted in ways that centralized rebate programs are not",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "estimating sales incentive costs requires significant judgment by management",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague Declaratives",
+          "text": "highlighting the significance of dealer-level data",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Emphasis Crutches",
+          "text": "which underscores its importance to the audit",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rhythm Patterns",
+          "text": "developing an independent expectation of the accrual using disaggregated historical cost percentages; testing the completeness and accuracy of the underlying dealer sales data; and evaluating announced program terms against the accrual model's program-type assumptions",
           "index": null,
           "severity": null
         }
@@ -796,74 +659,74 @@
       "words": 354,
       "findings": [
         {
-          "rule": "Negative Listing",
-          "text": "The Credo is not a slogan. Not a poster. An operating system.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Staccato fragmentation",
-          "text": "Heart. Science. Ingenuity.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "heart, science and ingenuity",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2014 Three-item lists",
-          "text": "Consumer Health, Pharmaceutical and Medical Devices",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Adverbs",
           "text": "profoundly change the trajectory of health for humanity",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "Certainly, the Credo remains central",
+          "rule": "Dramatic Fragmentation",
+          "text": "Heart. Science. Ingenuity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative Listing",
+          "text": "The Credo is not a slogan. Not a poster. An operating system.",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "Firstly, the scale of the enterprise compounds the impact of individual initiative",
+          "text": "Certainly, the Credo remains central to how the Company allocates capital and evaluates leaders",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "the scale of the enterprise compounds the impact of individual initiative",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "ultimately delivering value to its patients",
+          "text": "ultimately delivering value to its patients, consumers and healthcare professionals, employees, communities and shareholders",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "False Agency",
+          "text": "the significant investment in talent development mirrors the significant investment in research",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Passive Voice",
+          "text": "both are managed as long-horizon assets",
           "index": null,
           "severity": null
         },
         {
           "rule": "Adverbs",
-          "text": "Secondly, the significant investment in talent development mirrors the significant investment in research",
+          "text": "significantly higher retention and productivity metrics in 2020 than in the prior year",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "significantly higher retention and productivity metrics",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "approximately 25% of 2020 sales",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Adverbs",
-          "text": "both locally and globally",
+          "rule": "Passive Voice",
+          "text": "New products introduced within the past five years accounted for approximately 25% of 2020 sales.",
           "index": null,
           "severity": null
         },
@@ -881,13 +744,7 @@
         },
         {
           "rule": "Passive Voice",
-          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Passive Voice",
-          "text": "both are managed as long-horizon assets",
+          "text": "the talent and capital plans described above",
           "index": null,
           "severity": null
         }
@@ -897,25 +754,37 @@
       "words": 330,
       "findings": [
         {
-          "rule": "Rhythm Patterns \u2013 Staccato fragmentation (\"Don't stack short punchy sentences\")",
+          "rule": "Throat-Clearing Openers",
+          "text": "Without further ado, the highlights:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Dramatic Fragmentation",
           "text": "Azure grew 56%. Office held. Gaming climbed.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Core Rule 8 \u2013 Cut quotables",
-          "text": "The takeaway: cloud is the business.",
+          "rule": "Throat-Clearing Openers",
+          "text": "The takeaway:",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Business Jargon \u2013 Game-changer",
-          "text": "The commercial cloud is a game-changer for the revenue mix",
+          "rule": "Cut quotables",
+          "text": "cloud is the business",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Word Patterns \u2013 Lazy extremes (everyone)",
+          "rule": "Business Jargon",
+          "text": "game-changer",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Lazy extremes",
           "text": "the insight everyone's missing",
           "index": null,
           "severity": null
@@ -928,43 +797,43 @@
         },
         {
           "rule": "Adverbs",
-          "text": "regional competitors literally cannot match",
+          "text": "literally cannot match",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Word Patterns \u2013 Lazy extremes (every)",
-          "text": "the cost floor beneath every competing bid",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Rhythm Patterns \u2013 Em-dashes",
+          "rule": "Em-dashes",
           "text": "Growth \u2014 real, durable growth \u2014 across products, platforms, and partnerships defined the fiscal year",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2013 Three-item lists",
+          "rule": "Three-item lists",
           "text": "products, platforms, and partnerships",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Word Patterns \u2013 Lazy extremes (every)",
-          "text": "the pattern held in every geographic segment",
+          "rule": "False Agency",
+          "text": "defined the fiscal year",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Adverbs",
-          "text": "was relatively unchanged",
+          "rule": "Lazy extremes",
+          "text": "every geographic segment the Company reports",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Rhythm Patterns \u2013 Three-item lists",
-          "text": "software, services, and devices",
+          "rule": "Lazy extremes",
+          "text": "every competing bid",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Meta-Commentary",
+          "text": "In conclusion",
           "index": null,
           "severity": null
         },
@@ -975,8 +844,8 @@
           "severity": null
         },
         {
-          "rule": "Word Patterns \u2013 Lazy extremes (every)",
-          "text": "above its entry run-rate in every segment",
+          "rule": "False Agency",
+          "text": "the balance of the Company's revenue continues its migration toward subscription economics",
           "index": null,
           "severity": null
         }

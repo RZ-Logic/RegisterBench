@@ -1,0 +1,414 @@
+{
+  "tool": "the-antislop",
+  "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
+  "run_date": "2026-10-12",
+  "run_n": 2,
+  "options": {
+    "model": "claude-sonnet-5",
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "6ef63359c21fd05be8271cbf8f97fd3aa9a835cf29ef78d7dadee49935ff6675",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_019eRyPXX1LNvLuc23m1jwSK",
+      "msgbatch_01NW6MttRBZHJhXftCsi7bdY"
+    ],
+    "usage": {
+      "input": 233891,
+      "cache_write": 0,
+      "cache_read": 119394,
+      "output": 41499,
+      "thinking": 39089,
+      "cost_usd": 0.4533
+    }
+  },
+  "files": {
+    "AAPL_2020_mdna.txt": {
+      "words": 4264,
+      "findings": []
+    },
+    "AAPL_2020_opinion.txt": {
+      "words": 1380,
+      "findings": []
+    },
+    "CAT_2021_mdna.txt": {
+      "words": 14547,
+      "findings": []
+    },
+    "CAT_2021_opinion.txt": {
+      "words": 1857,
+      "findings": []
+    },
+    "DAL_2021_mdna.txt": {
+      "words": 14759,
+      "findings": [
+        {
+          "rule": "Align with",
+          "text": "to align with expected demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Align with",
+          "text": "to more closely align with demand",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "a seamless travel experience and industry-leading connectivity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Vague attributions",
+          "text": "in keeping with current health-expert recommendations",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Negative parallelisms",
+          "text": "Not only did it deliver the first direct impact to the Delta passenger experience, it also represented the first major phasing milestone.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "we have implemented enhanced measures focusing on the safety of our customers and employees",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "we have implemented, and will continue to implement, cost saving initiatives",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Synonym cycling",
+          "text": "the spread of the virus and the resulting global pandemic have significantly affected our entire network",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "as a result of the following actions to increase liquidity and strengthen our financial position during the year ended December 31, 2020:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Capacity Reductions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Expense Management.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Balance Sheet, Cash Flow and Liquidity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Government Support Programs.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Ancillary Businesses and Refinery.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "DAL_2021_opinion.txt": {
+      "words": 1898,
+      "findings": []
+    },
+    "DE_2020_opinion.txt": {
+      "words": 2072,
+      "findings": []
+    },
+    "F_2021_mdna.txt": {
+      "words": 20281,
+      "findings": [
+        {
+          "rule": "Moreover/Furthermore",
+          "text": "Moreover, new restrictions could have an adverse effect on production, supply chains, distribution, and demand for vehicles.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Moreover/Furthermore",
+          "text": "Moreover, our suspension of production earlier this year put pressure on our Automotive liquidity.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Moreover/Furthermore",
+          "text": "Moreover, we do not provide any guarantees in connection with the SCF program.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "Ford Credit's liquidity profile continues to be diverse, robust, and focused on maintaining liquidity levels that meet its business and funding requirements.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler phrases",
+          "text": "In order to compensate Ford Credit for the lower interest or lease payments offered to the retail customer, we pay the discounted value of the incentive directly to Ford Credit when it originates the retail finance or lease contract with the dealer's customer.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Filler phrases",
+          "text": "in order to be paid earlier than our payment terms provide",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "F_2021_opinion.txt": {
+      "words": 2160,
+      "findings": []
+    },
+    "HD_2021_mdna.txt": {
+      "words": 4772,
+      "findings": []
+    },
+    "HD_2021_opinion.txt": {
+      "words": 1339,
+      "findings": []
+    },
+    "JNJ_2021_mdna.txt": {
+      "words": 9300,
+      "findings": [
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "Leveraging in the Pharmaceutical and Consumer Health businesses",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Leverage (as verb)",
+          "text": "The Company continues to leverage its global manufacturing footprint and dual-source capabilities",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "the Company utilized three wholesalers distributing products for all three segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Clinical formality",
+          "text": "the Company announced plans to implement actions across its global supply chain",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Robust/Seamless/Scalable",
+          "text": "The robust, active business continuity plans across the Company's network have been instrumental in preparing the Company for events like COVID-19",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "blend heart, science and ingenuity",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Description of the Company and Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Analysis of Sales by Business Segments",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Medical Devices Segment:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Restructuring:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Provision for Taxes on Income:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Revenue Recognition:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Income Taxes:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Legal and Self Insurance Contingencies:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Long-Lived and Intangible Assets:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Employee Benefit Plans:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Stock Based Compensation:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Interest (Income) Expense:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Other (Income) Expense, Net:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "Cost of products sold increased as a percent to sales driven by:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "Selling, Marketing and Administrative Expenses decreased as a percent to sales driven by:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "Research and Development increased as a percent to sales primarily driven by:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "The decrease in the income before tax as a percent of sales was primarily driven by the following:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "The increase in the income before tax as a percent of sales was primarily driven by the following:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "The decrease in the income before tax as a percent to sales was primarily driven by the following:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "List addiction",
+          "text": "The Company has considered various internal and external factors in assessing the potential impact of COVID-19 on its business and financial results based upon information available at this time, as follows:",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "JNJ_2021_opinion.txt": {
+      "words": 2980,
+      "findings": []
+    },
+    "KO_2021_opinion.txt": {
+      "words": 1909,
+      "findings": [
+        {
+          "rule": "Rule of three",
+          "text": "We obtained an understanding, evaluated the design, and tested the effectiveness of controls over the Company's accounting process for uncertain tax positions.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Rule of three",
+          "text": "We obtained an understanding, evaluated the design and tested the operating effectiveness of controls over the Company's annual impairment assessments for trademarks with indefinite lives and reporting units with goodwill.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Title Case Headings",
+          "text": "Definition and Limitations of Internal Control over Financial Reporting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Copula avoidance",
+          "text": "We have served as the Company's auditor since 1921.",
+          "index": null,
+          "severity": null
+        }
+      ]
+    },
+    "MMM_2021_mdna.txt": {
+      "words": 16541,
+      "findings": []
+    },
+    "MMM_2021_opinion.txt": {
+      "words": 1240,
+      "findings": []
+    },
+    "MSFT_2020_mdna.txt": {
+      "words": 8784,
+      "findings": []
+    },
+    "MSFT_2020_opinion.txt": {
+      "words": 1230,
+      "findings": []
+    }
+  }
+}

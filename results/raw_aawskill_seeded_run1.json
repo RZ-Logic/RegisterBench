@@ -1,37 +1,57 @@
 {
   "tool": "avoid-ai-writing-skill",
   "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
-  "run_date": "2026-07-24",
+  "run_date": "2026-10-12",
   "run_n": 1,
   "options": {
     "model": "claude-sonnet-5",
-    "note": "FULL RUN via Claude Code subagent (model override 'sonnet' -> claude-sonnet-5), not the raw Anthropic API; ruleset files delivered as agent task instructions rather than a literal system prompt. One independent pass per draft per run (matches the API harness's per-file call granularity). Supersedes the earlier N=1 preview files, which used coarser per-tool-all-drafts granularity."
+    "max_tokens": 64000,
+    "detect_instruction": "uniform-v1",
+    "system_sha256": "955986644cea356586b35a13518f018bb4542ce065d5c98785472bbc65117ca4",
+    "api": "message-batches",
+    "thinking": "model default (adaptive, effort high); not set by the harness",
+    "prompt_caching": "system prompt, ephemeral 1h",
+    "served_models": [
+      "claude-sonnet-5"
+    ],
+    "batch_ids": [
+      "msgbatch_01STw8mybo6A47sJ8g6XCeW3",
+      "msgbatch_01WmJCpAx4CDeBMH9okexKho"
+    ],
+    "usage": {
+      "input": 7355,
+      "cache_write": 26677,
+      "cache_read": 240093,
+      "output": 33758,
+      "thinking": 28972,
+      "cost_usd": 0.2535
+    }
   },
   "files": {
     "fin-01.md": {
       "words": 371,
       "findings": [
         {
-          "rule": "Em dashes (\u2014 and --)",
-          "text": "Customers \u2014 and, by extension, channel partners \u2014 moved decisively toward online purchasing",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "\"It's not X \u2014 it's Y\" / \"This isn't about X, it's about Y\" (split-sentence form)",
+          "rule": "\"It's not X \u2014 it's Y\" / split-sentence negation form",
           "text": "This was not a temporary disruption. It was a structural shift.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace (in order to \u2192 to)",
+          "rule": "Em dashes",
+          "text": "Customers \u2014 and, by extension, channel partners \u2014 moved decisively toward online purchasing",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word/phrase: in order to",
           "text": "in order to meet that demand",
           "index": null,
           "severity": null
         },
         {
           "rule": "Hollow intensifiers",
-          "text": "genuinely believes",
+          "text": "The Company genuinely believes",
           "index": null,
           "severity": null
         },
@@ -48,20 +68,20 @@
           "severity": null
         },
         {
-          "rule": "Transition phrases to remove or rewrite (Moreover)",
-          "text": "Moreover",
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Moreover, the weakness in foreign currencies had an unfavorable impact on net sales during the year.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace (leverage (verb) \u2192 use)",
-          "text": "leverages",
+          "rule": "Tier 1 word: leverage",
+          "text": "the Company leverages its installed base across products, services, and experiences",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace (seamless / seamlessly \u2192 smooth, easy, without friction)",
-          "text": "seamless",
+          "rule": "Tier 1 word: seamless",
+          "text": "The seamless integration of hardware and services continued to differentiate the Company's offerings from those of its competitors.",
           "index": null,
           "severity": null
         },
@@ -77,38 +97,14 @@
       "words": 379,
       "findings": [
         {
-          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
-          "text": "empower every person and every organization on the planet to achieve more",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
-          "text": "we work to foster an ecosystem in which partners build durable businesses on our infrastructure",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
-          "text": "ecosystem in which partners build durable businesses on our infrastructure",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "False ranges",
-          "text": "from startups to superpowers",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "\"Let's\" constructions",
           "text": "Let's take a closer look at the drivers behind these results.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "Azure serves as a cornerstone of the commercial cloud",
+          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
+          "text": "we work to foster an ecosystem in which partners build durable businesses on our infrastructure",
           "index": null,
           "severity": null
         },
@@ -125,14 +121,14 @@
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "supported by a robust balance sheet",
+          "rule": "Tier 1 \u2014 Always replace (ever-evolving)",
+          "text": "an ever-evolving market",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "an ever-evolving market",
+          "rule": "Tier 1 \u2014 Always replace (robust)",
+          "text": "supported by a robust balance sheet",
           "index": null,
           "severity": null
         },
@@ -143,20 +139,14 @@
           "severity": null
         },
         {
-          "rule": "Confidence calibration phrases",
-          "text": "Make no mistake",
+          "rule": "Confidence calibration phrases (persuasive-authority tropes)",
+          "text": "Make no mistake:",
           "index": null,
           "severity": null
         },
         {
           "rule": "Infomercial engagement hooks",
           "text": "The result:",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Vague attributions",
-          "text": "Management believes",
           "index": null,
           "severity": null
         }
@@ -167,66 +157,54 @@
       "findings": [
         {
           "rule": "Vague attributions",
-          "text": "experts believe",
+          "text": "experts believe transfer-pricing disputes of this size can take a decade to resolve",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (underscores)",
-          "text": "underscoring",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Transition phrases to remove or rewrite",
+          "rule": "Transition phrases to remove or rewrite (Furthermore)",
           "text": "Furthermore",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (due to the fact that)",
+          "rule": "Tier 1 \u2014 Always replace (due to the fact that)",
           "text": "due to the fact that",
           "index": null,
           "severity": null
         },
         {
+          "rule": "Tier 1 \u2014 Always replace (underscores)",
+          "text": "underscoring the importance of rigorous transfer-pricing documentation",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Hedge-stacked predictions",
-          "text": "may eventually increase",
+          "text": "the reserve may eventually increase if subsequent rulings extend the Tax Court's methodology to later years",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (meticulous / meticulously)",
-          "text": "meticulous",
+          "rule": "Tier 1 \u2014 Always replace (meticulous)",
+          "text": "meticulous assessment",
           "index": null,
           "severity": null
         },
         {
-          "rule": "\"It's not X \u2014 it's Y\" / \"This isn't about X, it's about Y\" (multi-negation countdown / split-sentence form)",
+          "rule": "Sentence structure: \"It's not X \u2014 it's Y\" (multi-negation / split-sentence form)",
           "text": "This evaluation is not a formality. Not a checkbox. A judgment.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (holistic / holistically)",
-          "text": "holistic",
+          "rule": "Tier 1 \u2014 Always replace (holistic)",
+          "text": "holistic reading of the interplay between jurisdictional tax law and the Company's documented intent",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (interplay)",
-          "text": "interplay",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (boasts)",
-          "text": "boasts",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Copula avoidance",
+          "rule": "Tier 1 \u2014 Always replace (boasts)",
           "text": "the Company boasts a tax function with the depth to support that documentation",
           "index": null,
           "severity": null
@@ -243,74 +221,8 @@
           "severity": null
         },
         {
-          "rule": "Infomercial engagement hooks",
-          "text": "Here's the thing:",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Manufactured punchlines and staccato drama",
-          "text": "Demand collapsed. Fleets parked. Cash burned.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Compulsive rule of three",
-          "text": "large public events were cancelled, governmental authorities imposed restrictions on non-essential activities, and popular leisure destinations temporarily closed to visitors",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "watershed moment",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Significance inflation",
-          "text": "a watershed moment for the industry",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Em dashes (\u2014 and --)",
-          "text": "\u2014 slowly, unevenly \u2014",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "False concession structure",
-          "text": "Although demand has improved \u2014 slowly, unevenly \u2014 it remains significantly below pre-pandemic levels, and the exact timing and pace of the recovery remain uncertain as some markets that reopened have since experienced a resurgence of cases while others remain closed.",
-          "index": null,
-          "severity": null
-        },
-        {
           "rule": "Compulsive rule of three",
           "text": "safety, liquidity, and recovery",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Subjectless fragments and agentless passives",
-          "text": "Load factors were capped and middle seats blocked through at least April 30, 2021, while boarding and deplaning processes were modified to reduce physical touch points.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Novelty inflation",
-          "text": "What nobody tells you about airline recoveries",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "daunting",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Hollow intensifiers",
-          "text": "truly tests every assumption in the operating plan",
           "index": null,
           "severity": null
         },
@@ -321,14 +233,80 @@
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "The future looks bright",
+          "rule": "Em dashes",
+          "text": "\u2014 slowly, unevenly \u2014",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Infomercial engagement hooks",
+          "text": "Here's the thing:",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Significance inflation",
+          "text": "a watershed moment for the industry",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Words and phrases to replace (Tier 1)",
+          "text": "daunting",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Hollow intensifiers",
+          "text": "truly",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite",
+          "text": "Additionally",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Novelty inflation",
+          "text": "What nobody tells you about airline recoveries is that the cost base recovers faster than the revenue base.",
           "index": null,
           "severity": null
         },
         {
           "rule": "Generic conclusions",
           "text": "The future looks bright for carriers that adapt.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Manufactured punchlines and staccato drama",
+          "text": "Demand collapsed. Fleets parked. Cash burned.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Subjectless fragments and agentless passives",
+          "text": "large public events were cancelled",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Subjectless fragments and agentless passives",
+          "text": "Load factors were capped and middle seats blocked through at least April 30, 2021",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Subjectless fragments and agentless passives",
+          "text": "boarding and deplaning processes were modified to reduce physical touch points",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Subjectless fragments and agentless passives",
+          "text": "Forecasted expense and liquidity management initiatives may be modified as the demand environment evolves",
           "index": null,
           "severity": null
         }
@@ -338,14 +316,20 @@
       "words": 349,
       "findings": [
         {
-          "rule": "Filler phrases",
-          "text": "It is important to note that",
+          "rule": "Bold overuse",
+          "text": "**Consumer Health**",
           "index": null,
           "severity": null
         },
         {
           "rule": "Bold overuse",
-          "text": "**Consumer Health**, **Pharmaceutical**, and **Medical Devices**",
+          "text": "**Pharmaceutical**",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Bold overuse",
+          "text": "**Medical Devices**",
           "index": null,
           "severity": null
         },
@@ -356,8 +340,8 @@
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "competitive landscape",
+          "rule": "Filler phrases",
+          "text": "It is important to note that",
           "index": null,
           "severity": null
         },
@@ -368,26 +352,32 @@
           "severity": null
         },
         {
-          "rule": "Aphorism formulas",
-          "text": "not just a product portfolio but a platform",
+          "rule": "\"It's not X \u2014 it's Y\" / \"This isn't about X, it's about Y\"",
+          "text": "the enterprise treats its breadth as not just a product portfolio but a platform",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Synonym cycling",
-          "text": "It is important to note that the Company competes with other companies both locally and globally in a competitive landscape that spans all product lines without regard to the number and size of the competing companies involved. Competition in research, involving the development and improvement of new and existing products and processes, is **particularly significant**. Studies show that diversified healthcare companies outperform single-segment peers across economic cycles, and the enterprise treats its breadth as not just a product portfolio but a platform. The organization invests accordingly, and the healthcare giant's scale allows those investments to compound.",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 1 \u2014 Always replace",
+          "rule": "Word replacement (Tier 1): testament to",
           "text": "a testament to the research organization",
           "index": null,
           "severity": null
         },
         {
+          "rule": "Word replacement (Tier 2): transformative / transformation",
+          "text": "The transformative potential of this innovation pipeline",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Hedge-stacked predictions",
-          "text": "could potentially reshape",
+          "text": "could potentially reshape the composition of segment revenue over the next decade",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Superficial -ing analyses",
+          "text": "reflecting management's commitment to create life-enhancing innovations and to create value through partnerships",
           "index": null,
           "severity": null
         }
@@ -415,14 +405,14 @@
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "comprehensive",
+          "rule": "Tier 1 \u2014 Always replace (comprehensive)",
+          "text": "comprehensive framework of compensating controls",
           "index": null,
           "severity": null
         },
         {
           "rule": "Acknowledgment loops",
-          "text": "That's a great question from the committee, and one management considered carefully: whether remote certification streamlined the close process or merely relocated its risks.",
+          "text": "That's a great question from the committee, and one management considered carefully",
           "index": null,
           "severity": null
         },
@@ -434,13 +424,13 @@
         },
         {
           "rule": "Cutoff disclaimers",
-          "text": "As of my last update,",
+          "text": "As of my last update, no control deficiencies aggregating to a significant deficiency had been identified in the fourth quarter",
           "index": null,
           "severity": null
         },
         {
           "rule": "Transition phrases to remove or rewrite",
-          "text": "In conclusion,",
+          "text": "In conclusion",
           "index": null,
           "severity": null
         },
@@ -456,20 +446,14 @@
       "words": 355,
       "findings": [
         {
-          "rule": "Hollow intensifiers",
+          "rule": "Hedging",
           "text": "Let me be clear:",
           "index": null,
           "severity": null
         },
         {
           "rule": "Em dashes",
-          "text": "repurchased \u2014 $72.5 billion of it \u2014 and paid",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace): utilize",
-          "text": "utilizes",
+          "text": "repurchased \u2014 $72.5 billion of it \u2014 and paid dividends",
           "index": null,
           "severity": null
         },
@@ -480,26 +464,32 @@
           "severity": null
         },
         {
+          "rule": "Words and phrases to replace (Tier 1) \u2014 utilize",
+          "text": "utilizes",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Hedge-stacked predictions",
           "text": "might possibly compress",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Transition phrases to remove or rewrite",
-          "text": "At the end of the day",
+          "rule": "Transition phrases to remove or rewrite \u2014 At the end of the day",
+          "text": "At the end of the day,",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Transition phrases to remove or rewrite",
-          "text": "To summarize,",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Superficial -ing analyses",
+          "rule": "Superficial -ing analyses (declarative meaning-telling)",
           "text": "The balance sheet tells us a story of discipline.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Transition phrases to remove or rewrite \u2014 In conclusion / In summary / To summarize",
+          "text": "To summarize,",
           "index": null,
           "severity": null
         },
@@ -515,14 +505,14 @@
       "words": 361,
       "findings": [
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"intricate / intricacies\")",
-          "text": "the intricacies of the program mix change quarter to quarter",
+          "rule": "Compulsive rule of three",
+          "text": "rests on historical data, announced programs, and forecasted volumes",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 \u2014 Always replace (\"underscores\")",
-          "text": "which underscores its importance to the audit",
+          "rule": "Tier 1 word replacement \u2014 intricacies",
+          "text": "the intricacies of the program mix change quarter to quarter",
           "index": null,
           "severity": null
         },
@@ -533,14 +523,32 @@
           "severity": null
         },
         {
+          "rule": "Confidence calibration phrases",
+          "text": "which underscores its importance to the audit",
+          "index": null,
+          "severity": null
+        },
+        {
           "rule": "Vague attributions",
-          "text": "Observers note that dealer-network incentive structures of this kind are multifaceted in ways that centralized rebate programs are not",
+          "text": "Observers note that dealer-network incentive structures of this kind are multifaceted",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 2 word replacement \u2014 multifaceted",
+          "text": "are multifaceted in ways that centralized rebate programs are not",
           "index": null,
           "severity": null
         },
         {
           "rule": "False ranges",
-          "text": "since programs reach from the shop floor to the boardroom",
+          "text": "programs reach from the shop floor to the boardroom",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Confidence calibration phrases",
+          "text": "highlighting the significance of dealer-level data",
           "index": null,
           "severity": null
         },
@@ -551,8 +559,14 @@
           "severity": null
         },
         {
-          "rule": "Confidence calibration phrases (persuasive-authority tropes)",
+          "rule": "Confidence calibration phrases / persuasive-authority tropes",
           "text": "it is fundamentally the assumption on which the accrual turns",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Hollow intensifiers",
+          "text": "fundamentally the assumption",
           "index": null,
           "severity": null
         }
@@ -562,7 +576,7 @@
       "words": 354,
       "findings": [
         {
-          "rule": "\"It's not X \u2014 it's Y\" / \"This isn't about X, it's about Y\"",
+          "rule": "\"It's not X \u2014 it's Y\" / multi-negation countdown",
           "text": "The Credo is not a slogan. Not a poster. An operating system.",
           "index": null,
           "severity": null
@@ -574,44 +588,50 @@
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "Leveraging the extensive resources across the enterprise",
+          "rule": "Confidence calibration phrases",
+          "text": "Certainly, the Credo remains central to how the Company allocates capital and evaluates leaders",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "ever-evolving markets",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 1 \u2014 Always replace",
-          "text": "an enduring impact",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
+          "rule": "Tier 2 word table \u2014 poised (to)",
           "text": "poised to fulfill its purpose",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Tier 2 \u2014 Flag when 2+ appear in the same paragraph",
-          "text": "empowered and inspired",
+          "rule": "Tier 1 word table \u2014 ever-evolving",
+          "text": "ever-evolving markets in which it competes",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Subjectless fragments and agentless passives",
-          "text": "$12.2 billion was invested in research and development and $7.3 billion was spent on acquisitions.",
+          "rule": "Tier 2 word table \u2014 empower",
+          "text": "Employees are empowered and inspired to lead with the Company's Our Credo and purpose as guides.",
           "index": null,
           "severity": null
         },
         {
-          "rule": "Subjectless fragments and agentless passives",
-          "text": "both are managed as long-horizon assets",
+          "rule": "Tier 1 word table \u2014 leverage",
+          "text": "Leveraging the extensive resources across the enterprise enables the Company to innovate and execute with excellence",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 1 word table \u2014 enduring",
+          "text": "to invest for an enduring impact",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Tier 3 \u2014 Flag only at high density (significant/significantly)",
+          "text": "the significant investment in talent development mirrors the significant investment in research: both are managed as long-horizon assets, and both showed significantly higher retention and productivity metrics in 2020 than in the prior year.",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Reasoning chain artifacts",
+          "text": "Firstly, the scale of the enterprise compounds the impact of individual initiative",
           "index": null,
           "severity": null
         }
@@ -621,20 +641,14 @@
       "words": 330,
       "findings": [
         {
-          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
-          "text": "game-changer",
-          "index": null,
-          "severity": null
-        },
-        {
-          "rule": "Words and phrases to replace \u2014 Tier 1 (Always replace)",
-          "text": "cutting-edge",
+          "rule": "Words and phrases to replace \u2014 Tier 1 (game-changer)",
+          "text": "a game-changer for the revenue mix",
           "index": null,
           "severity": null
         },
         {
           "rule": "Novelty inflation",
-          "text": "the insight everyone's missing",
+          "text": "the insight everyone's missing is how much of that shift happened inside existing enterprise agreements rather than through new customer acquisition",
           "index": null,
           "severity": null
         },
@@ -645,7 +659,13 @@
           "severity": null
         },
         {
-          "rule": "Formatting \u2014 Em dashes (\u2014 and --)",
+          "rule": "Words and phrases to replace \u2014 Tier 1 (cutting-edge)",
+          "text": "the cutting-edge infrastructure investments of the past five years",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Formatting \u2014 Em dashes",
           "text": "Growth \u2014 real, durable growth \u2014 across products, platforms, and partnerships defined the fiscal year",
           "index": null,
           "severity": null
@@ -653,6 +673,18 @@
         {
           "rule": "Sentence structure \u2014 Hollow intensifiers",
           "text": "real, durable growth",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence structure \u2014 Compulsive rule of three",
+          "text": "products, platforms, and partnerships",
+          "index": null,
+          "severity": null
+        },
+        {
+          "rule": "Sentence structure \u2014 Compulsive rule of three",
+          "text": "software, services, and devices",
           "index": null,
           "severity": null
         },

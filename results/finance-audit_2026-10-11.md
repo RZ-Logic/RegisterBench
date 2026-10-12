@@ -14,10 +14,10 @@ pattern breakdowns are means across all runs, matching the headline.
 | tool | sha | runs (seeded/human) | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |
 |---|---|---|---|---|---|---|
 | avoid-ai-writing-detector | 27156c7a | 1/1 | 46.7% | deterministic | 1.09 | 0.144 |
-| avoid-ai-writing-skill | 27156c7a | 3/1 | 72.7% | 71.3%-73.8% | 1.34 | 0.009 |
-| no-ai-slop | 61c21c35 | 3/1 | 55.5% | 54.1%-56.6% | 0.55 | 0 |
-| stop-slop | 8da1f030 | 3/1 | 59.8% | 59.8%-59.8% | 6.9 | 0.072 |
-| the-antislop | 5edbf856 | 3/1 | 45.4% | 43.4%-46.7% | 0.7 | 0 |
+| avoid-ai-writing-skill | 27156c7a | 3/3 | 74.9% | 73.8%-75.4% | 0.39 (0.23-0.57) | 0 (0-0) |
+| no-ai-slop | 61c21c35 | 3/3 | 62.6% | 61.5%-63.1% | 0.1 (0.05-0.15) | 0 (0-0) |
+| stop-slop | 8da1f030 | 3/3 | 64.2% | 63.1%-65.6% | 0.34 (0.27-0.42) | 0 (0-0) |
+| the-antislop | 5edbf856 | 3/3 | 57.4% | 53.3%-59.8% | 0.36 (0.19-0.46) | 0 (0-0) |
 | unslop-deterministic | 5af59d9f | 1/1 | 28.7% | deterministic | 2.06 | 0.341 |
 
 ## Recall on claimed patterns only
@@ -29,10 +29,10 @@ canonical taxonomy; this measures accuracy on what each tool attempts.
 | tool | patterns claimed | plants claimed | full-taxonomy recall | claimed-only recall | claimed-only min-max |
 |---|---|---|---|---|---|
 | avoid-ai-writing-detector | 20/29 | 99/122 | 46.7% | 56.6% | deterministic |
-| avoid-ai-writing-skill | 28/29 | 120/122 | 72.7% | 73.1% | 71.7%-74.2% |
-| no-ai-slop | 21/29 | 89/122 | 55.5% | 69.3% | 68.5%-69.7% |
-| stop-slop | 17/29 | 81/122 | 59.8% | 63.4% | 61.7%-65.4% |
-| the-antislop | 22/29 | 94/122 | 45.4% | 54.3% | 52.1%-56.4% |
+| avoid-ai-writing-skill | 28/29 | 120/122 | 74.9% | 75.3% | 74.2%-75.8% |
+| no-ai-slop | 21/29 | 89/122 | 62.6% | 76.4% | 74.2%-78.6% |
+| stop-slop | 17/29 | 81/122 | 64.2% | 68.7% | 64.2%-71.6% |
+| the-antislop | 22/29 | 94/122 | 57.4% | 64.9% | 58.5%-68.1% |
 | unslop-deterministic | 18/29 | 92/122 | 28.7% | 37.0% | deterministic |
 
 ## Weighting sensitivity
@@ -44,12 +44,12 @@ conclusion is only robust if it survives every column.
 | tool | plant-weighted (published) | equal weight per tier | lexical tiers only | phrasal + structural only |
 |---|---|---|---|---|
 | avoid-ai-writing-detector | 46.7% | 40.1% | 46.8% | 46.5% |
-| avoid-ai-writing-skill | 72.7% | 63.2% | 57.5% | 82.6% |
-| no-ai-slop | 55.5% | 43.5% | 44.7% | 65.3% |
-| stop-slop | 59.8% | 52.4% | 37.6% | 75.1% |
-| the-antislop | 45.4% | 40.9% | 21.3% | 59.6% |
+| avoid-ai-writing-skill | 74.9% | 69.8% | 59.6% | 83.6% |
+| no-ai-slop | 62.6% | 54.5% | 51.8% | 70.9% |
+| stop-slop | 64.2% | 57.5% | 41.8% | 78.9% |
+| the-antislop | 57.4% | 50.2% | 30.5% | 74.2% |
 | unslop-deterministic | 28.7% | 27.7% | 29.8% | 26.8% |
-| **skill minus detector (points)** | **26.0** | **23.1** | **10.6** | **36.2** |
+| **skill minus detector (points)** | **28.1** | **29.7** | **12.8** | **37.1** |
 
 ## Term-of-art violations under two matching rules
 
@@ -62,10 +62,10 @@ With N runs a cell reads mean (min-max).
 | tool | anchored /1k | containment /1k | anchored, opinions /1k | anchored, MD&A /1k | distinct (document, term) pairs |
 |---|---|---|---|---|---|
 | avoid-ai-writing-detector | 0.144 | 0.144 | 0.554 | 0.064 | 14 |
-| avoid-ai-writing-skill | 0.009 | 0.009 | 0.055 | 0 | 1 |
-| no-ai-slop | 0 | 0 | 0 | 0 | 0 |
-| stop-slop | 0.072 | 0.252 | 0.443 | 0 | 8 |
-| the-antislop | 0 | 0 | 0 | 0 | 0 |
+| avoid-ai-writing-skill | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
+| no-ai-slop | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
+| stop-slop | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
+| the-antislop | 0 (0-0) | 0.003 (0-0.009) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
 | unslop-deterministic | 0.341 | 0.341 | 0.996 | 0.214 | 14 |
 
 ## avoid-ai-writing-detector: recall by tier (single deterministic run)
@@ -83,45 +83,45 @@ With N runs a cell reads mean (min-max).
 
 | tier | matched/planted | recall | matched min-max |
 |---|---|---|---|
-| conversational | 3/4 | 75.0% | 3-3 |
-| lex-1 | 21.67/23 | 94.2% | 21-22 |
-| lex-2 | 5/12 | 41.7% | 5-5 |
-| lex-3 | 0.33/12 | 2.8% | 0-1 |
-| phrasal | 34.33/42 | 81.7% | 33-35 |
-| structural | 24.33/29 | 83.9% | 24-25 |
+| conversational | 4/4 | 100.0% | 4-4 |
+| lex-1 | 20.33/23 | 88.4% | 20-21 |
+| lex-2 | 4.33/12 | 36.1% | 3-6 |
+| lex-3 | 3.33/12 | 27.8% | 2-5 |
+| phrasal | 35.67/42 | 84.9% | 34-37 |
+| structural | 23.67/29 | 81.6% | 23-24 |
 
 ## no-ai-slop: recall by tier (mean of 3 runs)
 
 | tier | matched/planted | recall | matched min-max |
 |---|---|---|---|
-| conversational | 0.33/4 | 8.3% | 0-1 |
-| lex-1 | 13.67/23 | 59.4% | 13-14 |
-| lex-2 | 5.67/12 | 47.2% | 5-7 |
-| lex-3 | 1.67/12 | 13.9% | 1-2 |
-| phrasal | 25.67/42 | 61.1% | 25-26 |
-| structural | 20.67/29 | 71.3% | 19-22 |
+| conversational | 1.67/4 | 41.7% | 1-2 |
+| lex-1 | 15/23 | 65.2% | 14-16 |
+| lex-2 | 7/12 | 58.3% | 6-8 |
+| lex-3 | 2.33/12 | 19.4% | 2-3 |
+| phrasal | 29/42 | 69.0% | 29-29 |
+| structural | 21.33/29 | 73.6% | 20-22 |
 
 ## stop-slop: recall by tier (mean of 3 runs)
 
 | tier | matched/planted | recall | matched min-max |
 |---|---|---|---|
-| conversational | 2/4 | 50.0% | 1-3 |
-| lex-1 | 9/23 | 39.1% | 8-10 |
-| lex-2 | 3/12 | 25.0% | 1-5 |
+| conversational | 2.67/4 | 66.7% | 2-3 |
+| lex-1 | 11.67/23 | 50.7% | 11-12 |
+| lex-2 | 2.33/12 | 19.4% | 1-4 |
 | lex-3 | 5.67/12 | 47.2% | 5-6 |
-| phrasal | 29/42 | 69.0% | 28-30 |
-| structural | 24.33/29 | 83.9% | 23-25 |
+| phrasal | 30.33/42 | 72.2% | 30-31 |
+| structural | 25.67/29 | 88.5% | 25-26 |
 
 ## the-antislop: recall by tier (mean of 3 runs)
 
 | tier | matched/planted | recall | matched min-max |
 |---|---|---|---|
 | conversational | 3/4 | 75.0% | 3-3 |
-| lex-1 | 8.67/23 | 37.7% | 8-9 |
-| lex-2 | 0/12 | 0.0% | 0-0 |
-| lex-3 | 1.33/12 | 11.1% | 1-2 |
-| phrasal | 23/42 | 54.8% | 23-23 |
-| structural | 19.33/29 | 66.7% | 18-20 |
+| lex-1 | 10/23 | 43.5% | 9-12 |
+| lex-2 | 1.67/12 | 13.9% | 1-3 |
+| lex-3 | 2.67/12 | 22.2% | 1-4 |
+| phrasal | 32.67/42 | 77.8% | 32-33 |
+| structural | 20/29 | 69.0% | 17-22 |
 
 ## unslop-deterministic: recall by tier (single deterministic run)
 
