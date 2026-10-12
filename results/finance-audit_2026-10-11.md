@@ -11,14 +11,14 @@ Recall assigns each quoted finding to at most one planted instance
 one such flag legitimately covers every plant of its pattern. Tier and
 pattern breakdowns are means across all runs, matching the headline.
 
-| tool | sha | runs | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |
+| tool | sha | runs (seeded/human) | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |
 |---|---|---|---|---|---|---|
-| avoid-ai-writing-detector | 27156c7a | 1 | 46.7% | deterministic | 1.09 | 0.144 |
-| avoid-ai-writing-skill | 27156c7a | 3 | 72.7% | 71.3%-73.8% | 1.34 | 0.009 |
-| no-ai-slop | 61c21c35 | 3 | 55.5% | 54.1%-56.6% | 0.55 | 0.0 |
-| stop-slop | 8da1f030 | 3 | 59.8% | 59.8%-59.8% | 6.9 | 0.072 |
-| the-antislop | 5edbf856 | 3 | 45.4% | 43.4%-46.7% | 0.7 | 0.0 |
-| unslop-deterministic | 5af59d9f | 1 | 28.7% | deterministic | 2.06 | 0.341 |
+| avoid-ai-writing-detector | 27156c7a | 1/1 | 46.7% | deterministic | 1.09 | 0.144 |
+| avoid-ai-writing-skill | 27156c7a | 3/1 | 72.7% | 71.3%-73.8% | 1.34 | 0.009 |
+| no-ai-slop | 61c21c35 | 3/1 | 55.5% | 54.1%-56.6% | 0.55 | 0 |
+| stop-slop | 8da1f030 | 3/1 | 59.8% | 59.8%-59.8% | 6.9 | 0.072 |
+| the-antislop | 5edbf856 | 3/1 | 45.4% | 43.4%-46.7% | 0.7 | 0 |
+| unslop-deterministic | 5af59d9f | 1/1 | 28.7% | deterministic | 2.06 | 0.341 |
 
 ## Recall on claimed patterns only
 
@@ -57,14 +57,15 @@ Headline rule is flag-anchored: protected-term text must be at least half
 of the flagged span. Containment counts any flag that encloses a term,
 however wide the quote, which penalises tools that quote whole clauses.
 Rates are per 1,000 words; the by-type columns use that type's words.
+With N runs a cell reads mean (min-max).
 
 | tool | anchored /1k | containment /1k | anchored, opinions /1k | anchored, MD&A /1k | distinct (document, term) pairs |
 |---|---|---|---|---|---|
 | avoid-ai-writing-detector | 0.144 | 0.144 | 0.554 | 0.064 | 14 |
-| avoid-ai-writing-skill | 0.009 | 0.009 | 0.055 | 0.0 | 1 |
-| no-ai-slop | 0.0 | 0.0 | 0.0 | 0.0 | 0 |
-| stop-slop | 0.072 | 0.252 | 0.443 | 0.0 | 8 |
-| the-antislop | 0.0 | 0.0 | 0.0 | 0.0 | 0 |
+| avoid-ai-writing-skill | 0.009 | 0.009 | 0.055 | 0 | 1 |
+| no-ai-slop | 0 | 0 | 0 | 0 | 0 |
+| stop-slop | 0.072 | 0.252 | 0.443 | 0 | 8 |
+| the-antislop | 0 | 0 | 0 | 0 | 0 |
 | unslop-deterministic | 0.341 | 0.341 | 0.996 | 0.214 | 14 |
 
 ## avoid-ai-writing-detector: recall by tier (single deterministic run)

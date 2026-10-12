@@ -449,6 +449,47 @@ def score_human(run, whitelist):
     }
 
 
+def aggregate_human(runs):
+    """Human-corpus metrics across N runs: mean, min and max. Counts are
+    averaged first and rates recomputed from the mean count over the same
+    words, so a single run reproduces its own figures exactly."""
+    n = len(runs)
+    words = runs[0]["words"]
+
+    def per_1k(x, w, nd=3):
+        return round(x / w * 1000, nd) if w else None
+
+    def stat(mean, vals):
+        return {"mean": mean, "min": min(vals), "max": max(vals)}
+
+    out = {"n_runs": n, "words": words}
+    out["flags_per_1k"] = stat(per_1k(sum(r["flags"] for r in runs) / n, words, 2),
+                               [r["flags_per_1k"] for r in runs])
+    for count, rate in (("toa_violations", "toa_per_1k"),
+                        ("toa_containment", "toa_containment_per_1k")):
+        out[rate] = stat(per_1k(sum(r[count] for r in runs) / n, words),
+                         [r[rate] for r in runs])
+    pairs = [r["toa_doc_term_pairs"] for r in runs]
+    out["toa_doc_term_pairs"] = stat(round(sum(pairs) / n, 1), pairs)
+    out["by_doc_type"] = {}
+    for dt in sorted({k for r in runs for k in r.get("by_doc_type", {})}):
+        rs = [r["by_doc_type"][dt] for r in runs if dt in r.get("by_doc_type", {})]
+        out["by_doc_type"][dt] = {"toa_per_1k": stat(
+            per_1k(sum(x["toa"] for x in rs) / len(rs), rs[0]["words"]),
+            [x["toa_per_1k"] for x in rs])}
+    return out
+
+
+def human_cell(stat, n):
+    """One run prints its value; N runs print mean (min-max)."""
+    if stat is None:
+        return "n/a"
+    fmt = lambda v: f"{v:g}" if isinstance(v, float) else str(v)
+    if n == 1:
+        return fmt(stat["mean"])
+    return f"{fmt(stat['mean'])} ({fmt(stat['min'])}-{fmt(stat['max'])})"
+
+
 def aggregate_breakdown(per_run):
     """Mean matched (with min and max) per key across N runs.
 
@@ -481,7 +522,6 @@ def main():
     seeded_runs, human_runs = {}, {}
     for rf in sorted((ROOT / "results").glob("raw_*.json")):
         run = json.loads(rf.read_text(encoding="utf-8"))
-        key = (run["tool"], run.get("run_n", 1))
         if set(run["files"]) & draft_files:
             seeded_runs.setdefault(run["tool"], []).append(run)
         else:
@@ -531,9 +571,11 @@ def main():
                     "recall_min": round(min(vals), 4),
                     "recall_max": round(max(vals), 4),
                 }
-        for run in human_runs.get(tool, []):
+        for run in sorted(human_runs.get(tool, []), key=lambda r: r.get("run_n", 1)):
             entry["sha"] = entry["sha"] or run.get("sha")
             entry["runs"].setdefault("human", []).append(score_human(run, whitelist))
+        if entry["runs"].get("human"):
+            entry["human"] = aggregate_human(entry["runs"]["human"])
         out["tools"][tool] = entry
 
     # Weighting sensitivity. The canonical taxonomy's tier sizes mirror how the
@@ -585,7 +627,7 @@ def main():
         "one such flag legitimately covers every plant of its pattern. Tier and",
         "pattern breakdowns are means across all runs, matching the headline.",
         "",
-        "| tool | sha | runs | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |",
+        "| tool | sha | runs (seeded/human) | recall (mean) | recall (min-max) | flags/1k human | ToA violations/1k |",
         "|---|---|---|---|---|---|---|",
     ]
     for tool, e in out["tools"].items():
@@ -595,10 +637,11 @@ def main():
         rng = ("deterministic" if n == 1 else
                f"{e['recall_min']:.1%}-{e['recall_max']:.1%}"
                if e.get("recall_min") is not None else "n/a")
-        h = e["runs"].get("human", [{}])
-        f1k = h[0].get("flags_per_1k", "n/a")
-        toa = h[0].get("toa_per_1k", "n/a")
-        lines.append(f"| {tool} | {sha} | {n or 'n/a'} | {rec} | {rng} | {f1k} | {toa} |")
+        hg = e.get("human") or {}
+        hn = hg.get("n_runs", 0)
+        f1k = human_cell(hg.get("flags_per_1k"), hn) if hg else "n/a"
+        toa = human_cell(hg.get("toa_per_1k"), hn) if hg else "n/a"
+        lines.append(f"| {tool} | {sha} | {n or '-'}/{hn or '-'} | {rec} | {rng} | {f1k} | {toa} |")
     lines.append("")
 
     lines += [
@@ -643,20 +686,23 @@ def main():
         "Headline rule is flag-anchored: protected-term text must be at least half",
         "of the flagged span. Containment counts any flag that encloses a term,",
         "however wide the quote, which penalises tools that quote whole clauses.",
-        "Rates are per 1,000 words; the by-type columns use that type's words.", "",
+        "Rates are per 1,000 words; the by-type columns use that type's words.",
+        "With N runs a cell reads mean (min-max).", "",
         "| tool | anchored /1k | containment /1k | anchored, opinions /1k | anchored, MD&A /1k | distinct (document, term) pairs |",
         "|---|---|---|---|---|---|",
     ]
     for tool, e in out["tools"].items():
-        h = e["runs"].get("human")
-        if not h:
+        hg = e.get("human")
+        if not hg:
             continue
-        h = h[0]
-        bt = h.get("by_doc_type", {})
+        hn = hg["n_runs"]
+        bt = hg["by_doc_type"]
         lines.append(
-            f"| {tool} | {h['toa_per_1k']} | {h['toa_containment_per_1k']} | "
-            f"{bt.get('opinion', {}).get('toa_per_1k', 'n/a')} | "
-            f"{bt.get('mdna', {}).get('toa_per_1k', 'n/a')} | {h['toa_doc_term_pairs']} |")
+            f"| {tool} | {human_cell(hg['toa_per_1k'], hn)} | "
+            f"{human_cell(hg['toa_containment_per_1k'], hn)} | "
+            f"{human_cell(bt.get('opinion', {}).get('toa_per_1k'), hn)} | "
+            f"{human_cell(bt.get('mdna', {}).get('toa_per_1k'), hn)} | "
+            f"{human_cell(hg['toa_doc_term_pairs'], hn)} |")
     lines.append("")
 
     # per-tier recall, aggregated across runs

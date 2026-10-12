@@ -39,7 +39,12 @@ N_RUNS = 3
 # rule name plus a quote. A truncated response is a silent zero unless caught,
 # and the bias would run against exactly the tools that flag most, so the
 # harness treats truncation as fatal rather than recording an empty result.
-MAX_TOKENS = 16000
+# Thinking also counts against max_tokens: claude-sonnet-5 thinks adaptively
+# by default (effort high), and the 2026-10-11 smoke call spent 6,888 thinking
+# tokens on a 330-word draft. 16,000 was sized before that was known; 64,000
+# leaves headroom for the long filings (the model's limit is 128K).
+MAX_TOKENS = 64000
+SYNC_MAX_WORDS = 5000
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 TOOLS_DIR = Path(os.environ.get("REGISTERBENCH_TOOLS_DIR", ROOT.parent / "tools"))
@@ -153,7 +158,7 @@ def call_api(system: str, user_text: str, api_key: str) -> dict:
         })
     for attempt in range(5):
         try:
-            with urllib.request.urlopen(req, timeout=300) as resp:
+            with urllib.request.urlopen(req, timeout=900) as resp:
                 return json.loads(resp.read())
         except urllib.error.HTTPError as e:
             if e.code in (429, 500, 529) and attempt < 4:
@@ -163,6 +168,11 @@ def call_api(system: str, user_text: str, api_key: str) -> dict:
             # limit reached) and never echoes the key.
             detail = e.read().decode("utf-8", "replace")[:500]
             sys.exit(f"API error HTTP {e.code}: {detail}")
+        except (urllib.error.URLError, TimeoutError, ConnectionError) as e:
+            # Not retried: the request was sent and may already be generating
+            # and billed. Re-running resumes from saved raw responses.
+            sys.exit(f"network error after sending ({e!r}); the call may have "
+                     f"been billed. Check the Console usage page before re-running.")
     raise RuntimeError("unreachable")
 
 
@@ -243,6 +253,13 @@ def main():
         return
 
     files = [f for inp in inputs for f in collect(Path(inp))]
+    # A non-streaming call on a long filing can outlast the socket timeout or
+    # an idle-connection drop after it has been billed. Long inputs go through
+    # run_prompt_batch.py, which has no such window.
+    too_long = [f.name for f in files if len(f.read_text(encoding="utf-8").split()) > SYNC_MAX_WORDS]
+    if too_long:
+        sys.exit(f"{len(too_long)} inputs exceed {SYNC_MAX_WORDS:,} words "
+                 f"({', '.join(too_long[:3])}...); use run_prompt_batch.py for them.")
     for n in range(1, N_RUNS + 1):
         result = {
             "tool": tool, "sha": sha, "run_date": date.today().isoformat(),
@@ -254,9 +271,16 @@ def main():
         served = set()
         for file in files:
             text = file.read_text(encoding="utf-8")
-            resp = call_api(system, text, api_key)
             raw_path = raw_dir / f"{tool}_{file.stem}_run{n}.json"
-            raw_path.write_text(json.dumps(resp, indent=2), encoding="utf-8")
+            saved = (json.loads(raw_path.read_text(encoding="utf-8"))
+                     if raw_path.is_file() else None)
+            if saved and saved.get("stop_reason") == "end_turn" and saved.get("model") == MODEL:
+                # Resume: a completed, billed response is reused, never re-bought.
+                resp = saved
+                print(f"{tool} run{n} {file.name}: reusing saved response")
+            else:
+                resp = call_api(system, text, api_key)
+                raw_path.write_text(json.dumps(resp, indent=2), encoding="utf-8")
             served.add(str(resp.get("model")))
             if resp.get("stop_reason") == "max_tokens":
                 sys.exit(
