@@ -36,13 +36,17 @@ class SpanAssignmentTest(unittest.TestCase):
         self.assertLessEqual(sc.match_seeded(run, MANIFEST, RULE_TO_CANON)["matched"], 1)
 
     def test_document_level_rule_covers_every_plant_of_its_pattern(self):
+        # One document-level flag must be reusable across every plant of its
+        # pattern. The draft chosen has two formatting plants, so a flag
+        # consumed after its first plant would fail this.
         draft = next(d for d in MANIFEST["drafts"]
-                     if sum(p["pattern_id"] == "str-em-dash" for p in d["plants"]) >= 1)
-        n = sum(p["pattern_id"] == "str-em-dash" for p in draft["plants"])
+                     if sum(p["pattern_id"] == "str-formatting-slop" for p in d["plants"]) >= 2)
+        n = sum(p["pattern_id"] == "str-formatting-slop" for p in draft["plants"])
+        self.assertGreaterEqual(n, 2)
         run = seeded_run("avoid-ai-writing-detector",
-                         {draft["draft_id"]: [{"rule": "em-dash", "text": "2 em dashes in 371 words", "index": None}]})
+                         {draft["draft_id"]: [{"rule": "formatting", "text": "formatting", "index": None}]})
         r = sc.match_seeded(run, MANIFEST, RULE_TO_CANON)
-        self.assertEqual(r["per_pattern"]["str-em-dash"]["matched"], n)
+        self.assertEqual(r["per_pattern"]["str-formatting-slop"]["matched"], n)
 
     def test_unlocatable_seeded_quote_is_reported_and_never_credited(self):
         draft = MANIFEST["drafts"][0]["draft_id"]
