@@ -74,6 +74,23 @@ def locate(text, ftext):
     return occ
 
 
+def locatable(text, f):
+    """Whether a finding points at something in the source text. Document-level
+    rules describe the whole text and the detector's Tier 3 flags report a word
+    count, so both count as located; every other finding must carry a verified
+    index or quote text that occurs in the document. A quote that occurs nowhere
+    is model output that does not match its input: it is reported, never
+    counted as a flag on the text and never credited to a plant."""
+    ftext = f.get("text") or ""
+    if f.get("rule") in DOC_LEVEL_RULES:
+        return True
+    if f.get("rule") == "tier3" and AAW_TIER3_RE.match(ftext):
+        return True
+    if not ftext:
+        return False
+    return index_valid(text, f) or bool(locate(text, ftext))
+
+
 def plant_range(text: str, span: str, occurrence: int):
     spans = find_all(text, span)
     return spans[occurrence - 1] if len(spans) >= occurrence else None
@@ -151,6 +168,8 @@ def match_seeded(run, manifest, rule_to_canon):
     matched_total = 0
     plants_total = 0
     unmatched_flags = []
+    unlocated = []
+    reported = 0
     for draft in manifest["drafts"]:
         did = draft["draft_id"]
         fname = f"{did}.md"
@@ -158,6 +177,9 @@ def match_seeded(run, manifest, rule_to_canon):
             continue
         text = (ROOT / "seeded" / REGISTER / fname).read_text(encoding="utf-8")
         findings = run["files"][fname]["findings"]
+        reported += len(findings)
+        unlocated += [{"draft": did, "rule": f["rule"], "text": f["text"]}
+                      for f in findings if not locatable(text, f)]
         # resolve finding char ranges (None = doc-level)
         resolved = []
         for f in findings:
@@ -241,6 +263,9 @@ def match_seeded(run, manifest, rule_to_canon):
         "per_tier": {k: {"matched": v[0], "planted": v[1]} for k, v in sorted(per_tier.items())},
         "unmatched_flag_count": len(unmatched_flags),
         "unmatched_flags": unmatched_flags,
+        "findings_reported": reported,
+        "unlocated": len(unlocated),
+        "unlocated_findings": unlocated,
     }
 
 
@@ -332,6 +357,8 @@ def score_human(run, whitelist):
     terms = whitelist_terms(whitelist)
     total_words = 0
     total_flags = 0
+    reported = 0
+    unlocated = []
     hits = {"anchored": 0, "containment": 0}
     by_type = {}
     by_term = {}
@@ -341,13 +368,22 @@ def score_human(run, whitelist):
     corpus_dir = ROOT / "corpora" / REGISTER / "clean"
     for fname, data in run["files"].items():
         total_words += data["words"]
-        total_flags += len(data["findings"])
+        reported += len(data["findings"])
         dt = by_type.setdefault(doc_type(fname), {"words": 0, "toa": 0, "toa_containment": 0})
         dt["words"] += data["words"]
         path = corpus_dir / fname
         if not path.exists():
+            # No source text to check against: count as reported, unverified.
+            total_flags += len(data["findings"])
             continue
         text = path.read_text(encoding="utf-8")
+        # Flag density counts only findings that point at the document. A quote
+        # that occurs nowhere in it is reported separately (see locatable).
+        for f in data["findings"]:
+            if locatable(text, f):
+                total_flags += 1
+            else:
+                unlocated.append({"file": fname, "rule": f["rule"], "text": f["text"]})
         lower = text.lower()
         labelled = []  # (start, end, canonical term)
         for t, canon in terms:
@@ -423,6 +459,9 @@ def score_human(run, whitelist):
         "words": total_words,
         "flags": total_flags,
         "flags_per_1k": round(total_flags / total_words * 1000, 2) if total_words else None,
+        "findings_reported": reported,
+        "unlocated": len(unlocated),
+        "unlocated_findings": unlocated,
         "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
         "toa_violations": hits["anchored"],
         "toa_per_1k": per_1k(hits["anchored"], total_words),
@@ -462,7 +501,9 @@ def aggregate_human(runs):
     def stat(mean, vals):
         return {"mean": mean, "min": min(vals), "max": max(vals)}
 
-    out = {"n_runs": n, "words": words}
+    out = {"n_runs": n, "words": words,
+           "findings_reported": sum(r.get("findings_reported", r["flags"]) for r in runs),
+           "unlocated": sum(r.get("unlocated", 0) for r in runs)}
     out["flags_per_1k"] = stat(per_1k(sum(r["flags"] for r in runs) / n, words, 2),
                                [r["flags_per_1k"] for r in runs])
     for count, rate in (("toa_violations", "toa_per_1k"),
@@ -576,6 +617,9 @@ def main():
             entry["runs"].setdefault("human", []).append(score_human(run, whitelist))
         if entry["runs"].get("human"):
             entry["human"] = aggregate_human(entry["runs"]["human"])
+        if entry["runs"].get("seeded"):
+            entry["seeded_findings_reported"] = sum(r["findings_reported"] for r in entry["runs"]["seeded"])
+            entry["seeded_unlocated"] = sum(r["unlocated"] for r in entry["runs"]["seeded"])
         out["tools"][tool] = entry
 
     # Weighting sensitivity. The canonical taxonomy's tier sizes mirror how the
@@ -703,6 +747,22 @@ def main():
             f"{human_cell(bt.get('opinion', {}).get('toa_per_1k'), hn)} | "
             f"{human_cell(bt.get('mdna', {}).get('toa_per_1k'), hn)} | "
             f"{human_cell(hg['toa_doc_term_pairs'], hn)} |")
+    lines.append("")
+
+    lines += [
+        "## Quotes that do not occur in the source text", "",
+        "Findings whose quoted text appears nowhere in the document they were",
+        "reported against (exact, then case-insensitive search). They are counted",
+        "here, excluded from flags/1k, and never credited to a planted instance.",
+        "Totals across all runs.", "",
+        "| tool | human corpus: unlocated / reported | seeded drafts: unlocated / reported |",
+        "|---|---|---|",
+    ]
+    for tool, e in out["tools"].items():
+        hg = e.get("human") or {}
+        lines.append(
+            f"| {tool} | {hg.get('unlocated', 0)} / {hg.get('findings_reported', 0)} | "
+            f"{e.get('seeded_unlocated', 0)} / {e.get('seeded_findings_reported', 0)} |")
     lines.append("")
 
     # per-tier recall, aggregated across runs

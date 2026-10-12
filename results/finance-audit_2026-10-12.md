@@ -15,9 +15,9 @@ pattern breakdowns are means across all runs, matching the headline.
 |---|---|---|---|---|---|---|
 | avoid-ai-writing-detector | 27156c7a | 1/1 | 46.7% | deterministic | 1.09 | 0.144 |
 | avoid-ai-writing-skill | 27156c7a | 3/3 | 74.9% | 73.8%-75.4% | 0.39 (0.23-0.57) | 0 (0-0) |
-| no-ai-slop | 61c21c35 | 3/3 | 62.6% | 61.5%-63.1% | 0.1 (0.05-0.15) | 0 (0-0) |
-| stop-slop | 8da1f030 | 3/3 | 64.2% | 63.1%-65.6% | 0.34 (0.27-0.42) | 0 (0-0) |
-| the-antislop | 5edbf856 | 3/3 | 57.4% | 53.3%-59.8% | 0.36 (0.19-0.46) | 0 (0-0) |
+| no-ai-slop | 61c21c35 | 3/3 | 62.6% | 61.5%-63.1% | 0.09 (0.04-0.15) | 0 (0-0) |
+| stop-slop | 8da1f030 | 3/3 | 64.2% | 63.1%-65.6% | 0.31 (0.27-0.4) | 0 (0-0) |
+| the-antislop | 5edbf856 | 3/3 | 57.4% | 53.3%-59.8% | 0.35 (0.17-0.46) | 0 (0-0) |
 | unslop-deterministic | 5af59d9f | 1/1 | 28.7% | deterministic | 2.06 | 0.341 |
 
 ## Recall on claimed patterns only
@@ -67,6 +67,22 @@ With N runs a cell reads mean (min-max).
 | stop-slop | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
 | the-antislop | 0 (0-0) | 0.003 (0-0.009) | 0 (0-0) | 0 (0-0) | 0 (0-0) |
 | unslop-deterministic | 0.341 | 0.341 | 0.996 | 0.214 | 14 |
+
+## Quotes that do not occur in the source text
+
+Findings whose quoted text appears nowhere in the document they were
+reported against (exact, then case-insensitive search). They are counted
+here, excluded from flags/1k, and never credited to a planted instance.
+Totals across all runs.
+
+| tool | human corpus: unlocated / reported | seeded drafts: unlocated / reported |
+|---|---|---|
+| avoid-ai-writing-detector | 0 / 121 | 0 / 68 |
+| avoid-ai-writing-skill | 1 / 130 | 0 / 308 |
+| no-ai-slop | 1 / 32 | 0 / 254 |
+| stop-slop | 7 / 112 | 1 / 400 |
+| the-antislop | 2 / 119 | 0 / 243 |
+| unslop-deterministic | 0 / 229 | 0 / 39 |
 
 ## avoid-ai-writing-detector: recall by tier (single deterministic run)
 

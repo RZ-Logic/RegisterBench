@@ -188,12 +188,21 @@ def parse_findings(response_text: str):
         arr = json.loads(t[start:end + 1])
     except json.JSONDecodeError:
         return None
+    # Strict schema. Every element must be {"rule": str, "quote": str}, both
+    # non-empty. Dropping a malformed element instead would let [{}] or
+    # ["bad response"] score as a clean empty result, indistinguishable from a
+    # tool that genuinely found nothing, so any malformed element makes the
+    # whole response unparseable and the harness refuses it.
+    if not isinstance(arr, list):
+        return None
     out = []
     for item in arr:
-        if isinstance(item, dict) and "quote" in item:
-            out.append({"rule": str(item.get("rule", "unnamed")),
-                        "text": str(item["quote"]), "index": None,
-                        "severity": None})
+        if not isinstance(item, dict):
+            return None
+        rule, quote = item.get("rule"), item.get("quote")
+        if not (isinstance(rule, str) and rule.strip() and isinstance(quote, str) and quote.strip()):
+            return None
+        out.append({"rule": rule, "text": quote, "index": None, "severity": None})
     return out
 
 

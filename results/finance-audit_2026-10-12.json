@@ -217,7 +217,10 @@
                 "rule": "uniformity",
                 "text": "All paragraphs are ~3 sentences"
               }
-            ]
+            ],
+            "findings_reported": 68,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
@@ -225,6 +228,9 @@
             "words": 111313,
             "flags": 121,
             "flags_per_1k": 1.09,
+            "findings_reported": 121,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 16,
             "toa_per_1k": 0.144,
@@ -637,6 +643,8 @@
       "human": {
         "n_runs": 1,
         "words": 111313,
+        "findings_reported": 121,
+        "unlocated": 0,
         "flags_per_1k": {
           "mean": 1.09,
           "min": 1.09,
@@ -673,7 +681,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 68,
+      "seeded_unlocated": 0
     },
     "avoid-ai-writing-skill": {
       "sha": "27156c7ae69fade80f2a3410e6899b780248709d",
@@ -884,7 +894,10 @@
                 "rule": "Sentence structure \u2014 Compulsive rule of three",
                 "text": "software, services, and devices"
               }
-            ]
+            ],
+            "findings_reported": 103,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.7540983606557377,
@@ -1091,7 +1104,10 @@
                 "rule": "Generic conclusions",
                 "text": "the momentum speaks for itself"
               }
-            ]
+            ],
+            "findings_reported": 103,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.7377049180327869,
@@ -1303,14 +1319,26 @@
                 "rule": "Compulsive rule of three",
                 "text": "products, platforms, and partnerships"
               }
-            ]
+            ],
+            "findings_reported": 102,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
           {
             "words": 111313,
-            "flags": 64,
+            "flags": 63,
             "flags_per_1k": 0.57,
+            "findings_reported": 64,
+            "unlocated": 1,
+            "unlocated_findings": [
+              {
+                "file": "JNJ_2021_mdna.txt",
+                "rule": "Transition phrases to remove or rewrite (Additionally)",
+                "text": "Additionally, the Company monitors the global capital markets on an ongoing basis and from time to time may raise capital when market conditions are favorable."
+              }
+            ],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -1340,6 +1368,9 @@
             "words": 111313,
             "flags": 26,
             "flags_per_1k": 0.23,
+            "findings_reported": 26,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -1369,6 +1400,9 @@
             "words": 111313,
             "flags": 40,
             "flags_per_1k": 0.36,
+            "findings_reported": 40,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -1694,6 +1728,8 @@
       "human": {
         "n_runs": 3,
         "words": 111313,
+        "findings_reported": 130,
+        "unlocated": 1,
         "flags_per_1k": {
           "mean": 0.39,
           "min": 0.23,
@@ -1730,7 +1766,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 308,
+      "seeded_unlocated": 0
     },
     "no-ai-slop": {
       "sha": "61c21c351da4dcb40946a11fead978f2078a2c65",
@@ -1926,7 +1964,10 @@
                 "rule": "Active voice",
                 "text": "$12.2 billion was invested in research and development and $7.3 billion was spent on acquisitions."
               }
-            ]
+            ],
+            "findings_reported": 85,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.6311475409836066,
@@ -2113,7 +2154,10 @@
                 "rule": "Colon reveals",
                 "text": "Here is the part most reviewers skip: the predictive value of the historical percentage of sales incentive costs to retail sales from dealers is itself an assumption"
               }
-            ]
+            ],
+            "findings_reported": 84,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.6147540983606558,
@@ -2315,7 +2359,10 @@
                 "rule": "Colon reveals",
                 "text": "the momentum speaks for itself: commercial cloud annualized revenue exited the fiscal year above its entry run-rate in every segment"
               }
-            ]
+            ],
+            "findings_reported": 85,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
@@ -2323,6 +2370,9 @@
             "words": 111313,
             "flags": 9,
             "flags_per_1k": 0.08,
+            "findings_reported": 9,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -2350,8 +2400,17 @@
           },
           {
             "words": 111313,
-            "flags": 6,
-            "flags_per_1k": 0.05,
+            "flags": 5,
+            "flags_per_1k": 0.04,
+            "findings_reported": 6,
+            "unlocated": 1,
+            "unlocated_findings": [
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Banned words",
+                "text": "robust"
+              }
+            ],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -2381,6 +2440,9 @@
             "words": 111313,
             "flags": 17,
             "flags_per_1k": 0.15,
+            "findings_reported": 17,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -2706,9 +2768,11 @@
       "human": {
         "n_runs": 3,
         "words": 111313,
+        "findings_reported": 32,
+        "unlocated": 1,
         "flags_per_1k": {
-          "mean": 0.1,
-          "min": 0.05,
+          "mean": 0.09,
+          "min": 0.04,
           "max": 0.15
         },
         "toa_per_1k": {
@@ -2742,7 +2806,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 254,
+      "seeded_unlocated": 0
     },
     "stop-slop": {
       "sha": "8da1f030185bdfe8471220585162991eaeb970e9",
@@ -3193,6 +3259,15 @@
                 "rule": "False Agency",
                 "text": "the balance of the Company's revenue continues its migration toward subscription economics"
               }
+            ],
+            "findings_reported": 139,
+            "unlocated": 1,
+            "unlocated_findings": [
+              {
+                "draft": "fin-05",
+                "rule": "Vague Declaratives",
+                "text": "Competition in research, involving the development and improvement of new and existing products and processes, is particularly significant."
+              }
             ]
           },
           {
@@ -3605,7 +3680,10 @@
                 "rule": "False Agency",
                 "text": "the balance of the Company's revenue continues its migration toward subscription economics"
               }
-            ]
+            ],
+            "findings_reported": 129,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.639344262295082,
@@ -4027,14 +4105,46 @@
                 "rule": "False Agency",
                 "text": "the balance of the Company's revenue continues its migration toward subscription economics"
               }
-            ]
+            ],
+            "findings_reported": 132,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
           {
             "words": 111313,
-            "flags": 35,
-            "flags_per_1k": 0.31,
+            "flags": 30,
+            "flags_per_1k": 0.27,
+            "findings_reported": 35,
+            "unlocated": 5,
+            "unlocated_findings": [
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Passive voice",
+                "text": "the discount reducing the carrying value of the loan which is being amortized as interest expense"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Adverbs",
+                "text": "remains depressed until effective vaccines become broadly available, vaccination becomes widespread globally"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Adverbs",
+                "text": "increased significantly in 2020"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Adverbs",
+                "text": "primarily due to the impact of, and our response to, the COVID-19 pandemic"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Em-dashes",
+                "text": "we expect three phases in 2021"
+              }
+            ],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -4064,6 +4174,9 @@
             "words": 111313,
             "flags": 30,
             "flags_per_1k": 0.27,
+            "findings_reported": 30,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -4091,8 +4204,22 @@
           },
           {
             "words": 111313,
-            "flags": 47,
-            "flags_per_1k": 0.42,
+            "flags": 45,
+            "flags_per_1k": 0.4,
+            "findings_reported": 47,
+            "unlocated": 2,
+            "unlocated_findings": [
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Adverbs",
+                "text": "primarily focus"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Adverbs",
+                "text": "primarily incurred"
+              }
+            ],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -4418,10 +4545,12 @@
       "human": {
         "n_runs": 3,
         "words": 111313,
+        "findings_reported": 112,
+        "unlocated": 7,
         "flags_per_1k": {
-          "mean": 0.34,
+          "mean": 0.31,
           "min": 0.27,
-          "max": 0.42
+          "max": 0.4
         },
         "toa_per_1k": {
           "mean": 0.0,
@@ -4454,7 +4583,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 400,
+      "seeded_unlocated": 1
     },
     "the-antislop": {
       "sha": "5edbf8562041fc99070e1bd51e0862afbb535fff",
@@ -4670,7 +4801,10 @@
                 "rule": "Formulaic challenges",
                 "text": "Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021."
               }
-            ]
+            ],
+            "findings_reported": 77,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.5983606557377049,
@@ -4847,7 +4981,10 @@
                 "rule": "Comparator Sentences",
                 "text": "The question isn't whether to return capital. It's how fast."
               }
-            ]
+            ],
+            "findings_reported": 78,
+            "unlocated": 0,
+            "unlocated_findings": []
           },
           {
             "recall": 0.5901639344262295,
@@ -5079,14 +5216,31 @@
                 "rule": "Generic conclusions",
                 "text": "Management expects the investments made in fiscal 2020 to carry the same trajectory into fiscal 2021."
               }
-            ]
+            ],
+            "findings_reported": 88,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
           {
             "words": 111313,
-            "flags": 21,
-            "flags_per_1k": 0.19,
+            "flags": 19,
+            "flags_per_1k": 0.17,
+            "findings_reported": 21,
+            "unlocated": 2,
+            "unlocated_findings": [
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "It's worth noting",
+                "text": "It's worth noting"
+              },
+              {
+                "file": "DAL_2021_mdna.txt",
+                "rule": "Rule of three",
+                "text": "ideate, iterate, and deliver"
+              }
+            ],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -5123,6 +5277,9 @@
             "words": 111313,
             "flags": 51,
             "flags_per_1k": 0.46,
+            "findings_reported": 51,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -5152,6 +5309,9 @@
             "words": 111313,
             "flags": 47,
             "flags_per_1k": 0.42,
+            "findings_reported": 47,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 0,
             "toa_per_1k": 0.0,
@@ -5477,9 +5637,11 @@
       "human": {
         "n_runs": 3,
         "words": 111313,
+        "findings_reported": 119,
+        "unlocated": 2,
         "flags_per_1k": {
-          "mean": 0.36,
-          "min": 0.19,
+          "mean": 0.35,
+          "min": 0.17,
           "max": 0.46
         },
         "toa_per_1k": {
@@ -5513,7 +5675,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 243,
+      "seeded_unlocated": 0
     },
     "unslop-deterministic": {
       "sha": "5af59d9fcdbd0df7b1a0762be958f78c7805fc09",
@@ -5689,7 +5853,10 @@
                 "rule": "stock_vocab",
                 "text": "comprehensive"
               }
-            ]
+            ],
+            "findings_reported": 39,
+            "unlocated": 0,
+            "unlocated_findings": []
           }
         ],
         "human": [
@@ -5697,6 +5864,9 @@
             "words": 111313,
             "flags": 229,
             "flags_per_1k": 2.06,
+            "findings_reported": 229,
+            "unlocated": 0,
+            "unlocated_findings": [],
             "toa_rule": "flag-anchored: protected terms cover >=50% of the flagged span",
             "toa_violations": 38,
             "toa_per_1k": 0.341,
@@ -6154,6 +6324,8 @@
       "human": {
         "n_runs": 1,
         "words": 111313,
+        "findings_reported": 229,
+        "unlocated": 0,
         "flags_per_1k": {
           "mean": 2.06,
           "min": 2.06,
@@ -6190,7 +6362,9 @@
             }
           }
         }
-      }
+      },
+      "seeded_findings_reported": 39,
+      "seeded_unlocated": 0
     }
   },
   "weighting_sensitivity": {
