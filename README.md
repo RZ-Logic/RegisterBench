@@ -345,8 +345,6 @@ Items with planned work have a roadmap entry below.
 ## 🗺️ Roadmap
 
 - [ ] **v0.2: the upstream PR to `avoid-ai-writing`.** A new `regulated` context profile, tolerance-matrix rows, a word-table exception list with a citation per term, scoped `leverage` handling, hedging and significance-inflation carve-outs for defined-term usage, auto-detection cues, and detector fixtures passing `npm test`, argued from the data above. This is the second deliverable of the project and the more important one.
-- [x] **v0.1.1: canonical prompt-track run through the API harness.** All 336 requests at N=3 on both corpora.
-- [x] **v0.1.2: validation fixes.** Strict response schema, quote location, and a 38-test suite in CI.
 - [ ] **v0.2: score distractor flags.** Publish the in-document collision rate that caught `stop-slop`.
 - [ ] **v0.2: execution-path comparison.** The same rulesets through an agent harness and the API, measured side by side.
 - [ ] **v0.2: casual-email, social and technical-docs registers.** Enron (CMU release, prose bodies, personal names redacted), pre-2022 Hacker News comments and personal blogs, OSS docs at git tags dated 2021 or earlier with commit dates as provenance.
