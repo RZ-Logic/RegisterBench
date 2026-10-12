@@ -8,11 +8,18 @@ same schema the code-track runners emit, one file per run index so score.py
 computes mean/min/max variance.
 
 COST GATE: this script makes paid API calls. It refuses to run unless
---approved is passed. Requires ANTHROPIC_API_KEY in the environment.
+--approved is passed. Reads REGISTERBENCH_API_KEY from the environment or
+from the repo's gitignored .env; ANTHROPIC_API_KEY is deliberately ignored
+(see load_api_key).
 
 Usage:
   py run_prompt_tool.py --approved <tool> <out-prefix> <file-or-dir> [...]
+  py run_prompt_tool.py --approved --smoke <tool> <file>
   tool: stop-slop | no-ai-slop | the-antislop | avoid-ai-writing-skill
+
+--smoke makes exactly one call and prints the model actually served, the
+stop reason and token usage. It writes only the raw response, under
+results/prompt_runs/, never a file score.py reads.
 
 Stdlib only.
 """
@@ -36,6 +43,11 @@ MAX_TOKENS = 16000
 
 ROOT = Path(__file__).resolve().parent.parent.parent
 TOOLS_DIR = Path(os.environ.get("REGISTERBENCH_TOOLS_DIR", ROOT.parent / "tools"))
+ENV_KEY = "REGISTERBENCH_API_KEY"
+ENV_FILE = ROOT / ".env"
+# Same skip set as the code-track runners: these describe a corpus, they are
+# not documents in it, and sending one would be a paid call scored as a draft.
+SKIP = {"readme.md", "provenance.md", "notes.md"}
 
 RULESET_FILES = {
     "stop-slop": ["SKILL.md", "references/phrases.md",
@@ -63,6 +75,57 @@ after, where each element is:
    "quote": "<the exact text span that triggered it, copied verbatim>"}
 If nothing fires, respond with [].
 """
+
+
+def read_env_file(path: Path) -> dict:
+    """Minimal KEY=VALUE reader for the repo's .env (stdlib only)."""
+    if not path.is_file():
+        return {}
+    raw = path.read_bytes()
+    # Windows PowerShell 5.1 `>` redirection writes UTF-16; Notepad may add a BOM.
+    if raw[:2] in (b"\xff\xfe", b"\xfe\xff"):
+        text = raw.decode("utf-16")
+    else:
+        text = raw.decode("utf-8-sig")
+    values = {}
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.startswith("#") or "=" not in line:
+            continue
+        key, _, value = line.partition("=")
+        key = key.strip()
+        if key.startswith("export "):
+            key = key[len("export "):].strip()
+        value = value.strip()
+        if len(value) >= 2 and value[0] == value[-1] and value[0] in "\"'":
+            value = value[1:-1]
+        elif " #" in value:
+            value = value.split(" #", 1)[0].rstrip()
+        values[key] = value
+    return values
+
+
+def load_api_key() -> str:
+    """REGISTERBENCH_API_KEY from the environment, else from the repo's .env.
+
+    Deliberately never ANTHROPIC_API_KEY. Other tools read that name, Claude
+    Code among them, and a session that picks it up bills the API instead of
+    a subscription. A dedicated name keeps the benchmark key, and its spend
+    limit, scoped to this harness.
+    """
+    key = os.environ.get(ENV_KEY, "").strip()
+    if key:
+        return key
+    from_file = read_env_file(ENV_FILE)
+    key = from_file.get(ENV_KEY, "").strip()
+    if key:
+        return key
+    hint = ""
+    if "ANTHROPIC_API_KEY" in from_file or os.environ.get("ANTHROPIC_API_KEY"):
+        hint = (" ANTHROPIC_API_KEY was found but is deliberately not read;"
+                f" rename it to {ENV_KEY}.")
+    sys.exit(f"{ENV_KEY} not set. Add a line {ENV_KEY}=<key> to {ENV_FILE}"
+             f" (gitignored; see .env.example) or set it in the environment.{hint}")
 
 
 def build_system_prompt(tool: str) -> str:
@@ -96,7 +159,10 @@ def call_api(system: str, user_text: str, api_key: str) -> dict:
             if e.code in (429, 500, 529) and attempt < 4:
                 time.sleep(10 * (attempt + 1))
                 continue
-            raise
+            # The error body names the cause (bad key, unknown model, spend
+            # limit reached) and never echoes the key.
+            detail = e.read().decode("utf-8", "replace")[:500]
+            sys.exit(f"API error HTTP {e.code}: {detail}")
     raise RuntimeError("unreachable")
 
 
@@ -123,7 +189,8 @@ def parse_findings(response_text: str):
 
 def collect(p: Path):
     if p.is_dir():
-        return sorted(f for f in p.iterdir() if f.suffix in (".txt", ".md"))
+        return sorted(f for f in p.iterdir()
+                      if f.suffix in (".txt", ".md") and f.name.lower() not in SKIP)
     return [p]
 
 
@@ -133,14 +200,19 @@ def main():
         sys.exit("Refusing to run: paid API calls need the --approved flag "
                  "(API budget is an open item; see the brief, section 10).")
     args.remove("--approved")
-    if len(args) < 3:
-        sys.exit("usage: py run_prompt_tool.py --approved <tool> <out-prefix> <file-or-dir> [...]")
-    tool, out_prefix, inputs = args[0], args[1], args[2:]
+    smoke = "--smoke" in args
+    if smoke:
+        args.remove("--smoke")
+        if len(args) != 2 or not Path(args[1]).is_file():
+            sys.exit("usage: py run_prompt_tool.py --approved --smoke <tool> <file>")
+        tool, out_prefix, inputs = args[0], None, args[1:]
+    else:
+        if len(args) < 3:
+            sys.exit("usage: py run_prompt_tool.py --approved <tool> <out-prefix> <file-or-dir> [...]")
+        tool, out_prefix, inputs = args[0], args[1], args[2:]
     if tool not in RULESET_FILES:
         sys.exit(f"unknown tool {tool}; choose from {sorted(RULESET_FILES)}")
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
-    if not api_key:
-        sys.exit("ANTHROPIC_API_KEY not set")
+    api_key = load_api_key()
 
     import subprocess
     sha = subprocess.check_output(
@@ -149,6 +221,26 @@ def main():
     system = build_system_prompt(tool)
     raw_dir = ROOT / "results" / "prompt_runs"
     raw_dir.mkdir(exist_ok=True)
+
+    if smoke:
+        file = Path(inputs[0])
+        resp = call_api(system, file.read_text(encoding="utf-8"), api_key)
+        raw_path = raw_dir / f"smoke_{tool}_{file.stem}.json"
+        raw_path.write_text(json.dumps(resp, indent=2), encoding="utf-8")
+        findings = parse_findings(
+            "".join(b.get("text", "") for b in resp.get("content", [])))
+        usage = resp.get("usage", {})
+        print(f"requested model: {MODEL}")
+        print(f"served model:    {resp.get('model')}")
+        print(f"stop_reason:     {resp.get('stop_reason')}")
+        print(f"tokens:          {usage.get('input_tokens')} in, "
+              f"{usage.get('output_tokens')} out")
+        print(f"findings:        "
+              f"{'UNPARSEABLE' if findings is None else len(findings)}")
+        print(f"raw response:    {raw_path}")
+        if findings is None or resp.get("stop_reason") == "max_tokens":
+            sys.exit(1)
+        return
 
     files = [f for inp in inputs for f in collect(Path(inp))]
     for n in range(1, N_RUNS + 1):
@@ -159,11 +251,13 @@ def main():
                         "detect_instruction": "uniform-v1"},
             "files": {},
         }
+        served = set()
         for file in files:
             text = file.read_text(encoding="utf-8")
             resp = call_api(system, text, api_key)
             raw_path = raw_dir / f"{tool}_{file.stem}_run{n}.json"
             raw_path.write_text(json.dumps(resp, indent=2), encoding="utf-8")
+            served.add(str(resp.get("model")))
             if resp.get("stop_reason") == "max_tokens":
                 sys.exit(
                     f"FATAL {file.name} run{n}: response hit max_tokens "
@@ -186,6 +280,9 @@ def main():
             }
             print(f"{tool} run{n} {file.name}: {len(findings)} findings")
             time.sleep(1)
+        # The API echoes the model it actually served; recorded so the pinned
+        # MODEL above is verifiable from the result file, not just asserted.
+        result["options"]["served_models"] = sorted(served)
         out = ROOT / "results" / f"{out_prefix}_run{n}.json"
         out.write_text(json.dumps(result, indent=2), encoding="utf-8")
         print(f"-> {out}")

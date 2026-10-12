@@ -366,14 +366,17 @@ python3 scripts/score.py finance-audit
 
 ### Run the prompt track
 
-This spends money against an Anthropic API key and is gated behind an explicit flag.
+This spends money against an Anthropic API key and is gated behind an explicit flag. The harness reads the key from `REGISTERBENCH_API_KEY`, set in the environment or in a gitignored `.env` at the repo root (template in [`.env.example`](.env.example)). It deliberately ignores `ANTHROPIC_API_KEY`: other tools read that name, Claude Code among them, and a dedicated one keeps the benchmark key and its spend limit scoped to this harness.
 
 ```bash
-export ANTHROPIC_API_KEY=sk-ant-...
+cp .env.example .env
+python3 runners/prompt_track/run_prompt_tool.py --approved --smoke avoid-ai-writing-skill seeded/finance-audit/fin-10.md
 python3 runners/prompt_track/run_prompt_tool.py --approved avoid-ai-writing-skill raw_aawskill_seeded seeded/finance-audit
 ```
 
-The second argument is an output prefix, not a path: the harness resolves it under `results/` and appends a run index, writing `raw_aawskill_seeded_run1.json` through `_run3.json` so `score.py` computes the N=3 spread. Valid tool arguments are `stop-slop`, `no-ai-slop`, `the-antislop`, and `avoid-ai-writing-skill`. Raw API responses are archived under `results/prompt_runs/` for hand-checking, and that directory is gitignored.
+`--smoke` makes one call on one file and prints the model actually served, the stop reason and token usage, without writing anything `score.py` reads.
+
+The second argument is an output prefix, not a path: the harness resolves it under `results/` and appends a run index, writing `raw_aawskill_seeded_run1.json` through `_run3.json` so `score.py` computes the N=3 spread. Valid tool arguments are `stop-slop`, `no-ai-slop`, `the-antislop`, and `avoid-ai-writing-skill`. Raw API responses are archived under `results/prompt_runs/` for hand-checking, and that directory is gitignored. Each result file records the model the API reports it served, so the pinned `claude-sonnet-5` is checkable rather than asserted. Directory inputs skip `README.md`, `PROVENANCE.md` and `NOTES.md`, as the code-track runners do.
 
 ---
 
