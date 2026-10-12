@@ -19,7 +19,7 @@ Usage: py scripts/score.py [register]
 import json
 import re
 import sys
-from datetime import date
+from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -527,7 +527,7 @@ def main():
         else:
             human_runs.setdefault(run["tool"], []).append(run)
 
-    out = {"register": REGISTER, "date": date.today().isoformat(),
+    out = {"register": REGISTER, "date": datetime.now(timezone.utc).date().isoformat(),  # UTC, matching the runners
            "crosswalk_version": cw["version"], "tools": {}}
     for tool in sorted(set(seeded_runs) | set(human_runs)):
         entry = {"sha": None, "runs": {}}

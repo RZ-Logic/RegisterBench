@@ -1,4 +1,4 @@
-# RegisterBench results: finance-audit (2026-10-11)
+# RegisterBench results: finance-audit (2026-10-12)
 
 RegisterBench measures rules, not writers. It never claims or implies AI
 authorship of any text. A flag on human text is not automatically wrong

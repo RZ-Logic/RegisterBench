@@ -1,6 +1,6 @@
 {
   "register": "finance-audit",
-  "date": "2026-10-11",
+  "date": "2026-10-12",
   "crosswalk_version": "0.2.0",
   "tools": {
     "avoid-ai-writing-detector": {
